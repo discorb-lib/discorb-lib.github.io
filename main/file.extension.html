@@ -89,6 +89,31 @@
 <span class='kw'>end</span>
 </code></pre>
 
+<h2 id="register-command">Register Command</h2>
+
+<p>Since v0.5.2, <span class='object_link'><a href="Discorb/Extension.html" title="Discorb::Extension (module)">Discorb::Extension</a></span> includes <span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html" title="Discorb::ApplicationCommand::Handler (module)">Discorb::ApplicationCommand::Handler</a></span> module, so you can register command with <span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#slash-instance_method" title="Discorb::ApplicationCommand::Handler#slash (method)">Discorb::ApplicationCommand::Handler#slash</a></span> and <span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#slash_group-instance_method" title="Discorb::ApplicationCommand::Handler#slash_group (method)">Discorb::ApplicationCommand::Handler#slash_group</a></span>.</p>
+
+<pre class="code ruby"><code class="ruby"><span class='kw'>module</span> <span class='const'>MyExtension</span>
+  <span class='id identifier rubyid_extend'>extend</span> <span class='const'><span class='object_link'><a href="Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Discorb/Extension.html" title="Discorb::Extension (module)">Extension</a></span></span>
+
+  <span class='id identifier rubyid_slash'>slash</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>command</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Command</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_interaction'>interaction</span><span class='op'>|</span>
+    <span class='comment'># ...
+</span>  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_slash_group'>slash_group</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>group</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Group</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_slash'>slash</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>subcommand</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Subcommand</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_interaction'>interaction</span><span class='op'>|</span>
+      <span class='comment'># ...
+</span>    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_group'>group</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>subgroup</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Subcommand group</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_slash'>slash</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>group_subcommand</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Command in Subcommand group</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_interaction'>interaction</span><span class='op'>|</span>
+        <span class='comment'># ...
+</span>      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+</code></pre>
+
 <h2 id="load-extension">Load extension</h2>
 
 <p>Use <span class='object_link'><a href="Discorb/Client.html#extend-instance_method" title="Discorb::Client#extend (method)">Discorb::Client#extend</a></span> to load extension.</p>
@@ -119,7 +144,7 @@
 </div></div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/2aa9aa64ce16fc07a85e23bedc0921b16afa837f"><code>2aa9aa64ce16fc07a85e23bedc0921b16afa837f</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/d59f5f10c8fec98c8f7919d0dfed1dd3fb37c3c4"><code>d59f5f10c8fec98c8f7919d0dfed1dd3fb37c3c4</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>

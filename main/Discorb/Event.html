@@ -149,34 +149,6 @@ Use <span class='object_link'><a href="Client.html#on-instance_method" title="Di
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#discriminator-instance_method" title="#discriminator (instance method)">#<strong>discriminator</strong>  &#x21d2; Hash </a>
-    
-
-    
-  </span>
-  
-  
-  
-    
-      <span class="note title readonly">readonly</span>
-    
-    
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>The event discriminator.</p>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#id-instance_method" title="#id (instance method)">#<strong>id</strong>  &#x21d2; Symbol </a>
     
 
@@ -197,6 +169,34 @@ Use <span class='object_link'><a href="Client.html#on-instance_method" title="Di
 
   
     <span class="summary_desc"><div class='inline'><p>The event id.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#metadata-instance_method" title="#metadata (instance method)">#<strong>metadata</strong>  &#x21d2; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The event metadata.</p>
 </div></span>
   
 </li>
@@ -271,7 +271,7 @@ Use <span class='object_link'><a href="Client.html#on-instance_method" title="Di
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(block, id, discriminator)  &#x21d2; Event </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(block, id, metadata)  &#x21d2; Event </a>
     
 
     
@@ -302,7 +302,7 @@ Use <span class='object_link'><a href="Client.html#on-instance_method" title="Di
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(block, id, discriminator)  &#x21d2; <tt><span class='object_link'><a href="" title="Discorb::Event (class)">Event</a></span></tt> 
+    #<strong>initialize</strong>(block, id, metadata)  &#x21d2; <tt><span class='object_link'><a href="" title="Discorb::Event (class)">Event</a></span></tt> 
   
 
   
@@ -335,11 +335,11 @@ Use <span class='object_link'><a href="Client.html#on-instance_method" title="Di
     <td>
       <pre class="code"><span class="info file"># File 'lib/discorb/event.rb', line 20</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_block'>block</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='id identifier rubyid_discriminator'>discriminator</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_block'>block</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='id identifier rubyid_metadata'>metadata</span><span class='rparen'>)</span>
   <span class='ivar'>@block</span> <span class='op'>=</span> <span class='id identifier rubyid_block'>block</span>
   <span class='ivar'>@id</span> <span class='op'>=</span> <span class='id identifier rubyid_id'>id</span>
-  <span class='ivar'>@once</span> <span class='op'>=</span> <span class='id identifier rubyid_discriminator'>discriminator</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:once</span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span>
-  <span class='ivar'>@discriminator</span> <span class='op'>=</span> <span class='id identifier rubyid_discriminator'>discriminator</span>
+  <span class='ivar'>@once</span> <span class='op'>=</span> <span class='id identifier rubyid_metadata'>metadata</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:once</span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='ivar'>@metadata</span> <span class='op'>=</span> <span class='id identifier rubyid_metadata'>metadata</span>
   <span class='ivar'>@rescue</span> <span class='op'>=</span> <span class='kw'>nil</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -414,65 +414,6 @@ Use <span class='object_link'><a href="Client.html#on-instance_method" title="Di
       
       <span id=""></span>
       <div class="method_details ">
-  <h3 class="signature " id="discriminator-instance_method">
-  
-    #<strong>discriminator</strong>  &#x21d2; <tt>Hash</tt>  <span class="extras">(readonly)</span>
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>Returns the event discriminator.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>the event discriminator.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-15
-16
-17</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/event.rb', line 15</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_discriminator'>discriminator</span>
-  <span class='ivar'>@discriminator</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id=""></span>
-      <div class="method_details ">
   <h3 class="signature " id="id-instance_method">
   
     #<strong>id</strong>  &#x21d2; <tt>Symbol</tt>  <span class="extras">(readonly)</span>
@@ -523,6 +464,65 @@ Use <span class='object_link'><a href="Client.html#on-instance_method" title="Di
 
 <span class='kw'>def</span> <span class='id identifier rubyid_id'>id</span>
   <span class='ivar'>@id</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="metadata-instance_method">
+  
+    #<strong>metadata</strong>  &#x21d2; <tt>Hash</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the event metadata.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the event metadata.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/event.rb', line 15</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_metadata'>metadata</span>
+  <span class='ivar'>@metadata</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -644,7 +644,7 @@ Use <span class='object_link'><a href="Client.html#on-instance_method" title="Di
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/2aa9aa64ce16fc07a85e23bedc0921b16afa837f"><code>2aa9aa64ce16fc07a85e23bedc0921b16afa837f</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/d59f5f10c8fec98c8f7919d0dfed1dd3fb37c3c4"><code>d59f5f10c8fec98c8f7919d0dfed1dd3fb37c3c4</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>

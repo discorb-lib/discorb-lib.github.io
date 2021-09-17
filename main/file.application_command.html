@@ -69,7 +69,16 @@
 
 <h2 id="how-do-i-register-an-application-command">How do I register an application command?</h2>
 
-<p>Use <span class='object_link'><a href="Discorb/Command/Handler.html#slash-instance_method" title="Discorb::Command::Handler#slash (method)">Discorb::Command::Handler#slash</a></span>, <span class='object_link'><a href="Discorb/Command/Handler.html#slash_group-instance_method" title="Discorb::Command::Handler#slash_group (method)">Discorb::Command::Handler#slash_group</a></span> for slash commands, <span class='object_link'><a href="Discorb/Command/Handler.html#user_command-instance_method" title="Discorb::Command::Handler#user_command (method)">Discorb::Command::Handler#user_command</a></span> for user menu commands, and <span class='object_link'><a href="Discorb/Command/Handler.html#message_command-instance_method" title="Discorb::Command::Handler#message_command (method)">Discorb::Command::Handler#message_command</a></span> for message menu commands.</p>
+<p>Write to a your script:</p>
+
+<ul>
+<li><span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#slash-instance_method" title="Discorb::ApplicationCommand::Handler#slash (method)">Discorb::ApplicationCommand::Handler#slash</a></span>, <span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#slash_group-instance_method" title="Discorb::ApplicationCommand::Handler#slash_group (method)">Discorb::ApplicationCommand::Handler#slash_group</a></span> for slash commands,</li>
+<li><span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#user_command-instance_method" title="Discorb::ApplicationCommand::Handler#user_command (method)">Discorb::ApplicationCommand::Handler#user_command</a></span> for user menu commands,</li>
+<li><span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#message_command-instance_method" title="Discorb::ApplicationCommand::Handler#message_command (method)">Discorb::ApplicationCommand::Handler#message_command</a></span> for message menu commands.</li>
+</ul>
+
+<p>And then run <code>discorb setup</code> to register your application commands.
+<a href="file.setup.html" title="Learn more about &lt;code&gt;discorb setup&lt;/code&gt;">Learn more about <code>discorb setup</code></a>. </p>
 
 <h3 id="note">Note</h3>
 
@@ -91,7 +100,7 @@ Guild commands will be registered immediately.</p>
 <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span><span class='lparen'>(</span><span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>DISCORD_BOT_TOKEN</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
 </code></pre>
 
-<p><span class='object_link'><a href="Discorb/Command/Handler.html#slash-instance_method" title="Discorb::Command::Handler#slash (method)">Discorb::Command::Handler#slash</a></span> takes 5 arguments:</p>
+<p><span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#slash-instance_method" title="Discorb::ApplicationCommand::Handler#slash (method)">Discorb::ApplicationCommand::Handler#slash</a></span> takes 5 arguments:</p>
 
 <table><thead>
 <tr>
@@ -124,11 +133,11 @@ Guild commands will be registered immediately.</p>
 <p>In <code>options</code>, hash should be like this:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='lbrace'>{</span>
-    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Name</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
-        <span class='label'>type:</span> <span class='symbol'>:string</span><span class='comma'>,</span>
-        <span class='label'>required:</span> <span class='kw'>true</span><span class='comma'>,</span>
-        <span class='label'>description:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>The description of the command.</span><span class='tstring_end'>&quot;</span></span>
-    <span class='rbrace'>}</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Name</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>type:</span> <span class='symbol'>:string</span><span class='comma'>,</span>
+    <span class='label'>required:</span> <span class='kw'>true</span><span class='comma'>,</span>
+    <span class='label'>description:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>The description of the command.</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span>
 <span class='rbrace'>}</span>
 </code></pre>
 
@@ -160,19 +169,19 @@ Guild commands will be registered immediately.</p>
 <code>choices</code> is hash like this:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='lbrace'>{</span>
-    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>vocaloid</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
-        <span class='label'>required:</span> <span class='kw'>true</span><span class='comma'>,</span>
-        <span class='label'>description:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>The vocaloid which you like.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-        <span class='label'>type:</span> <span class='symbol'>:string</span><span class='comma'>,</span>
-        <span class='label'>choices:</span> <span class='lbrace'>{</span>
-            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hatsune Miku</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>miku</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Kagamine Rin</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rin</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Kagamine Len</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>len</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Megurine Luka</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>luka</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MEIKO</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>meiko</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>KAITO</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>kaito</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-        <span class='rbrace'>}</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>vocaloid</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>required:</span> <span class='kw'>true</span><span class='comma'>,</span>
+    <span class='label'>description:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>The vocaloid which you like.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>type:</span> <span class='symbol'>:string</span><span class='comma'>,</span>
+    <span class='label'>choices:</span> <span class='lbrace'>{</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hatsune Miku</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>miku</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Kagamine Rin</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rin</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Kagamine Len</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>len</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Megurine Luka</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>luka</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MEIKO</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>meiko</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>KAITO</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>kaito</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
     <span class='rbrace'>}</span>
+  <span class='rbrace'>}</span>
 <span class='rbrace'>}</span>
 
 <span class='comment'># Note: This aritcle is written in 8/31.
@@ -228,30 +237,54 @@ Guild commands will be registered immediately.</p>
 
 <h3 id="group-slash-commands">Group Slash Commands</h3>
 
-<p>To register a group of slash commands, use <span class='object_link'><a href="Discorb/Command/Handler.html#slash_group-instance_method" title="Discorb::Command::Handler#slash_group (method)">Discorb::Command::Handler#slash_group</a></span>.</p>
+<p>To register a group of slash commands, use <span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#slash_group-instance_method" title="Discorb::ApplicationCommand::Handler#slash_group (method)">Discorb::ApplicationCommand::Handler#slash_group</a></span>.</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_group'>group</span> <span class='op'>=</span> <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_slash_group'>slash_group</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>settings</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Set settings of bot.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 
 <span class='id identifier rubyid_group'>group</span><span class='period'>.</span><span class='id identifier rubyid_slash'>slash</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>message_expand</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Whether bot should expand message.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span>
-    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>enabled</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
-        <span class='label'>type:</span> <span class='symbol'>:boolean</span><span class='comma'>,</span>
-        <span class='label'>description:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Whether bot should expand message.</span><span class='tstring_end'>&quot;</span></span>
-    <span class='rbrace'>}</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>enabled</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>type:</span> <span class='symbol'>:boolean</span><span class='comma'>,</span>
+    <span class='label'>description:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Whether bot should expand message.</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span>
 <span class='rbrace'>}</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_interaction'>interaction</span><span class='op'>|</span>
   <span class='comment'># ...
 </span><span class='kw'>end</span>
 
 <span class='id identifier rubyid_group'>group</span><span class='period'>.</span><span class='id identifier rubyid_slash'>slash</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bump_alert</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Whether bot should notify DISBOARD bump.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span>
-    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>enabled</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
-        <span class='label'>type:</span> <span class='symbol'>:boolean</span><span class='comma'>,</span>
-        <span class='label'>description:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Whether bot should notify DISBOARD bump.</span><span class='tstring_end'>&quot;</span></span>
-    <span class='rbrace'>}</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>enabled</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>type:</span> <span class='symbol'>:boolean</span><span class='comma'>,</span>
+    <span class='label'>description:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Whether bot should notify DISBOARD bump.</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span>
 <span class='rbrace'>}</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_interaction'>interaction</span><span class='op'>|</span>
   <span class='comment'># ...
 </span><span class='kw'>end</span>
+
 </code></pre>
 
-<p>You can make subcommand group by using <span class='object_link'><a href="Discorb/Command/Command/GroupCommand.html#group-instance_method" title="Discorb::Command::Command::GroupCommand#group (method)">Discorb::Command::Command::GroupCommand#group</a></span>.</p>
+<p>Since v0.5.1, You can use block for register commands.</p>
+
+<pre class="code ruby"><code class="ruby">
+<span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_slash_group'>slash_group</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>settings</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Set settings of bot.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_slash'>slash</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>message_expand</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Whether bot should expand message.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>enabled</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+      <span class='label'>type:</span> <span class='symbol'>:boolean</span><span class='comma'>,</span>
+      <span class='label'>description:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Whether bot should expand message.</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbrace'>}</span>
+  <span class='rbrace'>}</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_interaction'>interaction</span><span class='op'>|</span>
+    <span class='comment'># ...
+</span>  <span class='kw'>end</span>
+  <span class='id identifier rubyid_slash'>slash</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bump_alert</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Whether bot should notify DISBOARD bump.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>enabled</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+      <span class='label'>type:</span> <span class='symbol'>:boolean</span><span class='comma'>,</span>
+      <span class='label'>description:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Whether bot should notify DISBOARD bump.</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbrace'>}</span>
+  <span class='rbrace'>}</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_interaction'>interaction</span><span class='op'>|</span>
+    <span class='comment'># ...
+</span>  <span class='kw'>end</span>
+<span class='kw'>end</span>
+</code></pre>
+
+<p>You can make subcommand group by using <span class='object_link'><a href="Discorb/ApplicationCommand/Command/GroupCommand.html#group-instance_method" title="Discorb::ApplicationCommand::Command::GroupCommand#group (method)">Discorb::ApplicationCommand::Command::GroupCommand#group</a></span>.</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_group'>group</span> <span class='op'>=</span> <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_slash_group'>slash_group</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>permission</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Set/Get command permissions.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 
@@ -329,6 +362,8 @@ Guild commands will be registered immediately.</p>
 
 </code></pre>
 
+<p>Same as above, you can use block for register commands since v0.5.1.</p>
+
 <h3 id="register-user-context-menu-command">Register User Context Menu Command</h3>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_user_command'>user_command</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_interaction'>interaction</span><span class='comma'>,</span> <span class='id identifier rubyid_user'>user</span><span class='op'>|</span>
@@ -336,7 +371,7 @@ Guild commands will be registered immediately.</p>
 <span class='kw'>end</span>
 </code></pre>
 
-<p><span class='object_link'><a href="Discorb/Command/Handler.html#user_command-instance_method" title="Discorb::Command::Handler#user_command (method)">Discorb::Command::Handler#user_command</a></span> takes 3 arguments:</p>
+<p><span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#user_command-instance_method" title="Discorb::ApplicationCommand::Handler#user_command (method)">Discorb::ApplicationCommand::Handler#user_command</a></span> takes 3 arguments:</p>
 
 <table><thead>
 <tr>
@@ -383,7 +418,7 @@ Guild commands will be registered immediately.</p>
 </span><span class='kw'>end</span>
 </code></pre>
 
-<p><span class='object_link'><a href="Discorb/Command/Handler.html#message_command-instance_method" title="Discorb::Command::Handler#message_command (method)">Discorb::Command::Handler#message_command</a></span> takes 3 arguments:</p>
+<p><span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#message_command-instance_method" title="Discorb::ApplicationCommand::Handler#message_command (method)">Discorb::ApplicationCommand::Handler#message_command</a></span> takes 3 arguments:</p>
 
 <table><thead>
 <tr>
@@ -425,7 +460,7 @@ Guild commands will be registered immediately.</p>
 </div></div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/2aa9aa64ce16fc07a85e23bedc0921b16afa837f"><code>2aa9aa64ce16fc07a85e23bedc0921b16afa837f</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/d59f5f10c8fec98c8f7919d0dfed1dd3fb37c3c4"><code>d59f5f10c8fec98c8f7919d0dfed1dd3fb37c3c4</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>

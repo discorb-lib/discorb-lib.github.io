@@ -71,6 +71,11 @@
   
   
   
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="ApplicationCommand/Handler.html" title="Discorb::ApplicationCommand::Handler (module)">ApplicationCommand::Handler</a></span></dd>
+  </dl>
+  
   
 
   
@@ -111,6 +116,34 @@ extend this module to make your own extension.</p>
 
   <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
   <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#commands-instance_method" title="#commands (instance method)">#<strong>commands</strong>  &#x21d2; Array&lt;Discorb::ApplicationCommand::Command&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The commands of the extension.</p>
+</div></span>
+  
+</li>
+
     
       <li class="public ">
   <span class="summary_signature">
@@ -156,7 +189,7 @@ extend this module to make your own extension.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#event-instance_method" title="#event (instance method)">#<strong>event</strong>(event_name, id: nil, **discriminator, &amp;block)  &#x21d2; Discorb::Event </a>
+      <a href="#event-instance_method" title="#event (instance method)">#<strong>event</strong>(event_name, id: nil, **metadata, &amp;block)  &#x21d2; Discorb::Event </a>
     
 
     
@@ -179,7 +212,7 @@ extend this module to make your own extension.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#once_event-instance_method" title="#once_event (instance method)">#<strong>once_event</strong>(event_name, id: nil, **discriminator, &amp;block)  &#x21d2; Discorb::Event </a>
+      <a href="#once_event-instance_method" title="#once_event (instance method)">#<strong>once_event</strong>(event_name, id: nil, **metadata, &amp;block)  &#x21d2; Discorb::Event </a>
     
 
     
@@ -203,13 +236,83 @@ extend this module to make your own extension.</p>
   
 
 
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="ApplicationCommand/Handler.html" title="Discorb::ApplicationCommand::Handler (module)">ApplicationCommand::Handler</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="ApplicationCommand/Handler.html#message_command-instance_method" title="Discorb::ApplicationCommand::Handler#message_command (method)">#message_command</a></span>, <span class='object_link'><a href="ApplicationCommand/Handler.html#setup_commands-instance_method" title="Discorb::ApplicationCommand::Handler#setup_commands (method)">#setup_commands</a></span>, <span class='object_link'><a href="ApplicationCommand/Handler.html#slash-instance_method" title="Discorb::ApplicationCommand::Handler#slash (method)">#slash</a></span>, <span class='object_link'><a href="ApplicationCommand/Handler.html#slash_group-instance_method" title="Discorb::ApplicationCommand::Handler#slash_group (method)">#slash_group</a></span>, <span class='object_link'><a href="ApplicationCommand/Handler.html#user_command-instance_method" title="Discorb::ApplicationCommand::Handler#user_command (method)">#user_command</a></span></p>
+
   <div id="instance_attr_details" class="attr_details">
     <h2>Instance Attribute Details</h2>
     
       
       <span id=""></span>
       <div class="method_details first">
-  <h3 class="signature first" id="events-instance_method">
+  <h3 class="signature first" id="commands-instance_method">
+  
+    #<strong>commands</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="ApplicationCommand/Command.html" title="Discorb::ApplicationCommand::Command (class)">Discorb::ApplicationCommand::Command</a></span>&gt;</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns The commands of the extension.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="ApplicationCommand/Command.html" title="Discorb::ApplicationCommand::Command (class)">Discorb::ApplicationCommand::Command</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The commands of the extension.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/extension.rb', line 53</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_commands'>commands</span>
+  <span class='ivar'>@commands</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="events-instance_method">
   
     #<strong>events</strong>  &#x21d2; <tt>Hash{Symbol =&gt; Array&lt;<span class='object_link'><a href="Event.html" title="Discorb::Event (class)">Discorb::Event</a></span>&gt;}</tt>  <span class="extras">(readonly)</span>
   
@@ -250,12 +353,12 @@ extend this module to make your own extension.</p>
       <pre class="lines">
 
 
-48
-49
-50</pre>
+51
+52
+53</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/extension.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/extension.rb', line 51</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_events'>events</span>
   <span class='ivar'>@events</span>
@@ -275,7 +378,7 @@ extend this module to make your own extension.</p>
       <div class="method_details first">
   <h3 class="signature first" id="event-instance_method">
   
-    #<strong>event</strong>(event_name, id: nil, **discriminator, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Event.html" title="Discorb::Event (class)">Discorb::Event</a></span></tt> 
+    #<strong>event</strong>(event_name, id: nil, **metadata, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Event.html" title="Discorb::Event (class)">Discorb::Event</a></span></tt> 
   
 
   
@@ -326,7 +429,7 @@ extend this module to make your own extension.</p>
   
     <li>
       
-        <span class='name'>discriminator</span>
+        <span class='name'>metadata</span>
       
       
         <span class='type'>(<tt>Hash</tt>)</span>
@@ -334,7 +437,7 @@ extend this module to make your own extension.</p>
       
       
         &mdash;
-        <div class='inline'><p>Other discriminators.</p>
+        <div class='inline'><p>Other metadata.</p>
 </div>
       
     </li>
@@ -393,25 +496,25 @@ extend this module to make your own extension.</p>
       <pre class="lines">
 
 
-24
-25
-26
 27
 28
 29
 30
-31</pre>
+31
+32
+33
+34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/extension.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/extension.rb', line 27</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_event'>event</span><span class='lparen'>(</span><span class='id identifier rubyid_event_name'>event_name</span><span class='comma'>,</span> <span class='label'>id:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_discriminator'>discriminator</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_event'>event</span><span class='lparen'>(</span><span class='id identifier rubyid_event_name'>event_name</span><span class='comma'>,</span> <span class='label'>id:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_metadata'>metadata</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Event name must be a symbol</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_event_name'>event_name</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Symbol</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>block must be a Proc</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Proc</span><span class='rparen'>)</span>
 
   <span class='ivar'>@events</span><span class='lbracket'>[</span><span class='id identifier rubyid_event_name'>event_name</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-  <span class='id identifier rubyid_discriminator'>discriminator</span><span class='lbracket'>[</span><span class='symbol'>:extension</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
-  <span class='ivar'>@events</span><span class='lbracket'>[</span><span class='id identifier rubyid_event_name'>event_name</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Event.html" title="Discorb::Event (class)">Event</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Event.html#initialize-instance_method" title="Discorb::Event#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_block'>block</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='id identifier rubyid_discriminator'>discriminator</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_metadata'>metadata</span><span class='lbracket'>[</span><span class='symbol'>:extension</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+  <span class='ivar'>@events</span><span class='lbracket'>[</span><span class='id identifier rubyid_event_name'>event_name</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Event.html" title="Discorb::Event (class)">Event</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Event.html#initialize-instance_method" title="Discorb::Event#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_block'>block</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='id identifier rubyid_metadata'>metadata</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -421,7 +524,7 @@ extend this module to make your own extension.</p>
       <div class="method_details ">
   <h3 class="signature " id="once_event-instance_method">
   
-    #<strong>once_event</strong>(event_name, id: nil, **discriminator, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Event.html" title="Discorb::Event (class)">Discorb::Event</a></span></tt> 
+    #<strong>once_event</strong>(event_name, id: nil, **metadata, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Event.html" title="Discorb::Event (class)">Discorb::Event</a></span></tt> 
   
 
   
@@ -472,7 +575,7 @@ extend this module to make your own extension.</p>
   
     <li>
       
-        <span class='name'>discriminator</span>
+        <span class='name'>metadata</span>
       
       
         <span class='type'>(<tt>Hash</tt>)</span>
@@ -480,7 +583,7 @@ extend this module to make your own extension.</p>
       
       
         &mdash;
-        <div class='inline'><p>Other discriminators.</p>
+        <div class='inline'><p>Other metadata.</p>
 </div>
       
     </li>
@@ -526,15 +629,15 @@ extend this module to make your own extension.</p>
       <pre class="lines">
 
 
-43
-44
-45</pre>
+46
+47
+48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/extension.rb', line 43</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/extension.rb', line 46</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_once_event'>once_event</span><span class='lparen'>(</span><span class='id identifier rubyid_event_name'>event_name</span><span class='comma'>,</span> <span class='label'>id:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_discriminator'>discriminator</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_event'>event</span><span class='lparen'>(</span><span class='id identifier rubyid_event_name'>event_name</span><span class='comma'>,</span> <span class='label'>id:</span> <span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='label'>once:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_discriminator'>discriminator</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_once_event'>once_event</span><span class='lparen'>(</span><span class='id identifier rubyid_event_name'>event_name</span><span class='comma'>,</span> <span class='label'>id:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_metadata'>metadata</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_event'>event</span><span class='lparen'>(</span><span class='id identifier rubyid_event_name'>event_name</span><span class='comma'>,</span> <span class='label'>id:</span> <span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='label'>once:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_metadata'>metadata</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -546,7 +649,7 @@ extend this module to make your own extension.</p>
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/2aa9aa64ce16fc07a85e23bedc0921b16afa837f"><code>2aa9aa64ce16fc07a85e23bedc0921b16afa837f</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/d59f5f10c8fec98c8f7919d0dfed1dd3fb37c3c4"><code>d59f5f10c8fec98c8f7919d0dfed1dd3fb37c3c4</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>

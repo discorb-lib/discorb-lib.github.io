@@ -327,7 +327,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#fetch_message-instance_method" title="#fetch_message (instance method)">#<strong>fetch_message</strong>(force: false)  &#x21d2; Discorb::Message </a>
+      <a href="#fetch_message-instance_method" title="#fetch_message (instance method)">#<strong>fetch_message</strong>(force: false)  &#x21d2; Async::Task&lt;Discorb::Message&gt; </a>
     
 
     
@@ -423,12 +423,12 @@
       <pre class="lines">
 
 
-161
-162
-163</pre>
+164
+165
+166</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/gateway.rb', line 161</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/gateway.rb', line 164</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_channel'>channel</span>
   <span class='ivar'>@channel</span>
@@ -482,12 +482,12 @@
       <pre class="lines">
 
 
-154
-155
-156</pre>
+157
+158
+159</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/gateway.rb', line 154</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/gateway.rb', line 157</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_channel_id'>channel_id</span>
   <span class='ivar'>@channel_id</span>
@@ -541,12 +541,12 @@
       <pre class="lines">
 
 
-169
-170
-171</pre>
+172
+173
+174</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/gateway.rb', line 169</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/gateway.rb', line 172</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_emoji'>emoji</span>
   <span class='ivar'>@emoji</span>
@@ -619,12 +619,12 @@
       <pre class="lines">
 
 
-164
-165
-166</pre>
+167
+168
+169</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/gateway.rb', line 164</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/gateway.rb', line 167</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_guild'>guild</span>
   <span class='ivar'>@guild</span>
@@ -678,12 +678,12 @@
       <pre class="lines">
 
 
-158
-159
-160</pre>
+161
+162
+163</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/gateway.rb', line 158</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/gateway.rb', line 161</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_guild_id'>guild_id</span>
   <span class='ivar'>@guild_id</span>
@@ -756,12 +756,12 @@
       <pre class="lines">
 
 
-167
-168
-169</pre>
+170
+171
+172</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/gateway.rb', line 167</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/gateway.rb', line 170</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_message'>message</span>
   <span class='ivar'>@message</span>
@@ -815,12 +815,12 @@
       <pre class="lines">
 
 
-156
-157
-158</pre>
+159
+160
+161</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/gateway.rb', line 156</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/gateway.rb', line 159</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_message_id'>message_id</span>
   <span class='ivar'>@message_id</span>
@@ -840,7 +840,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="fetch_message-instance_method">
   
-    #<strong>fetch_message</strong>(force: false)  &#x21d2; <tt><span class='object_link'><a href="../Message.html" title="Discorb::Message (class)">Discorb::Message</a></span></tt> 
+    #<strong>fetch_message</strong>(force: false)  &#x21d2; <tt>Async::Task&lt;<span class='object_link'><a href="../Message.html" title="Discorb::Message (class)">Discorb::Message</a></span>&gt;</tt> 
   
 
   
@@ -896,7 +896,7 @@ If message is cached, it will be returned.</p>
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="../Message.html" title="Discorb::Message (class)">Discorb::Message</a></span></tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;<span class='object_link'><a href="../Message.html" title="Discorb::Message (class)">Discorb::Message</a></span>&gt;</tt>)</span>
       
       
       
@@ -931,16 +931,16 @@ If message is cached, it will be returned.</p>
       <pre class="lines">
 
 
-192
-193
-194
 195
 196
 197
-198</pre>
+198
+199
+200
+201</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/gateway.rb', line 192</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/gateway.rb', line 195</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_message'>fetch_message</span><span class='lparen'>(</span><span class='label'>force:</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -959,7 +959,7 @@ If message is cached, it will be returned.</p>
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/2aa9aa64ce16fc07a85e23bedc0921b16afa837f"><code>2aa9aa64ce16fc07a85e23bedc0921b16afa837f</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/d59f5f10c8fec98c8f7919d0dfed1dd3fb37c3c4"><code>d59f5f10c8fec98c8f7919d0dfed1dd3fb37c3c4</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>

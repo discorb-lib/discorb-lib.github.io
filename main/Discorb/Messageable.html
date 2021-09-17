@@ -164,7 +164,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#fetch_message-instance_method" title="#fetch_message (instance method)">#<strong>fetch_message</strong>(id)  &#x21d2; Discorb::Message </a>
+      <a href="#fetch_message-instance_method" title="#fetch_message (instance method)">#<strong>fetch_message</strong>(id)  &#x21d2; Async::Task&lt;Discorb::Message&gt; </a>
     
 
     
@@ -187,7 +187,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#fetch_messages-instance_method" title="#fetch_messages (instance method)">#<strong>fetch_messages</strong>(limit = 50, before: nil, after: nil, around: nil)  &#x21d2; Array&lt;Discorb::Message&gt; </a>
+      <a href="#fetch_messages-instance_method" title="#fetch_messages (instance method)">#<strong>fetch_messages</strong>(limit = 50, before: nil, after: nil, around: nil)  &#x21d2; Async::Task&lt;Array&lt;Discorb::Message&gt;&gt; </a>
     
 
     
@@ -210,7 +210,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#post-instance_method" title="#post (instance method)">#<strong>post</strong>(content = nil, tts: false, embed: nil, embeds: nil, allowed_mentions: nil, reference: nil, components: nil, file: nil, files: nil)  &#x21d2; Discorb::Message </a>
+      <a href="#post-instance_method" title="#post (instance method)">#<strong>post</strong>(content = nil, tts: false, embed: nil, embeds: nil, allowed_mentions: nil, reference: nil, components: nil, file: nil, files: nil)  &#x21d2; Async::Task&lt;Discorb::Message&gt; </a>
     
 
     
@@ -463,7 +463,7 @@
         <span class='name'>embeds</span>
       
       
-        <span class='type'>(<tt>Array&lt;Discord::Embed&gt;</tt>)</span>
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Embed.html" title="Discorb::Embed (class)">Discorb::Embed</a></span>&gt;</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>nil</tt>)</em>
@@ -638,7 +638,7 @@
       <div class="method_details ">
   <h3 class="signature " id="fetch_message-instance_method">
   
-    #<strong>fetch_message</strong>(id)  &#x21d2; <tt><span class='object_link'><a href="Message.html" title="Discorb::Message (class)">Discorb::Message</a></span></tt> 
+    #<strong>fetch_message</strong>(id)  &#x21d2; <tt>Async::Task&lt;<span class='object_link'><a href="Message.html" title="Discorb::Message (class)">Discorb::Message</a></span>&gt;</tt> 
   
 
   
@@ -691,7 +691,7 @@
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Message.html" title="Discorb::Message (class)">Discorb::Message</a></span></tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;<span class='object_link'><a href="Message.html" title="Discorb::Message (class)">Discorb::Message</a></span>&gt;</tt>)</span>
       
       
       
@@ -763,7 +763,7 @@
       <div class="method_details ">
   <h3 class="signature " id="fetch_messages-instance_method">
   
-    #<strong>fetch_messages</strong>(limit = 50, before: nil, after: nil, around: nil)  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="Message.html" title="Discorb::Message (class)">Discorb::Message</a></span>&gt;</tt> 
+    #<strong>fetch_messages</strong>(limit = 50, before: nil, after: nil, around: nil)  &#x21d2; <tt>Async::Task&lt;Array&lt;<span class='object_link'><a href="Message.html" title="Discorb::Message (class)">Discorb::Message</a></span>&gt;&gt;</tt> 
   
 
   
@@ -869,7 +869,7 @@
     <li>
       
       
-        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Message.html" title="Discorb::Message (class)">Discorb::Message</a></span>&gt;</tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;Array&lt;<span class='object_link'><a href="Message.html" title="Discorb::Message (class)">Discorb::Message</a></span>&gt;&gt;</tt>)</span>
       
       
       
@@ -940,7 +940,7 @@
       <div class="method_details ">
   <h3 class="signature " id="post-instance_method">
   
-    #<strong>post</strong>(content = nil, tts: false, embed: nil, embeds: nil, allowed_mentions: nil, reference: nil, components: nil, file: nil, files: nil)  &#x21d2; <tt><span class='object_link'><a href="Message.html" title="Discorb::Message (class)">Discorb::Message</a></span></tt> 
+    #<strong>post</strong>(content = nil, tts: false, embed: nil, embeds: nil, allowed_mentions: nil, reference: nil, components: nil, file: nil, files: nil)  &#x21d2; <tt>Async::Task&lt;<span class='object_link'><a href="Message.html" title="Discorb::Message (class)">Discorb::Message</a></span>&gt;</tt> 
   
 
   
@@ -1077,7 +1077,7 @@
         <span class='name'>components</span>
       
       
-        <span class='type'>(<tt>Array&lt;Discorb::Components&gt;</tt>, <tt>Array&lt;Array&lt;Discorb::Components&gt;&gt;</tt>)</span>
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Component.html" title="Discorb::Component (class)">Discorb::Component</a></span>&gt;</tt>, <tt>Array&lt;Array&lt;<span class='object_link'><a href="Component.html" title="Discorb::Component (class)">Discorb::Component</a></span>&gt;&gt;</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>nil</tt>)</em>
@@ -1131,7 +1131,7 @@
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Message.html" title="Discorb::Message (class)">Discorb::Message</a></span></tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;<span class='object_link'><a href="Message.html" title="Discorb::Message (class)">Discorb::Message</a></span>&gt;</tt>)</span>
       
       
       
@@ -1252,7 +1252,7 @@
     <span class='kw'>end</span>
     <span class='id identifier rubyid_files'>files</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_file'>file</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_file'>file</span>
     <span class='kw'>if</span> <span class='id identifier rubyid_files'>files</span>
-      <span class='id identifier rubyid_headers'>headers</span><span class='comma'>,</span> <span class='id identifier rubyid_payload'>payload</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="HTTP.html" title="Discorb::HTTP (class)">HTTP</a></span></span><span class='period'>.</span><span class='id identifier rubyid_multipart'><span class='object_link'><a href="HTTP.html#multipart-class_method" title="Discorb::HTTP.multipart (method)">multipart</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_payload'>payload</span><span class='comma'>,</span> <span class='id identifier rubyid_files'>files</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_headers'>headers</span><span class='comma'>,</span> <span class='id identifier rubyid_payload'>payload</span> <span class='op'>=</span> <span class='const'>HTTP</span><span class='period'>.</span><span class='id identifier rubyid_multipart'>multipart</span><span class='lparen'>(</span><span class='id identifier rubyid_payload'>payload</span><span class='comma'>,</span> <span class='id identifier rubyid_files'>files</span><span class='rparen'>)</span>
     <span class='kw'>else</span>
       <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
     <span class='kw'>end</span>
@@ -1381,7 +1381,7 @@ If block is given, trigger typing indicator during executing block.</p>
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/2aa9aa64ce16fc07a85e23bedc0921b16afa837f"><code>2aa9aa64ce16fc07a85e23bedc0921b16afa837f</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/d59f5f10c8fec98c8f7919d0dfed1dd3fb37c3c4"><code>d59f5f10c8fec98c8f7919d0dfed1dd3fb37c3c4</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>

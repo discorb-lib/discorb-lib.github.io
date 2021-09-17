@@ -93,6 +93,11 @@
   
   
   
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="Connectable.html" title="Discorb::Connectable (module)">Connectable</a></span></dd>
+  </dl>
+  
   
 
   
@@ -204,7 +209,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#edit-instance_method" title="#edit (instance method)">#<strong>edit</strong>(name: :unset, position: :unset, bitrate: :unset, rtc_region: :unset, reason: nil)  &#x21d2; self </a>
+      <a href="#edit-instance_method" title="#edit (instance method)">#<strong>edit</strong>(name: :unset, position: :unset, bitrate: :unset, rtc_region: :unset, reason: nil)  &#x21d2; Async::Task&lt;self&gt; </a>
     
 
     
@@ -229,7 +234,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#fetch_stage_instance-instance_method" title="#fetch_stage_instance (instance method)">#<strong>fetch_stage_instance</strong>  &#x21d2; StageInstance<sup>?</sup> </a>
+      <a href="#fetch_stage_instance-instance_method" title="#fetch_stage_instance (instance method)">#<strong>fetch_stage_instance</strong>  &#x21d2; Async::Task&lt;StageInstance&gt;, Async::Task&lt;nil&gt; </a>
     
 
     
@@ -274,7 +279,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#start-instance_method" title="#start (instance method)">#<strong>start</strong>(topic, public: false, reason: nil)  &#x21d2; Discorb::StageInstance </a>
+      <a href="#start-instance_method" title="#start (instance method)">#<strong>start</strong>(topic, public: false, reason: nil)  &#x21d2; Async::Task&lt;Discorb::StageInstance&gt; </a>
     
 
     
@@ -297,6 +302,17 @@
     </ul>
   
 
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Connectable.html" title="Discorb::Connectable (module)">Connectable</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Connectable.html#connect-instance_method" title="Discorb::Connectable#connect (method)">#connect</a></span></p>
 
   
   
@@ -379,12 +395,12 @@
       <pre class="lines">
 
 
-696
 697
-698</pre>
+698
+699</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 696</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 697</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_bitrate'>bitrate</span>
   <span class='ivar'>@bitrate</span>
@@ -438,12 +454,12 @@
       <pre class="lines">
 
 
-698
 699
-700</pre>
+700
+701</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 698</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 699</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_user_limit'>user_limit</span>
   <span class='ivar'>@user_limit</span>
@@ -463,7 +479,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="edit-instance_method">
   
-    #<strong>edit</strong>(name: :unset, position: :unset, bitrate: :unset, rtc_region: :unset, reason: nil)  &#x21d2; <tt>self</tt> 
+    #<strong>edit</strong>(name: :unset, position: :unset, bitrate: :unset, rtc_region: :unset, reason: nil)  &#x21d2; <tt>Async::Task&lt;self&gt;</tt> 
   
 
   
@@ -596,7 +612,7 @@
     <li>
       
       
-        <span class='type'>(<tt>self</tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;self&gt;</tt>)</span>
       
       
       
@@ -631,9 +647,6 @@
       <pre class="lines">
 
 
-730
-731
-732
 733
 734
 735
@@ -641,10 +654,13 @@
 737
 738
 739
-740</pre>
+740
+741
+742
+743</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 730</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 733</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_edit'>edit</span><span class='lparen'>(</span><span class='label'>name:</span> <span class='symbol'>:unset</span><span class='comma'>,</span> <span class='label'>position:</span> <span class='symbol'>:unset</span><span class='comma'>,</span> <span class='label'>bitrate:</span> <span class='symbol'>:unset</span><span class='comma'>,</span> <span class='label'>rtc_region:</span> <span class='symbol'>:unset</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -665,7 +681,7 @@
       <div class="method_details ">
   <h3 class="signature " id="fetch_stage_instance-instance_method">
   
-    #<strong>fetch_stage_instance</strong>  &#x21d2; <tt><span class='object_link'><a href="StageInstance.html" title="Discorb::StageInstance (class)">StageInstance</a></span></tt><sup>?</sup> 
+    #<strong>fetch_stage_instance</strong>  &#x21d2; <tt>Async::Task&lt;<span class='object_link'><a href="StageInstance.html" title="Discorb::StageInstance (class)">StageInstance</a></span>&gt;</tt>, <tt>Async::Task&lt;nil&gt;</tt> 
   
 
   
@@ -699,7 +715,7 @@
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="StageInstance.html" title="Discorb::StageInstance (class)">StageInstance</a></span></tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;<span class='object_link'><a href="StageInstance.html" title="Discorb::StageInstance (class)">StageInstance</a></span>&gt;</tt>)</span>
       
       
       
@@ -712,7 +728,7 @@
     <li>
       
       
-        <span class='type'>(<tt>nil</tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;nil&gt;</tt>)</span>
       
       
       
@@ -747,18 +763,18 @@
       <pre class="lines">
 
 
-770
-771
-772
 773
 774
 775
 776
 777
-778</pre>
+778
+779
+780
+781</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 770</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 773</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_stage_instance'>fetch_stage_instance</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -789,12 +805,12 @@
       <pre class="lines">
 
 
-712
-713
-714</pre>
+715
+716
+717</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 712</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 715</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_stage_instance'>stage_instance</span>
   <span class='ivar'>@stage_instances</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
@@ -807,7 +823,7 @@
       <div class="method_details ">
   <h3 class="signature " id="start-instance_method">
   
-    #<strong>start</strong>(topic, public: false, reason: nil)  &#x21d2; <tt><span class='object_link'><a href="StageInstance.html" title="Discorb::StageInstance (class)">Discorb::StageInstance</a></span></tt> 
+    #<strong>start</strong>(topic, public: false, reason: nil)  &#x21d2; <tt>Async::Task&lt;<span class='object_link'><a href="StageInstance.html" title="Discorb::StageInstance (class)">Discorb::StageInstance</a></span>&gt;</tt> 
   
 
   
@@ -894,7 +910,7 @@
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="StageInstance.html" title="Discorb::StageInstance (class)">Discorb::StageInstance</a></span></tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;<span class='object_link'><a href="StageInstance.html" title="Discorb::StageInstance (class)">Discorb::StageInstance</a></span>&gt;</tt>)</span>
       
       
       
@@ -929,15 +945,15 @@
       <pre class="lines">
 
 
-755
-756
-757
 758
 759
-760</pre>
+760
+761
+762
+763</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 755</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 758</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_start'>start</span><span class='lparen'>(</span><span class='id identifier rubyid_topic'>topic</span><span class='comma'>,</span> <span class='label'>public:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -955,7 +971,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/2aa9aa64ce16fc07a85e23bedc0921b16afa837f"><code>2aa9aa64ce16fc07a85e23bedc0921b16afa837f</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/d59f5f10c8fec98c8f7919d0dfed1dd3fb37c3c4"><code>d59f5f10c8fec98c8f7919d0dfed1dd3fb37c3c4</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>

@@ -329,7 +329,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#create_invite-instance_method" title="#create_invite (instance method)">#<strong>create_invite</strong>(max_age: nil, max_uses: nil, temporary: false, unique: false, reason: nil)  &#x21d2; Invite </a>
+      <a href="#create_invite-instance_method" title="#create_invite (instance method)">#<strong>create_invite</strong>(max_age: nil, max_uses: nil, temporary: false, unique: false, reason: nil)  &#x21d2; Async::Task&lt;Invite&gt; </a>
     
 
     
@@ -352,7 +352,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#create_webhook-instance_method" title="#create_webhook (instance method)">#<strong>create_webhook</strong>(name, avatar: nil)  &#x21d2; Discorb::Webhook::IncomingWebhook </a>
+      <a href="#create_webhook-instance_method" title="#create_webhook (instance method)">#<strong>create_webhook</strong>(name, avatar: nil)  &#x21d2; Async::Task&lt;Discorb::Webhook::IncomingWebhook&gt; </a>
     
 
     
@@ -425,7 +425,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#edit-instance_method" title="#edit (instance method)">#<strong>edit</strong>(name: :unset, position: :unset, category: :unset, parent: :unset, topic: :unset, nsfw: :unset, announce: :unset, rate_limit_per_user: :unset, slowmode: :unset, default_auto_archive_duration: :unset, archive_in: :unset, reason: nil)  &#x21d2; self </a>
+      <a href="#edit-instance_method" title="#edit (instance method)">#<strong>edit</strong>(name: :unset, position: :unset, category: :unset, parent: :unset, topic: :unset, nsfw: :unset, announce: :unset, rate_limit_per_user: :unset, slowmode: :unset, default_auto_archive_duration: :unset, archive_in: :unset, reason: nil)  &#x21d2; Async::Task&lt;self&gt; </a>
     
 
     
@@ -450,7 +450,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#fetch_archived_private_threads-instance_method" title="#fetch_archived_private_threads (instance method)">#<strong>fetch_archived_private_threads</strong>  &#x21d2; Array&lt;Discorb::ThreadChannel&gt; </a>
+      <a href="#fetch_archived_private_threads-instance_method" title="#fetch_archived_private_threads (instance method)">#<strong>fetch_archived_private_threads</strong>  &#x21d2; Async::Task&lt;Array&lt;Discorb::ThreadChannel&gt;&gt; </a>
     
 
     
@@ -473,7 +473,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#fetch_archived_public_threads-instance_method" title="#fetch_archived_public_threads (instance method)">#<strong>fetch_archived_public_threads</strong>  &#x21d2; Array&lt;Discorb::ThreadChannel&gt; </a>
+      <a href="#fetch_archived_public_threads-instance_method" title="#fetch_archived_public_threads (instance method)">#<strong>fetch_archived_public_threads</strong>  &#x21d2; Async::Task&lt;Array&lt;Discorb::ThreadChannel&gt;&gt; </a>
     
 
     
@@ -496,7 +496,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#fetch_invites-instance_method" title="#fetch_invites (instance method)">#<strong>fetch_invites</strong>  &#x21d2; Array&lt;Discorb::Invite&gt; </a>
+      <a href="#fetch_invites-instance_method" title="#fetch_invites (instance method)">#<strong>fetch_invites</strong>  &#x21d2; Async::Task&lt;Array&lt;Discorb::Invite&gt;&gt; </a>
     
 
     
@@ -519,7 +519,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#fetch_joined_archived_private_threads-instance_method" title="#fetch_joined_archived_private_threads (instance method)">#<strong>fetch_joined_archived_private_threads</strong>(limit: nil, before: nil)  &#x21d2; Array&lt;Discorb::ThreadChannel&gt; </a>
+      <a href="#fetch_joined_archived_private_threads-instance_method" title="#fetch_joined_archived_private_threads (instance method)">#<strong>fetch_joined_archived_private_threads</strong>(limit: nil, before: nil)  &#x21d2; Async::Task&lt;Array&lt;Discorb::ThreadChannel&gt;&gt; </a>
     
 
     
@@ -542,7 +542,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#fetch_pins-instance_method" title="#fetch_pins (instance method)">#<strong>fetch_pins</strong>  &#x21d2; Array&lt;Discorb::Message&gt; </a>
+      <a href="#fetch_pins-instance_method" title="#fetch_pins (instance method)">#<strong>fetch_pins</strong>  &#x21d2; Async::Task&lt;Array&lt;Discorb::Message&gt;&gt; </a>
     
 
     
@@ -565,7 +565,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#fetch_webhooks-instance_method" title="#fetch_webhooks (instance method)">#<strong>fetch_webhooks</strong>  &#x21d2; Array&lt;Discorb::Webhook&gt; </a>
+      <a href="#fetch_webhooks-instance_method" title="#fetch_webhooks (instance method)">#<strong>fetch_webhooks</strong>  &#x21d2; Async::Task&lt;Array&lt;Discorb::Webhook&gt;&gt; </a>
     
 
     
@@ -682,7 +682,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#start_thread-instance_method" title="#start_thread (instance method)">#<strong>start_thread</strong>(name, message: nil, auto_archive_duration: 1440, public: true, reason: nil)  &#x21d2; Discorb::ThreadChannel </a>
+      <a href="#start_thread-instance_method" title="#start_thread (instance method)">#<strong>start_thread</strong>(name, message: nil, auto_archive_duration: 1440, public: true, reason: nil)  &#x21d2; Async::Task&lt;Discorb::ThreadChannel&gt; </a>
     
 
     
@@ -1151,7 +1151,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="create_invite-instance_method">
   
-    #<strong>create_invite</strong>(max_age: nil, max_uses: nil, temporary: false, unique: false, reason: nil)  &#x21d2; <tt><span class='object_link'><a href="Invite.html" title="Discorb::Invite (class)">Invite</a></span></tt> 
+    #<strong>create_invite</strong>(max_age: nil, max_uses: nil, temporary: false, unique: false, reason: nil)  &#x21d2; <tt>Async::Task&lt;<span class='object_link'><a href="Invite.html" title="Discorb::Invite (class)">Invite</a></span>&gt;</tt> 
   
 
   
@@ -1275,7 +1275,7 @@
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Invite.html" title="Discorb::Invite (class)">Invite</a></span></tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;<span class='object_link'><a href="Invite.html" title="Discorb::Invite (class)">Invite</a></span>&gt;</tt>)</span>
       
       
       
@@ -1344,7 +1344,7 @@
       <div class="method_details ">
   <h3 class="signature " id="create_webhook-instance_method">
   
-    #<strong>create_webhook</strong>(name, avatar: nil)  &#x21d2; <tt><span class='object_link'><a href="Webhook/IncomingWebhook.html" title="Discorb::Webhook::IncomingWebhook (class)">Discorb::Webhook::IncomingWebhook</a></span></tt> 
+    #<strong>create_webhook</strong>(name, avatar: nil)  &#x21d2; <tt>Async::Task&lt;<span class='object_link'><a href="Webhook/IncomingWebhook.html" title="Discorb::Webhook::IncomingWebhook (class)">Discorb::Webhook::IncomingWebhook</a></span>&gt;</tt> 
   
 
   
@@ -1414,7 +1414,7 @@
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Webhook/IncomingWebhook.html" title="Discorb::Webhook::IncomingWebhook (class)">Discorb::Webhook::IncomingWebhook</a></span></tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;<span class='object_link'><a href="Webhook/IncomingWebhook.html" title="Discorb::Webhook::IncomingWebhook (class)">Discorb::Webhook::IncomingWebhook</a></span>&gt;</tt>)</span>
       
       
       
@@ -1731,7 +1731,7 @@
       <div class="method_details ">
   <h3 class="signature " id="edit-instance_method">
   
-    #<strong>edit</strong>(name: :unset, position: :unset, category: :unset, parent: :unset, topic: :unset, nsfw: :unset, announce: :unset, rate_limit_per_user: :unset, slowmode: :unset, default_auto_archive_duration: :unset, archive_in: :unset, reason: nil)  &#x21d2; <tt>self</tt> 
+    #<strong>edit</strong>(name: :unset, position: :unset, category: :unset, parent: :unset, topic: :unset, nsfw: :unset, announce: :unset, rate_limit_per_user: :unset, slowmode: :unset, default_auto_archive_duration: :unset, archive_in: :unset, reason: nil)  &#x21d2; <tt>Async::Task&lt;self&gt;</tt> 
   
 
   
@@ -1983,7 +1983,7 @@
     <li>
       
       
-        <span class='type'>(<tt>self</tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;self&gt;</tt>)</span>
       
       
       
@@ -2078,7 +2078,7 @@
       <div class="method_details ">
   <h3 class="signature " id="fetch_archived_private_threads-instance_method">
   
-    #<strong>fetch_archived_private_threads</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="ThreadChannel.html" title="Discorb::ThreadChannel (class)">Discorb::ThreadChannel</a></span>&gt;</tt> 
+    #<strong>fetch_archived_private_threads</strong>  &#x21d2; <tt>Async::Task&lt;Array&lt;<span class='object_link'><a href="ThreadChannel.html" title="Discorb::ThreadChannel (class)">Discorb::ThreadChannel</a></span>&gt;&gt;</tt> 
   
 
   
@@ -2112,7 +2112,7 @@
     <li>
       
       
-        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="ThreadChannel.html" title="Discorb::ThreadChannel (class)">Discorb::ThreadChannel</a></span>&gt;</tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;Array&lt;<span class='object_link'><a href="ThreadChannel.html" title="Discorb::ThreadChannel (class)">Discorb::ThreadChannel</a></span>&gt;&gt;</tt>)</span>
       
       
       
@@ -2171,7 +2171,7 @@
       <div class="method_details ">
   <h3 class="signature " id="fetch_archived_public_threads-instance_method">
   
-    #<strong>fetch_archived_public_threads</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="ThreadChannel.html" title="Discorb::ThreadChannel (class)">Discorb::ThreadChannel</a></span>&gt;</tt> 
+    #<strong>fetch_archived_public_threads</strong>  &#x21d2; <tt>Async::Task&lt;Array&lt;<span class='object_link'><a href="ThreadChannel.html" title="Discorb::ThreadChannel (class)">Discorb::ThreadChannel</a></span>&gt;&gt;</tt> 
   
 
   
@@ -2205,7 +2205,7 @@
     <li>
       
       
-        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="ThreadChannel.html" title="Discorb::ThreadChannel (class)">Discorb::ThreadChannel</a></span>&gt;</tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;Array&lt;<span class='object_link'><a href="ThreadChannel.html" title="Discorb::ThreadChannel (class)">Discorb::ThreadChannel</a></span>&gt;&gt;</tt>)</span>
       
       
       
@@ -2264,7 +2264,7 @@
       <div class="method_details ">
   <h3 class="signature " id="fetch_invites-instance_method">
   
-    #<strong>fetch_invites</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="Invite.html" title="Discorb::Invite (class)">Discorb::Invite</a></span>&gt;</tt> 
+    #<strong>fetch_invites</strong>  &#x21d2; <tt>Async::Task&lt;Array&lt;<span class='object_link'><a href="Invite.html" title="Discorb::Invite (class)">Discorb::Invite</a></span>&gt;&gt;</tt> 
   
 
   
@@ -2298,7 +2298,7 @@
     <li>
       
       
-        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Invite.html" title="Discorb::Invite (class)">Discorb::Invite</a></span>&gt;</tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;Array&lt;<span class='object_link'><a href="Invite.html" title="Discorb::Invite (class)">Discorb::Invite</a></span>&gt;&gt;</tt>)</span>
       
       
       
@@ -2357,7 +2357,7 @@
       <div class="method_details ">
   <h3 class="signature " id="fetch_joined_archived_private_threads-instance_method">
   
-    #<strong>fetch_joined_archived_private_threads</strong>(limit: nil, before: nil)  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="ThreadChannel.html" title="Discorb::ThreadChannel (class)">Discorb::ThreadChannel</a></span>&gt;</tt> 
+    #<strong>fetch_joined_archived_private_threads</strong>(limit: nil, before: nil)  &#x21d2; <tt>Async::Task&lt;Array&lt;<span class='object_link'><a href="ThreadChannel.html" title="Discorb::ThreadChannel (class)">Discorb::ThreadChannel</a></span>&gt;&gt;</tt> 
   
 
   
@@ -2429,7 +2429,7 @@
     <li>
       
       
-        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="ThreadChannel.html" title="Discorb::ThreadChannel (class)">Discorb::ThreadChannel</a></span>&gt;</tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;Array&lt;<span class='object_link'><a href="ThreadChannel.html" title="Discorb::ThreadChannel (class)">Discorb::ThreadChannel</a></span>&gt;&gt;</tt>)</span>
       
       
       
@@ -2514,7 +2514,7 @@
       <div class="method_details ">
   <h3 class="signature " id="fetch_pins-instance_method">
   
-    #<strong>fetch_pins</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="Message.html" title="Discorb::Message (class)">Discorb::Message</a></span>&gt;</tt> 
+    #<strong>fetch_pins</strong>  &#x21d2; <tt>Async::Task&lt;Array&lt;<span class='object_link'><a href="Message.html" title="Discorb::Message (class)">Discorb::Message</a></span>&gt;&gt;</tt> 
   
 
   
@@ -2548,7 +2548,7 @@
     <li>
       
       
-        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Message.html" title="Discorb::Message (class)">Discorb::Message</a></span>&gt;</tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;Array&lt;<span class='object_link'><a href="Message.html" title="Discorb::Message (class)">Discorb::Message</a></span>&gt;&gt;</tt>)</span>
       
       
       
@@ -2607,7 +2607,7 @@
       <div class="method_details ">
   <h3 class="signature " id="fetch_webhooks-instance_method">
   
-    #<strong>fetch_webhooks</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="Webhook.html" title="Discorb::Webhook (class)">Discorb::Webhook</a></span>&gt;</tt> 
+    #<strong>fetch_webhooks</strong>  &#x21d2; <tt>Async::Task&lt;Array&lt;<span class='object_link'><a href="Webhook.html" title="Discorb::Webhook (class)">Discorb::Webhook</a></span>&gt;&gt;</tt> 
   
 
   
@@ -2641,7 +2641,7 @@
     <li>
       
       
-        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Webhook.html" title="Discorb::Webhook (class)">Discorb::Webhook</a></span>&gt;</tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;Array&lt;<span class='object_link'><a href="Webhook.html" title="Discorb::Webhook (class)">Discorb::Webhook</a></span>&gt;&gt;</tt>)</span>
       
       
       
@@ -3181,7 +3181,7 @@
       <div class="method_details ">
   <h3 class="signature " id="start_thread-instance_method">
   
-    #<strong>start_thread</strong>(name, message: nil, auto_archive_duration: 1440, public: true, reason: nil)  &#x21d2; <tt><span class='object_link'><a href="ThreadChannel.html" title="Discorb::ThreadChannel (class)">Discorb::ThreadChannel</a></span></tt> 
+    #<strong>start_thread</strong>(name, message: nil, auto_archive_duration: 1440, public: true, reason: nil)  &#x21d2; <tt>Async::Task&lt;<span class='object_link'><a href="ThreadChannel.html" title="Discorb::ThreadChannel (class)">Discorb::ThreadChannel</a></span>&gt;</tt> 
   
 
   
@@ -3306,7 +3306,7 @@
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="ThreadChannel.html" title="Discorb::ThreadChannel (class)">Discorb::ThreadChannel</a></span></tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;<span class='object_link'><a href="ThreadChannel.html" title="Discorb::ThreadChannel (class)">Discorb::ThreadChannel</a></span>&gt;</tt>)</span>
       
       
       
@@ -3495,7 +3495,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/2aa9aa64ce16fc07a85e23bedc0921b16afa837f"><code>2aa9aa64ce16fc07a85e23bedc0921b16afa837f</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/d59f5f10c8fec98c8f7919d0dfed1dd3fb37c3c4"><code>d59f5f10c8fec98c8f7919d0dfed1dd3fb37c3c4</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>

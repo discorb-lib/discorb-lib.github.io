@@ -274,7 +274,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#components-instance_method" title="#components (instance method)">#<strong>components</strong>  &#x21d2; Array&lt;Array&lt;Discorb::Components&gt;&gt; </a>
+      <a href="#components-instance_method" title="#components (instance method)">#<strong>components</strong>  &#x21d2; Array&lt;Array&lt;Discorb::Component&gt;&gt; </a>
     
 
     
@@ -1013,7 +1013,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#fetch_reacted_users-instance_method" title="#fetch_reacted_users (instance method)">#<strong>fetch_reacted_users</strong>(emoji, limit: nil, after: 0)  &#x21d2; Array&lt;Discorb::User&gt; </a>
+      <a href="#fetch_reacted_users-instance_method" title="#fetch_reacted_users (instance method)">#<strong>fetch_reacted_users</strong>(emoji, limit: nil, after: 0)  &#x21d2; Async::Task&lt;Array&lt;Discorb::User&gt;&gt; </a>
     
 
     
@@ -1155,7 +1155,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#reply-instance_method" title="#reply (instance method)">#<strong>reply</strong>(*args, **kwargs)  &#x21d2; Discorb::Message </a>
+      <a href="#reply-instance_method" title="#reply (instance method)">#<strong>reply</strong>(*args, **kwargs)  &#x21d2; Async::Task&lt;Discorb::Message&gt; </a>
     
 
     
@@ -1178,7 +1178,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#start_thread-instance_method" title="#start_thread (instance method)">#<strong>start_thread</strong>(*args, **kwargs)  &#x21d2; &lt;Type&gt; </a>
+      <a href="#start_thread-instance_method" title="#start_thread (instance method)">#<strong>start_thread</strong>(*args, **kwargs)  &#x21d2; Async::Task&lt;&lt;Type&gt;&gt; </a>
     
 
     
@@ -1579,7 +1579,7 @@
       <div class="method_details ">
   <h3 class="signature " id="components-instance_method">
   
-    #<strong>components</strong>  &#x21d2; <tt>Array&lt;Array&lt;Discorb::Components&gt;&gt;</tt>  <span class="extras">(readonly)</span>
+    #<strong>components</strong>  &#x21d2; <tt>Array&lt;Array&lt;<span class='object_link'><a href="Component.html" title="Discorb::Component (class)">Discorb::Component</a></span>&gt;&gt;</tt>  <span class="extras">(readonly)</span>
   
 
   
@@ -1600,7 +1600,7 @@
     <li>
       
       
-        <span class='type'>(<tt>Array&lt;Array&lt;Discorb::Components&gt;&gt;</tt>)</span>
+        <span class='type'>(<tt>Array&lt;Array&lt;<span class='object_link'><a href="Component.html" title="Discorb::Component (class)">Discorb::Component</a></span>&gt;&gt;</tt>)</span>
       
       
       
@@ -3255,7 +3255,7 @@
         <span class='name'>embeds</span>
       
       
-        <span class='type'>(<tt>Array&lt;Discord::Embed&gt;</tt>)</span>
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Embed.html" title="Discorb::Embed (class)">Discorb::Embed</a></span>&gt;</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>nil</tt>)</em>
@@ -3353,7 +3353,7 @@
       <div class="method_details ">
   <h3 class="signature " id="fetch_reacted_users-instance_method">
   
-    #<strong>fetch_reacted_users</strong>(emoji, limit: nil, after: 0)  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="User.html" title="Discorb::User (class)">Discorb::User</a></span>&gt;</tt> 
+    #<strong>fetch_reacted_users</strong>(emoji, limit: nil, after: 0)  &#x21d2; <tt>Async::Task&lt;Array&lt;<span class='object_link'><a href="User.html" title="Discorb::User (class)">Discorb::User</a></span>&gt;&gt;</tt> 
   
 
   
@@ -3440,7 +3440,7 @@
     <li>
       
       
-        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="User.html" title="Discorb::User (class)">Discorb::User</a></span>&gt;</tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;Array&lt;<span class='object_link'><a href="User.html" title="Discorb::User (class)">Discorb::User</a></span>&gt;&gt;</tt>)</span>
       
       
       
@@ -3949,7 +3949,7 @@
       <div class="method_details ">
   <h3 class="signature " id="reply-instance_method">
   
-    #<strong>reply</strong>(*args, **kwargs)  &#x21d2; <tt><span class='object_link'><a href="" title="Discorb::Message (class)">Discorb::Message</a></span></tt> 
+    #<strong>reply</strong>(*args, **kwargs)  &#x21d2; <tt>Async::Task&lt;<span class='object_link'><a href="" title="Discorb::Message (class)">Discorb::Message</a></span>&gt;</tt> 
   
 
   
@@ -3983,7 +3983,7 @@
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="" title="Discorb::Message (class)">Discorb::Message</a></span></tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;<span class='object_link'><a href="" title="Discorb::Message (class)">Discorb::Message</a></span>&gt;</tt>)</span>
       
       
       
@@ -4040,7 +4040,7 @@
       <div class="method_details ">
   <h3 class="signature " id="start_thread-instance_method">
   
-    #<strong>start_thread</strong>(*args, **kwargs)  &#x21d2; <tt>&lt;Type&gt;</tt> 
+    #<strong>start_thread</strong>(*args, **kwargs)  &#x21d2; <tt>Async::Task&lt;&lt;Type&gt;&gt;</tt> 
   
 
   
@@ -4065,7 +4065,7 @@
     <li>
       
       
-        <span class='type'>(<tt>&lt;Type&gt;</tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;&lt;Type&gt;&gt;</tt>)</span>
       
       
       
@@ -4269,7 +4269,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/2aa9aa64ce16fc07a85e23bedc0921b16afa837f"><code>2aa9aa64ce16fc07a85e23bedc0921b16afa837f</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/d59f5f10c8fec98c8f7919d0dfed1dd3fb37c3c4"><code>d59f5f10c8fec98c8f7919d0dfed1dd3fb37c3c4</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>
