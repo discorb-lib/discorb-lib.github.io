@@ -1484,18 +1484,18 @@
       <pre class="code"><span class="info file"># File 'lib/discorb/embed.rb', line 95</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_hash'>to_hash</span>
-  <span class='lbrace'>{</span>
-    <span class='label'>title:</span> <span class='ivar'>@title</span><span class='comma'>,</span>
-    <span class='label'>description:</span> <span class='ivar'>@description</span><span class='comma'>,</span>
-    <span class='label'>url:</span> <span class='ivar'>@url</span><span class='comma'>,</span>
-    <span class='label'>timestamp:</span> <span class='ivar'>@timestamp</span><span class='op'>&amp;.</span><span class='id identifier rubyid_iso8601'>iso8601</span><span class='comma'>,</span>
-    <span class='label'>color:</span> <span class='ivar'>@color</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span>
-    <span class='label'>footer:</span> <span class='ivar'>@footer</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='comma'>,</span>
-    <span class='label'>image:</span> <span class='ivar'>@image</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='comma'>,</span>
-    <span class='label'>thumbnail:</span> <span class='ivar'>@thumbnail</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='comma'>,</span>
-    <span class='label'>author:</span> <span class='ivar'>@author</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='comma'>,</span>
-    <span class='label'>fields:</span> <span class='ivar'>@fields</span><span class='op'>&amp;.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_f'>f</span><span class='op'>|</span> <span class='id identifier rubyid_f'>f</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span> <span class='rbrace'>}</span><span class='comma'>,</span>
-  <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>type:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rich</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:title</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@title</span> <span class='kw'>if</span> <span class='ivar'>@title</span>
+  <span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:description</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@description</span> <span class='kw'>if</span> <span class='ivar'>@description</span>
+  <span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:url</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@url</span> <span class='kw'>if</span> <span class='ivar'>@url</span>
+  <span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:timestamp</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@timestamp</span><span class='op'>&amp;.</span><span class='id identifier rubyid_iso8601'>iso8601</span> <span class='kw'>if</span> <span class='ivar'>@timestamp</span>
+  <span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:color</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@color</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='kw'>if</span> <span class='ivar'>@color</span>
+  <span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:footer</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@footer</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_hash'>to_hash</span> <span class='kw'>if</span> <span class='ivar'>@footer</span>
+  <span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:image</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@image</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_hash'>to_hash</span> <span class='kw'>if</span> <span class='ivar'>@image</span>
+  <span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:thumbnail</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@thumbnail</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_hash'>to_hash</span> <span class='kw'>if</span> <span class='ivar'>@thumbnail</span>
+  <span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:author</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@author</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_hash'>to_hash</span> <span class='kw'>if</span> <span class='ivar'>@author</span>
+  <span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:fields</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@fields</span><span class='op'>&amp;.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_f'>f</span><span class='op'>|</span> <span class='id identifier rubyid_f'>f</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span> <span class='rbrace'>}</span> <span class='kw'>if</span> <span class='ivar'>@fields</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span>
+  <span class='id identifier rubyid_ret'>ret</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1507,7 +1507,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/0830ba13f42aa650f6436360e95bee9a9573b267"><code>0830ba13f42aa650f6436360e95bee9a9573b267</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/72759d99369c148dda6657adc55c8ed5b24cc799"><code>72759d99369c148dda6657adc55c8ed5b24cc799</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>
