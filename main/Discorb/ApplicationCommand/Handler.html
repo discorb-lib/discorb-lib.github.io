@@ -185,7 +185,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#slash_group-instance_method" title="#slash_group (instance method)">#<strong>slash_group</strong>(command_name, description, guild_ids: nil) { ... } &#x21d2; Discorb::ApplicationCommand::Command::GroupCommand </a>
+      <a href="#slash_group-instance_method" title="#slash_group (instance method)">#<strong>slash_group</strong>(command_name, description, guild_ids: nil) {|group| ... } &#x21d2; Discorb::ApplicationCommand::Command::GroupCommand </a>
     
 
     
@@ -724,7 +724,7 @@ The key is the option name, the value is a hash with the following keys:</p>
       <div class="method_details ">
   <h3 class="signature " id="slash_group-instance_method">
   
-    #<strong>slash_group</strong>(command_name, description, guild_ids: nil) { ... } &#x21d2; <tt><span class='object_link'><a href="Command/GroupCommand.html" title="Discorb::ApplicationCommand::Command::GroupCommand (class)">Discorb::ApplicationCommand::Command::GroupCommand</a></span></tt> 
+    #<strong>slash_group</strong>(command_name, description, guild_ids: nil) {|group| ... } &#x21d2; <tt><span class='object_link'><a href="Command/GroupCommand.html" title="Discorb::ApplicationCommand::Command::GroupCommand (class)">Discorb::ApplicationCommand::Command::GroupCommand</a></span></tt> 
   
 
   
@@ -801,7 +801,26 @@ The key is the option name, the value is a hash with the following keys:</p>
       
       
         
-        <div class='inline'><p>Block to execute as the command. It can be used to define sub-commands.</p>
+        <div class='inline'><p>Block to yield with the command.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>group</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Command/GroupCommand.html" title="Discorb::ApplicationCommand::Command::GroupCommand (class)">Discorb::ApplicationCommand::Command::GroupCommand</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Group command.</p>
 </div>
       
     </li>
@@ -852,7 +871,7 @@ The key is the option name, the value is a hash with the following keys:</p>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_slash_group'>slash_group</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>guild_ids:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../ApplicationCommand.html" title="Discorb::ApplicationCommand (module)">ApplicationCommand</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Command.html" title="Discorb::ApplicationCommand::Command (class)">Command</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Command/GroupCommand.html" title="Discorb::ApplicationCommand::Command::GroupCommand (class)">GroupCommand</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_guild_ids'>guild_ids</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_instance_eval'>instance_eval</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+  <span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_yield_self'>yield_self</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
   <span class='ivar'>@commands</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_command'>command</span>
   <span class='id identifier rubyid_command'>command</span>
 <span class='kw'>end</span></pre>
@@ -1029,7 +1048,7 @@ The key is the option name, the value is a hash with the following keys:</p>
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/8c7331afb04df0973444dd0765b4ffb869c782ff"><code>8c7331afb04df0973444dd0765b4ffb869c782ff</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/61241048279bb4fe5165767bdbc368e32d5bc260"><code>61241048279bb4fe5165767bdbc368e32d5bc260</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>
