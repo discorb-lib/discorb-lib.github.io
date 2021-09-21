@@ -274,27 +274,34 @@
 <li>Add: Add <code>error</code> event</li>
 <li>Fix: Fix some issues with client without guild intent</li>
 <li>Add: Add alias for <code>#fired_by</code></li>
-<li>Change!: Change block usage of <code>ApplicationCommand::Handler#group</code>
-```ruby
-# before
-client.slash_group do
-slash &quot;help&quot;, &quot;Help&quot; do |interaction|
-# ...
-end
-end</li>
+<li>Change!: Change block usage of <code>ApplicationCommand::Handler#group</code></li>
 </ul>
 
-<h1 id="after">after</h1>
+<pre class="code ruby"><code class="ruby"><span class='comment'># before
+</span><span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_slash_group'>slash_group</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_slash'>slash</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>help</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Help</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_interaction'>interaction</span><span class='op'>|</span>
+    <span class='comment'># ...
+</span>  <span class='kw'>end</span>
+<span class='kw'>end</span>
 
-<p>client.slash_group do |group|
-  group.slash &quot;help&quot;, &quot;Help&quot; do |interaction|
-    # ...
-  end
-end</p>
+<span class='comment'># after
+</span><span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_slash_group'>slash_group</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_group'>group</span><span class='op'>|</span>
+  <span class='id identifier rubyid_group'>group</span><span class='period'>.</span><span class='id identifier rubyid_slash'>slash</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>help</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Help</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_interaction'>interaction</span><span class='op'>|</span>
+    <span class='comment'># ...
+</span>  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+</code></pre>
+
+<h2 id="0-7-1">0.7.1</h2>
+
+<ul>
+<li>Fix: Fix error of responding to interaction</li>
+</ul>
 </div></div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/4561909d2dff10a0fc2ae4dae053fdc688856c68"><code>4561909d2dff10a0fc2ae4dae053fdc688856c68</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/ac906b68faf4db608d95fa0273aec8352523414b"><code>ac906b68faf4db608d95fa0273aec8352523414b</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>
