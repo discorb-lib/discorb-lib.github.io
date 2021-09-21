@@ -88,6 +88,18 @@ If true, the command will initialize git and commit the initial files with commi
 Use <code>git commit --amend -m &quot;...&quot;</code> to change the commit message.
 Default to false.</p>
 
+<h3 id="no-desc"><code>--[no-]desc</code></h3>
+
+<p>Whether to create a description file.
+If true, the command will create a <code>.env.sample</code> and <code>README.md</code> file.
+Default to false.</p>
+
+<h3 id="n-name"><code>-n</code> <code>--name</code></h3>
+
+<p>The name of the project.
+It will be used in the <code>README.md</code> file.
+Default to the directory name.</p>
+
 <h3 id="t-token"><code>-t</code>, <code>--token</code></h3>
 
 <p>The name of token environment variable.
@@ -113,6 +125,10 @@ Default to false.</p>
 <td>Environment variables.</td>
 </tr>
 <tr>
+<td><code>main.rb</code></td>
+<td>Main script.</td>
+</tr>
+<tr>
 <td><code>.gitignore</code></td>
 <td>Git ignore file. Won&#39;t be created if <code>--git</code> is false.</td>
 </tr>
@@ -125,14 +141,18 @@ Default to false.</p>
 <td>Gemfile lock file. Won&#39;t be created if <code>--bundle</code> is false.</td>
 </tr>
 <tr>
-<td><code>main.rb</code></td>
-<td>Main script.</td>
+<td><code>README.md</code></td>
+<td>Readme file. Won&#39;t be created if <code>--desc</code> is false.</td>
+</tr>
+<tr>
+<td><code>.env.sample</code></td>
+<td>Sample environment variables. Won&#39;t be created if <code>--desc</code> is false.</td>
 </tr>
 </tbody></table>
 </div></div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/7990c602e6543b97cd272b07f1e0afb6122080ad"><code>7990c602e6543b97cd272b07f1e0afb6122080ad</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/a83fddf40ec0c59ffeb107d6856f4b24b1cebdc8"><code>a83fddf40ec0c59ffeb107d6856f4b24b1cebdc8</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>
