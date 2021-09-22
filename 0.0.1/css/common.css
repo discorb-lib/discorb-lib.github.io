@@ -216,8 +216,8 @@ tt {
   font-family: var(--monospace-font);
 }
 
-pre.code {
-  color: var(--header-secondary);
+pre.code code {
+  color: var(--header-secondary) !important;
   tab-size: 2;
 }
 
@@ -309,6 +309,11 @@ li.odd,
 li.even {
   background: var(--background-secondary);
 }
+
+li.current {
+  background: var(--background-tertiary);
+}
+
 
 .item:hover {
   background: var(--background-secondary-alt);
@@ -416,7 +421,7 @@ code[class=""] {
 
 .docstring .abstract {
   --dstr-back: var(--background-modifier-hover);
-  --dstr-fore: var(--interactive-hover);
+  --dstr-fore: var(--interactive-muted);
 }
 
 .docstring .note {
@@ -516,4 +521,10 @@ li.r2 {
   border-color: var(--background-tertiary);
   color: var(--interactive-active);
   fill: var(--interactive-active);
+}
+
+dd pre.code {
+  padding: 9px 14px;
+  border-radius: 4px;
+  border: 1px solid var(--background-tertiary);
 }

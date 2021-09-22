@@ -7,7 +7,6 @@ body {
   background: #fafafa;
 }
 
-/* Hi!*/
 h1 { padding: 12px 10px; padding-bottom: 0; margin: 0; font-size: 1.4em; }
 .clear { clear: both; }
 .fixed_header { position: fixed; background: #fff; width: 100%; padding-bottom: 10px; margin-top: 0; top: 0; z-index: 9999; height: 70px; }
