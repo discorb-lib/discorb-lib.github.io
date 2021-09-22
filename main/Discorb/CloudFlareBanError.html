@@ -211,7 +211,9 @@
 96
 97
 98
-99</pre>
+99
+100
+101</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/discorb/error.rb', line 92</span>
@@ -219,11 +221,13 @@
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_resp'>resp</span><span class='comma'>,</span> <span class='id identifier rubyid_client'>client</span><span class='rparen'>)</span>
   <span class='ivar'>@client</span> <span class='op'>=</span> <span class='id identifier rubyid_client'>client</span>
   <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_close!'>close!</span>
-  <span class='const'><span class='object_link'><a href="DiscorbError.html" title="Discorb::DiscorbError (class)">DiscorbError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance_method'>instance_method</span><span class='lparen'>(</span><span class='symbol'>:initialize</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_bind'>bind</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='heredoc_beg'>&lt;&lt;~MESSAGE</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_message'>message</span> <span class='op'>=</span> <span class='heredoc_beg'>&lt;&lt;~MESSAGE</span>
 <span class='tstring_content'>    The client is banned from CloudFlare.
 </span><span class='tstring_content'>    Hint: Try to decrease the number of requests per second, e.g. Use sleep in between requests.
 </span><span class='heredoc_end'>  MESSAGE
-</span><span class='kw'>end</span></pre>
+</span>  <span class='gvar'>$stderr</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_message'>message</span>
+  <span class='const'><span class='object_link'><a href="DiscorbError.html" title="Discorb::DiscorbError (class)">DiscorbError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_instance_method'>instance_method</span><span class='lparen'>(</span><span class='symbol'>:initialize</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_bind'>bind</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -235,7 +239,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/5c10c8a9d9d21a33524e5631f03a1529052ae774"><code>5c10c8a9d9d21a33524e5631f03a1529052ae774</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/8950341ee48ede260c6998bbbaa5a622d8d66dfc"><code>8950341ee48ede260c6998bbbaa5a622d8d66dfc</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>

@@ -1864,6 +1864,31 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#fetch_members-instance_method" title="#fetch_members (instance method)">#<strong>fetch_members</strong>(limit: 0, after: nil)  &#x21d2; Async::Task&lt;Array&lt;Discorb::Member&gt;&gt; </a>
+    
+
+    
+      (also: #fetch_member_list)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Fetch members in the guild.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#fetch_members_named-instance_method" title="#fetch_members_named (instance method)">#<strong>fetch_members_named</strong>(name, limit: 1)  &#x21d2; Async::Task&lt;Array&lt;Discorb::Member&gt;&gt; </a>
     
 
@@ -4922,12 +4947,12 @@
       <pre class="lines">
 
 
-1042
-1043
-1044</pre>
+1074
+1075
+1076</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 1042</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 1074</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_banner'>banner</span><span class='lparen'>(</span><span class='id identifier rubyid_guild_id'>guild_id</span><span class='comma'>,</span> <span class='label'>style:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>banner</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#API_BASE_URL-constant" title="Discorb::API_BASE_URL (constant)">API_BASE_URL</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>/guilds/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_guild_id'>guild_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/widget.png&amp;style=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_style'>style</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -5098,17 +5123,17 @@
       <pre class="lines">
 
 
-643
-644
-645
-646
-647
-648
-649
-650</pre>
+675
+676
+677
+678
+679
+680
+681
+682</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 643</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 675</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_ban_member'>ban_member</span><span class='lparen'>(</span><span class='id identifier rubyid_member'>member</span><span class='comma'>,</span> <span class='label'>delete_message_days:</span> <span class='int'>0</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -5214,14 +5239,14 @@
       <pre class="lines">
 
 
-626
-627
-628
-629
-630</pre>
+658
+659
+660
+661
+662</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 626</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 658</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_banned?'>banned?</span><span class='lparen'>(</span><span class='id identifier rubyid_user'>user</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -6056,22 +6081,22 @@
       <pre class="lines">
 
 
-693
-694
-695
-696
-697
-698
-699
-700
-701
-702
-703
-704
-705</pre>
+725
+726
+727
+728
+729
+730
+731
+732
+733
+734
+735
+736
+737</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 693</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 725</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create_role'>create_role</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>color:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>hoist:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>mentionable:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -6417,17 +6442,17 @@
       <pre class="lines">
 
 
-902
-903
-904
-905
-906
-907
-908
-909</pre>
+934
+935
+936
+937
+938
+939
+940
+941</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 902</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 934</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create_template'>create_template</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -7057,14 +7082,14 @@
       <pre class="lines">
 
 
-559
-560
-561
-562
-563</pre>
+591
+592
+593
+594
+595</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 559</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 591</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_edit_nickname'>edit_nickname</span><span class='lparen'>(</span><span class='id identifier rubyid_nickname'>nickname</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -7366,18 +7391,18 @@
       <pre class="lines">
 
 
-607
-608
-609
-610
-611
-612
-613
-614
-615</pre>
+639
+640
+641
+642
+643
+644
+645
+646
+647</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 607</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 639</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_ban'>fetch_ban</span><span class='lparen'>(</span><span class='id identifier rubyid_user'>user</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -7465,15 +7490,15 @@
       <pre class="lines">
 
 
-590
-591
-592
-593
-594
-595</pre>
+622
+623
+624
+625
+626
+627</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 590</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 622</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_bans'>fetch_bans</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -7882,15 +7907,15 @@
       <pre class="lines">
 
 
-784
-785
-786
-787
-788
-789</pre>
+816
+817
+818
+819
+820
+821</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 784</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 816</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_integrations'>fetch_integrations</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -7975,15 +8000,15 @@
       <pre class="lines">
 
 
-770
-771
-772
-773
-774
-775</pre>
+802
+803
+804
+805
+806
+807</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 770</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 802</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_invites'>fetch_invites</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -8017,12 +8042,6 @@
   <div class="note notetag">
     <strong>Note:</strong>
     <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>You must enable <code>GUILD_MEMBERS</code> intent to use this method.</p>
 </div>
   </div>
 
@@ -8106,6 +8125,7 @@
       <pre class="lines">
 
 
+511
 512
 513
 514
@@ -8113,11 +8133,10 @@
 516
 517
 518
-519
-520</pre>
+519</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 512</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 511</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_member'>fetch_member</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -8218,18 +8237,187 @@
       <pre class="lines">
 
 
-547
-548
-549
-550
-551</pre>
+579
+580
+581
+582
+583</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 547</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 579</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_member_named'>fetch_member_named</span><span class='lparen'>(</span><span class='op'>...</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
     <span class='id identifier rubyid_fetch_members_named'>fetch_members_named</span><span class='lparen'>(</span><span class='op'>...</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="fetch_members-instance_method">
+  
+    #<strong>fetch_members</strong>(limit: 0, after: nil)  &#x21d2; <tt>Async::Task&lt;Array&lt;<span class='object_link'><a href="Member.html" title="Discorb::Member (class)">Discorb::Member</a></span>&gt;&gt;</tt> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='fetch_member_list-instance_method'>fetch_member_list</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
+</div>
+  </div>
+
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'><p>This method calls HTTP request.</p>
+</div>
+  </div>
+
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'><p>You must enable <code>GUILD_MEMBERS</code> intent to use this method.</p>
+</div>
+  </div>
+
+<p>Fetch members in the guild.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>limit</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The maximum number of members to fetch, 0 for all.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>after</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The ID of the member to start fetching after.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Async::Task&lt;Array&lt;<span class='object_link'><a href="Member.html" title="Discorb::Member (class)">Discorb::Member</a></span>&gt;&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The list of members.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>HTTP request failed.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 531</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_fetch_members'>fetch_members</span><span class='lparen'>(</span><span class='label'>limit:</span> <span class='int'>0</span><span class='comma'>,</span> <span class='label'>after:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='const'>Async</span> <span class='kw'>do</span>
+    <span class='kw'>unless</span> <span class='id identifier rubyid_limit'>limit</span> <span class='op'>==</span> <span class='int'>0</span>
+      <span class='id identifier rubyid__resp'>_resp</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/guilds/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/members?</span><span class='embexpr_beg'>#{</span><span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_encode_www_form'>encode_www_form</span><span class='lparen'>(</span><span class='lbrace'>{</span> <span class='label'>after:</span> <span class='id identifier rubyid_after'>after</span><span class='comma'>,</span> <span class='label'>limit:</span> <span class='id identifier rubyid_limit'>limit</span> <span class='rbrace'>}</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
+      <span class='kw'>next</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:members</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_m'>m</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="Member.html" title="Discorb::Member (class)">Member</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@client</span><span class='comma'>,</span> <span class='ivar'>@id</span><span class='comma'>,</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='symbol'>:user</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_m'>m</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_after'>after</span> <span class='op'>=</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_loop'>loop</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>after:</span> <span class='id identifier rubyid_after'>after</span><span class='comma'>,</span> <span class='label'>limit:</span> <span class='int'>100</span> <span class='rbrace'>}</span>
+      <span class='id identifier rubyid__resp'>_resp</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/guilds/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/members?</span><span class='embexpr_beg'>#{</span><span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_encode_www_form'>encode_www_form</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
+      <span class='id identifier rubyid_ret'>ret</span> <span class='op'>+=</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_m'>m</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="Member.html" title="Discorb::Member (class)">Member</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@client</span><span class='comma'>,</span> <span class='ivar'>@id</span><span class='comma'>,</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='symbol'>:user</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_m'>m</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+      <span class='id identifier rubyid_after'>after</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='lbracket'>[</span><span class='symbol'>:user</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>!=</span> <span class='int'>1000</span>
+        <span class='kw'>break</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_ret'>ret</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -8345,15 +8533,15 @@
       <pre class="lines">
 
 
-532
-533
-534
-535
-536
-537</pre>
+564
+565
+566
+567
+568
+569</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 532</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 564</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_members_named'>fetch_members_named</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>limit:</span> <span class='int'>1</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -8476,20 +8664,20 @@
       <pre class="lines">
 
 
-717
-718
-719
-720
-721
-722
-723
-724
-725
-726
-727</pre>
+749
+750
+751
+752
+753
+754
+755
+756
+757
+758
+759</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 717</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 749</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_prune'>fetch_prune</span><span class='lparen'>(</span><span class='id identifier rubyid_days'>days</span> <span class='op'>=</span> <span class='int'>7</span><span class='comma'>,</span> <span class='label'>roles:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -8579,15 +8767,15 @@
       <pre class="lines">
 
 
-673
-674
-675
-676
-677
-678</pre>
+705
+706
+707
+708
+709
+710</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 673</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 705</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_roles'>fetch_roles</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -8704,18 +8892,18 @@
       <pre class="lines">
 
 
-857
-858
-859
-860
-861
-862
-863
-864
-865</pre>
+889
+890
+891
+892
+893
+894
+895
+896
+897</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 857</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 889</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_sticker'>fetch_sticker</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -8803,15 +8991,15 @@
       <pre class="lines">
 
 
-840
-841
-842
-843
-844
-845</pre>
+872
+873
+874
+875
+876
+877</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 840</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 872</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_stickers'>fetch_stickers</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -8879,14 +9067,14 @@
       <pre class="lines">
 
 
-887
-888
-889
-890
-891</pre>
+919
+920
+921
+922
+923</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 887</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 919</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_template'>fetch_template</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -8970,15 +9158,15 @@
       <pre class="lines">
 
 
-874
-875
-876
-877
-878
-879</pre>
+906
+907
+908
+909
+910
+911</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 874</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 906</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_templates'>fetch_templates</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -9063,15 +9251,15 @@
       <pre class="lines">
 
 
-812
-813
-814
-815
-816
-817</pre>
+844
+845
+846
+847
+848
+849</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 812</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 844</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_vanity_invite'>fetch_vanity_invite</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -9156,15 +9344,15 @@
       <pre class="lines">
 
 
-756
-757
-758
-759
-760
-761</pre>
+788
+789
+790
+791
+792
+793</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 756</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 788</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_voice_regions'>fetch_voice_regions</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -9342,15 +9530,15 @@
       <pre class="lines">
 
 
-826
-827
-828
-829
-830
-831</pre>
+858
+859
+860
+861
+862
+863</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 826</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 858</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_welcome_screen'>fetch_welcome_screen</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -9435,15 +9623,15 @@
       <pre class="lines">
 
 
-798
-799
-800
-801
-802
-803</pre>
+830
+831
+832
+833
+834
+835</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 798</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 830</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_widget'>fetch_widget</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -9577,14 +9765,14 @@
       <pre class="lines">
 
 
-577
-578
-579
-580
-581</pre>
+609
+610
+611
+612
+613</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 577</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 609</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_kick_member'>kick_member</span><span class='lparen'>(</span><span class='id identifier rubyid_member'>member</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -9829,17 +10017,17 @@
       <pre class="lines">
 
 
-740
-741
-742
-743
-744
-745
-746
-747</pre>
+772
+773
+774
+775
+776
+777
+778
+779</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 740</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 772</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_prune'>prune</span><span class='lparen'>(</span><span class='id identifier rubyid_days'>days</span> <span class='op'>=</span> <span class='int'>7</span><span class='comma'>,</span> <span class='label'>roles:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -10035,14 +10223,14 @@
       <pre class="lines">
 
 
-660
-661
-662
-663
-664</pre>
+692
+693
+694
+695
+696</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 660</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 692</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_unban_user'>unban_user</span><span class='lparen'>(</span><span class='id identifier rubyid_user'>user</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -10059,7 +10247,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/5c10c8a9d9d21a33524e5631f03a1529052ae774"><code>5c10c8a9d9d21a33524e5631f03a1529052ae774</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/8950341ee48ede260c6998bbbaa5a622d8d66dfc"><code>8950341ee48ede260c6998bbbaa5a622d8d66dfc</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>
