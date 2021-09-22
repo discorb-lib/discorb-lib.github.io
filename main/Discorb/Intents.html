@@ -353,6 +353,28 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#to_h-instance_method" title="#to_h (instance method)">#<strong>to_h</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#value-instance_method" title="#value (instance method)">#<strong>value</strong>  &#x21d2; Integer </a>
     
 
@@ -780,7 +802,7 @@
   <span class='kw'>if</span> <span class='ivar'>@raw_value</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
     <span class='ivar'>@raw_value</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
   <span class='kw'>elsif</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_end_with?'>end_with?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@raw_value</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>..</span><span class='op'>-</span><span class='int'>2</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>true/false expected</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'>TrueClass</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>FalseClass</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>true/false expected</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'>TrueClass</span> <span class='kw'>or</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>FalseClass</span><span class='rparen'>)</span>
 
     <span class='ivar'>@raw_value</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>..</span><span class='op'>-</span><span class='int'>2</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span>
   <span class='kw'>else</span>
@@ -824,12 +846,12 @@
       <pre class="lines">
 
 
-137
-138
-139</pre>
+141
+142
+143</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 137</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 141</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_intent_bits'>intent_bits</span>
   <span class='ivar'>@intent_bits</span>
@@ -871,15 +893,15 @@
       <pre class="lines">
 
 
-128
-129
-130</pre>
+132
+133
+134</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 128</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 132</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_all'>all</span>
-  <span class='id identifier rubyid_from_value'>from_value</span><span class='lparen'>(</span><span class='int'>32_767</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_from_value'>from_value</span><span class='lparen'>(</span><span class='int'>32767</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -911,15 +933,15 @@
       <pre class="lines">
 
 
-123
-124
-125</pre>
+127
+128
+129</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 123</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 127</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_default'>default</span>
-  <span class='id identifier rubyid_from_value'>from_value</span><span class='lparen'>(</span><span class='int'>32_509</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_from_value'>from_value</span><span class='lparen'>(</span><span class='int'>32509</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -970,16 +992,16 @@
       <pre class="lines">
 
 
-114
-115
-116
-117
 118
 119
-120</pre>
+120
+121
+122
+123
+124</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 114</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 118</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_from_value'>from_value</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raw_value'>raw_value</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
@@ -1018,12 +1040,12 @@
       <pre class="lines">
 
 
-133
-134
-135</pre>
+137
+138
+139</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 133</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 137</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_none'>none</span>
   <span class='id identifier rubyid_from_value'>from_value</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span>
@@ -1122,6 +1144,36 @@
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="to_h-instance_method">
+  
+    #<strong>to_h</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+111
+112
+113</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 111</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_h'>to_h</span>
+  <span class='ivar'>@raw_value</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="value-instance_method">
   
     #<strong>value</strong>  &#x21d2; <tt>Integer</tt> 
@@ -1191,7 +1243,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/8950341ee48ede260c6998bbbaa5a622d8d66dfc"><code>8950341ee48ede260c6998bbbaa5a622d8d66dfc</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/a69fb6b85a3f5bfcbcdc10415ad83337318082ec"><code>a69fb6b85a3f5bfcbcdc10415ad83337318082ec</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>
