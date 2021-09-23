@@ -967,6 +967,29 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#clean_content-instance_method" title="#clean_content (instance method)">#<strong>clean_content</strong>(user: true, channel: true, role: true, emoji: true, everyone: true, codeblock: false)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Removes the mentions from the message.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#delete!-instance_method" title="#delete! (instance method)">#<strong>delete!</strong>(reason: nil)  &#x21d2; Object </a>
     
 
@@ -3112,18 +3135,247 @@
       <pre class="lines">
 
 
-294
-295
-296
-297
-298</pre>
+343
+344
+345
+346
+347</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 294</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 343</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add_reaction'>add_reaction</span><span class='lparen'>(</span><span class='id identifier rubyid_emoji'>emoji</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
     <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_put'>put</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/channels/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@channel_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/messages/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/reactions/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_emoji'>emoji</span><span class='period'>.</span><span class='id identifier rubyid_to_uri'>to_uri</span><span class='embexpr_end'>}</span><span class='tstring_content'>/@me</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="clean_content-instance_method">
+  
+    #<strong>clean_content</strong>(user: true, channel: true, role: true, emoji: true, everyone: true, codeblock: false)  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Removes the mentions from the message.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether to clean user mentions.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>channel</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether to clean channel mentions.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>role</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether to clean role mentions.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>emoji</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether to clean emoji.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>everyone</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether to clean <code>@everyone</code> and <code>@here</code>.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>codeblock</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether to clean codeblocks.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The cleaned content of the message.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 228</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_clean_content'>clean_content</span><span class='lparen'>(</span><span class='label'>user:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>channel:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>role:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>emoji:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>everyone:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>codeblock:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='ivar'>@content</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+  <span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>&lt;@!?(\d+)&gt;</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_match'>match</span><span class='op'>|</span>
+    <span class='id identifier rubyid_member'>member</span> <span class='op'>=</span> <span class='ivar'>@guild</span><span class='op'>&amp;.</span><span class='id identifier rubyid_members'>members</span><span class='op'>&amp;.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_m'>m</span><span class='op'>|</span> <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='op'>==</span> <span class='id identifier rubyid_match'>match</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_member'>member</span> <span class='op'>||=</span> <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_users'>users</span><span class='lbracket'>[</span><span class='id identifier rubyid_match'>match</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_member'>member</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_member'>member</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@Unknown User</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span> <span class='kw'>if</span> <span class='id identifier rubyid_user'>user</span>
+  <span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>&lt;#(\d+)&gt;</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_match'>match</span><span class='op'>|</span>
+    <span class='id identifier rubyid_channel'>channel</span> <span class='op'>=</span> <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_channels'>channels</span><span class='lbracket'>[</span><span class='id identifier rubyid_match'>match</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_channel'>channel</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;#</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_channel'>channel</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#Unknown Channel</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>&lt;@&amp;(\d+)&gt;</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_match'>match</span><span class='op'>|</span>
+    <span class='id identifier rubyid_role'>role</span> <span class='op'>=</span> <span class='ivar'>@guild</span><span class='op'>&amp;.</span><span class='id identifier rubyid_roles'>roles</span><span class='op'>&amp;.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>|</span> <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='op'>==</span> <span class='id identifier rubyid_match'>match</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_role'>role</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_role'>role</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@Unknown Role</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span> <span class='kw'>if</span> <span class='id identifier rubyid_role'>role</span>
+  <span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>&lt;a?:([a-zA-Z0-9_]+):\d+&gt;</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_match'>match</span><span class='op'>|</span>
+    <span class='id identifier rubyid_match'>match</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span> <span class='kw'>if</span> <span class='id identifier rubyid_emoji'>emoji</span>
+  <span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>@(everyone|here)</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@\u200b\\1</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_everyone'>everyone</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_codeblock'>codeblock</span>
+    <span class='id identifier rubyid_codeblocks'>codeblocks</span> <span class='op'>=</span> <span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>```</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='op'>-</span><span class='int'>1</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_original_codeblocks'>original_codeblocks</span> <span class='op'>=</span> <span class='ivar'>@content</span><span class='period'>.</span><span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>```(.+?)```</span><span class='regexp_end'>/m</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_max'>max</span> <span class='op'>=</span> <span class='id identifier rubyid_codeblocks'>codeblocks</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
+    <span class='id identifier rubyid_codeblocks'>codeblocks</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_codeblock'>codeblock</span><span class='comma'>,</span> <span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_max'>max</span> <span class='op'>%</span> <span class='int'>2</span> <span class='op'>==</span> <span class='int'>0</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>==</span> <span class='id identifier rubyid_max'>max</span> <span class='op'>-</span> <span class='int'>1</span> <span class='kw'>or</span> <span class='id identifier rubyid_i'>i</span><span class='period'>.</span><span class='id identifier rubyid_even?'>even?</span>
+        <span class='id identifier rubyid_res'>res</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_codeblock'>codeblock</span>
+      <span class='kw'>else</span>
+        <span class='id identifier rubyid_res'>res</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_original_codeblocks'>original_codeblocks</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span> <span class='op'>/</span> <span class='int'>2</span><span class='rbracket'>]</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>```</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_ret'>ret</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -3177,14 +3429,14 @@
       <pre class="lines">
 
 
-239
-240
-241
-242
-243</pre>
+288
+289
+290
+291
+292</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 239</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 288</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete!'>delete!</span><span class='lparen'>(</span><span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -3327,16 +3579,16 @@
       <pre class="lines">
 
 
-226
-227
-228
-229
-230
-231
-232</pre>
+275
+276
+277
+278
+279
+280
+281</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 226</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 275</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_edit'>edit</span><span class='lparen'>(</span><span class='id identifier rubyid_message_id'>message_id</span><span class='comma'>,</span> <span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>embed:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>embeds:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>allowed_mentions:</span> <span class='kw'>nil</span><span class='comma'>,</span>
                                     <span class='label'>components:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>supress:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
@@ -3475,31 +3727,31 @@
       <pre class="lines">
 
 
-344
-345
-346
-347
-348
-349
-350
-351
-352
-353
-354
-355
-356
-357
-358
-359
-360
-361
-362
-363
-364
-365</pre>
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 344</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 393</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_reacted_users'>fetch_reacted_users</span><span class='lparen'>(</span><span class='id identifier rubyid_emoji'>emoji</span><span class='comma'>,</span> <span class='label'>limit:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>after:</span> <span class='int'>0</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -3553,12 +3805,12 @@
       <pre class="lines">
 
 
-408
-409
-410</pre>
+457
+458
+459</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 408</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 457</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='ivar'>@content</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'> id=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@id</span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
@@ -3644,14 +3896,14 @@
       <pre class="lines">
 
 
-374
-375
-376
-377
-378</pre>
+423
+424
+425
+426
+427</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 374</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 423</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pin'>pin</span><span class='lparen'>(</span><span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -3718,14 +3970,14 @@
       <pre class="lines">
 
 
-281
-282
-283
-284
-285</pre>
+330
+331
+332
+333
+334</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 281</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 330</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_publish'>publish</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -3815,14 +4067,14 @@
       <pre class="lines">
 
 
-309
-310
-311
-312
-313</pre>
+358
+359
+360
+361
+362</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 309</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 358</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_reaction'>remove_reaction</span><span class='lparen'>(</span><span class='id identifier rubyid_emoji'>emoji</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -3927,14 +4179,14 @@
       <pre class="lines">
 
 
-325
-326
-327
-328
-329</pre>
+374
+375
+376
+377
+378</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 325</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 374</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_reaction_of'>remove_reaction_of</span><span class='lparen'>(</span><span class='id identifier rubyid_emoji'>emoji</span><span class='comma'>,</span> <span class='id identifier rubyid_member'>member</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -4018,14 +4270,14 @@
       <pre class="lines">
 
 
-270
-271
-272
-273
-274</pre>
+319
+320
+321
+322
+323</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 270</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 319</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_reply'>reply</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -4083,14 +4335,14 @@
       <pre class="lines">
 
 
-398
-399
-400
-401
-402</pre>
+447
+448
+449
+450
+451</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 398</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 447</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_start_thread'>start_thread</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -4165,17 +4417,17 @@
       <pre class="lines">
 
 
-252
-253
-254
-255
-256
-257
-258
-259</pre>
+301
+302
+303
+304
+305
+306
+307
+308</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 252</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 301</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_reference'>to_reference</span><span class='lparen'>(</span><span class='label'>fail_if_not_exists:</span> <span class='kw'>true</span><span class='rparen'>)</span>
   <span class='lbrace'>{</span>
@@ -4245,14 +4497,14 @@
       <pre class="lines">
 
 
-385
-386
-387
-388
-389</pre>
+434
+435
+436
+437
+438</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 385</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 434</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_unpin'>unpin</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -4269,7 +4521,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/3f386a5bbcf693bab6f5288c650bba9c2ca4af43"><code>3f386a5bbcf693bab6f5288c650bba9c2ca4af43</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/8d23b1bbfb7cb1c6dedb1203e444c790da3dcb57"><code>8d23b1bbfb7cb1c6dedb1203e444c790da3dcb57</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>
