@@ -993,12 +993,12 @@
       <pre class="lines">
 
 
+424
 425
-426
-427</pre>
+426</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 425</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 424</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_from_url'>from_url</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="Webhook/URLWebhook.html" title="Discorb::Webhook::URLWebhook (class)">URLWebhook</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#new-class_method" title="Discorb::Webhook.new (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
@@ -1069,6 +1069,7 @@
       <pre class="lines">
 
 
+404
 405
 406
 407
@@ -1086,11 +1087,10 @@
 419
 420
 421
-422
-423</pre>
+422</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 405</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 404</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='kw'>self</span> <span class='op'>!=</span> <span class='const'><span class='object_link'><a href="" title="Discorb::Webhook (class)">Webhook</a></span></span>
@@ -1246,15 +1246,15 @@
       <pre class="lines">
 
 
+178
 179
 180
 181
 182
-183
-184</pre>
+183</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 179</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 178</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete_message!'>delete_message!</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -1639,8 +1639,7 @@
 168
 169
 170
-171
-172</pre>
+171</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 145</span>
@@ -1657,7 +1656,6 @@
     <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:content</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_content'>content</span> <span class='kw'>if</span> <span class='id identifier rubyid_content'>content</span> <span class='op'>!=</span> <span class='symbol'>:unset</span>
     <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:embeds</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_embed'>embed</span> <span class='op'>?</span> <span class='lbracket'>[</span><span class='id identifier rubyid_embed'>embed</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_embed'>embed</span> <span class='op'>!=</span> <span class='symbol'>:unset</span>
     <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:embeds</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_embeds'>embeds</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_hash</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_embeds'>embeds</span> <span class='op'>!=</span> <span class='symbol'>:unset</span>
-    <span class='id identifier rubyid_attachments'>attachments</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_attachment'>attachment</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_attachment'>attachment</span> <span class='op'>!=</span> <span class='symbol'>:unset</span>
     <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:attachments</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_attachments'>attachments</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_hash</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_attachments'>attachments</span> <span class='op'>!=</span> <span class='symbol'>:unset</span>
     <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:allowed_mentions</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_allowed_mentions'>allowed_mentions</span> <span class='kw'>if</span> <span class='id identifier rubyid_allowed_mentions'>allowed_mentions</span> <span class='op'>!=</span> <span class='symbol'>:unset</span>
     <span class='id identifier rubyid_files'>files</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_file'>file</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_file'>file</span> <span class='op'>!=</span> <span class='symbol'>:unset</span>
@@ -2041,7 +2039,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/91f117953aa296f537a2e8f84fbeb350a3aa63be"><code>91f117953aa296f537a2e8f84fbeb350a3aa63be</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/6042e85000280db462e4fc5154a8f6829063565c"><code>6042e85000280db462e4fc5154a8f6829063565c</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>
