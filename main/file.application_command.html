@@ -145,28 +145,39 @@ Guild commands will be registered immediately.</p>
 <table><thead>
 <tr>
 <th>Key</th>
+<th>Type</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td><code>type</code></td>
-<td>The type of the argument.</td>
+<td><code>:description</code></td>
+<td><code>String</code></td>
+<td>Description of the option.</td>
 </tr>
 <tr>
-<td><code>required</code></td>
+<td><code>:required</code></td>
 <td>Whether the argument is required. <code>optional</code> will be used if not specified.</td>
+<td></td>
 </tr>
 <tr>
-<td><code>optional</code></td>
+<td><code>:optional</code></td>
 <td>Whether the argument is optional. <code>required</code> will be used if not specified.</td>
+<td></td>
 </tr>
 <tr>
-<td><code>description</code></td>
-<td>The description of the argument.</td>
+<td><code>:type</code></td>
+<td><code>Object</code></td>
+<td>Type of the option.</td>
 </tr>
 <tr>
-<td><code>choices</code></td>
-<td>The choices of the argument.</td>
+<td><code>:choice</code></td>
+<td><code>Hash{String =&gt; String, Integer, Float}</code></td>
+<td>Type of the option.</td>
+</tr>
+<tr>
+<td><code>:default</code></td>
+<td><code>Object</code></td>
+<td>Default value of the option.</td>
 </tr>
 </tbody></table>
 
@@ -465,7 +476,7 @@ Guild commands will be registered immediately.</p>
 </div></div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/0ea4cd01bba1e36871388078e2b8ae8f7fec5fbf"><code>0ea4cd01bba1e36871388078e2b8ae8f7fec5fbf</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/c54113ed8faa489a2519c69367ffb279e560c350"><code>c54113ed8faa489a2519c69367ffb279e560c350</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>
