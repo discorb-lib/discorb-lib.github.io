@@ -215,6 +215,8 @@
     
 
     
+      (also: #send_message)
+    
   </span>
   
   
@@ -358,14 +360,14 @@
       <pre class="lines">
 
 
-131
-132
 133
 134
-135</pre>
+135
+136
+137</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/modules.rb', line 131</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/modules.rb', line 133</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete_message!'>delete_message!</span><span class='lparen'>(</span><span class='id identifier rubyid_message_id'>message_id</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -553,8 +555,6 @@
       <pre class="lines">
 
 
-85
-86
 87
 88
 89
@@ -589,10 +589,12 @@
 118
 119
 120
-121</pre>
+121
+122
+123</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/modules.rb', line 85</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/modules.rb', line 87</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_edit_message'>edit_message</span><span class='lparen'>(</span><span class='id identifier rubyid_message_id'>message_id</span><span class='comma'>,</span> <span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>embed:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>embeds:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>allowed_mentions:</span> <span class='kw'>nil</span><span class='comma'>,</span>
                                             <span class='label'>components:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>supress:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
@@ -625,7 +627,7 @@
         <span class='kw'>end</span>
       <span class='kw'>end</span>
       <span class='id identifier rubyid_tmp_components'>tmp_components</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_tmp_row'>tmp_row</span>
-      <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:flags</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_supress'>supress</span> <span class='op'>?</span> <span class='int'>1</span> <span class='op'>&lt;&lt;</span> <span class='int'>2</span> <span class='op'>:</span> <span class='int'>0</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_flags'>flags</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+      <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:flags</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_supress'>supress</span> <span class='op'>?</span> <span class='int'>1</span> <span class='op'>&lt;&lt;</span> <span class='int'>2</span> <span class='op'>:</span> <span class='int'>0</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_supress'>supress</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
       <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:components</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_tmp_components'>tmp_components</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='period'>.</span><span class='id identifier rubyid_positive?'>positive?</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='lbrace'>{</span> <span class='label'>type:</span> <span class='int'>1</span><span class='comma'>,</span> <span class='label'>components:</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_hash</span><span class='rparen'>)</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span>
     <span class='kw'>end</span>
     <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_patch'>patch</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/channels/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span><span class='embexpr_end'>}</span><span class='tstring_content'>/messages/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_message_id'>message_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_payload'>payload</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
@@ -740,15 +742,15 @@
       <pre class="lines">
 
 
-149
-150
 151
 152
 153
-154</pre>
+154
+155
+156</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/modules.rb', line 149</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/modules.rb', line 151</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_message'>fetch_message</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -905,8 +907,6 @@
       <pre class="lines">
 
 
-168
-169
 170
 171
 172
@@ -916,10 +916,12 @@
 176
 177
 178
-179</pre>
+179
+180
+181</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/modules.rb', line 168</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/modules.rb', line 170</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_messages'>fetch_messages</span><span class='lparen'>(</span><span class='id identifier rubyid_limit'>limit</span> <span class='op'>=</span> <span class='int'>50</span><span class='comma'>,</span> <span class='label'>before:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>after:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>around:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -944,6 +946,10 @@
     #<strong>post</strong>(content = nil, tts: false, embed: nil, embeds: nil, allowed_mentions: nil, reference: nil, components: nil, file: nil, files: nil) -&gt; <tt>Async::Task&lt;<span class='object_link'><a href="Message.html" title="Discorb::Message (class)">Discorb::Message</a></span>&gt;</tt> 
   
 
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='send_message-instance_method'>send_message</span></span>
+    </span>
   
 
   
@@ -1336,8 +1342,6 @@ If block is given, trigger typing indicator during executing block.</p>
       <pre class="lines">
 
 
-194
-195
 196
 197
 198
@@ -1354,10 +1358,12 @@ If block is given, trigger typing indicator during executing block.</p>
 209
 210
 211
-212</pre>
+212
+213
+214</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/modules.rb', line 194</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/modules.rb', line 196</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_typing'>typing</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -1388,7 +1394,7 @@ If block is given, trigger typing indicator during executing block.</p>
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/4ac7fe48b623fcc7379621339d7b62787a15ed98"><code>4ac7fe48b623fcc7379621339d7b62787a15ed98</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/454a2275cda778365ec4dd727296fd951f11515a"><code>454a2275cda778365ec4dd727296fd951f11515a</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>
