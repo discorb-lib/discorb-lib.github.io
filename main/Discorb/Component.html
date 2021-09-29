@@ -156,6 +156,29 @@
 </li>
 
       
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_payload-class_method" title="to_payload (class method)">.<strong>to_payload</strong>(components) -&gt; Array&lt;Hash&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Convert components to a hash.</p>
+</div></span>
+  
+</li>
+
+      
     </ul>
   
 
@@ -284,12 +307,122 @@
 </table>
 </div>
     
+      <div class="method_details ">
+  <h3 class="signature " id="to_payload-class_method">
+  
+    .<strong>to_payload</strong>(components) -&gt; <tt>Array&lt;Hash&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Convert components to a hash.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>components</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="" title="Discorb::Component (class)">Discorb::Component</a></span>&gt;</tt>, <tt>Array&lt;Array&lt;<span class='object_link'><a href="" title="Discorb::Component (class)">Discorb::Component</a></span>&gt;&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Components.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Hash&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Hash data.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/components.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_payload'>to_payload</span><span class='lparen'>(</span><span class='id identifier rubyid_components'>components</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_tmp_components'>tmp_components</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_tmp_row'>tmp_row</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_components'>components</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span>
+    <span class='kw'>case</span> <span class='id identifier rubyid_c'>c</span>
+    <span class='kw'>when</span> <span class='const'>Array</span>
+      <span class='id identifier rubyid_tmp_components'>tmp_components</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_tmp_row'>tmp_row</span>
+      <span class='id identifier rubyid_tmp_row'>tmp_row</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_tmp_components'>tmp_components</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_c'>c</span>
+    <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="SelectMenu.html" title="Discorb::SelectMenu (class)">SelectMenu</a></span></span>
+      <span class='id identifier rubyid_tmp_components'>tmp_components</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_tmp_row'>tmp_row</span>
+      <span class='id identifier rubyid_tmp_row'>tmp_row</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_tmp_components'>tmp_components</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='id identifier rubyid_c'>c</span><span class='rbracket'>]</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_tmp_row'>tmp_row</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_c'>c</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_tmp_components'>tmp_components</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_tmp_row'>tmp_row</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_tmp_components'>tmp_components</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='period'>.</span><span class='id identifier rubyid_positive?'>positive?</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='lbrace'>{</span> <span class='label'>type:</span> <span class='int'>1</span><span class='comma'>,</span> <span class='label'>components:</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_hash</span><span class='rparen'>)</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/454a2275cda778365ec4dd727296fd951f11515a"><code>454a2275cda778365ec4dd727296fd951f11515a</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/e5314326ee38a927890369d2117fc4b049183e21"><code>e5314326ee38a927890369d2117fc4b049183e21</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>
