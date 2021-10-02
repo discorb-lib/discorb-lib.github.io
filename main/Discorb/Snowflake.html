@@ -70,12 +70,12 @@
   <dl>
     <dt>Inherits:</dt>
     <dd>
-      <span class="inheritName"><span class='object_link'><a href="DiscordModel.html" title="Discorb::DiscordModel (class)">DiscordModel</a></span></span>
+      <span class="inheritName">String</span>
       
         <ul class="fullTree">
           <li>Object</li>
           
-            <li class="next"><span class='object_link'><a href="DiscordModel.html" title="Discorb::DiscordModel (class)">DiscordModel</a></span></li>
+            <li class="next">String</li>
           
             <li class="next">Discorb::Snowflake</li>
           
@@ -320,63 +320,10 @@
 </li>
 
       
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#to_i-instance_method" title="#to_i (instance method)">#<strong>to_i</strong> -&gt; Integer </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>Integerize snowflake.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#to_s-instance_method" title="#to_s (instance method)">#<strong>to_s</strong> -&gt; String </a>
-    
-
-    
-      (also: #to_str)
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>Stringify snowflake.</p>
-</div></span>
-  
-</li>
-
-      
     </ul>
   
 
 
-  
-  
-  
-  
-  
   
   <div id="instance_attr_details" class="attr_details">
     <h2>Instance Attribute Details</h2>
@@ -428,7 +375,7 @@
 </pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/common.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/common.rb', line 49</span>
 
 </pre>
     </td>
@@ -483,7 +430,7 @@
 </pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/common.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/common.rb', line 49</span>
 
 </pre>
     </td>
@@ -538,7 +485,7 @@
 </pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/common.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/common.rb', line 49</span>
 
 </pre>
     </td>
@@ -593,7 +540,7 @@
 </pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/common.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/common.rb', line 49</span>
 
 </pre>
     </td>
@@ -633,7 +580,7 @@
         <span class='name'>other</span>
       
       
-        <span class='type'>(<tt>#<span class='object_link'><a href="#to_s-instance_method" title="Discorb::Snowflake#to_s (method)">to_s</a></span></tt>)</span>
+        <span class='type'>(<tt>#to_s</tt>)</span>
       
       
       
@@ -669,14 +616,14 @@
       <pre class="lines">
 
 
-94
-95
-96
-97
-98</pre>
+75
+76
+77
+78
+79</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/common.rb', line 94</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/common.rb', line 75</span>
 
 <span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_s</span><span class='rparen'>)</span>
@@ -726,12 +673,12 @@
       <pre class="lines">
 
 
-103
-104
-105</pre>
+84
+85
+86</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/common.rb', line 103</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/common.rb', line 84</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eql?'>eql?</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='kw'>self</span> <span class='op'>==</span> <span class='id identifier rubyid_other'>other</span>
@@ -766,133 +713,15 @@
       <pre class="lines">
 
 
-108
-109
-110</pre>
+89
+90
+91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/common.rb', line 108</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/common.rb', line 89</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_hash'>hash</span>
   <span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_hash'>hash</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="to_i-instance_method">
-  
-    #<strong>to_i</strong> -&gt; <tt>Integer</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>Integerize snowflake.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>Integerized snowflake.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-83
-84
-85</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/common.rb', line 83</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_to_i'>to_i</span>
-  <span class='ivar'>@value</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="to_s-instance_method">
-  
-    #<strong>to_s</strong> -&gt; <tt>String</tt> 
-  
-
-  
-    <span class="aliases">Also known as:
-    <span class="names"><span id='to_str-instance_method'>to_str</span></span>
-    </span>
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>Stringify snowflake.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>Stringified snowflake.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-72
-73
-74</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/common.rb', line 72</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
-  <span class='ivar'>@value</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -904,7 +733,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/2e6037065ad32ee5989fa00bd49255f1bd5f9191"><code>2e6037065ad32ee5989fa00bd49255f1bd5f9191</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/3400e1a7bfa6ee918d8cc4f7c7714fddf5d4e6f0"><code>3400e1a7bfa6ee918d8cc4f7c7714fddf5d4e6f0</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>
