@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<link rel="shortcut icon" href="/favicon.png" />
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Discorb::ApplicationCommand::Handler
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Discorb::ApplicationCommand::Handler";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../a_index.html">Index (H)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../ApplicationCommand.html" title="Discorb::ApplicationCommand (module)">ApplicationCommand</a></span></span>
+     &raquo; 
+    <span class="title">Handler</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: Discorb::ApplicationCommand::Handler
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+  <dl>
+    <dt>Included in:</dt>
+    <dd><span class='object_link'><a href="../Client.html" title="Discorb::Client (class)">Client</a></span>, <span class='object_link'><a href="../Extension.html" title="Discorb::Extension (class)">Extension</a></span></dd>
+  </dl>
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/discorb/app_command.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Module to handle application commands.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#message_command-instance_method" title="#message_command (instance method)">#<strong>message_command</strong>(command_name, guild_ids: nil, &amp;block) {|interaction, message| ... } &#x21d2; Discorb::ApplicationCommand::Command </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Add message context menu command.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#setup_commands-instance_method" title="#setup_commands (instance method)">#<strong>setup_commands</strong>(token = nil, guild_ids: nil) -&gt; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Setup commands.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#slash-instance_method" title="#slash (instance method)">#<strong>slash</strong>(command_name, description, options = {}, guild_ids: nil, &amp;block) -&gt; Discorb::ApplicationCommand::Command::SlashCommand </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Add new top-level command.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#slash_group-instance_method" title="#slash_group (instance method)">#<strong>slash_group</strong>(command_name, description, guild_ids: nil) {|group| ... } &#x21d2; Discorb::ApplicationCommand::Command::GroupCommand </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Add new command with group.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#user_command-instance_method" title="#user_command (instance method)">#<strong>user_command</strong>(command_name, guild_ids: nil, &amp;block) {|interaction, user| ... } &#x21d2; Discorb::ApplicationCommand::Command </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Add user context menu command.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="message_command-instance_method">
+  
+    #<strong>message_command</strong>(command_name, guild_ids: nil, &amp;block) {|interaction, message| ... } &#x21d2; <tt><span class='object_link'><a href="Command.html" title="Discorb::ApplicationCommand::Command (class)">Discorb::ApplicationCommand::Command</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Add message context menu command.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>command_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Command name.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>guild_ids</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;#to_s&gt;</tt>, <tt>false</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Guild IDs to set the command to. <code>false</code> to global command, <code>nil</code> to use default.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>block</span>
+      
+      
+        <span class='type'>(<tt>Proc</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Command block.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>interaction</tt>, <tt>message</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Block to execute.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>interaction</span>
+      
+      
+        <span class='type'>(<tt>Discorb::ApplicationCommandInteraction::UserMenuCommand</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Interaction object.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>message</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Message.html" title="Discorb::Message (class)">Discorb::Message</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Message object.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Command.html" title="Discorb::ApplicationCommand::Command (class)">Discorb::ApplicationCommand::Command</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Command object.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+79
+80
+81
+82
+83</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command.rb', line 79</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_message_command'>message_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='label'>guild_ids:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../ApplicationCommand.html" title="Discorb::ApplicationCommand (module)">ApplicationCommand</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Command.html" title="Discorb::ApplicationCommand::Command (class)">Command</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='id identifier rubyid_guild_ids'>guild_ids</span><span class='comma'>,</span> <span class='id identifier rubyid_block'>block</span><span class='comma'>,</span> <span class='int'>3</span><span class='rparen'>)</span>
+  <span class='ivar'>@commands</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_command'>command</span>
+  <span class='id identifier rubyid_command'>command</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="setup_commands-instance_method">
+  
+    #<strong>setup_commands</strong>(token = nil, guild_ids: nil) -&gt; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'><p><code>token</code> parameter only required if you don&#39;t run client.</p>
+</div>
+  </div>
+
+<p>Setup commands.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>token</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Bot token.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>guild_ids</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;#to_s&gt;</tt>, <tt>false</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Guild IDs to use as default. If <code>false</code> is given, it will be global command.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="../Client.html#initialize-instance_method" title="Discorb::Client#initialize (method)">Client#initialize</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command.rb', line 112</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_setup_commands'>setup_commands</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>guild_ids:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='const'>Async</span> <span class='kw'>do</span>
+    <span class='ivar'>@token</span> <span class='op'>||=</span> <span class='id identifier rubyid_token'>token</span>
+    <span class='ivar'>@http</span> <span class='op'>=</span> <span class='const'>HTTP</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_global_commands'>global_commands</span> <span class='op'>=</span> <span class='ivar'>@commands</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_guild_ids'>guild_ids</span> <span class='op'>==</span> <span class='kw'>false</span> <span class='kw'>or</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_guild_ids'>guild_ids</span> <span class='op'>==</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_local_commands'>local_commands</span> <span class='op'>=</span> <span class='ivar'>@commands</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_guild_ids'>guild_ids</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_guild_ids'>guild_ids</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_default_commands'>default_commands</span> <span class='op'>=</span> <span class='ivar'>@commands</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_guild_ids'>guild_ids</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='rbrace'>}</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_guild_ids'>guild_ids</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_default_commands'>default_commands</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_command'>command</span><span class='op'>|</span>
+        <span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span><span class='symbol'>:@guild_ids</span><span class='comma'>,</span> <span class='id identifier rubyid_guild_ids'>guild_ids</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+      <span class='id identifier rubyid_local_commands'>local_commands</span> <span class='op'>+=</span> <span class='id identifier rubyid_default_commands'>default_commands</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_global_commands'>global_commands</span> <span class='op'>+=</span> <span class='id identifier rubyid_default_commands'>default_commands</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_final_guild_ids'>final_guild_ids</span> <span class='op'>=</span> <span class='id identifier rubyid_local_commands'>local_commands</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:guild_ids</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_s</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_uniq'>uniq</span>
+    <span class='id identifier rubyid_app_info'>app_info</span> <span class='op'>=</span> <span class='id identifier rubyid_fetch_application'>fetch_application</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
+    <span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_put'>put</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/applications/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_app_info'>app_info</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/commands</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_global_commands'>global_commands</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_hash</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span> <span class='kw'>unless</span> <span class='id identifier rubyid_global_commands'>global_commands</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+    <span class='id identifier rubyid_final_guild_ids'>final_guild_ids</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_guild_id'>guild_id</span><span class='op'>|</span>
+      <span class='id identifier rubyid_commands'>commands</span> <span class='op'>=</span> <span class='id identifier rubyid_local_commands'>local_commands</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_guild_ids'>guild_ids</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_guild_id'>guild_id</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+      <span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_put'>put</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/applications/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_app_info'>app_info</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/guilds/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_guild_id'>guild_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/commands</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_commands'>commands</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_hash</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
+    <span class='kw'>end</span> <span class='kw'>unless</span> <span class='id identifier rubyid_final_guild_ids'>final_guild_ids</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+    <span class='ivar'>@log</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Successfully setup commands</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="slash-instance_method">
+  
+    #<strong>slash</strong>(command_name, description, options = {}, guild_ids: nil, &amp;block) -&gt; <tt><span class='object_link'><a href="Command/SlashCommand.html" title="Discorb::ApplicationCommand::Command::SlashCommand (class)">Discorb::ApplicationCommand::Command::SlashCommand</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Add new top-level command.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>command_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Command name.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>description</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Command description.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash{String =&gt; Hash{:description =&gt; String, :optional =&gt; Boolean, :type =&gt; Object}}</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Command options.
+The key is the option name, the value is a hash with the following keys:</p>
+
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>:description</code></td>
+<td><code>String</code></td>
+<td>Description of the option.</td>
+</tr>
+<tr>
+<td><code>:required</code></td>
+<td>Whether the argument is required. <code>optional</code> will be used if not specified.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>:optional</code></td>
+<td>Whether the argument is optional. <code>required</code> will be used if not specified.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>:type</code></td>
+<td><code>Object</code></td>
+<td>Type of the option.</td>
+</tr>
+<tr>
+<td><code>:choice</code></td>
+<td><code>Hash{String =&gt; String, Integer, Float}</code></td>
+<td>Type of the option.</td>
+</tr>
+<tr>
+<td><code>:default</code></td>
+<td><code>Object</code></td>
+<td>Default value of the option.</td>
+</tr>
+<tr>
+<td><code>:channel_types</code></td>
+<td><code>Array&lt;Class&lt;Discorb::Channel&gt;&gt;</code></td>
+<td>Type of the channel option.</td>
+</tr>
+</tbody></table>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>guild_ids</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;#to_s&gt;</tt>, <tt>false</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Guild IDs to set the command to. <code>false</code> to global command, <code>nil</code> to use default.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>block</span>
+      
+      
+        <span class='type'>(<tt>Proc</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Command block.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Command/SlashCommand.html" title="Discorb::ApplicationCommand::Command::SlashCommand (class)">Discorb::ApplicationCommand::Command::SlashCommand</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Command object.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="../../file.application_command.html#register-slash-command" title="Application Commands">Application Commands</a></li>
+    
+      <li><a href="../../file.setup.html" title="CLI: discorb setup">CLI: discorb setup</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+38
+39
+40
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command.rb', line 38</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_slash'>slash</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>guild_ids:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../ApplicationCommand.html" title="Discorb::ApplicationCommand (module)">ApplicationCommand</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Command.html" title="Discorb::ApplicationCommand::Command (class)">Command</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Command/SlashCommand.html" title="Discorb::ApplicationCommand::Command::SlashCommand (class)">SlashCommand</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='comma'>,</span> <span class='id identifier rubyid_guild_ids'>guild_ids</span><span class='comma'>,</span> <span class='id identifier rubyid_block'>block</span><span class='comma'>,</span> <span class='int'>1</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@commands</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_command'>command</span>
+  <span class='ivar'>@bottom_commands</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_command'>command</span>
+  <span class='id identifier rubyid_command'>command</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="slash_group-instance_method">
+  
+    #<strong>slash_group</strong>(command_name, description, guild_ids: nil) {|group| ... } &#x21d2; <tt><span class='object_link'><a href="Command/GroupCommand.html" title="Discorb::ApplicationCommand::Command::GroupCommand (class)">Discorb::ApplicationCommand::Command::GroupCommand</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Add new command with group.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>command_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Command name.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>description</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Command description.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>guild_ids</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;#to_s&gt;</tt>, <tt>false</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Guild IDs to set the command to. <code>false</code> to global command, <code>nil</code> to use default.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Block to yield with the command.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>group</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Command/GroupCommand.html" title="Discorb::ApplicationCommand::Command::GroupCommand (class)">Discorb::ApplicationCommand::Command::GroupCommand</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Group command.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Command/GroupCommand.html" title="Discorb::ApplicationCommand::Command::GroupCommand (class)">Discorb::ApplicationCommand::Command::GroupCommand</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Command object.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="../../file.slash_command.html" title="slash_command">slash_command</a></li>
+    
+      <li><a href="../../file.setup.html" title="CLI: discorb setup">CLI: discorb setup</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+60
+61
+62
+63
+64
+65</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command.rb', line 60</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_slash_group'>slash_group</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>guild_ids:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../ApplicationCommand.html" title="Discorb::ApplicationCommand (module)">ApplicationCommand</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Command.html" title="Discorb::ApplicationCommand::Command (class)">Command</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Command/GroupCommand.html" title="Discorb::ApplicationCommand::Command::GroupCommand (class)">GroupCommand</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_guild_ids'>guild_ids</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_yield_self'>yield_self</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+  <span class='ivar'>@commands</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_command'>command</span>
+  <span class='id identifier rubyid_command'>command</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="user_command-instance_method">
+  
+    #<strong>user_command</strong>(command_name, guild_ids: nil, &amp;block) {|interaction, user| ... } &#x21d2; <tt><span class='object_link'><a href="Command.html" title="Discorb::ApplicationCommand::Command (class)">Discorb::ApplicationCommand::Command</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Add user context menu command.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>command_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Command name.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>guild_ids</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;#to_s&gt;</tt>, <tt>false</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Guild IDs to set the command to. <code>false</code> to global command, <code>nil</code> to use default.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>block</span>
+      
+      
+        <span class='type'>(<tt>Proc</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Command block.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>interaction</tt>, <tt>user</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Block to execute.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>interaction</span>
+      
+      
+        <span class='type'>(<tt>Discorb::ApplicationCommandInteraction::UserMenuCommand</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Interaction object.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>user</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../User.html" title="Discorb::User (class)">Discorb::User</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>User object.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Command.html" title="Discorb::ApplicationCommand::Command (class)">Discorb::ApplicationCommand::Command</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Command object.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+97
+98
+99
+100
+101</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command.rb', line 97</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_user_command'>user_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='label'>guild_ids:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../ApplicationCommand.html" title="Discorb::ApplicationCommand (module)">ApplicationCommand</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Command.html" title="Discorb::ApplicationCommand::Command (class)">Command</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='id identifier rubyid_guild_ids'>guild_ids</span><span class='comma'>,</span> <span class='id identifier rubyid_block'>block</span><span class='comma'>,</span> <span class='int'>2</span><span class='rparen'>)</span>
+  <span class='ivar'>@commands</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_command'>command</span>
+  <span class='id identifier rubyid_command'>command</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/7e6c15d5aaf86127c0f8fd9c51db5877c1e01c1b"><code>7e6c15d5aaf86127c0f8fd9c51db5877c1e01c1b</code></a>, version (main), with YARD 0.9.26.
+    </div>
+
+    </div>
+  </body>
+</html>
