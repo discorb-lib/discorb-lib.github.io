@@ -60,13 +60,21 @@
 
       <div id="content"><div id='filecontents'><h1 id="fequently-asked-questions">Fequently asked questions</h1>
 
-<h2 id="what-is-async-task">What is <code>Async::Task</code>?</h2>
+<h2 id="what-is">What is ...?</h2>
+
+<h3 id="what-is-async-task">What is <code>Async::Task</code>?</h3>
 
 <p>Async::Task is a object for asynchronous tasks.</p>
 
 <p><a href="https://socketry.github.io/async/">https://socketry.github.io/async/</a> for more information.</p>
 
-<h2 id="how-do-i-do-something-with-sent-messages">How do I do something with sent messages?</h2>
+<h3 id="what-is-guild">What is <code>Guild</code>?</h3>
+
+<p>It means a <code>server</code> in official Discord client.</p>
+
+<h2 id="how-can-i">How can I ...?</h2>
+
+<h2 id="how-can-i-do-something-with-sent-messages">How can I do something with sent messages?</h2>
 
 <p>Use <code>Async::Task#wait</code> method.</p>
 
@@ -79,11 +87,11 @@
 </span><span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_pin'>pin</span>
 </code></pre>
 
-<h2 id="how-can-i-send-dm-to-a-user">How can I send DM to a user?</h2>
+<h3 id="how-can-i-send-dm-to-a-user">How can I send DM to a user?</h3>
 
 <p>Use <span class='object_link'><a href="Discorb/Messageable.html#post-instance_method" title="Discorb::Messageable#post (method)">Discorb::Messageable#post</a></span> method, <span class='object_link'><a href="Discorb/User.html" title="Discorb::User (class)">Discorb::User</a></span> includes <span class='object_link'><a href="Discorb/Messageable.html" title="Discorb::Messageable (module)">Discorb::Messageable</a></span>.</p>
 
-<h2 id="how-can-i-edit-status">How can I edit status?</h2>
+<h3 id="how-can-i-edit-status">How can I edit status?</h3>
 
 <p>Use <span class='object_link'><a href="Discorb/Client.html#update_presence-instance_method" title="Discorb::Client#update_presence (method)">Discorb::Client#update_presence</a></span> method.</p>
 
@@ -103,7 +111,7 @@
 <span class='kw'>end</span>
 </code></pre>
 
-<h2 id="how-can-i-send-files">How can I send files?</h2>
+<h3 id="how-can-i-send-files">How can I send files?</h3>
 
 <p>Use <span class='object_link'><a href="Discorb/File.html" title="Discorb::File (class)">Discorb::File</a></span> class.</p>
 
@@ -115,6 +123,14 @@
 
 <span class='comment'># Send a string as a file
 </span><span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_channel'>channel</span><span class='period'>.</span><span class='id identifier rubyid_post'>post</span> <span class='label'>file:</span> <span class='const'><span class='object_link'><a href="Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Discorb/File.html" title="Discorb::File (class)">File</a></span></span><span class='period'>.</span><span class='id identifier rubyid_from_string'><span class='object_link'><a href="Discorb/File.html#from_string-class_method" title="Discorb::File.from_string (method)">from_string</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello world!</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hello.txt</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+</code></pre>
+
+<h3 id="how-can-i-add-reactions">How can I add reactions?</h3>
+
+<p>Use <span class='object_link'><a href="Discorb/Message.html#add_reaction-instance_method" title="Discorb::Message#add_reaction (method)">Discorb::Message#add_reaction</a></span> method.</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_add_reaction'>add_reaction</span> <span class='const'><span class='object_link'><a href="Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Discorb/UnicodeEmoji.html" title="Discorb::UnicodeEmoji (class)">UnicodeEmoji</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>🤔</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_add_reaction'>add_reaction</span> <span class='const'><span class='object_link'><a href="Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Discorb/UnicodeEmoji.html" title="Discorb::UnicodeEmoji (class)">UnicodeEmoji</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>thinking</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
 </code></pre>
 
 <h1 id="not-fequently-asked-questions">Not fequently asked questions</h1>
@@ -133,7 +149,7 @@
 </div></div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/b89e125d7a790f9fd315ff7b4693fe9e333b1ec6"><code>b89e125d7a790f9fd315ff7b4693fe9e333b1ec6</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/d969baf915b28b3702012d65dfb269a8c209d265"><code>d969baf915b28b3702012d65dfb269a8c209d265</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>
