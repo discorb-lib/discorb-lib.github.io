@@ -456,16 +456,16 @@
       <pre class="lines">
 
 
-243
 244
 245
 246
 247
 248
-249</pre>
+249
+250</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/components.rb', line 243</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/components.rb', line 244</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_label'>label</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='label'>description:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>emoji:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>default:</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='ivar'>@label</span> <span class='op'>=</span> <span class='id identifier rubyid_label'>label</span>
@@ -528,12 +528,12 @@
       <pre class="lines">
 
 
-233
 234
-235</pre>
+235
+236</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/components.rb', line 233</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/components.rb', line 234</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_default'>default</span>
   <span class='ivar'>@default</span>
@@ -587,12 +587,12 @@
       <pre class="lines">
 
 
-229
 230
-231</pre>
+231
+232</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/components.rb', line 229</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/components.rb', line 230</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_description'>description</span>
   <span class='ivar'>@description</span>
@@ -646,12 +646,12 @@
       <pre class="lines">
 
 
-231
 232
-233</pre>
+233
+234</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/components.rb', line 231</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/components.rb', line 232</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_emoji'>emoji</span>
   <span class='ivar'>@emoji</span>
@@ -705,12 +705,12 @@
       <pre class="lines">
 
 
-225
 226
-227</pre>
+227
+228</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/components.rb', line 225</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/components.rb', line 226</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_label'>label</span>
   <span class='ivar'>@label</span>
@@ -764,12 +764,12 @@
       <pre class="lines">
 
 
-227
 228
-229</pre>
+229
+230</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/components.rb', line 227</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/components.rb', line 228</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_value'>value</span>
   <span class='ivar'>@value</span>
@@ -847,12 +847,12 @@
       <pre class="lines">
 
 
-293
 294
-295</pre>
+295
+296</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/components.rb', line 293</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/components.rb', line 294</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_from_hash'>from_hash</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:label</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:value</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>description:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:description</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>emoji:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:emoji</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>default:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:default</span><span class='rbracket'>]</span><span class='rparen'>)</span>
@@ -917,7 +917,6 @@
       <pre class="lines">
 
 
-257
 258
 259
 260
@@ -925,10 +924,11 @@
 262
 263
 264
-265</pre>
+265
+266</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/components.rb', line 257</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/components.rb', line 258</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_hash'>to_hash</span>
   <span class='lbrace'>{</span>
@@ -949,7 +949,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/8e8ccd7eb473cf36880c0f9e861044fc28ca8ec7"><code>8e8ccd7eb473cf36880c0f9e861044fc28ca8ec7</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/b89e125d7a790f9fd315ff7b4693fe9e333b1ec6"><code>b89e125d7a790f9fd315ff7b4693fe9e333b1ec6</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>
