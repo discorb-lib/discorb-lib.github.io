@@ -184,6 +184,11 @@ Guild commands will be registered immediately.</p>
 <td><code>Array&lt;Class&lt;Discorb::Channel&gt;&gt;</code></td>
 <td>Type of the channel option.</td>
 </tr>
+<tr>
+<td><code>:autocomplete</code></td>
+<td><code>Proc</code></td>
+<td>Autocomplete function.</td>
+</tr>
 </tbody></table>
 
 <p><code>choices</code> should be unspecified if you don&#39;t want to use it.
@@ -256,7 +261,7 @@ Guild commands will be registered immediately.</p>
 </tr>
 </tbody></table>
 
-<h3 id="group-slash-commands">Group Slash Commands</h3>
+<h4 id="group-slash-commands">Group Slash Commands</h4>
 
 <p>To register a group of slash commands, use <span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#slash_group-instance_method" title="Discorb::ApplicationCommand::Handler#slash_group (method)">Discorb::ApplicationCommand::Handler#slash_group</a></span>.</p>
 
@@ -385,6 +390,30 @@ Guild commands will be registered immediately.</p>
 
 <p>Same as above, you can use block for register commands since v0.5.1.</p>
 
+<h4 id="use-auto-completing">Use Auto Completing</h4>
+
+<p>Since v0.11.0, you can use auto completion by setting Proc to <code>:autocomplete</code> in options.
+The proc will be called with interaction object and the argument.
+The proc should return an hash of the autocomplete result.</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_slash'>slash</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hello2</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Greet for you</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>target</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>type:</span> <span class='symbol'>:string</span><span class='comma'>,</span>
+    <span class='label'>description:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Person to greet</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>autocomplete:</span> <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_interaction'>interaction</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span> <span class='tlambeg'>{</span>
+      <span class='lbrace'>{</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_interaction'>interaction</span><span class='period'>.</span><span class='id identifier rubyid_target'>target</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+      <span class='rbrace'>}</span>
+    <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+<span class='rbrace'>}</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_interaction'>interaction</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='op'>|</span>
+  <span class='id identifier rubyid_interaction'>interaction</span><span class='period'>.</span><span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello, </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target'>target</span><span class='embexpr_end'>}</span><span class='tstring_content'>!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span>
+</code></pre>
+
+<p>In the above example, <code>You</code> will be displayed in the user menu.
+Due to the limitation of Discord API, the proc must return the result in less than 3 second.</p>
+
 <h3 id="register-user-context-menu-command">Register User Context Menu Command</h3>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_user_command'>user_command</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_interaction'>interaction</span><span class='comma'>,</span> <span class='id identifier rubyid_user'>user</span><span class='op'>|</span>
@@ -481,7 +510,7 @@ Guild commands will be registered immediately.</p>
 </div></div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/e1dace64d5967024e64df2dfcbfbfeba04612acd"><code>e1dace64d5967024e64df2dfcbfbfeba04612acd</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/160c6d1257c99240a4a1a20cb30740ce30ea3f44"><code>160c6d1257c99240a4a1a20cb30740ce30ea3f44</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>
