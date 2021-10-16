@@ -2531,15 +2531,15 @@
       <pre class="lines">
 
 
-477
-478
-479
-480
 481
-482</pre>
+482
+483
+484
+485
+486</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/client.rb', line 477</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/client.rb', line 481</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_close!'>close!</span>
   <span class='ivar'>@connection</span><span class='period'>.</span><span class='id identifier rubyid_send_close'>send_close</span>
@@ -4236,7 +4236,11 @@ If application was cached, it will be used.</p>
 469
 470
 471
-472</pre>
+472
+473
+474
+475
+476</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/discorb/client.rb', line 424</span>
@@ -4288,6 +4292,10 @@ If application was cached, it will be used.</p>
       <span class='id identifier rubyid_guild_ids'>guild_ids</span> <span class='op'>=</span> <span class='kw'>false</span>
     <span class='kw'>end</span>
     <span class='id identifier rubyid_setup_commands'>setup_commands</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='label'>guild_ids:</span> <span class='id identifier rubyid_guild_ids'>guild_ids</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
+    <span class='ivar'>@events</span><span class='lbracket'>[</span><span class='symbol'>:setup</span><span class='rbracket'>]</span><span class='op'>&amp;.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_event'>event</span><span class='op'>|</span>
+      <span class='id identifier rubyid_event'>event</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span>
+    <span class='kw'>end</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_on_setup'>on_setup</span> <span class='kw'>if</span> <span class='id identifier rubyid_respond_to?'>respond_to?</span> <span class='symbol'>:on_setup</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -4431,7 +4439,7 @@ If application was cached, it will be used.</p>
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/42463298b01aa2b62b7329f3bd3c93f137344206"><code>42463298b01aa2b62b7329f3bd3c93f137344206</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/5a4ea085257dbd155cf35855ed7f015efc63d4e4"><code>5a4ea085257dbd155cf35855ed7f015efc63d4e4</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>
