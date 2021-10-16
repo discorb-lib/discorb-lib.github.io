@@ -531,66 +531,243 @@
 </h3><div class="docstring">
   <div class="discussion">
     <p>Create a color from a Discord&#39;s color.
-Currently these colors are supported:
-| Color Name | Hexadecimal |
-|------------|------------|
-| <code>:teal</code> | <code>#1abc9c</code> |
-| <code>:dark_teal</code> | <code>#11806a</code> |
-| <code>:green</code> | <code>#2ecc71</code> |
-| <code>:dark_green</code> | <code>#1f8b4c</code> |
-| <code>:blue</code> | <code>#3498db</code> |
-| <code>:dark_blue</code> | <code>#206694</code> |
-| <code>:purple</code> | <code>#9b59b6</code> |
-| <code>:dark_purple</code> | <code>#71368a</code> |
-| <code>:magenta</code> | <code>#e91e63</code> |
-| <code>:dark_magenta</code> | <code>#ad1457</code> |
-| <code>:gold</code> | <code>#f1c40f</code> |
-| <code>:dark_gold</code> | <code>#c27c0e</code> |
-| <code>:orange</code> | <code>#e67e22</code> |
-| <code>:dark_orange</code> | <code>#a84300</code> |
-| <code>:red</code> | <code>#e74c3c</code> |
-| <code>:dark_red</code> | <code>#992d22</code> |
-| <code>:lighter_grey</code> | <code>#95a5a6</code> |
-| <code>:lighter_gray</code> | <code>#95a5a6</code> |
-| <code>:dark_grey</code> | <code>#607d8b</code> |
-| <code>:dark_gray</code> | <code>#607d8b</code> |
-| <code>:light_grey</code> | <code>#979c9f</code> |
-| <code>:light_gray</code> | <code>#979c9f</code> |
-| <code>:darker_grey</code> | <code>#546e7a</code> |
-| <code>:darker_gray</code> | <code>#546e7a</code> |
-| <code>:og_blurple</code> | <code>#7289da</code> |
-| <code>:blurple</code> | <code>#5865f2</code> |
-| <code>:greyple</code> | <code>#99aab5</code> |
-| <code>:dark_theme</code> | <code>#36393f</code> |
-| <code>:fuchsia</code> | <code>#eb459e</code> |
-| <code>:dark_teal</code> | <code>#11806a</code> |
-| <code>:green</code> | <code>#2ecc71</code> |
-| <code>:dark_green</code> | <code>#1f8b4c</code> |
-| <code>:blue</code> | <code>#3498db</code> |
-| <code>:dark_blue</code> | <code>#206694</code> |
-| <code>:purple</code> | <code>#9b59b6</code> |
-| <code>:dark_purple</code> | <code>#71368a</code> |
-| <code>:magenta</code> | <code>#e91e63</code> |
-| <code>:dark_magenta</code> | <code>#ad1457</code> |
-| <code>:gold</code> | <code>#f1c40f</code> |
-| <code>:dark_gold</code> | <code>#c27c0e</code> |
-| <code>:orange</code> | <code>#e67e22</code> |
-| <code>:dark_orange</code> | <code>#a84300</code> |
-| <code>:red</code> | <code>#e74c3c</code> |
-| <code>:dark_red</code> | <code>#992d22</code> |
-| <code>:lighter_grey</code> | <code>#95a5a6</code> |
-| <code>:lighter_gray</code> | <code>#95a5a6</code> |
-| <code>:dark_grey</code> | <code>#607d8b</code> |
-| <code>:dark_gray</code> | <code>#607d8b</code> |
-| <code>:light_grey</code> | <code>#979c9f</code> |
-| <code>:light_gray</code> | <code>#979c9f</code> |
-| <code>:darker_grey</code> | <code>#546e7a</code> |
-| <code>:darker_gray</code> | <code>#546e7a</code> |
-| <code>:og_blurple</code> | <code>#7289da</code> |
-| <code>:blurple</code> | <code>#5865f2</code> |
-| <code>:greyple</code> | <code>#99aab5</code> |
-| <code>:dark_theme</code> | <code>#36393f</code> |
-| <code>:fuchsia</code> | <code>#eb459e</code> |</p>
+Currently these colors are supported:</p>
+
+<table><thead>
+<tr>
+<th>Color Name</th>
+<th>Hexadecimal</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>:teal</code></td>
+<td><code>#1abc9c</code></td>
+</tr>
+<tr>
+<td><code>:dark_teal</code></td>
+<td><code>#11806a</code></td>
+</tr>
+<tr>
+<td><code>:green</code></td>
+<td><code>#2ecc71</code></td>
+</tr>
+<tr>
+<td><code>:dark_green</code></td>
+<td><code>#1f8b4c</code></td>
+</tr>
+<tr>
+<td><code>:blue</code></td>
+<td><code>#3498db</code></td>
+</tr>
+<tr>
+<td><code>:dark_blue</code></td>
+<td><code>#206694</code></td>
+</tr>
+<tr>
+<td><code>:purple</code></td>
+<td><code>#9b59b6</code></td>
+</tr>
+<tr>
+<td><code>:dark_purple</code></td>
+<td><code>#71368a</code></td>
+</tr>
+<tr>
+<td><code>:magenta</code></td>
+<td><code>#e91e63</code></td>
+</tr>
+<tr>
+<td><code>:dark_magenta</code></td>
+<td><code>#ad1457</code></td>
+</tr>
+<tr>
+<td><code>:gold</code></td>
+<td><code>#f1c40f</code></td>
+</tr>
+<tr>
+<td><code>:dark_gold</code></td>
+<td><code>#c27c0e</code></td>
+</tr>
+<tr>
+<td><code>:orange</code></td>
+<td><code>#e67e22</code></td>
+</tr>
+<tr>
+<td><code>:dark_orange</code></td>
+<td><code>#a84300</code></td>
+</tr>
+<tr>
+<td><code>:red</code></td>
+<td><code>#e74c3c</code></td>
+</tr>
+<tr>
+<td><code>:dark_red</code></td>
+<td><code>#992d22</code></td>
+</tr>
+<tr>
+<td><code>:lighter_grey</code></td>
+<td><code>#95a5a6</code></td>
+</tr>
+<tr>
+<td><code>:lighter_gray</code></td>
+<td><code>#95a5a6</code></td>
+</tr>
+<tr>
+<td><code>:dark_grey</code></td>
+<td><code>#607d8b</code></td>
+</tr>
+<tr>
+<td><code>:dark_gray</code></td>
+<td><code>#607d8b</code></td>
+</tr>
+<tr>
+<td><code>:light_grey</code></td>
+<td><code>#979c9f</code></td>
+</tr>
+<tr>
+<td><code>:light_gray</code></td>
+<td><code>#979c9f</code></td>
+</tr>
+<tr>
+<td><code>:darker_grey</code></td>
+<td><code>#546e7a</code></td>
+</tr>
+<tr>
+<td><code>:darker_gray</code></td>
+<td><code>#546e7a</code></td>
+</tr>
+<tr>
+<td><code>:og_blurple</code></td>
+<td><code>#7289da</code></td>
+</tr>
+<tr>
+<td><code>:blurple</code></td>
+<td><code>#5865f2</code></td>
+</tr>
+<tr>
+<td><code>:greyple</code></td>
+<td><code>#99aab5</code></td>
+</tr>
+<tr>
+<td><code>:dark_theme</code></td>
+<td><code>#36393f</code></td>
+</tr>
+<tr>
+<td><code>:fuchsia</code></td>
+<td><code>#eb459e</code></td>
+</tr>
+<tr>
+<td><code>:dark_teal</code></td>
+<td><code>#11806a</code></td>
+</tr>
+<tr>
+<td><code>:green</code></td>
+<td><code>#2ecc71</code></td>
+</tr>
+<tr>
+<td><code>:dark_green</code></td>
+<td><code>#1f8b4c</code></td>
+</tr>
+<tr>
+<td><code>:blue</code></td>
+<td><code>#3498db</code></td>
+</tr>
+<tr>
+<td><code>:dark_blue</code></td>
+<td><code>#206694</code></td>
+</tr>
+<tr>
+<td><code>:purple</code></td>
+<td><code>#9b59b6</code></td>
+</tr>
+<tr>
+<td><code>:dark_purple</code></td>
+<td><code>#71368a</code></td>
+</tr>
+<tr>
+<td><code>:magenta</code></td>
+<td><code>#e91e63</code></td>
+</tr>
+<tr>
+<td><code>:dark_magenta</code></td>
+<td><code>#ad1457</code></td>
+</tr>
+<tr>
+<td><code>:gold</code></td>
+<td><code>#f1c40f</code></td>
+</tr>
+<tr>
+<td><code>:dark_gold</code></td>
+<td><code>#c27c0e</code></td>
+</tr>
+<tr>
+<td><code>:orange</code></td>
+<td><code>#e67e22</code></td>
+</tr>
+<tr>
+<td><code>:dark_orange</code></td>
+<td><code>#a84300</code></td>
+</tr>
+<tr>
+<td><code>:red</code></td>
+<td><code>#e74c3c</code></td>
+</tr>
+<tr>
+<td><code>:dark_red</code></td>
+<td><code>#992d22</code></td>
+</tr>
+<tr>
+<td><code>:lighter_grey</code></td>
+<td><code>#95a5a6</code></td>
+</tr>
+<tr>
+<td><code>:lighter_gray</code></td>
+<td><code>#95a5a6</code></td>
+</tr>
+<tr>
+<td><code>:dark_grey</code></td>
+<td><code>#607d8b</code></td>
+</tr>
+<tr>
+<td><code>:dark_gray</code></td>
+<td><code>#607d8b</code></td>
+</tr>
+<tr>
+<td><code>:light_grey</code></td>
+<td><code>#979c9f</code></td>
+</tr>
+<tr>
+<td><code>:light_gray</code></td>
+<td><code>#979c9f</code></td>
+</tr>
+<tr>
+<td><code>:darker_grey</code></td>
+<td><code>#546e7a</code></td>
+</tr>
+<tr>
+<td><code>:darker_gray</code></td>
+<td><code>#546e7a</code></td>
+</tr>
+<tr>
+<td><code>:og_blurple</code></td>
+<td><code>#7289da</code></td>
+</tr>
+<tr>
+<td><code>:blurple</code></td>
+<td><code>#5865f2</code></td>
+</tr>
+<tr>
+<td><code>:greyple</code></td>
+<td><code>#99aab5</code></td>
+</tr>
+<tr>
+<td><code>:dark_theme</code></td>
+<td><code>#36393f</code></td>
+</tr>
+<tr>
+<td><code>:fuchsia</code></td>
+<td><code>#eb459e</code></td>
+</tr>
+</tbody></table>
 
 
   </div>
@@ -640,12 +817,12 @@ Currently these colors are supported:
       <pre class="lines">
 
 
-197
 198
-199</pre>
+199
+200</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/color.rb', line 197</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/color.rb', line 198</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_color'>color</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@discord_colors</span><span class='lbracket'>[</span><span class='id identifier rubyid_color'>color</span><span class='rbracket'>]</span><span class='rparen'>)</span>
@@ -1171,7 +1348,7 @@ Currently these colors are supported:
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/5a4ea085257dbd155cf35855ed7f015efc63d4e4"><code>5a4ea085257dbd155cf35855ed7f015efc63d4e4</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/1f93e37c56d64770cc0c7d3c65a0dd4e88d4e67b"><code>1f93e37c56d64770cc0c7d3c65a0dd4e88d4e67b</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>
