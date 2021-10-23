@@ -3755,10 +3755,10 @@ If application was cached, it will be used.</p>
     <span class='kw'>end</span>
   <span class='kw'>end</span>
   <span class='ivar'>@commands</span><span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_cmd'>cmd</span><span class='op'>|</span>
-    <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span> <span class='symbol'>:extension</span> <span class='kw'>and</span> <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_extension'>extension</span> <span class='op'>==</span> <span class='id identifier rubyid_ins'>ins</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+    <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span> <span class='symbol'>:extension</span> <span class='kw'>and</span> <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_extension'>extension</span> <span class='op'>==</span> <span class='id identifier rubyid_ins'>ins</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
   <span class='kw'>end</span>
   <span class='id identifier rubyid_ins'>ins</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_commands'>commands</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_cmd'>cmd</span><span class='op'>|</span>
-    <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_define_singleton_method'>define_singleton_method</span><span class='lparen'>(</span><span class='symbol'>:extension</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_ins'>ins</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_define_singleton_method'>define_singleton_method</span><span class='lparen'>(</span><span class='symbol'>:extension</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_ins'>ins</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='rbrace'>}</span>
     <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_replace_block'>replace_block</span><span class='lparen'>(</span><span class='id identifier rubyid_ins'>ins</span><span class='rparen'>)</span>
     <span class='ivar'>@commands</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_cmd'>cmd</span>
   <span class='kw'>end</span>
@@ -4423,7 +4423,7 @@ If application was cached, it will be used.</p>
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/b241054ee9c6b6461ed2df6e45730dc2e69e2789"><code>b241054ee9c6b6461ed2df6e45730dc2e69e2789</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/8ca20ac4cbb740aa2dee12d379f79fc8cb354cb5"><code>8ca20ac4cbb740aa2dee12d379f79fc8cb354cb5</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>
