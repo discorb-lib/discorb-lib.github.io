@@ -336,12 +336,12 @@
       <pre class="lines">
 
 
-262
-263
-264</pre>
+270
+271
+272</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/app_command.rb', line 262</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command.rb', line 270</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_commands'>commands</span>
   <span class='ivar'>@commands</span>
@@ -395,12 +395,12 @@
       <pre class="lines">
 
 
-264
-265
-266</pre>
+272
+273
+274</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/app_command.rb', line 264</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command.rb', line 272</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_description'>description</span>
   <span class='ivar'>@description</span>
@@ -536,15 +536,15 @@
       <pre class="lines">
 
 
-301
-302
-303
-304
-305
-306</pre>
+309
+310
+311
+312
+313
+314</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/app_command.rb', line 301</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command.rb', line 309</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_group'>group</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../ApplicationCommand.html" title="Discorb::ApplicationCommand (module)">ApplicationCommand</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Command.html" title="Discorb::ApplicationCommand::Command (class)">Command</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SubcommandGroup.html" title="Discorb::ApplicationCommand::Command::SubcommandGroup (class)">SubcommandGroup</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='ivar'>@name</span><span class='comma'>,</span> <span class='ivar'>@client</span><span class='rparen'>)</span>
@@ -730,15 +730,15 @@ The key is the option name, the value is a hash with the following keys:</p>
       <pre class="lines">
 
 
-281
-282
-283
-284
-285
-286</pre>
+289
+290
+291
+292
+293
+294</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/app_command.rb', line 281</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command.rb', line 289</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_slash'>slash</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../ApplicationCommand.html" title="Discorb::ApplicationCommand (module)">ApplicationCommand</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Command.html" title="Discorb::ApplicationCommand::Command (class)">Command</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SlashCommand.html" title="Discorb::ApplicationCommand::Command::SlashCommand (class)">SlashCommand</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_block'>block</span><span class='comma'>,</span> <span class='int'>1</span><span class='comma'>,</span> <span class='ivar'>@name</span><span class='rparen'>)</span>
@@ -793,12 +793,12 @@ The key is the option name, the value is a hash with the following keys:</p>
       <pre class="lines">
 
 
-313
-314
-315</pre>
+321
+322
+323</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/app_command.rb', line 313</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command.rb', line 321</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
   <span class='ivar'>@name</span>
@@ -813,7 +813,7 @@ The key is the option name, the value is a hash with the following keys:</p>
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/1d55151bd0f5c12958ea10a90bd63680d499e084"><code>1d55151bd0f5c12958ea10a90bd63680d499e084</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/0e6f7d655dcf88f99b0ea50ae4bcf7d9a0f42de0"><code>0e6f7d655dcf88f99b0ea50ae4bcf7d9a0f42de0</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>
