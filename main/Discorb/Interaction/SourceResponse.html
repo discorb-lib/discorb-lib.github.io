@@ -84,7 +84,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/discorb/interaction.rb</dd>
+    <dd>lib/discorb/interaction/response.rb</dd>
   </dl>
   
 </div>
@@ -255,20 +255,20 @@
       <pre class="lines">
 
 
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118</pre>
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction.rb', line 108</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/response.rb', line 15</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_defer_source'>defer_source</span><span class='lparen'>(</span><span class='label'>ephemeral:</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -481,91 +481,43 @@
       <pre class="lines">
 
 
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
-150
-151
-152
-153
-154
-155
-156
-157
-158
-159
-160
-161
-162
-163
-164
-165
-166
-167
-168
-169
-170
-171
-172
-173
-174
-175
-176
-177
-178
-179
-180
-181
-182
-183
-184</pre>
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction.rb', line 136</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/response.rb', line 43</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>tts:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>embed:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>embeds:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>allowed_mentions:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>components:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>ephemeral:</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
     <span class='id identifier rubyid_payload'>payload</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
     <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:content</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_content'>content</span> <span class='kw'>if</span> <span class='id identifier rubyid_content'>content</span>
     <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:tts</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_tts'>tts</span>
-    <span class='id identifier rubyid_tmp_embed'>tmp_embed</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_embed'>embed</span>
-        <span class='lbracket'>[</span><span class='id identifier rubyid_embed'>embed</span><span class='rbracket'>]</span>
-      <span class='kw'>elsif</span> <span class='id identifier rubyid_embeds'>embeds</span>
-        <span class='id identifier rubyid_embeds'>embeds</span>
-      <span class='kw'>end</span>
-    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:embeds</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_tmp_embed'>tmp_embed</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_hash</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_tmp_embed'>tmp_embed</span>
-    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:allowed_mentions</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_allowed_mentions'>allowed_mentions</span> <span class='op'>?</span> <span class='id identifier rubyid_allowed_mentions'>allowed_mentions</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='lparen'>(</span><span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_allowed_mentions'>allowed_mentions</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_allowed_mentions'>allowed_mentions</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span>
-    <span class='kw'>if</span> <span class='id identifier rubyid_components'>components</span>
-      <span class='id identifier rubyid_tmp_components'>tmp_components</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-      <span class='id identifier rubyid_tmp_row'>tmp_row</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-      <span class='id identifier rubyid_components'>components</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span>
-        <span class='kw'>case</span> <span class='id identifier rubyid_c'>c</span>
-        <span class='kw'>when</span> <span class='const'>Array</span>
-          <span class='id identifier rubyid_tmp_components'>tmp_components</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_tmp_row'>tmp_row</span>
-          <span class='id identifier rubyid_tmp_row'>tmp_row</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-          <span class='id identifier rubyid_tmp_components'>tmp_components</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_c'>c</span>
-        <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="../SelectMenu.html" title="Discorb::SelectMenu (class)">SelectMenu</a></span></span>
-          <span class='id identifier rubyid_tmp_components'>tmp_components</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_tmp_row'>tmp_row</span>
-          <span class='id identifier rubyid_tmp_row'>tmp_row</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-          <span class='id identifier rubyid_tmp_components'>tmp_components</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='id identifier rubyid_c'>c</span><span class='rbracket'>]</span>
-        <span class='kw'>else</span>
-          <span class='id identifier rubyid_tmp_row'>tmp_row</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_c'>c</span>
-        <span class='kw'>end</span>
-      <span class='kw'>end</span>
-      <span class='id identifier rubyid_tmp_components'>tmp_components</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_tmp_row'>tmp_row</span>
-      <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:components</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_tmp_components'>tmp_components</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='period'>.</span><span class='id identifier rubyid_positive?'>positive?</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='lbrace'>{</span> <span class='label'>type:</span> <span class='int'>1</span><span class='comma'>,</span> <span class='label'>components:</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_hash</span><span class='rparen'>)</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span>
-    <span class='kw'>end</span>
+    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:embeds</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_embeds'>embeds</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='id identifier rubyid_embed'>embed</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='op'>&amp;.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_e'>e</span><span class='op'>|</span> <span class='id identifier rubyid_e'>e</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_hash'>to_hash</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='id identifier rubyid__1'>_1</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:allowed_mentions</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_allowed_mentions'>allowed_mentions</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='lparen'>(</span><span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_allowed_mentions'>allowed_mentions</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_allowed_mentions'>allowed_mentions</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span>
+    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:components</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Component.html" title="Discorb::Component (class)">Component</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_payload'><span class='object_link'><a href="../Component.html#to_payload-class_method" title="Discorb::Component.to_payload (method)">to_payload</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_components'>components</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_components'>components</span>
     <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:flags</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_ephemeral'>ephemeral</span> <span class='op'>?</span> <span class='int'>1</span> <span class='op'>&lt;&lt;</span> <span class='int'>6</span> <span class='op'>:</span> <span class='int'>0</span><span class='rparen'>)</span>
 
     <span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='ivar'>@responded</span>
@@ -593,7 +545,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/8ca20ac4cbb740aa2dee12d379f79fc8cb354cb5"><code>8ca20ac4cbb740aa2dee12d379f79fc8cb354cb5</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/0ab745fe11e82c4bd23ac136e9ca3df142c0363f"><code>0ab745fe11e82c4bd23ac136e9ca3df142c0363f</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>

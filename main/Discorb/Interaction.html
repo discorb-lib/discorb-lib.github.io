@@ -97,7 +97,9 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/discorb/interaction.rb</dd>
+    <dd>lib/discorb/interaction/root.rb<span class="defines">,<br />
+  lib/discorb/interaction/response.rb</span>
+</dd>
   </dl>
   
 </div>
@@ -494,12 +496,12 @@
       <pre class="lines">
 
 
-11
-12
-13</pre>
+9
+10
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction.rb', line 11</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_application_id'>application_id</span>
   <span class='ivar'>@application_id</span>
@@ -553,12 +555,12 @@
       <pre class="lines">
 
 
-9
-10
-11</pre>
+7
+8
+9</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 7</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_id'>id</span>
   <span class='ivar'>@id</span>
@@ -612,12 +614,12 @@
       <pre class="lines">
 
 
-15
-16
-17</pre>
+13
+14
+15</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction.rb', line 15</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 13</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_member'>member</span>
   <span class='ivar'>@member</span>
@@ -671,12 +673,12 @@
       <pre class="lines">
 
 
-22
-23
-24</pre>
+20
+21
+22</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 20</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_token'>token</span>
   <span class='ivar'>@token</span>
@@ -730,12 +732,12 @@
       <pre class="lines">
 
 
-13
-14
-15</pre>
+11
+12
+13</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 11</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_type'>type</span>
   <span class='ivar'>@type</span>
@@ -789,12 +791,12 @@
       <pre class="lines">
 
 
-17
-18
-19</pre>
+15
+16
+17</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction.rb', line 17</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 15</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_user'>user</span>
   <span class='ivar'>@user</span>
@@ -855,12 +857,12 @@
       <pre class="lines">
 
 
-20
-21
-22</pre>
+18
+19
+20</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction.rb', line 20</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 18</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_version'>version</span>
   <span class='ivar'>@version</span>
@@ -892,12 +894,12 @@
       <pre class="lines">
 
 
-58
-59
-60</pre>
+56
+57
+58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction.rb', line 58</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 56</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_channel'>channel</span>
   <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_channels'>channels</span><span class='lbracket'>[</span><span class='ivar'>@channel_id</span><span class='rbracket'>]</span>
@@ -922,12 +924,12 @@
       <pre class="lines">
 
 
-54
-55
-56</pre>
+52
+53
+54</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 52</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_guild'>guild</span>
   <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_guilds'>guilds</span><span class='lbracket'>[</span><span class='ivar'>@guild_id</span><span class='rbracket'>]</span>
@@ -952,12 +954,12 @@
       <pre class="lines">
 
 
-69
-70
-71</pre>
+67
+68
+69</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction.rb', line 69</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 67</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> id=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@id</span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
@@ -986,12 +988,12 @@
       <pre class="lines">
 
 
-62
-63
-64</pre>
+60
+61
+62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_target'>target</span>
   <span class='ivar'>@member</span> <span class='op'>||</span> <span class='ivar'>@user</span>
@@ -1006,7 +1008,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/8ca20ac4cbb740aa2dee12d379f79fc8cb354cb5"><code>8ca20ac4cbb740aa2dee12d379f79fc8cb354cb5</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/0ab745fe11e82c4bd23ac136e9ca3df142c0363f"><code>0ab745fe11e82c4bd23ac136e9ca3df142c0363f</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>
