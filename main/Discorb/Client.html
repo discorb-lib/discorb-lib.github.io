@@ -4131,7 +4131,7 @@ If application was cached, it will be used.</p>
 
   <div class="note notetag">
     <strong>Note:</strong>
-    <div class='inline'><p>If the token is nil, you should use <code>discorb run</code> with the <code>-t</code> or <code>--token</code> option.</p>
+    <div class='inline'><p>If the token is nil, you should use <code>discorb run</code> with the <code>-e</code> or <code>--env</code> option.</p>
 </div>
   </div>
 
@@ -4209,7 +4209,7 @@ If application was cached, it will be used.</p>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_token'>token</span> <span class='op'>||=</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>DISCORB_CLI_TOKEN</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Token is not specified, and -t/--token is not specified</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_token'>token</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Token is not specified, and -e/--env is not specified</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_token'>token</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
   <span class='kw'>case</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>DISCORB_CLI_FLAG</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
   <span class='kw'>when</span> <span class='kw'>nil</span>
     <span class='id identifier rubyid_start_client'>start_client</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span><span class='rparen'>)</span>
@@ -4361,7 +4361,7 @@ If application was cached, it will be used.</p>
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/0ab745fe11e82c4bd23ac136e9ca3df142c0363f"><code>0ab745fe11e82c4bd23ac136e9ca3df142c0363f</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/6b99fd4e7e5f9f5b2beb8e11e47350799f3ac7ee"><code>6b99fd4e7e5f9f5b2beb8e11e47350799f3ac7ee</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>
