@@ -74,7 +74,7 @@
   
   <dl>
       <dt>Includes:</dt>
-      <dd><span class='object_link'><a href="../ApplicationCommand/Handler.html" title="Discorb::ApplicationCommand::Handler (module)">ApplicationCommand::Handler</a></span></dd>
+      <dd>ApplicationCommand::Handler</dd>
   </dl>
   
   
@@ -127,7 +127,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#events-instance_method" title="#events (instance method)">#<strong>events</strong> -&gt; Hash{Symbol =&gt; Array&lt;Discorb::Event&gt;} </a>
+      <a href="#events-instance_method" title="#events (instance method)">#<strong>events</strong> -&gt; Hash{Symbol =&gt; Array&lt;Discorb::EventHandler&gt;} </a>
     
 
     
@@ -168,7 +168,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#event-instance_method" title="#event (instance method)">#<strong>event</strong>(event_name, id: nil, **metadata, &amp;block) -&gt; Discorb::Event </a>
+      <a href="#event-instance_method" title="#event (instance method)">#<strong>event</strong>(event_name, id: nil, **metadata, &amp;block) -&gt; Discorb::EventHandler </a>
     
 
     
@@ -191,7 +191,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#once_event-instance_method" title="#once_event (instance method)">#<strong>once_event</strong>(event_name, id: nil, **metadata, &amp;block) -&gt; Discorb::Event </a>
+      <a href="#once_event-instance_method" title="#once_event (instance method)">#<strong>once_event</strong>(event_name, id: nil, **metadata, &amp;block) -&gt; Discorb::EventHandler </a>
     
 
     
@@ -216,16 +216,6 @@
 
 
   
-  
-  
-  
-  
-  
-  
-  
-  <h3 class="inherited">Methods included from <span class='object_link'><a href="../ApplicationCommand/Handler.html" title="Discorb::ApplicationCommand::Handler (module)">ApplicationCommand::Handler</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../ApplicationCommand/Handler.html#message_command-instance_method" title="Discorb::ApplicationCommand::Handler#message_command (method)">#message_command</a></span>, <span class='object_link'><a href="../ApplicationCommand/Handler.html#setup_commands-instance_method" title="Discorb::ApplicationCommand::Handler#setup_commands (method)">#setup_commands</a></span>, <span class='object_link'><a href="../ApplicationCommand/Handler.html#slash-instance_method" title="Discorb::ApplicationCommand::Handler#slash (method)">#slash</a></span>, <span class='object_link'><a href="../ApplicationCommand/Handler.html#slash_group-instance_method" title="Discorb::ApplicationCommand::Handler#slash_group (method)">#slash_group</a></span>, <span class='object_link'><a href="../ApplicationCommand/Handler.html#user_command-instance_method" title="Discorb::ApplicationCommand::Handler#user_command (method)">#user_command</a></span></p>
-
   <div id="instance_attr_details" class="attr_details">
     <h2>Instance Attribute Details</h2>
     
@@ -293,7 +283,7 @@
       <div class="method_details ">
   <h3 class="signature " id="events-instance_method">
   
-    #<strong>events</strong> -&gt; <tt>Hash{Symbol =&gt; Array&lt;<span class='object_link'><a href="../Event.html" title="Discorb::Event (class)">Discorb::Event</a></span>&gt;}</tt>  <span class="extras">(readonly)</span>
+    #<strong>events</strong> -&gt; <tt>Hash{Symbol =&gt; Array&lt;<span class='object_link'><a href="../EventHandler.html" title="Discorb::EventHandler (class)">Discorb::EventHandler</a></span>&gt;}</tt>  <span class="extras">(readonly)</span>
   
 
   
@@ -314,7 +304,7 @@
     <li>
       
       
-        <span class='type'>(<tt>Hash{Symbol =&gt; Array&lt;<span class='object_link'><a href="../Event.html" title="Discorb::Event (class)">Discorb::Event</a></span>&gt;}</tt>)</span>
+        <span class='type'>(<tt>Hash{Symbol =&gt; Array&lt;<span class='object_link'><a href="../EventHandler.html" title="Discorb::EventHandler (class)">Discorb::EventHandler</a></span>&gt;}</tt>)</span>
       
       
       
@@ -357,7 +347,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="event-instance_method">
   
-    #<strong>event</strong>(event_name, id: nil, **metadata, &amp;block) -&gt; <tt><span class='object_link'><a href="../Event.html" title="Discorb::Event (class)">Discorb::Event</a></span></tt> 
+    #<strong>event</strong>(event_name, id: nil, **metadata, &amp;block) -&gt; <tt><span class='object_link'><a href="../EventHandler.html" title="Discorb::EventHandler (class)">Discorb::EventHandler</a></span></tt> 
   
 
   
@@ -429,7 +419,7 @@
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="../Event.html" title="Discorb::Event (class)">Discorb::Event</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../EventHandler.html" title="Discorb::EventHandler (class)">Discorb::EventHandler</a></span></tt>)</span>
       
       
       
@@ -488,7 +478,7 @@
       <div class="method_details ">
   <h3 class="signature " id="once_event-instance_method">
   
-    #<strong>once_event</strong>(event_name, id: nil, **metadata, &amp;block) -&gt; <tt><span class='object_link'><a href="../Event.html" title="Discorb::Event (class)">Discorb::Event</a></span></tt> 
+    #<strong>once_event</strong>(event_name, id: nil, **metadata, &amp;block) -&gt; <tt><span class='object_link'><a href="../EventHandler.html" title="Discorb::EventHandler (class)">Discorb::EventHandler</a></span></tt> 
   
 
   
@@ -575,7 +565,7 @@
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="../Event.html" title="Discorb::Event (class)">Discorb::Event</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../EventHandler.html" title="Discorb::EventHandler (class)">Discorb::EventHandler</a></span></tt>)</span>
       
       
       
@@ -613,7 +603,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/9d854cd53172f5e882e428c6eb633d2d8e20ca53"><code>9d854cd53172f5e882e428c6eb633d2d8e20ca53</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/025458f593e9ca2f95e4d681c960ad8f19305c0a"><code>025458f593e9ca2f95e4d681c960ad8f19305c0a</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>

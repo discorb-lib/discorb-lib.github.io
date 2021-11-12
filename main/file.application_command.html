@@ -73,9 +73,9 @@
 <p>Write to a your script:</p>
 
 <ul>
-<li><span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#slash-instance_method" title="Discorb::ApplicationCommand::Handler#slash (method)">Discorb::ApplicationCommand::Handler#slash</a></span>, <span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#slash_group-instance_method" title="Discorb::ApplicationCommand::Handler#slash_group (method)">Discorb::ApplicationCommand::Handler#slash_group</a></span> for slash commands,</li>
-<li><span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#user_command-instance_method" title="Discorb::ApplicationCommand::Handler#user_command (method)">Discorb::ApplicationCommand::Handler#user_command</a></span> for user menu commands,</li>
-<li><span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#message_command-instance_method" title="Discorb::ApplicationCommand::Handler#message_command (method)">Discorb::ApplicationCommand::Handler#message_command</a></span> for message menu commands.</li>
+<li>Discorb::ApplicationCommand::Handler.slash, Discorb::ApplicationCommand::Handler.slash_group for slash commands,</li>
+<li>Discorb::ApplicationCommand::Handler.user_command for user menu commands,</li>
+<li>Discorb::ApplicationCommand::Handler.message_command for message menu commands.</li>
 </ul>
 
 <p>And then run <code>discorb setup</code> to register your application commands.
@@ -101,7 +101,7 @@ Guild commands will be registered immediately.</p>
 <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span><span class='lparen'>(</span><span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>DISCORD_BOT_TOKEN</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
 </code></pre>
 
-<p><span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#slash-instance_method" title="Discorb::ApplicationCommand::Handler#slash (method)">Discorb::ApplicationCommand::Handler#slash</a></span> takes 5 arguments:</p>
+<p>Discorb::ApplicationCommand::Handler#slash takes 5 arguments:</p>
 
 <table><thead>
 <tr>
@@ -189,6 +189,11 @@ Guild commands will be registered immediately.</p>
 <td><code>Proc</code></td>
 <td>Autocomplete function.</td>
 </tr>
+<tr>
+<td><code>:range</code></td>
+<td><code>Range</code></td>
+<td>Range of the option. Only valid for numeric options. (<code>:int</code>, <code>:float</code>)</td>
+</tr>
 </tbody></table>
 
 <p><code>choices</code> should be unspecified if you don&#39;t want to use it.
@@ -263,7 +268,7 @@ Guild commands will be registered immediately.</p>
 
 <h4 id="group-slash-commands">Group Slash Commands</h4>
 
-<p>To register a group of slash commands, use <span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#slash_group-instance_method" title="Discorb::ApplicationCommand::Handler#slash_group (method)">Discorb::ApplicationCommand::Handler#slash_group</a></span>.</p>
+<p>To register a group of slash commands, use Discorb::ApplicationCommand::Handler#slash_group.</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_group'>group</span> <span class='op'>=</span> <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_slash_group'>slash_group</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>settings</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Set settings of bot.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 
@@ -421,7 +426,7 @@ Due to the limitation of Discord API, the proc must return the result in less th
 <span class='kw'>end</span>
 </code></pre>
 
-<p><span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#user_command-instance_method" title="Discorb::ApplicationCommand::Handler#user_command (method)">Discorb::ApplicationCommand::Handler#user_command</a></span> takes 3 arguments:</p>
+<p>Discorb::ApplicationCommand::Handler.user_command takes 3 arguments:</p>
 
 <table><thead>
 <tr>
@@ -468,7 +473,7 @@ Due to the limitation of Discord API, the proc must return the result in less th
 </span><span class='kw'>end</span>
 </code></pre>
 
-<p><span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#message_command-instance_method" title="Discorb::ApplicationCommand::Handler#message_command (method)">Discorb::ApplicationCommand::Handler#message_command</a></span> takes 3 arguments:</p>
+<p>Discorb::ApplicationCommand::Handler.message_command takes 3 arguments:</p>
 
 <table><thead>
 <tr>
@@ -510,7 +515,7 @@ Due to the limitation of Discord API, the proc must return the result in less th
 </div></div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/9d854cd53172f5e882e428c6eb633d2d8e20ca53"><code>9d854cd53172f5e882e428c6eb633d2d8e20ca53</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/025458f593e9ca2f95e4d681c960ad8f19305c0a"><code>025458f593e9ca2f95e4d681c960ad8f19305c0a</code></a>, version (main), with YARD 0.9.26.
     </div>
 
     </div>
