@@ -337,7 +337,143 @@
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>command_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Command name.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>description</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Command description.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash{String =&gt; Hash{:description =&gt; String, :optional =&gt; Boolean, :type =&gt; Object}}</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Command options.
+The key is the option name, the value is a hash with the following keys:</p>
+
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>:description</code></td>
+<td><code>String</code></td>
+<td>Description of the option.</td>
+</tr>
+<tr>
+<td><code>:required</code></td>
+<td>Whether the argument is required. <code>optional</code> will be used if not specified.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>:optional</code></td>
+<td>Whether the argument is optional. <code>required</code> will be used if not specified.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>:type</code></td>
+<td><code>Object</code></td>
+<td>Type of the option.</td>
+</tr>
+<tr>
+<td><code>:choice</code></td>
+<td><code>Hash{String =&gt; String, Integer, Float}</code></td>
+<td>Type of the option.</td>
+</tr>
+<tr>
+<td><code>:default</code></td>
+<td><code>Object</code></td>
+<td>Default value of the option.</td>
+</tr>
+<tr>
+<td><code>:channel_types</code></td>
+<td><code>Array&lt;Class&lt;Discorb::Channel&gt;&gt;</code></td>
+<td>Type of the channel option.</td>
+</tr>
+<tr>
+<td><code>:autocomplete</code></td>
+<td><code>Proc</code></td>
+<td>Autocomplete function.</td>
+</tr>
+<tr>
+<td><code>:range</code></td>
+<td><code>Range</code></td>
+<td>Range of the option. Only valid for numeric options. (<code>:int</code>, <code>:float</code>)</td>
+</tr>
+</tbody></table>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>guild_ids</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;#<span class='object_link'><a href="#to_s-instance_method" title="Discorb::ApplicationCommand::Command::SubcommandGroup#to_s (method)">to_s</a></span>&gt;</tt>, <tt>false</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Guild IDs to set the command to. <code>false</code> to global command, <code>nil</code> to use default.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>block</span>
+      
+      
+        <span class='type'>(<tt>Proc</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Command block.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -418,7 +554,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/025458f593e9ca2f95e4d681c960ad8f19305c0a"><code>025458f593e9ca2f95e4d681c960ad8f19305c0a</code></a>, version (main), with YARD 0.9.26.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/9273a26879db27cc62f80f06a5695c41f54df16c"><code>9273a26879db27cc62f80f06a5695c41f54df16c</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
