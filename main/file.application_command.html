@@ -131,6 +131,8 @@ Guild commands will be registered immediately.</p>
 </tr>
 </tbody></table>
 
+<p>Block will be called with a Discorb::ApplicationCommand::Interaction object and specified options.</p>
+
 <p>In <code>options</code>, hash should be like this:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='lbrace'>{</span>
@@ -277,16 +279,16 @@ Guild commands will be registered immediately.</p>
     <span class='label'>type:</span> <span class='symbol'>:boolean</span><span class='comma'>,</span>
     <span class='label'>description:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Whether bot should expand message.</span><span class='tstring_end'>&quot;</span></span>
   <span class='rbrace'>}</span>
-<span class='rbrace'>}</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_interaction'>interaction</span><span class='op'>|</span>
+<span class='rbrace'>}</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_interaction'>interaction</span><span class='comma'>,</span> <span class='id identifier rubyid_enabled'>enabled</span><span class='op'>|</span>
   <span class='comment'># ...
 </span><span class='kw'>end</span>
 
-<span class='id identifier rubyid_group'>group</span><span class='period'>.</span><span class='id identifier rubyid_slash'>slash</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bump_alert</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Whether bot should notify DISBOARD bump.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span>
+<span class='id identifier rubyid_group'>group</span><span class='period'>.</span><span class='id identifier rubyid_slash'>slash</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>level</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Whether level system is enabled.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>enabled</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
     <span class='label'>type:</span> <span class='symbol'>:boolean</span><span class='comma'>,</span>
-    <span class='label'>description:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Whether bot should notify DISBOARD bump.</span><span class='tstring_end'>&quot;</span></span>
+    <span class='label'>description:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Whether level system is enabled.</span><span class='tstring_end'>&quot;</span></span>
   <span class='rbrace'>}</span>
-<span class='rbrace'>}</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_interaction'>interaction</span><span class='op'>|</span>
+<span class='rbrace'>}</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_interaction'>interaction</span><span class='comma'>,</span> <span class='id identifier rubyid_enabled'>enabled</span><span class='op'>|</span>
   <span class='comment'># ...
 </span><span class='kw'>end</span>
 
@@ -301,15 +303,15 @@ Guild commands will be registered immediately.</p>
       <span class='label'>type:</span> <span class='symbol'>:boolean</span><span class='comma'>,</span>
       <span class='label'>description:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Whether bot should expand message.</span><span class='tstring_end'>&quot;</span></span>
     <span class='rbrace'>}</span>
-  <span class='rbrace'>}</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_interaction'>interaction</span><span class='op'>|</span>
+  <span class='rbrace'>}</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_interaction'>interaction</span><span class='comma'>,</span> <span class='id identifier rubyid_enabled'>enabled</span><span class='op'>|</span>
     <span class='comment'># ...
 </span>  <span class='kw'>end</span>
-  <span class='id identifier rubyid_group'>group</span><span class='period'>.</span><span class='id identifier rubyid_slash'>slash</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bump_alert</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Whether bot should notify DISBOARD bump.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span>
+  <span class='id identifier rubyid_group'>group</span><span class='period'>.</span><span class='id identifier rubyid_slash'>slash</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bump_alert</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Whether level system is enabled.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span>
     <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>enabled</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
       <span class='label'>type:</span> <span class='symbol'>:boolean</span><span class='comma'>,</span>
-      <span class='label'>description:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Whether bot should notify DISBOARD bump.</span><span class='tstring_end'>&quot;</span></span>
+      <span class='label'>description:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Whether level system is enabled.</span><span class='tstring_end'>&quot;</span></span>
     <span class='rbrace'>}</span>
-  <span class='rbrace'>}</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_interaction'>interaction</span><span class='op'>|</span>
+  <span class='rbrace'>}</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_interaction'>interaction</span><span class='comma'>,</span> <span class='id identifier rubyid_enabled'>enabled</span><span class='op'>|</span>
     <span class='comment'># ...
 </span>  <span class='kw'>end</span>
 <span class='kw'>end</span>
@@ -515,7 +517,7 @@ Due to the limitation of Discord API, the proc must return the result in less th
 </div></div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/9273a26879db27cc62f80f06a5695c41f54df16c"><code>9273a26879db27cc62f80f06a5695c41f54df16c</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/2388d769e886e71de49b12f79de931f3390e6eb9"><code>2388d769e886e71de49b12f79de931f3390e6eb9</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
