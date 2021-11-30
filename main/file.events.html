@@ -1083,7 +1083,104 @@ Not like <a href="file._23message_delete.html" title="#message_delete">#message_
 
 <h3 id="voice-events">Voice events</h3>
 
-<p>It&#39;s too big, so they&#39;re documented in <a href="file.voice_events.html" title="Voice Events">Voice Events</a></p>
+<p>Because it&#39;s big, it&#39;s documented in <a href="file.voice_events.html" title="Voice Events">Voice Events</a>.</p>
+
+<h3 id="guild-scheduled-event-events">Guild scheduled event events</h3>
+
+<h4 id="scheduled_event_create-event"><code>scheduled_event_create(event)</code></h4>
+
+<p>Fires when a scheduled event is created.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>event</code></td>
+<td><span class='object_link'><a href="Discorb/ScheduledEvent.html" title="Discorb::ScheduledEvent (class)">Discorb::ScheduledEvent</a></span></td>
+<td>The created scheduled event.</td>
+</tr>
+</tbody></table>
+
+<h4 id="scheduled_event_cancel-event-scheduled_event_delete-event"><code>scheduled_event_cancel(event)</code>, <code>scheduled_event_delete(event)</code></h4>
+
+<p>Fires when a scheduled event is canceled or deleted.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>event</code></td>
+<td><span class='object_link'><a href="Discorb/ScheduledEvent.html" title="Discorb::ScheduledEvent (class)">Discorb::ScheduledEvent</a></span></td>
+<td>The deleted scheduled event.</td>
+</tr>
+</tbody></table>
+
+<h4 id="scheduled_event_edit-before-after"><code>scheduled_event_edit(before, after)</code></h4>
+
+<p>Fires when a scheduled event is edited.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>before</code></td>
+<td><span class='object_link'><a href="Discorb/ScheduledEvent.html" title="Discorb::ScheduledEvent (class)">Discorb::ScheduledEvent</a></span></td>
+<td>The scheduled event before the edit.</td>
+</tr>
+<tr>
+<td><code>after</code></td>
+<td><span class='object_link'><a href="Discorb/ScheduledEvent.html" title="Discorb::ScheduledEvent (class)">Discorb::ScheduledEvent</a></span></td>
+<td>The scheduled event after the edit.</td>
+</tr>
+</tbody></table>
+
+<h4 id="scheduled_event_start-event"><code>scheduled_event_start(event)</code></h4>
+
+<p>Fires when a scheduled event is started.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>event</code></td>
+<td><span class='object_link'><a href="Discorb/ScheduledEvent.html" title="Discorb::ScheduledEvent (class)">Discorb::ScheduledEvent</a></span></td>
+<td>The scheduled event that started.</td>
+</tr>
+</tbody></table>
+
+<h4 id="scheduled_event_end-event"><code>scheduled_event_end(event)</code></h4>
+
+<p>Fires when a scheduled event is ended.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>event</code></td>
+<td><span class='object_link'><a href="Discorb/ScheduledEvent.html" title="Discorb::ScheduledEvent (class)">Discorb::ScheduledEvent</a></span></td>
+<td>The scheduled event that ended.</td>
+</tr>
+</tbody></table>
 
 <h3 id="low-level-events">Low-level events</h3>
 
@@ -1140,10 +1237,33 @@ Not like <a href="file._23message_delete.html" title="#message_delete">#message_
 <td>The thread of the event.</td>
 </tr>
 </tbody></table>
+
+<h4 id="scheduled_event_update-before-after"><code>scheduled_event_update(before, after)</code></h4>
+
+<p>Fires when <code>SCHEDULED_EVENT_UPDATE</code> is received.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>before</code></td>
+<td><span class='object_link'><a href="Discorb/ScheduledEvent.html" title="Discorb::ScheduledEvent (class)">Discorb::ScheduledEvent</a></span></td>
+<td>The scheduled event before the update.</td>
+</tr>
+<tr>
+<td><code>after</code></td>
+<td><span class='object_link'><a href="Discorb/ScheduledEvent.html" title="Discorb::ScheduledEvent (class)">Discorb::ScheduledEvent</a></span></td>
+<td>The scheduled event after the update.</td>
+</tr>
+</tbody></table>
 </div></div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/b821a6b791fdd631dcc6ee7cabac3535278e6020"><code>b821a6b791fdd631dcc6ee7cabac3535278e6020</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/69913a7923033db358b7b7040a9c99fef4c451bb"><code>69913a7923033db358b7b7040a9c99fef4c451bb</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
