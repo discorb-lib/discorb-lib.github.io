@@ -5,7 +5,7 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
-  Class: Discorb::Message::Flag
+  Class: Discorb::Application::Flag
   
     &mdash; discorb (main) documentation
   
@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="../../css/common.css" type="text/css" />
 
 <script type="text/javascript">
-  pathId = "Discorb::Message::Flag";
+  pathId = "Discorb::Application::Flag";
   relpath = '../../';
 </script>
 
@@ -38,7 +38,7 @@
         <div id="menu">
   
     <a href="../../a_index.html">Index (F)</a> &raquo;
-    <span class='title'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Message.html" title="Discorb::Message (class)">Message</a></span></span>
+    <span class='title'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Application.html" title="Discorb::Application (class)">Application</a></span></span>
      &raquo; 
     <span class="title">Flag</span>
   
@@ -60,7 +60,7 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><h1>Class: Discorb::Message::Flag
+      <div id="content"><h1>Class: Discorb::Application::Flag
   
   
   
@@ -77,7 +77,7 @@
           
             <li class="next"><span class='object_link'><a href="../Flag.html" title="Discorb::Flag (class)">Flag</a></span></li>
           
-            <li class="next">Discorb::Message::Flag</li>
+            <li class="next">Discorb::Application::Flag</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
@@ -97,14 +97,14 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/discorb/message.rb</dd>
+    <dd>lib/discorb/application.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Represents message flag.</p>
+    <p>Represents a flag for an application.</p>
 
 <h2 id="flag-fields">Flag fields</h2>
 
@@ -115,36 +115,36 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><code>1 &lt;&lt; 0</code></td>
-<td><code>:crossposted</code></td>
+<td><code>1 &lt;&lt; 12</code></td>
+<td><code>:gateway_presence</code></td>
 </tr>
 <tr>
-<td><code>1 &lt;&lt; 1</code></td>
-<td><code>:crosspost</code></td>
+<td><code>1 &lt;&lt; 13</code></td>
+<td><code>:gateway_presence_limited</code></td>
 </tr>
 <tr>
-<td><code>1 &lt;&lt; 2</code></td>
-<td><code>:supress_embeds</code></td>
+<td><code>1 &lt;&lt; 14</code></td>
+<td><code>:gateway_guild_members</code></td>
 </tr>
 <tr>
-<td><code>1 &lt;&lt; 3</code></td>
-<td><code>:source_message_deleted</code></td>
+<td><code>1 &lt;&lt; 15</code></td>
+<td><code>:gateway_guild_members_limited</code></td>
 </tr>
 <tr>
-<td><code>1 &lt;&lt; 4</code></td>
-<td><code>:urgent</code></td>
+<td><code>1 &lt;&lt; 16</code></td>
+<td><code>:verification_pending_guild_limit</code></td>
 </tr>
 <tr>
-<td><code>1 &lt;&lt; 5</code></td>
-<td><code>:has_thread</code></td>
+<td><code>1 &lt;&lt; 17</code></td>
+<td><code>:embedded</code></td>
 </tr>
 <tr>
-<td><code>1 &lt;&lt; 6</code></td>
-<td><code>:ephemeral</code></td>
+<td><code>1 &lt;&lt; 18</code></td>
+<td><code>:gateway_message_content</code></td>
 </tr>
 <tr>
-<td><code>1 &lt;&lt; 7</code></td>
-<td><code>:loading</code></td>
+<td><code>1 &lt;&lt; 19</code></td>
+<td><code>:gateway_message_content_limited</code></td>
 </tr>
 </tbody></table>
 
