@@ -113,45 +113,97 @@
   
 </p>
 
-  
-    <h2>
-      Constant Summary
-      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
-    </h2>
 
-    <dl class="constants">
-      
-        <dt id="privacy_level-classvariable" class="">@@privacy_level =
-          
-        </dt>
-        <dd><pre class="code"><span class='lbrace'>{</span>
-  <span class='int'>2</span> <span class='op'>=&gt;</span> <span class='symbol'>:guild_only</span><span class='comma'>,</span>
-<span class='rbrace'>}</span></pre></dd>
-      
-        <dt id="status-classvariable" class="">@@status =
-          
-        </dt>
-        <dd><pre class="code"><span class='lbrace'>{</span>
-  <span class='int'>1</span> <span class='op'>=&gt;</span> <span class='symbol'>:scheduled</span><span class='comma'>,</span>
-  <span class='int'>2</span> <span class='op'>=&gt;</span> <span class='symbol'>:active</span><span class='comma'>,</span>
-  <span class='int'>3</span> <span class='op'>=&gt;</span> <span class='symbol'>:completed</span><span class='comma'>,</span>
-  <span class='int'>4</span> <span class='op'>=&gt;</span> <span class='symbol'>:canceled</span><span class='comma'>,</span>
-<span class='rbrace'>}</span></pre></dd>
-      
-        <dt id="entity_type-classvariable" class="">@@entity_type =
-          
-        </dt>
-        <dd><pre class="code"><span class='lbrace'>{</span>
-  <span class='int'>1</span> <span class='op'>=&gt;</span> <span class='symbol'>:stage_instance</span><span class='comma'>,</span>
-  <span class='int'>2</span> <span class='op'>=&gt;</span> <span class='symbol'>:voice</span><span class='comma'>,</span>
-  <span class='int'>3</span> <span class='op'>=&gt;</span> <span class='symbol'>:external</span><span class='comma'>,</span>
-<span class='rbrace'>}</span></pre></dd>
-      
-    </dl>
+
+
+  <h2>Class Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#entity_type-class_method" title="entity_type (class method)">.<strong>entity_type</strong> -&gt; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
   
 
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute entity_type.</p>
+</div></span>
+  
+</li>
 
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#privacy_level-class_method" title="privacy_level (class method)">.<strong>privacy_level</strong> -&gt; Object </a>
+    
 
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute privacy_level.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#status-class_method" title="status (class method)">.<strong>status</strong> -&gt; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute status.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
 
   <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
   <ul class="summary">
@@ -752,6 +804,137 @@
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="DiscordModel.html" title="Discorb::DiscordModel (class)">DiscordModel</a></span></h3>
   <p class="inherited"><span class='object_link'><a href="DiscordModel.html#==-instance_method" title="Discorb::DiscordModel#== (method)">#==</a></span>, <span class='object_link'><a href="DiscordModel.html#eql%3F-instance_method" title="Discorb::DiscordModel#eql? (method)">#eql?</a></span>, <span class='object_link'><a href="DiscordModel.html#hash-instance_method" title="Discorb::DiscordModel#hash (method)">#hash</a></span></p>
+
+  <div id="class_attr_details" class="attr_details">
+    <h2>Class Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="entity_type-class_method">
+  
+    .<strong>entity_type</strong> -&gt; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of attribute entity_type.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+273
+274
+275</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/event.rb', line 273</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_entity_type'>entity_type</span>
+  <span class='ivar'>@entity_type</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="privacy_level-class_method">
+  
+    .<strong>privacy_level</strong> -&gt; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of attribute privacy_level.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+273
+274
+275</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/event.rb', line 273</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_privacy_level'>privacy_level</span>
+  <span class='ivar'>@privacy_level</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="status-class_method">
+  
+    .<strong>status</strong> -&gt; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of attribute status.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+273
+274
+275</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/event.rb', line 273</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_status'>status</span>
+  <span class='ivar'>@status</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
 
   <div id="instance_attr_details" class="attr_details">
     <h2>Instance Attribute Details</h2>
@@ -2103,10 +2286,10 @@ Only present if the event will do in stage instance or voice channel.</p>
           <span class='label'>description:</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span>
           <span class='label'>scheduled_start_time:</span> <span class='id identifier rubyid_start_time'>start_time</span><span class='period'>.</span><span class='id identifier rubyid_iso8601'>iso8601</span><span class='comma'>,</span>
           <span class='label'>scheduled_end_time:</span> <span class='id identifier rubyid_end_time'>end_time</span><span class='op'>&amp;.</span><span class='id identifier rubyid_iso8601'>iso8601</span><span class='comma'>,</span>
-          <span class='label'>privacy_level:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Discorb::ScheduledEvent (class)">ScheduledEvent</a></span></span><span class='period'>.</span><span class='id identifier rubyid_privacy_level'>privacy_level</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='lparen'>(</span><span class='id identifier rubyid_privacy_level'>privacy_level</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
+          <span class='label'>privacy_level:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Discorb::ScheduledEvent (class)">ScheduledEvent</a></span></span><span class='period'>.</span><span class='id identifier rubyid_privacy_level'><span class='object_link'><a href="#privacy_level-class_method" title="Discorb::ScheduledEvent.privacy_level (method)">privacy_level</a></span></span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='lparen'>(</span><span class='id identifier rubyid_privacy_level'>privacy_level</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
           <span class='label'>channel_id:</span> <span class='id identifier rubyid_channel'>channel</span><span class='op'>&amp;.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span>
-          <span class='label'>entity_type:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Discorb::ScheduledEvent (class)">ScheduledEvent</a></span></span><span class='period'>.</span><span class='id identifier rubyid_entity_type'>entity_type</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='lparen'>(</span><span class='symbol'>:stage_instance</span><span class='rparen'>)</span><span class='comma'>,</span>
-          <span class='label'>status:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Discorb::ScheduledEvent (class)">ScheduledEvent</a></span></span><span class='period'>.</span><span class='id identifier rubyid_status'>status</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
+          <span class='label'>entity_type:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Discorb::ScheduledEvent (class)">ScheduledEvent</a></span></span><span class='period'>.</span><span class='id identifier rubyid_entity_type'><span class='object_link'><a href="#entity_type-class_method" title="Discorb::ScheduledEvent.entity_type (method)">entity_type</a></span></span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='lparen'>(</span><span class='symbol'>:stage_instance</span><span class='rparen'>)</span><span class='comma'>,</span>
+          <span class='label'>status:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Discorb::ScheduledEvent (class)">ScheduledEvent</a></span></span><span class='period'>.</span><span class='id identifier rubyid_status'><span class='object_link'><a href="#status-class_method" title="Discorb::ScheduledEvent.status (method)">status</a></span></span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
         <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_reject'>reject</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span> <span class='id identifier rubyid_v'>v</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span> <span class='rbrace'>}</span>
       <span class='kw'>when</span> <span class='symbol'>:voice</span>
         <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel must be provided for voice events</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_channel'>channel</span>
@@ -2115,10 +2298,10 @@ Only present if the event will do in stage instance or voice channel.</p>
           <span class='label'>description:</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span>
           <span class='label'>scheduled_start_time:</span> <span class='id identifier rubyid_start_time'>start_time</span><span class='period'>.</span><span class='id identifier rubyid_iso8601'>iso8601</span><span class='comma'>,</span>
           <span class='label'>scheduled_end_time:</span> <span class='id identifier rubyid_end_time'>end_time</span><span class='op'>&amp;.</span><span class='id identifier rubyid_iso8601'>iso8601</span><span class='comma'>,</span>
-          <span class='label'>privacy_level:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Discorb::ScheduledEvent (class)">ScheduledEvent</a></span></span><span class='period'>.</span><span class='id identifier rubyid_privacy_level'>privacy_level</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='lparen'>(</span><span class='id identifier rubyid_privacy_level'>privacy_level</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
+          <span class='label'>privacy_level:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Discorb::ScheduledEvent (class)">ScheduledEvent</a></span></span><span class='period'>.</span><span class='id identifier rubyid_privacy_level'><span class='object_link'><a href="#privacy_level-class_method" title="Discorb::ScheduledEvent.privacy_level (method)">privacy_level</a></span></span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='lparen'>(</span><span class='id identifier rubyid_privacy_level'>privacy_level</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
           <span class='label'>channel_id:</span> <span class='id identifier rubyid_channel'>channel</span><span class='op'>&amp;.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span>
-          <span class='label'>entity_type:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Discorb::ScheduledEvent (class)">ScheduledEvent</a></span></span><span class='period'>.</span><span class='id identifier rubyid_entity_type'>entity_type</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='lparen'>(</span><span class='symbol'>:voice</span><span class='rparen'>)</span><span class='comma'>,</span>
-          <span class='label'>status:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Discorb::ScheduledEvent (class)">ScheduledEvent</a></span></span><span class='period'>.</span><span class='id identifier rubyid_status'>status</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
+          <span class='label'>entity_type:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Discorb::ScheduledEvent (class)">ScheduledEvent</a></span></span><span class='period'>.</span><span class='id identifier rubyid_entity_type'><span class='object_link'><a href="#entity_type-class_method" title="Discorb::ScheduledEvent.entity_type (method)">entity_type</a></span></span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='lparen'>(</span><span class='symbol'>:voice</span><span class='rparen'>)</span><span class='comma'>,</span>
+          <span class='label'>status:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Discorb::ScheduledEvent (class)">ScheduledEvent</a></span></span><span class='period'>.</span><span class='id identifier rubyid_status'><span class='object_link'><a href="#status-class_method" title="Discorb::ScheduledEvent.status (method)">status</a></span></span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
         <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_reject'>reject</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span> <span class='id identifier rubyid_v'>v</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span> <span class='rbrace'>}</span>
       <span class='kw'>when</span> <span class='symbol'>:external</span>
         <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>location must be provided for external events</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_location'>location</span>
@@ -2129,12 +2312,12 @@ Only present if the event will do in stage instance or voice channel.</p>
           <span class='label'>channel_id:</span> <span class='kw'>nil</span><span class='comma'>,</span>
           <span class='label'>scheduled_start_time:</span> <span class='id identifier rubyid_start_time'>start_time</span><span class='period'>.</span><span class='id identifier rubyid_iso8601'>iso8601</span><span class='comma'>,</span>
           <span class='label'>scheduled_end_time:</span> <span class='id identifier rubyid_end_time'>end_time</span><span class='period'>.</span><span class='id identifier rubyid_iso8601'>iso8601</span><span class='comma'>,</span>
-          <span class='label'>privacy_level:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Discorb::ScheduledEvent (class)">ScheduledEvent</a></span></span><span class='period'>.</span><span class='id identifier rubyid_privacy_level'>privacy_level</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='lparen'>(</span><span class='id identifier rubyid_privacy_level'>privacy_level</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
-          <span class='label'>entity_type:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Discorb::ScheduledEvent (class)">ScheduledEvent</a></span></span><span class='period'>.</span><span class='id identifier rubyid_entity_type'>entity_type</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='lparen'>(</span><span class='symbol'>:external</span><span class='rparen'>)</span><span class='comma'>,</span>
+          <span class='label'>privacy_level:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Discorb::ScheduledEvent (class)">ScheduledEvent</a></span></span><span class='period'>.</span><span class='id identifier rubyid_privacy_level'><span class='object_link'><a href="#privacy_level-class_method" title="Discorb::ScheduledEvent.privacy_level (method)">privacy_level</a></span></span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='lparen'>(</span><span class='id identifier rubyid_privacy_level'>privacy_level</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
+          <span class='label'>entity_type:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Discorb::ScheduledEvent (class)">ScheduledEvent</a></span></span><span class='period'>.</span><span class='id identifier rubyid_entity_type'><span class='object_link'><a href="#entity_type-class_method" title="Discorb::ScheduledEvent.entity_type (method)">entity_type</a></span></span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='lparen'>(</span><span class='symbol'>:external</span><span class='rparen'>)</span><span class='comma'>,</span>
           <span class='label'>entity_metadata:</span> <span class='lbrace'>{</span>
             <span class='label'>location:</span> <span class='id identifier rubyid_location'>location</span><span class='comma'>,</span>
           <span class='rbrace'>}</span><span class='comma'>,</span>
-          <span class='label'>status:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Discorb::ScheduledEvent (class)">ScheduledEvent</a></span></span><span class='period'>.</span><span class='id identifier rubyid_status'>status</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
+          <span class='label'>status:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Discorb::ScheduledEvent (class)">ScheduledEvent</a></span></span><span class='period'>.</span><span class='id identifier rubyid_status'><span class='object_link'><a href="#status-class_method" title="Discorb::ScheduledEvent.status (method)">status</a></span></span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
         <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_reject'>reject</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span> <span class='id identifier rubyid_v'>v</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span> <span class='rbrace'>}</span>
       <span class='kw'>else</span>
         <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Invalid scheduled event type: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_type'>type</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -2408,7 +2591,7 @@ This should be used for manual fetching of members.</p>
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/72995ce45f49a8e0fe0ae48b274aa0281121c6ad"><code>72995ce45f49a8e0fe0ae48b274aa0281121c6ad</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/90c990146a0d22309642c02a3683cac3ca6ac470"><code>90c990146a0d22309642c02a3683cac3ca6ac470</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
