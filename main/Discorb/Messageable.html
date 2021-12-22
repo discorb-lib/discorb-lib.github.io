@@ -117,7 +117,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#delete_message!-instance_method" title="#delete_message! (instance method)">#<strong>delete_message!</strong>(message_id, reason: nil) -&gt; Object </a>
+      <a href="#delete_message!-instance_method" title="#delete_message! (instance method)">#<strong>delete_message!</strong>(message_id, reason: nil) -&gt; Async::Task&lt;void&gt; </a>
     
 
     
@@ -142,7 +142,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#edit_message-instance_method" title="#edit_message (instance method)">#<strong>edit_message</strong>(message_id, content = nil, embed: nil, embeds: nil, allowed_mentions: nil, components: nil, supress: nil) -&gt; Object </a>
+      <a href="#edit_message-instance_method" title="#edit_message (instance method)">#<strong>edit_message</strong>(message_id, content = nil, embed: nil, embeds: nil, allowed_mentions: nil, components: nil, supress: nil) -&gt; Async::Task&lt;void&gt; </a>
     
 
     
@@ -234,7 +234,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#pin_message-instance_method" title="#pin_message (instance method)">#<strong>pin_message</strong>(message, reason: nil) -&gt; Object </a>
+      <a href="#pin_message-instance_method" title="#pin_message (instance method)">#<strong>pin_message</strong>(message, reason: nil) -&gt; Async::Task&lt;void&gt; </a>
     
 
     
@@ -305,7 +305,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#unpin_message-instance_method" title="#unpin_message (instance method)">#<strong>unpin_message</strong>(message, reason: nil) -&gt; Object </a>
+      <a href="#unpin_message-instance_method" title="#unpin_message (instance method)">#<strong>unpin_message</strong>(message, reason: nil) -&gt; Async::Task&lt;void&gt; </a>
     
 
     
@@ -337,7 +337,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="delete_message!-instance_method">
   
-    #<strong>delete_message!</strong>(message_id, reason: nil) -&gt; <tt>Object</tt> 
+    #<strong>delete_message!</strong>(message_id, reason: nil) -&gt; <tt>Async::Task&lt;void&gt;</tt> 
   
 
   
@@ -349,20 +349,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
-<p>Delete a message.</p>
+    <p>Delete a message.</p>
 
 
   </div>
@@ -405,18 +392,18 @@
   
 </ul>
 
-<p class="tag_title">Raises:</p>
-<ul class="raise">
+<p class="tag_title">Returns:</p>
+<ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;void&gt;</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>HTTP request failed.</p>
+        <div class='inline'><p>The task.</p>
 </div>
       
     </li>
@@ -429,14 +416,14 @@
       <pre class="lines">
 
 
-95
 96
 97
 98
-99</pre>
+99
+100</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/modules.rb', line 95</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/modules.rb', line 96</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete_message!'>delete_message!</span><span class='lparen'>(</span><span class='id identifier rubyid_message_id'>message_id</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -451,7 +438,7 @@
       <div class="method_details ">
   <h3 class="signature " id="edit_message-instance_method">
   
-    #<strong>edit_message</strong>(message_id, content = nil, embed: nil, embeds: nil, allowed_mentions: nil, components: nil, supress: nil) -&gt; <tt>Object</tt> 
+    #<strong>edit_message</strong>(message_id, content = nil, embed: nil, embeds: nil, allowed_mentions: nil, components: nil, supress: nil) -&gt; <tt>Async::Task&lt;void&gt;</tt> 
   
 
   
@@ -459,20 +446,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
-<p>Edit a message.</p>
+    <p>Edit a message.</p>
 
 
   </div>
@@ -600,18 +574,18 @@
   
 </ul>
 
-<p class="tag_title">Raises:</p>
-<ul class="raise">
+<p class="tag_title">Returns:</p>
+<ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;void&gt;</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>HTTP request failed.</p>
+        <div class='inline'><p>The task.</p>
 </div>
       
     </li>
@@ -680,20 +654,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
-<p>Fetch a message from ID.</p>
+    <p>Fetch a message from ID.</p>
 
 
   </div>
@@ -738,19 +699,6 @@
 </ul>
 <p class="tag_title">Raises:</p>
 <ul class="raise">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>HTTP request failed.</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -805,20 +753,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
-<p>Fetch a message history.</p>
+    <p>Fetch a message history.</p>
 
 
   </div>
@@ -914,23 +849,6 @@
     </li>
   
 </ul>
-<p class="tag_title">Raises:</p>
-<ul class="raise">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>HTTP request failed.</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -938,6 +856,7 @@
       <pre class="lines">
 
 
+131
 132
 133
 134
@@ -948,11 +867,10 @@
 139
 140
 141
-142
-143</pre>
+142</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/modules.rb', line 132</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/modules.rb', line 131</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_messages'>fetch_messages</span><span class='lparen'>(</span><span class='id identifier rubyid_limit'>limit</span> <span class='op'>=</span> <span class='int'>50</span><span class='comma'>,</span> <span class='label'>before:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>after:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>around:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -982,20 +900,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
-<p>Fetch the pinned messages in the channel.</p>
+    <p>Fetch the pinned messages in the channel.</p>
 
 
   </div>
@@ -1019,23 +924,6 @@
     </li>
   
 </ul>
-<p class="tag_title">Raises:</p>
-<ul class="raise">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>HTTP request failed.</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -1043,15 +931,15 @@
       <pre class="lines">
 
 
+150
+151
 152
 153
 154
-155
-156
-157</pre>
+155</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/modules.rb', line 152</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/modules.rb', line 150</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_pins'>fetch_pins</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -1067,7 +955,7 @@
       <div class="method_details ">
   <h3 class="signature " id="pin_message-instance_method">
   
-    #<strong>pin_message</strong>(message, reason: nil) -&gt; <tt>Object</tt> 
+    #<strong>pin_message</strong>(message, reason: nil) -&gt; <tt>Async::Task&lt;void&gt;</tt> 
   
 
   
@@ -1075,20 +963,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
-<p>Pin a message in the channel.</p>
+    <p>Pin a message in the channel.</p>
 
 
   </div>
@@ -1131,18 +1006,18 @@
   
 </ul>
 
-<p class="tag_title">Raises:</p>
-<ul class="raise">
+<p class="tag_title">Returns:</p>
+<ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;void&gt;</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>HTTP request failed.</p>
+        <div class='inline'><p>The task.</p>
 </div>
       
     </li>
@@ -1155,14 +1030,14 @@
       <pre class="lines">
 
 
+166
 167
 168
 169
-170
-171</pre>
+170</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/modules.rb', line 167</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/modules.rb', line 166</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pin_message'>pin_message</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -1189,20 +1064,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
-<p>Post a message to the channel.</p>
+    <p>Post a message to the channel.</p>
 
 
   </div>
@@ -1383,23 +1245,6 @@
     </li>
   
 </ul>
-<p class="tag_title">Raises:</p>
-<ul class="raise">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>HTTP request failed.</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -1407,6 +1252,7 @@
       <pre class="lines">
 
 
+24
 25
 26
 27
@@ -1432,11 +1278,10 @@
 47
 48
 49
-50
-51</pre>
+50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/modules.rb', line 25</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/modules.rb', line 24</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>tts:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>embed:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>embeds:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>allowed_mentions:</span> <span class='kw'>nil</span><span class='comma'>,</span>
                         <span class='label'>reference:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>components:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>file:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>files:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
@@ -1481,20 +1326,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
-<p>Trigger the typing indicator in the channel.
+    <p>Trigger the typing indicator in the channel.
 If block is given, trigger typing indicator during executing block.</p>
 
 
@@ -1514,23 +1346,6 @@ If block is given, trigger typing indicator during executing block.</p>
     
   </div>
 
-<p class="tag_title">Raises:</p>
-<ul class="raise">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>HTTP request failed.</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -1538,6 +1353,7 @@ If block is given, trigger typing indicator during executing block.</p>
       <pre class="lines">
 
 
+199
 200
 201
 202
@@ -1555,11 +1371,10 @@ If block is given, trigger typing indicator during executing block.</p>
 214
 215
 216
-217
-218</pre>
+217</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/modules.rb', line 200</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/modules.rb', line 199</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_typing'>typing</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -1588,7 +1403,7 @@ If block is given, trigger typing indicator during executing block.</p>
       <div class="method_details ">
   <h3 class="signature " id="unpin_message-instance_method">
   
-    #<strong>unpin_message</strong>(message, reason: nil) -&gt; <tt>Object</tt> 
+    #<strong>unpin_message</strong>(message, reason: nil) -&gt; <tt>Async::Task&lt;void&gt;</tt> 
   
 
   
@@ -1596,20 +1411,7 @@ If block is given, trigger typing indicator during executing block.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
-<p>Unpin a message in the channel.</p>
+    <p>Unpin a message in the channel.</p>
 
 
   </div>
@@ -1652,18 +1454,18 @@ If block is given, trigger typing indicator during executing block.</p>
   
 </ul>
 
-<p class="tag_title">Raises:</p>
-<ul class="raise">
+<p class="tag_title">Returns:</p>
+<ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;void&gt;</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>HTTP request failed.</p>
+        <div class='inline'><p>The task.</p>
 </div>
       
     </li>
@@ -1700,7 +1502,7 @@ If block is given, trigger typing indicator during executing block.</p>
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/6e0dd513551e57d7caa8b0f57033a7765fe9beba"><code>6e0dd513551e57d7caa8b0f57033a7765fe9beba</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/6a7acc6e29fa331a5ed0b074683d2565690cf3aa"><code>6a7acc6e29fa331a5ed0b074683d2565690cf3aa</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>

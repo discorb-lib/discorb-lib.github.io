@@ -400,7 +400,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#delete!-instance_method" title="#delete! (instance method)">#<strong>delete!</strong> -&gt; Object </a>
+      <a href="#delete!-instance_method" title="#delete! (instance method)">#<strong>delete!</strong> -&gt; Async::Task&lt;void&gt; </a>
     
 
     
@@ -425,7 +425,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#delete_message!-instance_method" title="#delete_message! (instance method)">#<strong>delete_message!</strong>(message) -&gt; Object </a>
+      <a href="#delete_message!-instance_method" title="#delete_message! (instance method)">#<strong>delete_message!</strong>(message) -&gt; Async::Task&lt;void&gt; </a>
     
 
     
@@ -448,7 +448,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#edit-instance_method" title="#edit (instance method)">#<strong>edit</strong>(name: :unset, avatar: :unset, channel: :unset) -&gt; Object </a>
+      <a href="#edit-instance_method" title="#edit (instance method)">#<strong>edit</strong>(name: :unset, avatar: :unset, channel: :unset) -&gt; Async::Task&lt;void&gt; </a>
     
 
     
@@ -473,7 +473,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#edit_message-instance_method" title="#edit_message (instance method)">#<strong>edit_message</strong>(message, content = :unset, embed: :unset, embeds: :unset, file: :unset, files: :unset, attachments: :unset, allowed_mentions: :unset) -&gt; Object </a>
+      <a href="#edit_message-instance_method" title="#edit_message (instance method)">#<strong>edit_message</strong>(message, content = :unset, embed: :unset, embeds: :unset, file: :unset, files: :unset, attachments: :unset, allowed_mentions: :unset) -&gt; Async::Task&lt;void&gt; </a>
     
 
     
@@ -994,12 +994,12 @@
       <pre class="lines">
 
 
-424
-425
-426</pre>
+430
+431
+432</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 424</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 430</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_from_url'>from_url</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="Webhook/URLWebhook.html" title="Discorb::Webhook::URLWebhook (class)">URLWebhook</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#new-class_method" title="Discorb::Webhook.new (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
@@ -1070,12 +1070,6 @@
       <pre class="lines">
 
 
-404
-405
-406
-407
-408
-409
 410
 411
 412
@@ -1088,10 +1082,16 @@
 419
 420
 421
-422</pre>
+422
+423
+424
+425
+426
+427
+428</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 404</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 410</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='kw'>self</span> <span class='op'>!=</span> <span class='const'><span class='object_link'><a href="" title="Discorb::Webhook (class)">Webhook</a></span></span>
@@ -1126,7 +1126,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="delete!-instance_method">
   
-    #<strong>delete!</strong> -&gt; <tt>Object</tt> 
+    #<strong>delete!</strong> -&gt; <tt>Async::Task&lt;void&gt;</tt> 
   
 
   
@@ -1138,38 +1138,25 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
-<p>Deletes the webhook.</p>
+    <p>Deletes the webhook.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-<p class="tag_title">Raises:</p>
-<ul class="raise">
+<p class="tag_title">Returns:</p>
+<ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;void&gt;</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>HTTP request failed.</p>
+        <div class='inline'><p>The task.</p>
 </div>
       
     </li>
@@ -1182,15 +1169,15 @@
       <pre class="lines">
 
 
-121
 122
 123
 124
 125
-126</pre>
+126
+127</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 121</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 122</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete!'>delete!</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -1206,7 +1193,7 @@
       <div class="method_details ">
   <h3 class="signature " id="delete_message!-instance_method">
   
-    #<strong>delete_message!</strong>(message) -&gt; <tt>Object</tt> 
+    #<strong>delete_message!</strong>(message) -&gt; <tt>Async::Task&lt;void&gt;</tt> 
   
 
   
@@ -1240,6 +1227,23 @@
   
 </ul>
 
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Async::Task&lt;void&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The task.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -1247,15 +1251,15 @@
       <pre class="lines">
 
 
-178
-179
-180
-181
 182
-183</pre>
+183
+184
+185
+186
+187</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 178</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 182</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete_message!'>delete_message!</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -1271,7 +1275,7 @@
       <div class="method_details ">
   <h3 class="signature " id="edit-instance_method">
   
-    #<strong>edit</strong>(name: :unset, avatar: :unset, channel: :unset) -&gt; <tt>Object</tt> 
+    #<strong>edit</strong>(name: :unset, avatar: :unset, channel: :unset) -&gt; <tt>Async::Task&lt;void&gt;</tt> 
   
 
   
@@ -1284,18 +1288,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
   <div class="note notetag">
     <strong>Note:</strong>
     <div class='inline'><p>The arguments of this method are defaultly set to <code>:unset</code>. Specify value to set the value, if not don&#39;t specify or specify <code>:unset</code>.</p>
@@ -1364,18 +1356,18 @@
   
 </ul>
 
-<p class="tag_title">Raises:</p>
-<ul class="raise">
+<p class="tag_title">Returns:</p>
+<ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;void&gt;</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>HTTP request failed.</p>
+        <div class='inline'><p>The task.</p>
 </div>
       
     </li>
@@ -1418,7 +1410,7 @@
       <div class="method_details ">
   <h3 class="signature " id="edit_message-instance_method">
   
-    #<strong>edit_message</strong>(message, content = :unset, embed: :unset, embeds: :unset, file: :unset, files: :unset, attachments: :unset, allowed_mentions: :unset) -&gt; <tt>Object</tt> 
+    #<strong>edit_message</strong>(message, content = :unset, embed: :unset, embeds: :unset, file: :unset, files: :unset, attachments: :unset, allowed_mentions: :unset) -&gt; <tt>Async::Task&lt;void&gt;</tt> 
   
 
   
@@ -1427,18 +1419,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
   <div class="note notetag">
     <strong>Note:</strong>
     <div class='inline'><p>The arguments of this method are defaultly set to <code>:unset</code>. Specify value to set the value, if not don&#39;t specify or specify <code>:unset</code>.</p>
@@ -1590,18 +1570,18 @@
   
 </ul>
 
-<p class="tag_title">Raises:</p>
-<ul class="raise">
+<p class="tag_title">Returns:</p>
+<ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;void&gt;</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>HTTP request failed.</p>
+        <div class='inline'><p>The task.</p>
 </div>
       
     </li>
@@ -1614,8 +1594,6 @@
       <pre class="lines">
 
 
-145
-146
 147
 148
 149
@@ -1640,10 +1618,12 @@
 168
 169
 170
-171</pre>
+171
+172
+173</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 145</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 147</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_edit_message'>edit_message</span><span class='lparen'>(</span>
   <span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='symbol'>:unset</span><span class='comma'>,</span>
@@ -1722,20 +1702,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
-<p>Posts a message to the webhook.</p>
+    <p>Posts a message to the webhook.</p>
 
 
   </div>
@@ -1946,23 +1913,6 @@
     </li>
   
 </ul>
-<p class="tag_title">Raises:</p>
-<ul class="raise">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>HTTP request failed.</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -1970,6 +1920,7 @@
       <pre class="lines">
 
 
+62
 63
 64
 65
@@ -1996,11 +1947,10 @@
 86
 87
 88
-89
-90</pre>
+89</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 63</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>tts:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>embed:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>embeds:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>allowed_mentions:</span> <span class='kw'>nil</span><span class='comma'>,</span>
                         <span class='label'>file:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>files:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>username:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>avatar_url:</span> <span class='symbol'>:unset</span><span class='comma'>,</span> <span class='label'>wait:</span> <span class='kw'>true</span><span class='rparen'>)</span>
@@ -2040,7 +1990,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/6e0dd513551e57d7caa8b0f57033a7765fe9beba"><code>6e0dd513551e57d7caa8b0f57033a7765fe9beba</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/6a7acc6e29fa331a5ed0b074683d2565690cf3aa"><code>6a7acc6e29fa331a5ed0b074683d2565690cf3aa</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>

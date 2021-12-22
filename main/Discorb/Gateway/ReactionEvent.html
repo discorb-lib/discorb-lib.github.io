@@ -1350,20 +1350,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
-<p>Fetch the message.
+    <p>Fetch the message.
 If message is cached, it will be returned.</p>
 
 
@@ -1409,23 +1396,6 @@ If message is cached, it will be returned.</p>
     </li>
   
 </ul>
-<p class="tag_title">Raises:</p>
-<ul class="raise">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>HTTP request failed.</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -1433,16 +1403,16 @@ If message is cached, it will be returned.</p>
       <pre class="lines">
 
 
+102
 103
 104
 105
 106
 107
-108
-109</pre>
+108</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/gateway.rb', line 103</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/gateway.rb', line 102</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_message'>fetch_message</span><span class='lparen'>(</span><span class='label'>force:</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -1461,7 +1431,7 @@ If message is cached, it will be returned.</p>
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/6e0dd513551e57d7caa8b0f57033a7765fe9beba"><code>6e0dd513551e57d7caa8b0f57033a7765fe9beba</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/6a7acc6e29fa331a5ed0b074683d2565690cf3aa"><code>6a7acc6e29fa331a5ed0b074683d2565690cf3aa</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
