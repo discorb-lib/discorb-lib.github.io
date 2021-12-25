@@ -166,6 +166,34 @@
       <li class="public ">
   <span class="summary_signature">
     
+      <a href="#guild_locale-instance_method" title="#guild_locale (instance method)">#<strong>guild_locale</strong> -&gt; Symbol </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The locale of the guild that created the interaction.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#id-instance_method" title="#id (instance method)">#<strong>id</strong> -&gt; Discorb::Snowflake </a>
     
 
@@ -186,6 +214,34 @@
 
   
     <span class="summary_desc"><div class='inline'><p>The ID of the interaction.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#locale-instance_method" title="#locale (instance method)">#<strong>locale</strong> -&gt; Symbol </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The locale of the user that created the interaction.</p>
 </div></span>
   
 </li>
@@ -514,6 +570,72 @@
       
       <span id=""></span>
       <div class="method_details ">
+  <h3 class="signature " id="guild_locale-instance_method">
+  
+    #<strong>guild_locale</strong> -&gt; <tt>Symbol</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'><p>This modifies the language code, <code>-</code> will be replaced with <code>_</code>.</p>
+</div>
+  </div>
+
+<p>Returns The locale of the guild that created the interaction.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The locale of the guild that created the interaction.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+26
+27
+28</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 26</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_guild_locale'>guild_locale</span>
+  <span class='ivar'>@guild_locale</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
   <h3 class="signature " id="id-instance_method">
   
     #<strong>id</strong> -&gt; <tt><span class='object_link'><a href="Snowflake.html" title="Discorb::Snowflake (class)">Discorb::Snowflake</a></span></tt>  <span class="extras">(readonly)</span>
@@ -564,6 +686,72 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_id'>id</span>
   <span class='ivar'>@id</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="locale-instance_method">
+  
+    #<strong>locale</strong> -&gt; <tt>Symbol</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'><p>This modifies the language code, <code>-</code> will be replaced with <code>_</code>.</p>
+</div>
+  </div>
+
+<p>Returns The locale of the user that created the interaction.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The locale of the user that created the interaction.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 23</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_locale'>locale</span>
+  <span class='ivar'>@locale</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -894,12 +1082,12 @@
       <pre class="lines">
 
 
-56
-57
-58</pre>
+64
+65
+66</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 64</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_channel'>channel</span>
   <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_channels'>channels</span><span class='lbracket'>[</span><span class='ivar'>@channel_id</span><span class='rbracket'>]</span>
@@ -924,12 +1112,12 @@
       <pre class="lines">
 
 
-52
-53
-54</pre>
+60
+61
+62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_guild'>guild</span>
   <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_guilds'>guilds</span><span class='lbracket'>[</span><span class='ivar'>@guild_id</span><span class='rbracket'>]</span>
@@ -954,12 +1142,12 @@
       <pre class="lines">
 
 
-67
-68
-69</pre>
+75
+76
+77</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 75</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> id=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@id</span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
@@ -988,12 +1176,12 @@
       <pre class="lines">
 
 
-60
-61
-62</pre>
+68
+69
+70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 68</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_target'>target</span>
   <span class='ivar'>@member</span> <span class='op'>||</span> <span class='ivar'>@user</span>
@@ -1008,7 +1196,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/3c197490cbe21cf12def4121f52a566ea33d2fd7"><code>3c197490cbe21cf12def4121f52a566ea33d2fd7</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/fa0920fde0c19c98bbf8f1e833a67fe46fc5b319"><code>fa0920fde0c19c98bbf8f1e833a67fe46fc5b319</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
