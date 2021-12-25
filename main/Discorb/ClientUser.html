@@ -137,7 +137,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#edit-instance_method" title="#edit (instance method)">#<strong>edit</strong>(name: :unset, avatar: :unset) -&gt; Async::Task&lt;void&gt; </a>
+      <a href="#edit-instance_method" title="#edit (instance method)">#<strong>edit</strong>(name: Discorb::Unset, avatar: Discorb::Unset) -&gt; Async::Task&lt;void&gt; </a>
     
 
     
@@ -202,7 +202,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="edit-instance_method">
   
-    #<strong>edit</strong>(name: :unset, avatar: :unset) -&gt; <tt>Async::Task&lt;void&gt;</tt> 
+    #<strong>edit</strong>(name: Discorb::Unset, avatar: Discorb::Unset) -&gt; <tt>Async::Task&lt;void&gt;</tt> 
   
 
   
@@ -213,7 +213,7 @@
     
   <div class="note notetag">
     <strong>Note:</strong>
-    <div class='inline'><p>The arguments of this method are defaultly set to <code>:unset</code>. Specify value to set the value, if not don&#39;t specify or specify <code>:unset</code>.</p>
+    <div class='inline'><p>The arguments of this method are defaultly set to <code>Discorb::Unset</code>. Specify value to set the value, if not don&#39;t specify or specify <code>Discorb::Unset</code>.</p>
 </div>
   </div>
 
@@ -234,7 +234,7 @@
         <span class='type'>(<tt>String</tt>)</span>
       
       
-        <em class="default">(defaults to: <tt>:unset</tt>)</em>
+        <em class="default">(defaults to: <tt>Discorb::Unset</tt>)</em>
       
       
         &mdash;
@@ -251,7 +251,7 @@
         <span class='type'>(<tt><span class='object_link'><a href="Image.html" title="Discorb::Image (class)">Discorb::Image</a></span></tt>)</span>
       
       
-        <em class="default">(defaults to: <tt>:unset</tt>)</em>
+        <em class="default">(defaults to: <tt>Discorb::Unset</tt>)</em>
       
       
         &mdash;
@@ -305,11 +305,11 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/discorb/user.rb', line 160</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_edit'>edit</span><span class='lparen'>(</span><span class='label'>name:</span> <span class='symbol'>:unset</span><span class='comma'>,</span> <span class='label'>avatar:</span> <span class='symbol'>:unset</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_edit'>edit</span><span class='lparen'>(</span><span class='label'>name:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span> <span class='label'>avatar:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
     <span class='id identifier rubyid_payload'>payload</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:username</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span> <span class='kw'>unless</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>==</span> <span class='symbol'>:unset</span>
-    <span class='kw'>if</span> <span class='id identifier rubyid_avatar'>avatar</span> <span class='op'>==</span> <span class='symbol'>:unset</span>
+    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:username</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span> <span class='kw'>unless</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_avatar'>avatar</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
       <span class='comment'># Nothing
 </span>    <span class='kw'>elsif</span> <span class='id identifier rubyid_avatar'>avatar</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
       <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:avatar</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>nil</span>
@@ -330,7 +330,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/fa0920fde0c19c98bbf8f1e833a67fe46fc5b319"><code>fa0920fde0c19c98bbf8f1e833a67fe46fc5b319</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/09ad90d45a3d82101b200332e9159ea87e07ceb2"><code>09ad90d45a3d82101b200332e9159ea87e07ceb2</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
