@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<link rel="shortcut icon" href="/favicon.png" />
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: CLI: discorb new
+  
+    &mdash; discorb v0.13.1 documentation
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "new";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="file_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="a_index.html">Index</a> &raquo; 
+    <span class="title">File: CLI: discorb new</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><div id='filecontents'><h1 id="discorb-new">discorb new</h1>
+
+<p>This command will create a new project in the directory.</p>
+
+<h2 id="usage">Usage</h2>
+
+<pre class="code bash"><code class="bash">discorb new [options] [dir]
+</code></pre>
+
+<h2 id="options">Options</h2>
+
+<h3 id="dir"><code>dir</code></h3>
+
+<p>The directory to create the project in.
+Defaults to the current directory.
+If the directory exists and is not empty, an error is returned.
+You can use <code>--force</code> to overwrite an existing directory.</p>
+
+<h3 id="no-bundle"><code>--[no-]bundle</code></h3>
+
+<p>Whether to use bundle.
+If true, the command will create Gemfile and execute <code>bundle install</code>.
+Default to true.</p>
+
+<h3 id="no-git"><code>--[no-]git</code></h3>
+
+<p>Whether to initialize git.
+If true, the command will initialize git and commit the initial files with commit message <code>Initial commit</code>.
+Use <code>git commit --amend -m &quot;...&quot;</code> to change the commit message.
+Default to false.</p>
+
+<h3 id="no-desc"><code>--[no-]desc</code></h3>
+
+<p>Whether to create a description file.
+If true, the command will create a <code>.env.sample</code> and <code>README.md</code> file.
+Default to false.</p>
+
+<h3 id="n-name"><code>-n</code> <code>--name</code></h3>
+
+<p>The name of the project.
+It will be used in the <code>README.md</code> file.
+Default to the directory name.</p>
+
+<h3 id="t-token"><code>-t</code>, <code>--token</code></h3>
+
+<p>The name of token environment variable.
+Default to TOKEN.</p>
+
+<h3 id="f-force"><code>-f</code>, <code>--force</code></h3>
+
+<p>Whether to overwrite an existing directory.
+Default to false.</p>
+
+<h2 id="file-structure">File structure</h2>
+
+<p>The following files will be created:</p>
+
+<table><thead>
+<tr>
+<th>File</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>.env</code></td>
+<td>Environment variables.</td>
+</tr>
+<tr>
+<td><code>main.rb</code></td>
+<td>Main script.</td>
+</tr>
+<tr>
+<td><code>.gitignore</code></td>
+<td>Git ignore file. Won&#39;t be created if <code>--git</code> is false.</td>
+</tr>
+<tr>
+<td><code>Gemfile</code></td>
+<td>Gemfile. Won&#39;t be created if <code>--bundle</code> is false.</td>
+</tr>
+<tr>
+<td><code>Gemfile.lock</code></td>
+<td>Gemfile lock file. Won&#39;t be created if <code>--bundle</code> is false.</td>
+</tr>
+<tr>
+<td><code>README.md</code></td>
+<td>Readme file. Won&#39;t be created if <code>--desc</code> is false.</td>
+</tr>
+<tr>
+<td><code>.env.sample</code></td>
+<td>Sample environment variables. Won&#39;t be created if <code>--desc</code> is false.</td>
+</tr>
+</tbody></table>
+</div></div>
+
+    <div id="footer">
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/9de66b09d41dc5b6e41caa451862e1844b51b6c9"><code>9de66b09d41dc5b6e41caa451862e1844b51b6c9</code></a>, version v0.13.1, with YARD 0.9.27.
+    </div>
+
+    </div>
+  </body>
+</html>
