@@ -7,7 +7,7 @@
 <title>
   Class: Discorb::Message
   
-    &mdash; discorb v0.13.0 documentation
+    &mdash; discorb v0.13.1 documentation
   
 </title>
 
@@ -531,34 +531,6 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#flag-instance_method" title="#flag (instance method)">#<strong>flag</strong> -&gt; Discorb::Message::Flag </a>
-    
-
-    
-  </span>
-  
-  
-  
-    
-      <span class="note title readonly">readonly</span>
-    
-    
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>The flag of the message.</p>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#guild-instance_method" title="#guild (instance method)">#<strong>guild</strong> -&gt; nil, Discorb::Guild </a>
     
 
@@ -1054,7 +1026,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#add_reaction-instance_method" title="#add_reaction (instance method)">#<strong>add_reaction</strong>(emoji) -&gt; Object </a>
+      <a href="#add_reaction-instance_method" title="#add_reaction (instance method)">#<strong>add_reaction</strong>(emoji) -&gt; Async::Task&lt;void&gt; </a>
     
 
     
@@ -1102,7 +1074,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#delete!-instance_method" title="#delete! (instance method)">#<strong>delete!</strong>(reason: nil) -&gt; Object </a>
+      <a href="#delete!-instance_method" title="#delete! (instance method)">#<strong>delete!</strong>(reason: nil) -&gt; Async::Task&lt;void&gt; </a>
     
 
     
@@ -1125,7 +1097,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#edit-instance_method" title="#edit (instance method)">#<strong>edit</strong>(content = nil, embed: nil, embeds: nil, allowed_mentions: nil, components: nil, supress: nil) -&gt; Object </a>
+      <a href="#edit-instance_method" title="#edit (instance method)">#<strong>edit</strong>(content = nil, embed: nil, embeds: nil, allowed_mentions: nil, components: nil, supress: nil) -&gt; Async::Task&lt;void&gt; </a>
     
 
     
@@ -1171,6 +1143,32 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#flag-instance_method" title="#flag (instance method)">#<strong>flag</strong> -&gt; Discorb::Message::Flag </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The flag of the message.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#inspect-instance_method" title="#inspect (instance method)">#<strong>inspect</strong> -&gt; Object </a>
     
 
@@ -1194,7 +1192,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#pin-instance_method" title="#pin (instance method)">#<strong>pin</strong>(reason: nil) -&gt; Object </a>
+      <a href="#pin-instance_method" title="#pin (instance method)">#<strong>pin</strong>(reason: nil) -&gt; Async::Task&lt;void&gt; </a>
     
 
     
@@ -1217,7 +1215,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#publish-instance_method" title="#publish (instance method)">#<strong>publish</strong> -&gt; Object </a>
+      <a href="#publish-instance_method" title="#publish (instance method)">#<strong>publish</strong> -&gt; Async::Task&lt;void&gt; </a>
     
 
     
@@ -1240,7 +1238,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#remove_reaction-instance_method" title="#remove_reaction (instance method)">#<strong>remove_reaction</strong>(emoji) -&gt; Object </a>
+      <a href="#remove_reaction-instance_method" title="#remove_reaction (instance method)">#<strong>remove_reaction</strong>(emoji) -&gt; Async::Task&lt;void&gt; </a>
     
 
     
@@ -1265,7 +1263,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#remove_reaction_of-instance_method" title="#remove_reaction_of (instance method)">#<strong>remove_reaction_of</strong>(emoji, member) -&gt; Object </a>
+      <a href="#remove_reaction_of-instance_method" title="#remove_reaction_of (instance method)">#<strong>remove_reaction_of</strong>(emoji, member) -&gt; Async::Task&lt;void&gt; </a>
     
 
     
@@ -1313,7 +1311,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#start_thread-instance_method" title="#start_thread (instance method)">#<strong>start_thread</strong>(*args, **kwargs) -&gt; Async::Task&lt;&lt;Type&gt;&gt; </a>
+      <a href="#start_thread-instance_method" title="#start_thread (instance method)">#<strong>start_thread</strong>(*args, **kwargs) -&gt; Async::Task&lt;Discorb::ThreadChannel&gt; </a>
     
 
     
@@ -1361,7 +1359,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#unpin-instance_method" title="#unpin (instance method)">#<strong>unpin</strong>(reason: nil) -&gt; Object </a>
+      <a href="#unpin-instance_method" title="#unpin (instance method)">#<strong>unpin</strong>(reason: nil) -&gt; Async::Task&lt;void&gt; </a>
     
 
     
@@ -2257,72 +2255,6 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_embeds'>embeds</span>
   <span class='ivar'>@embeds</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id=""></span>
-      <div class="method_details ">
-  <h3 class="signature " id="flag-instance_method">
-  
-    #<strong>flag</strong> -&gt; <tt><span class='object_link'><a href="Message/Flag.html" title="Discorb::Message::Flag (class)">Discorb::Message::Flag</a></span></tt>  <span class="extras">(readonly)</span>
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>Returns The flag of the message.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="Message/Flag.html" title="Discorb::Message::Flag (class)">Discorb::Message::Flag</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The flag of the message.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-  <p class="tag_title">See Also:</p>
-  <ul class="see">
-    
-      <li><span class='object_link'><a href="Message/Flag.html" title="Discorb::Message::Flag (class)">Flag</a></span></li>
-    
-  </ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-129
-130
-131</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 129</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_flag'>flag</span>
-  <span class='ivar'>@flag</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3428,7 +3360,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="add_reaction-instance_method">
   
-    #<strong>add_reaction</strong>(emoji) -&gt; <tt>Object</tt> 
+    #<strong>add_reaction</strong>(emoji) -&gt; <tt>Async::Task&lt;void&gt;</tt> 
   
 
   
@@ -3440,20 +3372,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
-<p>Add a reaction to the message.</p>
+    <p>Add a reaction to the message.</p>
 
 
   </div>
@@ -3479,18 +3398,18 @@
   
 </ul>
 
-<p class="tag_title">Raises:</p>
-<ul class="raise">
+<p class="tag_title">Returns:</p>
+<ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;void&gt;</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>HTTP request failed.</p>
+        <div class='inline'><p>The task.</p>
 </div>
       
     </li>
@@ -3503,14 +3422,14 @@
       <pre class="lines">
 
 
-373
-374
-375
-376
-377</pre>
+380
+381
+382
+383
+384</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 373</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 380</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add_reaction'>add_reaction</span><span class='lparen'>(</span><span class='id identifier rubyid_emoji'>emoji</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -3754,7 +3673,7 @@
       <div class="method_details ">
   <h3 class="signature " id="delete!-instance_method">
   
-    #<strong>delete!</strong>(reason: nil) -&gt; <tt>Object</tt> 
+    #<strong>delete!</strong>(reason: nil) -&gt; <tt>Async::Task&lt;void&gt;</tt> 
   
 
   
@@ -3790,6 +3709,23 @@
   
 </ul>
 
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Async::Task&lt;void&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The task.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -3797,14 +3733,14 @@
       <pre class="lines">
 
 
-318
-319
-320
-321
-322</pre>
+324
+325
+326
+327
+328</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 318</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 324</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete!'>delete!</span><span class='lparen'>(</span><span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -3819,7 +3755,7 @@
       <div class="method_details ">
   <h3 class="signature " id="edit-instance_method">
   
-    #<strong>edit</strong>(content = nil, embed: nil, embeds: nil, allowed_mentions: nil, components: nil, supress: nil) -&gt; <tt>Object</tt> 
+    #<strong>edit</strong>(content = nil, embed: nil, embeds: nil, allowed_mentions: nil, components: nil, supress: nil) -&gt; <tt>Async::Task&lt;void&gt;</tt> 
   
 
   
@@ -3940,6 +3876,23 @@
   
 </ul>
 
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Async::Task&lt;void&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The task.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -3947,16 +3900,16 @@
       <pre class="lines">
 
 
-305
-306
-307
 308
 309
 310
-311</pre>
+311
+312
+313
+314</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 305</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 308</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_edit'>edit</span><span class='lparen'>(</span><span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>embed:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>embeds:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>allowed_mentions:</span> <span class='kw'>nil</span><span class='comma'>,</span>
                         <span class='label'>components:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>supress:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
@@ -3981,20 +3934,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
-<p>Fetch reacted users of reaction.</p>
+    <p>Fetch reacted users of reaction.</p>
 
 
   </div>
@@ -4071,23 +4011,6 @@
     </li>
   
 </ul>
-<p class="tag_title">Raises:</p>
-<ul class="raise">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>HTTP request failed.</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -4095,14 +4018,6 @@
       <pre class="lines">
 
 
-423
-424
-425
-426
-427
-428
-429
-430
 431
 432
 433
@@ -4116,10 +4031,18 @@
 441
 442
 443
-444</pre>
+444
+445
+446
+447
+448
+449
+450
+451
+452</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 423</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 431</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_reacted_users'>fetch_reacted_users</span><span class='lparen'>(</span><span class='id identifier rubyid_emoji'>emoji</span><span class='comma'>,</span> <span class='label'>limit:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>after:</span> <span class='int'>0</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -4142,6 +4065,70 @@
       <span class='kw'>next</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>|</span> <span class='id identifier rubyid_guild'>guild</span><span class='op'>&amp;.</span><span class='id identifier rubyid_members'>members</span><span class='op'>&amp;.</span><span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_r'>r</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_users'>users</span><span class='lbracket'>[</span><span class='id identifier rubyid_r'>r</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="User.html" title="Discorb::User (class)">User</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@client</span><span class='comma'>,</span> <span class='id identifier rubyid_r'>r</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
     <span class='kw'>end</span>
   <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="flag-instance_method">
+  
+    #<strong>flag</strong> -&gt; <tt><span class='object_link'><a href="Message/Flag.html" title="Discorb::Message::Flag (class)">Discorb::Message::Flag</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns The flag of the message.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Message/Flag.html" title="Discorb::Message::Flag (class)">Discorb::Message::Flag</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The flag of the message.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="Message/Flag.html" title="Discorb::Message::Flag (class)"></a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+129
+130
+131</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 129</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_flag'>flag</span>
+  <span class='ivar'>@flag</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -4173,12 +4160,12 @@
       <pre class="lines">
 
 
-489
-490
-491</pre>
+500
+501
+502</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 489</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 500</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='ivar'>@content</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'> id=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@id</span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
@@ -4191,7 +4178,7 @@
       <div class="method_details ">
   <h3 class="signature " id="pin-instance_method">
   
-    #<strong>pin</strong>(reason: nil) -&gt; <tt>Object</tt> 
+    #<strong>pin</strong>(reason: nil) -&gt; <tt>Async::Task&lt;void&gt;</tt> 
   
 
   
@@ -4199,20 +4186,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
-<p>Pin the message.</p>
+    <p>Pin the message.</p>
 
 
   </div>
@@ -4240,18 +4214,18 @@
   
 </ul>
 
-<p class="tag_title">Raises:</p>
-<ul class="raise">
+<p class="tag_title">Returns:</p>
+<ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;void&gt;</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>HTTP request failed.</p>
+        <div class='inline'><p>The task.</p>
 </div>
       
     </li>
@@ -4264,14 +4238,14 @@
       <pre class="lines">
 
 
-453
-454
-455
-456
-457</pre>
+462
+463
+464
+465
+466</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 453</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 462</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pin'>pin</span><span class='lparen'>(</span><span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -4286,7 +4260,7 @@
       <div class="method_details ">
   <h3 class="signature " id="publish-instance_method">
   
-    #<strong>publish</strong> -&gt; <tt>Object</tt> 
+    #<strong>publish</strong> -&gt; <tt>Async::Task&lt;void&gt;</tt> 
   
 
   
@@ -4294,38 +4268,25 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
-<p>Publish the message.</p>
+    <p>Publish the message.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-<p class="tag_title">Raises:</p>
-<ul class="raise">
+<p class="tag_title">Returns:</p>
+<ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;void&gt;</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>HTTP request failed.</p>
+        <div class='inline'><p>The task.</p>
 </div>
       
     </li>
@@ -4338,14 +4299,14 @@
       <pre class="lines">
 
 
-360
-361
-362
-363
-364</pre>
+366
+367
+368
+369
+370</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 360</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 366</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_publish'>publish</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -4360,7 +4321,7 @@
       <div class="method_details ">
   <h3 class="signature " id="remove_reaction-instance_method">
   
-    #<strong>remove_reaction</strong>(emoji) -&gt; <tt>Object</tt> 
+    #<strong>remove_reaction</strong>(emoji) -&gt; <tt>Async::Task&lt;void&gt;</tt> 
   
 
   
@@ -4372,20 +4333,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
-<p>Remove a reaction from the message.</p>
+    <p>Remove a reaction from the message.</p>
 
 
   </div>
@@ -4411,18 +4359,18 @@
   
 </ul>
 
-<p class="tag_title">Raises:</p>
-<ul class="raise">
+<p class="tag_title">Returns:</p>
+<ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;void&gt;</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>HTTP request failed.</p>
+        <div class='inline'><p>The task.</p>
 </div>
       
     </li>
@@ -4435,14 +4383,14 @@
       <pre class="lines">
 
 
-388
-389
-390
-391
-392</pre>
+396
+397
+398
+399
+400</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 388</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 396</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_reaction'>remove_reaction</span><span class='lparen'>(</span><span class='id identifier rubyid_emoji'>emoji</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -4457,7 +4405,7 @@
       <div class="method_details ">
   <h3 class="signature " id="remove_reaction_of-instance_method">
   
-    #<strong>remove_reaction_of</strong>(emoji, member) -&gt; <tt>Object</tt> 
+    #<strong>remove_reaction_of</strong>(emoji, member) -&gt; <tt>Async::Task&lt;void&gt;</tt> 
   
 
   
@@ -4469,20 +4417,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
-<p>Remove other member&#39;s reaction from the message.</p>
+    <p>Remove other member&#39;s reaction from the message.</p>
 
 
   </div>
@@ -4523,18 +4458,18 @@
   
 </ul>
 
-<p class="tag_title">Raises:</p>
-<ul class="raise">
+<p class="tag_title">Returns:</p>
+<ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;void&gt;</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>HTTP request failed.</p>
+        <div class='inline'><p>The task.</p>
 </div>
       
     </li>
@@ -4547,14 +4482,14 @@
       <pre class="lines">
 
 
-404
-405
-406
-407
-408</pre>
+413
+414
+415
+416
+417</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 404</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 413</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_reaction_of'>remove_reaction_of</span><span class='lparen'>(</span><span class='id identifier rubyid_emoji'>emoji</span><span class='comma'>,</span> <span class='id identifier rubyid_member'>member</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -4577,20 +4512,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
-<p>Reply to the message.</p>
+    <p>Reply to the message.</p>
 
 
   </div>
@@ -4614,23 +4536,6 @@
     </li>
   
 </ul>
-<p class="tag_title">Raises:</p>
-<ul class="raise">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>HTTP request failed.</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -4638,14 +4543,14 @@
       <pre class="lines">
 
 
-349
-350
-351
-352
-353</pre>
+354
+355
+356
+357
+358</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 349</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 354</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_reply'>reply</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -4660,7 +4565,7 @@
       <div class="method_details ">
   <h3 class="signature " id="start_thread-instance_method">
   
-    #<strong>start_thread</strong>(*args, **kwargs) -&gt; <tt>Async::Task&lt;&lt;Type&gt;&gt;</tt> 
+    #<strong>start_thread</strong>(*args, **kwargs) -&gt; <tt>Async::Task&lt;<span class='object_link'><a href="ThreadChannel.html" title="Discorb::ThreadChannel (class)">Discorb::ThreadChannel</a></span>&gt;</tt> 
   
 
   
@@ -4685,7 +4590,7 @@
     <li>
       
       
-        <span class='type'>(<tt>Async::Task&lt;&lt;Type&gt;&gt;</tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;<span class='object_link'><a href="ThreadChannel.html" title="Discorb::ThreadChannel (class)">Discorb::ThreadChannel</a></span>&gt;</tt>)</span>
       
       
       
@@ -4703,14 +4608,14 @@
       <pre class="lines">
 
 
-479
-480
-481
-482
-483</pre>
+490
+491
+492
+493
+494</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 479</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 490</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_start_thread'>start_thread</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -4785,17 +4690,17 @@
       <pre class="lines">
 
 
-331
-332
-333
-334
-335
-336
 337
-338</pre>
+338
+339
+340
+341
+342
+343
+344</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 331</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 337</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_reference'>to_reference</span><span class='lparen'>(</span><span class='label'>fail_if_not_exists:</span> <span class='kw'>true</span><span class='rparen'>)</span>
   <span class='lbrace'>{</span>
@@ -4813,7 +4718,7 @@
       <div class="method_details ">
   <h3 class="signature " id="unpin-instance_method">
   
-    #<strong>unpin</strong>(reason: nil) -&gt; <tt>Object</tt> 
+    #<strong>unpin</strong>(reason: nil) -&gt; <tt>Async::Task&lt;void&gt;</tt> 
   
 
   
@@ -4821,20 +4726,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
-<p>Unpin the message.</p>
+    <p>Unpin the message.</p>
 
 
   </div>
@@ -4862,18 +4754,18 @@
   
 </ul>
 
-<p class="tag_title">Raises:</p>
-<ul class="raise">
+<p class="tag_title">Returns:</p>
+<ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;void&gt;</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>HTTP request failed.</p>
+        <div class='inline'><p>The task.</p>
 </div>
       
     </li>
@@ -4886,14 +4778,14 @@
       <pre class="lines">
 
 
-466
-467
-468
-469
-470</pre>
+476
+477
+478
+479
+480</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 466</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 476</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_unpin'>unpin</span><span class='lparen'>(</span><span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -4910,7 +4802,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/6e4508bd47d409b03bc7652c3bf12e52a090eb33"><code>6e4508bd47d409b03bc7652c3bf12e52a090eb33</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/9de66b09d41dc5b6e41caa451862e1844b51b6c9"><code>9de66b09d41dc5b6e41caa451862e1844b51b6c9</code></a>, version v0.13.1, with YARD 0.9.27.
     </div>
 
     </div>

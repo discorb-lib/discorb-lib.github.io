@@ -7,7 +7,7 @@
 <title>
   Class: Discorb::GuildTemplate
   
-    &mdash; discorb v0.13.0 documentation
+    &mdash; discorb v0.13.1 documentation
   
 </title>
 
@@ -456,7 +456,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#delete!-instance_method" title="#delete! (instance method)">#<strong>delete!</strong> -&gt; Object </a>
+      <a href="#delete!-instance_method" title="#delete! (instance method)">#<strong>delete!</strong> -&gt; Async::Task&lt;void&gt; </a>
     
 
     
@@ -481,7 +481,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#edit-instance_method" title="#edit (instance method)">#<strong>edit</strong>(name = nil, description = :unset) -&gt; Object </a>
+      <a href="#edit-instance_method" title="#edit (instance method)">#<strong>edit</strong>(name = nil, description = Discorb::Unset) -&gt; Async::Task&lt;void&gt; </a>
     
 
     
@@ -506,7 +506,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#update-instance_method" title="#update (instance method)">#<strong>update</strong> -&gt; Object </a>
+      <a href="#update-instance_method" title="#update (instance method)">#<strong>update</strong> -&gt; Async::Task&lt;void&gt; </a>
     
 
     
@@ -1239,7 +1239,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="delete!-instance_method">
   
-    #<strong>delete!</strong> -&gt; <tt>Object</tt> 
+    #<strong>delete!</strong> -&gt; <tt>Async::Task&lt;void&gt;</tt> 
   
 
   
@@ -1251,38 +1251,25 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
-<p>Delete the template.</p>
+    <p>Delete the template.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-<p class="tag_title">Raises:</p>
-<ul class="raise">
+<p class="tag_title">Returns:</p>
+<ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;void&gt;</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>HTTP request failed.</p>
+        <div class='inline'><p>The task.</p>
 </div>
       
     </li>
@@ -1295,14 +1282,14 @@
       <pre class="lines">
 
 
-83
-84
-85
 86
-87</pre>
+87
+88
+89
+90</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild_template.rb', line 83</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild_template.rb', line 86</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete!'>delete!</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -1317,7 +1304,7 @@
       <div class="method_details ">
   <h3 class="signature " id="edit-instance_method">
   
-    #<strong>edit</strong>(name = nil, description = :unset) -&gt; <tt>Object</tt> 
+    #<strong>edit</strong>(name = nil, description = Discorb::Unset) -&gt; <tt>Async::Task&lt;void&gt;</tt> 
   
 
   
@@ -1332,19 +1319,7 @@
     
   <div class="note notetag">
     <strong>Note:</strong>
-    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>The arguments of this method are defaultly set to <code>:unset</code>. Specify value to set the value, if not don&#39;t specify or specify <code>:unset</code>.</p>
+    <div class='inline'><p>The arguments of this method are defaultly set to <code>Discorb::Unset</code>. Specify value to set the value, if not don&#39;t specify or specify <code>Discorb::Unset</code>.</p>
 </div>
   </div>
 
@@ -1382,7 +1357,7 @@
         <span class='type'>(<tt>String</tt>)</span>
       
       
-        <em class="default">(defaults to: <tt>:unset</tt>)</em>
+        <em class="default">(defaults to: <tt>Discorb::Unset</tt>)</em>
       
       
         &mdash;
@@ -1393,18 +1368,18 @@
   
 </ul>
 
-<p class="tag_title">Raises:</p>
-<ul class="raise">
+<p class="tag_title">Returns:</p>
+<ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;void&gt;</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>HTTP request failed.</p>
+        <div class='inline'><p>The task.</p>
 </div>
       
     </li>
@@ -1417,23 +1392,23 @@
       <pre class="lines">
 
 
-55
 56
 57
 58
 59
 60
 61
-62</pre>
+62
+63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild_template.rb', line 55</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild_template.rb', line 56</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_edit'>edit</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span> <span class='op'>=</span> <span class='symbol'>:unset</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_edit'>edit</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
     <span class='id identifier rubyid_payload'>payload</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
     <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span> <span class='kw'>if</span> <span class='id identifier rubyid_name'>name</span>
-    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:description</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_description'>description</span> <span class='kw'>if</span> <span class='id identifier rubyid_description'>description</span> <span class='op'>!=</span> <span class='symbol'>:unset</span>
+    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:description</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_description'>description</span> <span class='kw'>if</span> <span class='id identifier rubyid_description'>description</span> <span class='op'>!=</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
     <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_patch'>patch</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/guilds/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@source_guild_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/templates/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@code</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_payload'>payload</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
@@ -1445,7 +1420,7 @@
       <div class="method_details ">
   <h3 class="signature " id="update-instance_method">
   
-    #<strong>update</strong> -&gt; <tt>Object</tt> 
+    #<strong>update</strong> -&gt; <tt>Async::Task&lt;void&gt;</tt> 
   
 
   
@@ -1453,38 +1428,25 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
-<p>Update the template.</p>
+    <p>Update the template.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-<p class="tag_title">Raises:</p>
-<ul class="raise">
+<p class="tag_title">Returns:</p>
+<ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;void&gt;</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>HTTP request failed.</p>
+        <div class='inline'><p>The task.</p>
 </div>
       
     </li>
@@ -1497,15 +1459,15 @@
       <pre class="lines">
 
 
-71
-72
 73
 74
 75
-76</pre>
+76
+77
+78</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild_template.rb', line 71</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild_template.rb', line 73</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -1523,7 +1485,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/6e4508bd47d409b03bc7652c3bf12e52a090eb33"><code>6e4508bd47d409b03bc7652c3bf12e52a090eb33</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/9de66b09d41dc5b6e41caa451862e1844b51b6c9"><code>9de66b09d41dc5b6e41caa451862e1844b51b6c9</code></a>, version v0.13.1, with YARD 0.9.27.
     </div>
 
     </div>

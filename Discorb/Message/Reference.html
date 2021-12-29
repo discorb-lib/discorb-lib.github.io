@@ -7,7 +7,7 @@
 <title>
   Class: Discorb::Message::Reference
   
-    &mdash; discorb v0.13.0 documentation
+    &mdash; discorb v0.13.1 documentation
   
 </title>
 
@@ -415,15 +415,15 @@
       <pre class="lines">
 
 
-543
-544
-545
-546
-547
-548</pre>
+554
+555
+556
+557
+558
+559</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 543</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 554</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_guild_id'>guild_id</span><span class='comma'>,</span> <span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='id identifier rubyid_message_id'>message_id</span><span class='comma'>,</span> <span class='label'>fail_if_not_exists:</span> <span class='kw'>true</span><span class='rparen'>)</span>
   <span class='ivar'>@guild_id</span> <span class='op'>=</span> <span class='id identifier rubyid_guild_id'>guild_id</span>
@@ -485,12 +485,12 @@
       <pre class="lines">
 
 
-527
-528
-529</pre>
+538
+539
+540</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 527</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 538</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_channel_id'>channel_id</span>
   <span class='ivar'>@channel_id</span>
@@ -548,12 +548,12 @@
       <pre class="lines">
 
 
-531
-532
-533</pre>
+542
+543
+544</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 531</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 542</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fail_if_not_exists'>fail_if_not_exists</span>
   <span class='ivar'>@fail_if_not_exists</span>
@@ -607,12 +607,12 @@
       <pre class="lines">
 
 
-525
-526
-527</pre>
+536
+537
+538</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 525</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 536</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_guild_id'>guild_id</span>
   <span class='ivar'>@guild_id</span>
@@ -666,12 +666,12 @@
       <pre class="lines">
 
 
-529
-530
-531</pre>
+540
+541
+542</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 529</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 540</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_message_id'>message_id</span>
   <span class='ivar'>@message_id</span>
@@ -746,7 +746,7 @@
   <p class="tag_title">See Also:</p>
   <ul class="see">
     
-      <li><a href="https://discord.com/developers/docs/resources/channel#message-reference-object" target="_parent" title="https://discord.com/developers/docs/resources/channel#message-reference-object">https://discord.com/developers/docs/resources/channel#message-reference-object</a></li>
+      <li><a href="https://discord.com/developers/docs/resources/channel#message-reference-object" target="_parent" title=""></a></li>
     
   </ul>
 
@@ -756,12 +756,12 @@
       <pre class="lines">
 
 
-574
-575
-576</pre>
+585
+586
+587</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 574</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 585</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_from_hash'>from_hash</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:guild_id</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:channel_id</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:message_id</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>fail_if_not_exists:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:fail_if_not_exists</span><span class='rbracket'>]</span><span class='rparen'>)</span>
@@ -823,17 +823,17 @@
       <pre class="lines">
 
 
-555
-556
-557
-558
-559
-560
-561
-562</pre>
+566
+567
+568
+569
+570
+571
+572
+573</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 555</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message.rb', line 566</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_hash'>to_hash</span>
   <span class='lbrace'>{</span>
@@ -853,7 +853,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/6e4508bd47d409b03bc7652c3bf12e52a090eb33"><code>6e4508bd47d409b03bc7652c3bf12e52a090eb33</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/9de66b09d41dc5b6e41caa451862e1844b51b6c9"><code>9de66b09d41dc5b6e41caa451862e1844b51b6c9</code></a>, version v0.13.1, with YARD 0.9.27.
     </div>
 
     </div>

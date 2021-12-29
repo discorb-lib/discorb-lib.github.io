@@ -7,7 +7,7 @@
 <title>
   Module: Discorb::Interaction::UpdateResponse
   
-    &mdash; discorb v0.13.0 documentation
+    &mdash; discorb v0.13.1 documentation
   
 </title>
 
@@ -117,7 +117,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#defer_update-instance_method" title="#defer_update (instance method)">#<strong>defer_update</strong>(ephemeral: false) -&gt; Object </a>
+      <a href="#defer_update-instance_method" title="#defer_update (instance method)">#<strong>defer_update</strong>(ephemeral: false) -&gt; Async::Task&lt;void&gt; </a>
     
 
     
@@ -140,7 +140,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#edit-instance_method" title="#edit (instance method)">#<strong>edit</strong>(content, tts: false, embed: nil, embeds: nil, allowed_mentions: nil, components: nil, ephemeral: false) -&gt; Object </a>
+      <a href="#edit-instance_method" title="#edit (instance method)">#<strong>edit</strong>(content, tts: false, embed: nil, embeds: nil, allowed_mentions: nil, components: nil, ephemeral: false) -&gt; Async::Task&lt;void&gt; </a>
     
 
     
@@ -172,7 +172,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="defer_update-instance_method">
   
-    #<strong>defer_update</strong>(ephemeral: false) -&gt; <tt>Object</tt> 
+    #<strong>defer_update</strong>(ephemeral: false) -&gt; <tt>Async::Task&lt;void&gt;</tt> 
   
 
   
@@ -208,6 +208,23 @@
   
 </ul>
 
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Async::Task&lt;void&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The task.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -215,7 +232,6 @@
       <pre class="lines">
 
 
-138
 139
 140
 141
@@ -224,10 +240,11 @@
 144
 145
 146
-147</pre>
+147
+148</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/response.rb', line 138</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/response.rb', line 139</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_defer_update'>defer_update</span><span class='lparen'>(</span><span class='label'>ephemeral:</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -247,7 +264,7 @@
       <div class="method_details ">
   <h3 class="signature " id="edit-instance_method">
   
-    #<strong>edit</strong>(content, tts: false, embed: nil, embeds: nil, allowed_mentions: nil, components: nil, ephemeral: false) -&gt; <tt>Object</tt> 
+    #<strong>edit</strong>(content, tts: false, embed: nil, embeds: nil, allowed_mentions: nil, components: nil, ephemeral: false) -&gt; <tt>Async::Task&lt;void&gt;</tt> 
   
 
   
@@ -255,20 +272,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
-<p>Response with <code>UPDATE_MESSAGE</code>(<code>7</code>).</p>
+    <p>Response with <code>UPDATE_MESSAGE</code>(<code>7</code>).</p>
 
 
   </div>
@@ -396,18 +400,18 @@
   
 </ul>
 
-<p class="tag_title">Raises:</p>
-<ul class="raise">
+<p class="tag_title">Returns:</p>
+<ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="../HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
+        <span class='type'>(<tt>Async::Task&lt;void&gt;</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>HTTP request failed.</p>
+        <div class='inline'><p>The task.</p>
 </div>
       
     </li>
@@ -420,8 +424,6 @@
       <pre class="lines">
 
 
-163
-164
 165
 166
 167
@@ -436,10 +438,12 @@
 176
 177
 178
-179</pre>
+179
+180
+181</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/response.rb', line 163</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/response.rb', line 165</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_edit'>edit</span><span class='lparen'>(</span><span class='id identifier rubyid_content'>content</span><span class='comma'>,</span> <span class='label'>tts:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>embed:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>embeds:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>allowed_mentions:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>components:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>ephemeral:</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -468,7 +472,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/6e4508bd47d409b03bc7652c3bf12e52a090eb33"><code>6e4508bd47d409b03bc7652c3bf12e52a090eb33</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/9de66b09d41dc5b6e41caa451862e1844b51b6c9"><code>9de66b09d41dc5b6e41caa451862e1844b51b6c9</code></a>, version v0.13.1, with YARD 0.9.27.
     </div>
 
     </div>

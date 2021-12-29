@@ -7,7 +7,7 @@
 <title>
   Class: Discorb::GuildChannel
   
-    &mdash; discorb v0.13.0 documentation
+    &mdash; discorb v0.13.1 documentation
   
 </title>
 
@@ -348,7 +348,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#move-instance_method" title="#move (instance method)">#<strong>move</strong>(position, lock_permissions: false, parent: :unset, reason: nil) -&gt; Async::Task&lt;self&gt; </a>
+      <a href="#move-instance_method" title="#move (instance method)">#<strong>move</strong>(position, lock_permissions: false, parent: Discorb::Unset, reason: nil) -&gt; Async::Task&lt;self&gt; </a>
     
 
     
@@ -745,20 +745,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
-<p>Deletes the channel.</p>
+    <p>Deletes the channel.</p>
 
 
   </div>
@@ -803,23 +790,6 @@
     </li>
   
 </ul>
-<p class="tag_title">Raises:</p>
-<ul class="raise">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>HTTP request failed.</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -827,16 +797,16 @@
       <pre class="lines">
 
 
+175
 176
 177
 178
 179
 180
-181
-182</pre>
+181</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 176</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 175</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete!'>delete!</span><span class='lparen'>(</span><span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -943,7 +913,7 @@
       <div class="method_details ">
   <h3 class="signature " id="move-instance_method">
   
-    #<strong>move</strong>(position, lock_permissions: false, parent: :unset, reason: nil) -&gt; <tt>Async::Task&lt;self&gt;</tt> 
+    #<strong>move</strong>(position, lock_permissions: false, parent: Discorb::Unset, reason: nil) -&gt; <tt>Async::Task&lt;self&gt;</tt> 
   
 
   
@@ -951,20 +921,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This is an asynchronous method, it will return a <code>Async::Task</code> object. Use <code>Async::Task#wait</code> to get the result.</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method calls HTTP request.</p>
-</div>
-  </div>
-
-<p>Moves the channel to another position.</p>
+    <p>Moves the channel to another position.</p>
 
 
   </div>
@@ -1013,7 +970,7 @@
         <span class='type'>(<tt><span class='object_link'><a href="CategoryChannel.html" title="Discorb::CategoryChannel (class)">Discorb::CategoryChannel</a></span></tt>)</span>
       
       
-        <em class="default">(defaults to: <tt>:unset</tt>)</em>
+        <em class="default">(defaults to: <tt>Discorb::Unset</tt>)</em>
       
       
         &mdash;
@@ -1058,23 +1015,6 @@
     </li>
   
 </ul>
-<p class="tag_title">Raises:</p>
-<ul class="raise">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="HTTPError.html" title="Discorb::HTTPError (class)">Discorb::HTTPError</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>HTTP request failed.</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -1082,6 +1022,8 @@
       <pre class="lines">
 
 
+197
+198
 199
 200
 201
@@ -1089,20 +1031,18 @@
 203
 204
 205
-206
-207
-208</pre>
+206</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 199</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 197</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_move'>move</span><span class='lparen'>(</span><span class='id identifier rubyid_position'>position</span><span class='comma'>,</span> <span class='label'>lock_permissions:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>parent:</span> <span class='symbol'>:unset</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_move'>move</span><span class='lparen'>(</span><span class='id identifier rubyid_position'>position</span><span class='comma'>,</span> <span class='label'>lock_permissions:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>parent:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
     <span class='id identifier rubyid_payload'>payload</span> <span class='op'>=</span> <span class='lbrace'>{</span>
       <span class='label'>position:</span> <span class='id identifier rubyid_position'>position</span><span class='comma'>,</span>
     <span class='rbrace'>}</span>
     <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:lock_permissions</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_lock_permissions'>lock_permissions</span>
-    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:parent_id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_parent'>parent</span><span class='op'>&amp;.</span><span class='id identifier rubyid_id'>id</span> <span class='kw'>if</span> <span class='id identifier rubyid_parent'>parent</span> <span class='op'>!=</span> <span class='symbol'>:unset</span>
+    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:parent_id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_parent'>parent</span><span class='op'>&amp;.</span><span class='id identifier rubyid_id'>id</span> <span class='kw'>if</span> <span class='id identifier rubyid_parent'>parent</span> <span class='op'>!=</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
     <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_patch'>patch</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/guilds/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@guild_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/channels</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_payload'>payload</span><span class='comma'>,</span> <span class='label'>audit_log_reason:</span> <span class='id identifier rubyid_reason'>reason</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
@@ -1211,7 +1151,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/6e4508bd47d409b03bc7652c3bf12e52a090eb33"><code>6e4508bd47d409b03bc7652c3bf12e52a090eb33</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/9de66b09d41dc5b6e41caa451862e1844b51b6c9"><code>9de66b09d41dc5b6e41caa451862e1844b51b6c9</code></a>, version v0.13.1, with YARD 0.9.27.
     </div>
 
     </div>
