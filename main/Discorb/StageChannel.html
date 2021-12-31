@@ -210,6 +210,28 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#audiences-instance_method" title="#audiences (instance method)">#<strong>audiences</strong> -&gt; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#edit-instance_method" title="#edit (instance method)">#<strong>edit</strong>(name: Discorb::Unset, position: Discorb::Unset, bitrate: Discorb::Unset, rtc_region: Discorb::Unset, reason: nil) -&gt; Async::Task&lt;self&gt; </a>
     
 
@@ -258,6 +280,50 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#members-instance_method" title="#members (instance method)">#<strong>members</strong> -&gt; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#speakers-instance_method" title="#speakers (instance method)">#<strong>speakers</strong> -&gt; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#stage_instance-instance_method" title="#stage_instance (instance method)">#<strong>stage_instance</strong> -&gt; Object </a>
     
 
@@ -296,6 +362,28 @@
   
     <span class="summary_desc"><div class='inline'><p>Start a stage instance.</p>
 </div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#voice_states-instance_method" title="#voice_states (instance method)">#<strong>voice_states</strong> -&gt; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -396,12 +484,12 @@
       <pre class="lines">
 
 
-655
-656
-657</pre>
+668
+669
+670</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 655</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 668</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_bitrate'>bitrate</span>
   <span class='ivar'>@bitrate</span>
@@ -455,12 +543,12 @@
       <pre class="lines">
 
 
-657
-658
-659</pre>
+670
+671
+672</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 657</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 670</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_user_limit'>user_limit</span>
   <span class='ivar'>@user_limit</span>
@@ -478,7 +566,37 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="edit-instance_method">
+  <h3 class="signature first" id="audiences-instance_method">
+  
+    #<strong>audiences</strong> -&gt; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+763
+764
+765</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 763</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_audiences'>audiences</span>
+  <span class='id identifier rubyid_voice_states'>voice_states</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_state'>state</span><span class='op'>|</span> <span class='id identifier rubyid_state'>state</span><span class='period'>.</span><span class='id identifier rubyid_suppress?'>suppress?</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:member</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="edit-instance_method">
   
     #<strong>edit</strong>(name: Discorb::Unset, position: Discorb::Unset, bitrate: Discorb::Unset, rtc_region: Discorb::Unset, reason: nil) -&gt; <tt>Async::Task&lt;self&gt;</tt> 
   
@@ -619,20 +737,20 @@
       <pre class="lines">
 
 
-690
-691
-692
-693
-694
-695
-696
-697
-698
-699
-700</pre>
+703
+704
+705
+706
+707
+708
+709
+710
+711
+712
+713</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 690</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 703</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_edit'>edit</span><span class='lparen'>(</span><span class='label'>name:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span> <span class='label'>position:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span> <span class='label'>bitrate:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span> <span class='label'>rtc_region:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -705,18 +823,18 @@
       <pre class="lines">
 
 
-728
-729
-730
-731
-732
-733
-734
-735
-736</pre>
+741
+742
+743
+744
+745
+746
+747
+748
+749</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 728</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 741</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_stage_instance'>fetch_stage_instance</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -726,6 +844,66 @@
   <span class='kw'>else</span>
     <span class='const'><span class='object_link'><a href="StageInstance.html" title="Discorb::StageInstance (class)">StageInstance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@client</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="members-instance_method">
+  
+    #<strong>members</strong> -&gt; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+755
+756
+757</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 755</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_members'>members</span>
+  <span class='id identifier rubyid_voice_states'>voice_states</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:member</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="speakers-instance_method">
+  
+    #<strong>speakers</strong> -&gt; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+759
+760
+761</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 759</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_speakers'>speakers</span>
+  <span class='id identifier rubyid_voice_states'>voice_states</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_state'>state</span><span class='op'>|</span> <span class='op'>!</span><span class='id identifier rubyid_state'>state</span><span class='period'>.</span><span class='id identifier rubyid_suppress?'>suppress?</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:member</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -747,12 +925,12 @@
       <pre class="lines">
 
 
-673
-674
-675</pre>
+686
+687
+688</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 673</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 686</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_stage_instance'>stage_instance</span>
   <span class='ivar'>@stage_instances</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
@@ -857,15 +1035,15 @@
       <pre class="lines">
 
 
-714
-715
-716
-717
-718
-719</pre>
+727
+728
+729
+730
+731
+732</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 714</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 727</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_start'>start</span><span class='lparen'>(</span><span class='id identifier rubyid_topic'>topic</span><span class='comma'>,</span> <span class='label'>public:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -878,12 +1056,42 @@
 </table>
 </div>
     
+      <div class="method_details ">
+  <h3 class="signature " id="voice_states-instance_method">
+  
+    #<strong>voice_states</strong> -&gt; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+751
+752
+753</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 751</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_voice_states'>voice_states</span>
+  <span class='id identifier rubyid_guild'>guild</span><span class='period'>.</span><span class='id identifier rubyid_voice_states'>voice_states</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_state'>state</span><span class='op'>|</span> <span class='id identifier rubyid_state'>state</span><span class='period'>.</span><span class='id identifier rubyid_channel'>channel</span><span class='op'>&amp;.</span><span class='id identifier rubyid_id'>id</span> <span class='op'>==</span> <span class='ivar'>@id</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/28e55975a91d432797bb311f184dcaca7f488630"><code>28e55975a91d432797bb311f184dcaca7f488630</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/e1b82b28b38be51e10fcfe0066e710ec91523f28"><code>e1b82b28b38be51e10fcfe0066e710ec91523f28</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
