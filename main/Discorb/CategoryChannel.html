@@ -110,42 +110,9 @@
 
 
 
-  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
-  <ul class="summary">
-    
-      <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#channels-instance_method" title="#channels (instance method)">#<strong>channels</strong> -&gt; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-    
-      <span class="note title readonly">readonly</span>
-    
-    
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute channels.</p>
-</div></span>
-  
-</li>
-
-    
-  </ul>
 
 
-
-  
+  <h2>Instance Attribute Summary</h2>
   
   <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="GuildChannel.html" title="Discorb::GuildChannel (class)">GuildChannel</a></span></h3>
   <p class="inherited"><span class='object_link'><a href="GuildChannel.html#permission_overwrites-instance_method" title="Discorb::GuildChannel#permission_overwrites (method)">#permission_overwrites</a></span>, <span class='object_link'><a href="GuildChannel.html#position-instance_method" title="Discorb::GuildChannel#position (method)">#position</a></span></p>
@@ -163,6 +130,28 @@
     </h2>
 
     <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#channels-instance_method" title="#channels (instance method)">#<strong>channels</strong> -&gt; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
       
         <li class="public ">
   <span class="summary_signature">
@@ -378,60 +367,43 @@
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="DiscordModel.html" title="Discorb::DiscordModel (class)">DiscordModel</a></span></h3>
   <p class="inherited"><span class='object_link'><a href="DiscordModel.html#==-instance_method" title="Discorb::DiscordModel#== (method)">#==</a></span>, <span class='object_link'><a href="DiscordModel.html#eql%3F-instance_method" title="Discorb::DiscordModel#eql? (method)">#eql?</a></span>, <span class='object_link'><a href="DiscordModel.html#hash-instance_method" title="Discorb::DiscordModel#hash (method)">#hash</a></span></p>
 
-  <div id="instance_attr_details" class="attr_details">
-    <h2>Instance Attribute Details</h2>
-    
-      
-      <span id=""></span>
-      <div class="method_details first">
-  <h3 class="signature first" id="channels-instance_method">
-  
-    #<strong>channels</strong> -&gt; <tt>Object</tt>  <span class="extras">(readonly)</span>
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>Returns the value of attribute channels.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-1065
-1066
-1067</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 1065</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_channels'>channels</span>
-  <span class='ivar'>@channels</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-  </div>
-
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="create_news_channel-instance_method">
+  <h3 class="signature first" id="channels-instance_method">
+  
+    #<strong>channels</strong> -&gt; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1067
+1068
+1069</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 1067</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_channels'>channels</span>
+  <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_channels'>channels</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_channel'>channel</span><span class='op'>|</span> <span class='id identifier rubyid_channel'>channel</span><span class='period'>.</span><span class='id identifier rubyid_parent'>parent</span> <span class='op'>==</span> <span class='kw'>self</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_news_channel-instance_method">
   
     #<strong>create_news_channel</strong>(*args, **kwargs) -&gt; <tt>Object</tt> 
   
@@ -445,12 +417,12 @@
       <pre class="lines">
 
 
-1093
-1094
-1095</pre>
+1095
+1096
+1097</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 1093</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 1095</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create_news_channel'>create_news_channel</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_guild'>guild</span><span class='period'>.</span><span class='id identifier rubyid_create_news_channel'>create_news_channel</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='label'>parent:</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
@@ -475,12 +447,12 @@
       <pre class="lines">
 
 
-1097
-1098
-1099</pre>
+1099
+1100
+1101</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 1097</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 1099</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create_stage_channel'>create_stage_channel</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_guild'>guild</span><span class='period'>.</span><span class='id identifier rubyid_create_stage_channel'>create_stage_channel</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='label'>parent:</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
@@ -505,12 +477,12 @@
       <pre class="lines">
 
 
-1085
-1086
-1087</pre>
+1087
+1088
+1089</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 1085</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 1087</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create_text_channel'>create_text_channel</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_guild'>guild</span><span class='period'>.</span><span class='id identifier rubyid_create_text_channel'>create_text_channel</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='label'>parent:</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
@@ -535,12 +507,12 @@
       <pre class="lines">
 
 
-1089
-1090
-1091</pre>
+1091
+1092
+1093</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 1089</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 1091</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create_voice_channel'>create_voice_channel</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_guild'>guild</span><span class='period'>.</span><span class='id identifier rubyid_create_voice_channel'>create_voice_channel</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='label'>parent:</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
@@ -565,15 +537,15 @@
       <pre class="lines">
 
 
-1077
-1078
-1079</pre>
+1079
+1080
+1081</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 1077</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 1079</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_news_channel'>news_channel</span>
-  <span class='ivar'>@channels</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'><span class='object_link'><a href="NewsChannel.html" title="Discorb::NewsChannel (class)">NewsChannel</a></span></span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_channels'>channels</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'><span class='object_link'><a href="NewsChannel.html" title="Discorb::NewsChannel (class)">NewsChannel</a></span></span> <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -595,15 +567,15 @@
       <pre class="lines">
 
 
-1081
-1082
-1083</pre>
+1083
+1084
+1085</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 1081</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 1083</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_stage_channels'>stage_channels</span>
-  <span class='ivar'>@channels</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'><span class='object_link'><a href="StageChannel.html" title="Discorb::StageChannel (class)">StageChannel</a></span></span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_channels'>channels</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'><span class='object_link'><a href="StageChannel.html" title="Discorb::StageChannel (class)">StageChannel</a></span></span> <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -625,15 +597,15 @@
       <pre class="lines">
 
 
-1069
-1070
-1071</pre>
+1071
+1072
+1073</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 1069</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 1071</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_text_channels'>text_channels</span>
-  <span class='ivar'>@channels</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'><span class='object_link'><a href="TextChannel.html" title="Discorb::TextChannel (class)">TextChannel</a></span></span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_channels'>channels</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'><span class='object_link'><a href="TextChannel.html" title="Discorb::TextChannel (class)">TextChannel</a></span></span> <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -655,15 +627,15 @@
       <pre class="lines">
 
 
-1073
-1074
-1075</pre>
+1075
+1076
+1077</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 1073</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 1075</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_voice_channels'>voice_channels</span>
-  <span class='ivar'>@channels</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'><span class='object_link'><a href="VoiceChannel.html" title="Discorb::VoiceChannel (class)">VoiceChannel</a></span></span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_channels'>channels</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'><span class='object_link'><a href="VoiceChannel.html" title="Discorb::VoiceChannel (class)">VoiceChannel</a></span></span> <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -675,7 +647,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/2b8b6aa21531bb29e0411828dabd8b091dd64bc2"><code>2b8b6aa21531bb29e0411828dabd8b091dd64bc2</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/3fb04e6f440f8dc3c10ff1c99d8705069e46b2c6"><code>3fb04e6f440f8dc3c10ff1c99d8705069e46b2c6</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
