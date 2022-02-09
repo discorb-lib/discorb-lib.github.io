@@ -116,7 +116,7 @@
 
 </div><div id="subclasses">
   <h2>Direct Known Subclasses</h2>
-  <p class="children"><span class='object_link'><a href="Button.html" title="Discorb::Button (class)">Button</a></span>, <span class='object_link'><a href="SelectMenu.html" title="Discorb::SelectMenu (class)">SelectMenu</a></span></p>
+  <p class="children"><span class='object_link'><a href="Button.html" title="Discorb::Button (class)">Button</a></span>, <span class='object_link'><a href="SelectMenu.html" title="Discorb::SelectMenu (class)">SelectMenu</a></span>, <span class='object_link'><a href="TextInput.html" title="Discorb::TextInput (class)">TextInput</a></span></p>
 </div>
 
 
@@ -307,7 +307,15 @@
 39
 40
 41
-42</pre>
+42
+43
+44
+45
+46
+47
+48
+49
+50</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/discorb/components.rb', line 22</span>
@@ -325,6 +333,14 @@
     <span class='rparen'>)</span>
   <span class='kw'>when</span> <span class='int'>3</span>
     <span class='const'><span class='object_link'><a href="SelectMenu.html" title="Discorb::SelectMenu (class)">SelectMenu</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SelectMenu.html#initialize-instance_method" title="Discorb::SelectMenu#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+      <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:custom_id</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:options</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_o'>o</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="SelectMenu.html" title="Discorb::SelectMenu (class)">SelectMenu</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SelectMenu/Option.html" title="Discorb::SelectMenu::Option (class)">Option</a></span></span><span class='period'>.</span><span class='id identifier rubyid_from_hash'><span class='object_link'><a href="SelectMenu/Option.html#from_hash-class_method" title="Discorb::SelectMenu::Option.from_hash (method)">from_hash</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_o'>o</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+      <span class='label'>placeholder:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:placeholder</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='label'>min_values:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:min_values</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='label'>max_values:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:max_values</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='int'>4</span>
+    <span class='const'><span class='object_link'><a href="TextInput.html" title="Discorb::TextInput (class)">TextInput</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="TextInput.html#initialize-instance_method" title="Discorb::TextInput#initialize (method)">new</a></span></span><span class='lparen'>(</span>
       <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:custom_id</span><span class='rbracket'>]</span><span class='comma'>,</span>
       <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:options</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_o'>o</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="SelectMenu.html" title="Discorb::SelectMenu (class)">SelectMenu</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SelectMenu/Option.html" title="Discorb::SelectMenu::Option (class)">Option</a></span></span><span class='period'>.</span><span class='id identifier rubyid_from_hash'><span class='object_link'><a href="SelectMenu/Option.html#from_hash-class_method" title="Discorb::SelectMenu::Option.from_hash (method)">from_hash</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_o'>o</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='comma'>,</span>
       <span class='label'>placeholder:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:placeholder</span><span class='rbracket'>]</span><span class='comma'>,</span>
@@ -399,14 +415,6 @@
       <pre class="lines">
 
 
-51
-52
-53
-54
-55
-56
-57
-58
 59
 60
 61
@@ -418,10 +426,18 @@
 67
 68
 69
-70</pre>
+70
+71
+72
+73
+74
+75
+76
+77
+78</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/components.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/components.rb', line 59</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_payload'>to_payload</span><span class='lparen'>(</span><span class='id identifier rubyid_components'>components</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tmp_components'>tmp_components</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -432,7 +448,7 @@
       <span class='id identifier rubyid_tmp_components'>tmp_components</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_tmp_row'>tmp_row</span>
       <span class='id identifier rubyid_tmp_row'>tmp_row</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
       <span class='id identifier rubyid_tmp_components'>tmp_components</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_c'>c</span>
-    <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="SelectMenu.html" title="Discorb::SelectMenu (class)">SelectMenu</a></span></span>
+    <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="SelectMenu.html" title="Discorb::SelectMenu (class)">SelectMenu</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="TextInput.html" title="Discorb::TextInput (class)">TextInput</a></span></span>
       <span class='id identifier rubyid_tmp_components'>tmp_components</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_tmp_row'>tmp_row</span>
       <span class='id identifier rubyid_tmp_row'>tmp_row</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
       <span class='id identifier rubyid_tmp_components'>tmp_components</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='id identifier rubyid_c'>c</span><span class='rbracket'>]</span>
@@ -489,7 +505,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/f3df7ac87b247d5c5c6d8d96c4a3751bc7e86701"><code>f3df7ac87b247d5c5c6d8d96c4a3751bc7e86701</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/1e41eb03d44f604a0c6c8a43383cc3b500aed479"><code>1e41eb03d44f604a0c6c8a43383cc3b500aed479</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
