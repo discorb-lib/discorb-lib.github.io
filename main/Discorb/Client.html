@@ -2531,15 +2531,15 @@
       <pre class="lines">
 
 
-440
-441
-442
-443
-444
-445</pre>
+448
+449
+450
+451
+452
+453</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/client.rb', line 440</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/client.rb', line 448</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_close!'>close!</span>
   <span class='ivar'>@connection</span><span class='period'>.</span><span class='id identifier rubyid_send_close'>send_close</span>
@@ -3579,7 +3579,15 @@ If application was cached, it will be used.</p>
 406
 407
 408
-409</pre>
+409
+410
+411
+412
+413
+414
+415
+416
+417</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/discorb/client.rb', line 376</span>
@@ -3609,12 +3617,20 @@ If application was cached, it will be used.</p>
   <span class='id identifier rubyid_ins'>ins</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_commands'>commands</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_cmd'>cmd</span><span class='op'>|</span>
     <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_define_singleton_method'>define_singleton_method</span><span class='lparen'>(</span><span class='symbol'>:extension</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_ins'>ins</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='rbrace'>}</span>
     <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_replace_block'>replace_block</span><span class='lparen'>(</span><span class='id identifier rubyid_ins'>ins</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_define_singleton_method'>define_singleton_method</span><span class='lparen'>(</span><span class='symbol'>:self_replaced</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='kw'>true</span> <span class='rbrace'>}</span>
     <span class='ivar'>@commands</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_cmd'>cmd</span>
   <span class='kw'>end</span>
 
   <span class='id identifier rubyid_cls'>cls</span> <span class='op'>=</span> <span class='id identifier rubyid_ins'>ins</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span>
   <span class='id identifier rubyid_cls'>cls</span><span class='period'>.</span><span class='id identifier rubyid_loaded'>loaded</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='op'>...</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_cls'>cls</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span> <span class='symbol'>:loaded</span>
-  <span class='ivar'>@bottom_commands</span> <span class='op'>+=</span> <span class='id identifier rubyid_ins'>ins</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_bottom_commands'>bottom_commands</span>
+  <span class='id identifier rubyid_ins'>ins</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_bottom_commands'>bottom_commands</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_cmd'>cmd</span><span class='op'>|</span>
+    <span class='kw'>unless</span> <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span> <span class='symbol'>:self_replaced</span>
+      <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_define_singleton_method'>define_singleton_method</span><span class='lparen'>(</span><span class='symbol'>:extension</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_ins'>ins</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='rbrace'>}</span>
+      <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_replace_block'>replace_block</span><span class='lparen'>(</span><span class='id identifier rubyid_ins'>ins</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_define_singleton_method'>define_singleton_method</span><span class='lparen'>(</span><span class='symbol'>:self_replaced</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='kw'>true</span> <span class='rbrace'>}</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@bottom_commands</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_cmd'>cmd</span>
+  <span class='kw'>end</span>
   <span class='ivar'>@extensions</span><span class='lbracket'>[</span><span class='id identifier rubyid_ins'>ins</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_ins'>ins</span>
   <span class='id identifier rubyid_ins'>ins</span>
 <span class='kw'>end</span></pre>
@@ -4039,22 +4055,22 @@ If application was cached, it will be used.</p>
       <pre class="lines">
 
 
-423
-424
-425
-426
-427
-428
-429
-430
 431
 432
 433
 434
-435</pre>
+435
+436
+437
+438
+439
+440
+441
+442
+443</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/client.rb', line 423</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/client.rb', line 431</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_token'>token</span> <span class='op'>||=</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>DISCORB_CLI_TOKEN</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
@@ -4210,7 +4226,7 @@ If application was cached, it will be used.</p>
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/5b90e16fe087afc6390cee3846fab96e1ba96d3e"><code>5b90e16fe087afc6390cee3846fab96e1ba96d3e</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/cd459b10e13fc994416c2cf63a0fcf9a9d37e885"><code>cd459b10e13fc994416c2cf63a0fcf9a9d37e885</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
