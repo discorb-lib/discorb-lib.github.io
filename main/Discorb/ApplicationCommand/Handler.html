@@ -84,7 +84,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/discorb/app_command.rb</dd>
+    <dd>lib/discorb/app_command/handler.rb</dd>
   </dl>
   
 </div>
@@ -389,7 +389,7 @@
 85</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/app_command.rb', line 81</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/handler.rb', line 81</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_message_command'>message_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='label'>guild_ids:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../ApplicationCommand.html" title="Discorb::ApplicationCommand (module)">ApplicationCommand</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Command.html" title="Discorb::ApplicationCommand::Command (class)">Command</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='id identifier rubyid_guild_ids'>guild_ids</span><span class='comma'>,</span> <span class='id identifier rubyid_block'>block</span><span class='comma'>,</span> <span class='int'>3</span><span class='rparen'>)</span>
@@ -527,7 +527,7 @@
 161</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/app_command.rb', line 115</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/handler.rb', line 115</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_setup_commands'>setup_commands</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>guild_ids:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -778,7 +778,7 @@ The key is the option name, the value is a hash with the following keys:</p>
 45</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/app_command.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/handler.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_slash'>slash</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>guild_ids:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../ApplicationCommand.html" title="Discorb::ApplicationCommand (module)">ApplicationCommand</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Command.html" title="Discorb::ApplicationCommand::Command (class)">Command</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Command/SlashCommand.html" title="Discorb::ApplicationCommand::Command::SlashCommand (class)">SlashCommand</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='comma'>,</span> <span class='id identifier rubyid_guild_ids'>guild_ids</span><span class='comma'>,</span> <span class='id identifier rubyid_block'>block</span><span class='comma'>,</span> <span class='int'>1</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -937,7 +937,7 @@ The key is the option name, the value is a hash with the following keys:</p>
 67</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/app_command.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/handler.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_slash_group'>slash_group</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>guild_ids:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../ApplicationCommand.html" title="Discorb::ApplicationCommand (module)">ApplicationCommand</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Command.html" title="Discorb::ApplicationCommand::Command (class)">Command</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Command/GroupCommand.html" title="Discorb::ApplicationCommand::Command::GroupCommand (class)">GroupCommand</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_guild_ids'>guild_ids</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span>
@@ -1101,7 +1101,7 @@ The key is the option name, the value is a hash with the following keys:</p>
 103</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/app_command.rb', line 99</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/handler.rb', line 99</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_user_command'>user_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='label'>guild_ids:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../ApplicationCommand.html" title="Discorb::ApplicationCommand (module)">ApplicationCommand</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Command.html" title="Discorb::ApplicationCommand::Command (class)">Command</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='id identifier rubyid_guild_ids'>guild_ids</span><span class='comma'>,</span> <span class='id identifier rubyid_block'>block</span><span class='comma'>,</span> <span class='int'>2</span><span class='rparen'>)</span>
@@ -1118,7 +1118,7 @@ The key is the option name, the value is a hash with the following keys:</p>
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/a7433753e81e0e3abcd77434eae373d92848b0d0"><code>a7433753e81e0e3abcd77434eae373d92848b0d0</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/4daa9f917090e0537033615e8bb905afd42ee7a1"><code>4daa9f917090e0537033615e8bb905afd42ee7a1</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
