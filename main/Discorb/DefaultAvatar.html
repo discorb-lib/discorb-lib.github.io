@@ -218,7 +218,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="DiscordModel.html" title="Discorb::DiscordModel (class)">DiscordModel</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="DiscordModel.html#==-instance_method" title="Discorb::DiscordModel#== (method)">#==</a></span>, <span class='object_link'><a href="DiscordModel.html#eql%3F-instance_method" title="Discorb::DiscordModel#eql? (method)">#eql?</a></span>, <span class='object_link'><a href="DiscordModel.html#hash-instance_method" title="Discorb::DiscordModel#hash (method)">#hash</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="DiscordModel.html#==-instance_method" title="Discorb::DiscordModel#== (method)">#==</a></span>, <span class='object_link'><a href="DiscordModel.html#eql%3F-instance_method" title="Discorb::DiscordModel#eql? (method)">#eql?</a></span></p>
 
   <div id="instance_attr_details" class="attr_details">
     <h2>Instance Attribute Details</h2>
@@ -300,12 +300,12 @@
       <pre class="lines">
 
 
-87
-88
-89</pre>
+89
+90
+91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/asset.rb', line 87</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/asset.rb', line 89</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='ivar'>@discriminator</span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
@@ -327,6 +327,8 @@
 </h3><div class="docstring">
   <div class="discussion">
     <p>Returns the URL of the avatar.</p>
+
+<p>rubocop: disable Lint/UnusedMethodArgument</p>
 
 
   </div>
@@ -395,15 +397,17 @@
       <pre class="lines">
 
 
-83
 84
-85</pre>
+85
+86
+87</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/asset.rb', line 83</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/asset.rb', line 84</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_url'>url</span><span class='lparen'>(</span><span class='label'>image_format:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>size:</span> <span class='int'>1024</span><span class='rparen'>)</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://cdn.discordapp.com/embed/avatars/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@discriminator</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>%</span> <span class='int'>5</span><span class='embexpr_end'>}</span><span class='tstring_content'>.png</span><span class='tstring_end'>&quot;</span></span>
+  <span class='comment'># rubocop: enable Lint/UnusedMethodArgument
+</span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://cdn.discordapp.com/embed/avatars/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@discriminator</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>%</span> <span class='int'>5</span><span class='embexpr_end'>}</span><span class='tstring_content'>.png</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -415,7 +419,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/2c9a5f5cad207a9aa6730dd0cf71cd2e062c215a"><code>2c9a5f5cad207a9aa6730dd0cf71cd2e062c215a</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/87daf5224c397f02fd3c60be35e6ee8d5f4570dc"><code>87daf5224c397f02fd3c60be35e6ee8d5f4570dc</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>

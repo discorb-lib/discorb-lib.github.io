@@ -94,7 +94,7 @@
   
   <dl>
       <dt>Includes:</dt>
-      <dd><span class='object_link'><a href="Interaction/ModalResponse.html" title="Discorb::Interaction::ModalResponse (module)">Interaction::ModalResponse</a></span>, <span class='object_link'><a href="Interaction/SourceResponse.html" title="Discorb::Interaction::SourceResponse (module)">Interaction::SourceResponse</a></span>, <span class='object_link'><a href="Interaction/UpdateResponse.html" title="Discorb::Interaction::UpdateResponse (module)">Interaction::UpdateResponse</a></span></dd>
+      <dd><span class='object_link'><a href="Interaction/ModalResponder.html" title="Discorb::Interaction::ModalResponder (module)">Interaction::ModalResponder</a></span>, <span class='object_link'><a href="Interaction/SourceResponder.html" title="Discorb::Interaction::SourceResponder (module)">Interaction::SourceResponder</a></span>, <span class='object_link'><a href="Interaction/UpdateResponder.html" title="Discorb::Interaction::UpdateResponder (module)">Interaction::UpdateResponder</a></span></dd>
   </dl>
   
   
@@ -219,8 +219,8 @@
   
   <h2>Method Summary</h2>
   
-  <h3 class="inherited">Methods included from <span class='object_link'><a href="Interaction/ModalResponse.html" title="Discorb::Interaction::ModalResponse (module)">Interaction::ModalResponse</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Interaction/ModalResponse.html#show_modal-instance_method" title="Discorb::Interaction::ModalResponse#show_modal (method)">#show_modal</a></span></p>
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Interaction/ModalResponder.html" title="Discorb::Interaction::ModalResponder (module)">Interaction::ModalResponder</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Interaction/ModalResponder.html#show_modal-instance_method" title="Discorb::Interaction::ModalResponder#show_modal (method)">#show_modal</a></span></p>
 
   
   
@@ -230,8 +230,8 @@
   
   
   
-  <h3 class="inherited">Methods included from <span class='object_link'><a href="Interaction/UpdateResponse.html" title="Discorb::Interaction::UpdateResponse (module)">Interaction::UpdateResponse</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Interaction/UpdateResponse.html#defer_update-instance_method" title="Discorb::Interaction::UpdateResponse#defer_update (method)">#defer_update</a></span>, <span class='object_link'><a href="Interaction/UpdateResponse.html#edit-instance_method" title="Discorb::Interaction::UpdateResponse#edit (method)">#edit</a></span></p>
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Interaction/UpdateResponder.html" title="Discorb::Interaction::UpdateResponder (module)">Interaction::UpdateResponder</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Interaction/UpdateResponder.html#defer_update-instance_method" title="Discorb::Interaction::UpdateResponder#defer_update (method)">#defer_update</a></span>, <span class='object_link'><a href="Interaction/UpdateResponder.html#edit-instance_method" title="Discorb::Interaction::UpdateResponder#edit (method)">#edit</a></span></p>
 
   
   
@@ -241,8 +241,8 @@
   
   
   
-  <h3 class="inherited">Methods included from <span class='object_link'><a href="Interaction/SourceResponse.html" title="Discorb::Interaction::SourceResponse (module)">Interaction::SourceResponse</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Interaction/SourceResponse.html#defer_source-instance_method" title="Discorb::Interaction::SourceResponse#defer_source (method)">#defer_source</a></span>, <span class='object_link'><a href="Interaction/SourceResponse.html#post-instance_method" title="Discorb::Interaction::SourceResponse#post (method)">#post</a></span></p>
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Interaction/SourceResponder.html" title="Discorb::Interaction::SourceResponder (module)">Interaction::SourceResponder</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Interaction/SourceResponder.html#defer_source-instance_method" title="Discorb::Interaction::SourceResponder#defer_source (method)">#defer_source</a></span>, <span class='object_link'><a href="Interaction/SourceResponder.html#post-instance_method" title="Discorb::Interaction::SourceResponder#post (method)">#post</a></span></p>
 
   
   
@@ -264,7 +264,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="DiscordModel.html" title="Discorb::DiscordModel (class)">DiscordModel</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="DiscordModel.html#==-instance_method" title="Discorb::DiscordModel#== (method)">#==</a></span>, <span class='object_link'><a href="DiscordModel.html#eql%3F-instance_method" title="Discorb::DiscordModel#eql? (method)">#eql?</a></span>, <span class='object_link'><a href="DiscordModel.html#hash-instance_method" title="Discorb::DiscordModel#hash (method)">#hash</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="DiscordModel.html#==-instance_method" title="Discorb::DiscordModel#== (method)">#==</a></span>, <span class='object_link'><a href="DiscordModel.html#eql%3F-instance_method" title="Discorb::DiscordModel#eql? (method)">#eql?</a></span></p>
 
   <div id="instance_attr_details" class="attr_details">
     <h2>Instance Attribute Details</h2>
@@ -313,12 +313,12 @@
       <pre class="lines">
 
 
-13
 14
-15</pre>
+15
+16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/components.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/components.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_custom_id'>custom_id</span>
   <span class='ivar'>@custom_id</span>
@@ -372,12 +372,12 @@
       <pre class="lines">
 
 
-15
 16
-17</pre>
+17
+18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/components.rb', line 15</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/components.rb', line 16</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_message'>message</span>
   <span class='ivar'>@message</span>
@@ -393,7 +393,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/2c9a5f5cad207a9aa6730dd0cf71cd2e062c215a"><code>2c9a5f5cad207a9aa6730dd0cf71cd2e062c215a</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/87daf5224c397f02fd3c60be35e6ee8d5f4570dc"><code>87daf5224c397f02fd3c60be35e6ee8d5f4570dc</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>

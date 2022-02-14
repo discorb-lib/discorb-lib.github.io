@@ -1109,13 +1109,13 @@
       <pre class="code"><span class="info file"># File 'lib/discorb/permission.rb', line 176</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_hash'>to_hash</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_bits'>bits</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_field'>field</span><span class='op'>|</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_bits'>bits</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_to_h'>to_h</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_field'>field</span><span class='op'>|</span>
     <span class='lbracket'>[</span><span class='id identifier rubyid_field'>field</span><span class='comma'>,</span> <span class='kw'>if</span> <span class='ivar'>@allow</span> <span class='op'>&amp;</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_bits'>bits</span><span class='lbracket'>[</span><span class='id identifier rubyid_field'>field</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='int'>0</span>
       <span class='kw'>true</span>
     <span class='kw'>elsif</span> <span class='ivar'>@deny</span> <span class='op'>&amp;</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_bits'>bits</span><span class='lbracket'>[</span><span class='id identifier rubyid_method'>method</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='int'>0</span>
       <span class='kw'>false</span>
     <span class='kw'>end</span><span class='rbracket'>]</span>
-  <span class='kw'>end</span><span class='period'>.</span><span class='id identifier rubyid_to_h'>to_h</span>
+  <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1127,7 +1127,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/2c9a5f5cad207a9aa6730dd0cf71cd2e062c215a"><code>2c9a5f5cad207a9aa6730dd0cf71cd2e062c215a</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/87daf5224c397f02fd3c60be35e6ee8d5f4570dc"><code>87daf5224c397f02fd3c60be35e6ee8d5f4570dc</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
