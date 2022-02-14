@@ -7,7 +7,7 @@
 <title>
   File: Examples
   
-    &mdash; discorb v0.13.4 documentation
+    &mdash; discorb v0.14.0 documentation
   
 </title>
 
@@ -62,7 +62,8 @@
 
 <h2 id="simple-ping-pong">Simple ping pong</h2>
 
-<p><pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>"</span><span class='tstring_content'>discorb</span><span class='tstring_end'>"</span></span>
+<p><pre class="code ruby"><code class="ruby"><span class='comment'># frozen_string_literal: true
+</span><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>"</span><span class='tstring_content'>discorb</span><span class='tstring_end'>"</span></span>
 
 <span class='id identifier rubyid_client'>client</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Discorb/Client.html" title="Discorb::Client (class)">Client</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Discorb/Client.html#initialize-instance_method" title="Discorb::Client#initialize (method)">new</a></span></span>
 
@@ -81,7 +82,8 @@
 
 <h2 id="wait-for-a-message">Wait for a message</h2>
 
-<p><pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>"</span><span class='tstring_content'>discorb</span><span class='tstring_end'>"</span></span>
+<p><pre class="code ruby"><code class="ruby"><span class='comment'># frozen_string_literal: true
+</span><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>"</span><span class='tstring_content'>discorb</span><span class='tstring_end'>"</span></span>
 
 <span class='id identifier rubyid_client'>client</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Discorb/Client.html" title="Discorb::Client (class)">Client</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Discorb/Client.html#initialize-instance_method" title="Discorb::Client#initialize (method)">new</a></span></span>
 
@@ -93,16 +95,16 @@
   <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_author'>author</span><span class='period'>.</span><span class='id identifier rubyid_bot?'>bot?</span>
   <span class='kw'>next</span> <span class='kw'>unless</span> <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>"</span><span class='tstring_content'>!quiz</span><span class='tstring_end'>"</span></span>
 
-  <span class='id identifier rubyid_operator'>operator</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='symbol'>:+</span><span class='comma'>,</span> <span class='symbol'>:-</span><span class='comma'>,</span> <span class='symbol'>:*</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_sample'>sample</span>
+  <span class='id identifier rubyid_operator'>operator</span> <span class='op'>=</span> <span class='qsymbols_beg'>%i[</span><span class='tstring_content'>+</span><span class='words_sep'> </span><span class='tstring_content'>-</span><span class='words_sep'> </span><span class='tstring_content'>*</span><span class='tstring_end'>]</span></span><span class='period'>.</span><span class='id identifier rubyid_sample'>sample</span>
   <span class='id identifier rubyid_num1'>num1</span> <span class='op'>=</span> <span class='id identifier rubyid_rand'>rand</span><span class='lparen'>(</span><span class='int'>1</span><span class='op'>..</span><span class='int'>10</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_num2'>num2</span> <span class='op'>=</span> <span class='id identifier rubyid_rand'>rand</span><span class='lparen'>(</span><span class='int'>1</span><span class='op'>..</span><span class='int'>10</span><span class='rparen'>)</span>
 
   <span class='id identifier rubyid_val'>val</span> <span class='op'>=</span> <span class='id identifier rubyid_num1'>num1</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_operator'>operator</span><span class='comma'>,</span> <span class='id identifier rubyid_num2'>num2</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_channel'>channel</span><span class='period'>.</span><span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>"</span><span class='tstring_content'>Quiz: `</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_num1'>num1</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_operator'>operator</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_num2'>num2</span><span class='embexpr_end'>}</span><span class='tstring_content'>`</span><span class='tstring_end'>"</span></span><span class='rparen'>)</span>
   <span class='kw'>begin</span>
-    <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_event_lock'>event_lock</span><span class='lparen'>(</span><span class='symbol'>:message</span><span class='comma'>,</span> <span class='int'>30</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_m'>m</span><span class='op'>|</span>
+    <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_event_lock'>event_lock</span><span class='lparen'>(</span><span class='symbol'>:message</span><span class='comma'>,</span> <span class='int'>30</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_m'>m</span><span class='op'>|</span>
       <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span> <span class='op'>==</span> <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>&&</span> <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_channel'>channel</span> <span class='op'>==</span> <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_channel'>channel</span>
-    <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
+    <span class='kw'>end</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
   <span class='kw'>rescue</span> <span class='const'><span class='object_link'><a href="Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Discorb/TimeoutError.html" title="Discorb::TimeoutError (class)">TimeoutError</a></span></span>
     <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_channel'>channel</span><span class='period'>.</span><span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>"</span><span class='tstring_content'>No one answered...</span><span class='tstring_end'>"</span></span><span class='rparen'>)</span>
   <span class='kw'>else</span>
@@ -116,7 +118,8 @@
 
 <h3 id="authorization-button">Authorization button</h3>
 
-<p><pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>"</span><span class='tstring_content'>discorb</span><span class='tstring_end'>"</span></span>
+<p><pre class="code ruby"><code class="ruby"><span class='comment'># frozen_string_literal: true
+</span><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>"</span><span class='tstring_content'>discorb</span><span class='tstring_end'>"</span></span>
 
 <span class='id identifier rubyid_client'>client</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Discorb/Client.html" title="Discorb::Client (class)">Client</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Discorb/Client.html#initialize-instance_method" title="Discorb::Client#initialize (method)">new</a></span></span>
 
@@ -145,7 +148,7 @@
     <span class='label'>components:</span> <span class='lbracket'>[</span>
       <span class='const'><span class='object_link'><a href="Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Discorb/Button.html" title="Discorb::Button (class)">Button</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Discorb/Button.html#initialize-instance_method" title="Discorb::Button#initialize (method)">new</a></span></span><span class='lparen'>(</span>
         <span class='tstring'><span class='tstring_beg'>"</span><span class='tstring_content'>Get role</span><span class='tstring_end'>"</span></span><span class='comma'>,</span> <span class='label'>custom_id:</span> <span class='tstring'><span class='tstring_beg'>"</span><span class='tstring_content'>auth:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_role'>role</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_end'>"</span></span><span class='comma'>,</span>
-      <span class='rparen'>)</span><span class='comma'>,</span>
+      <span class='rparen'>)</span>
     <span class='rbracket'>]</span><span class='comma'>,</span>
   <span class='rparen'>)</span>
 <span class='kw'>end</span>
@@ -162,14 +165,15 @@
 
 <h3 id="pagination-with-select-menu">Pagination with select menu</h3>
 
-<p><pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>"</span><span class='tstring_content'>discorb</span><span class='tstring_end'>"</span></span>
+<p><pre class="code ruby"><code class="ruby"><span class='comment'># frozen_string_literal: true
+</span><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>"</span><span class='tstring_content'>discorb</span><span class='tstring_end'>"</span></span>
 
 <span class='id identifier rubyid_client'>client</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Discorb/Client.html" title="Discorb::Client (class)">Client</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Discorb/Client.html#initialize-instance_method" title="Discorb::Client#initialize (method)">new</a></span></span>
 
 <span class='const'>SECTIONS</span> <span class='op'>=</span> <span class='lbracket'>[</span>
   <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>"</span><span class='tstring_content'>About</span><span class='tstring_end'>"</span></span><span class='comma'>,</span> <span class='heredoc_beg'><<~WIKI</span><span class='rbracket'>]</span><span class='comma'>,</span>
   <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>"</span><span class='tstring_content'>Early concept</span><span class='tstring_end'>"</span></span><span class='comma'>,</span> <span class='heredoc_beg'><<~WIKI</span><span class='rbracket'>]</span><span class='comma'>,</span>
-  <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>"</span><span class='tstring_content'>First publication</span><span class='tstring_end'>"</span></span><span class='comma'>,</span> <span class='heredoc_beg'><<~WIKI</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>"</span><span class='tstring_content'>First publication</span><span class='tstring_end'>"</span></span><span class='comma'>,</span> <span class='heredoc_beg'><<~WIKI</span><span class='rbracket'>]</span>
 <span class='tstring_content'>    The first public release of Ruby 0.95 was announced on Japanese domestic newsgroups on December 21, 1995.
 </span><span class='tstring_content'>    Subsequently, three more versions of Ruby were released in two days.
 </span><span class='tstring_content'>    The release coincided with the launch of the Japanese-language ruby-list mailing list, which was the first mailing list for the new language.
@@ -215,7 +219,7 @@
 </div></div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/51fe9ec3980607d3716e54c0b451ae554af7ed11"><code>51fe9ec3980607d3716e54c0b451ae554af7ed11</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/5982a54ad3064f3a6a27fa7138bc3eed1a26a833"><code>5982a54ad3064f3a6a27fa7138bc3eed1a26a833</code></a>, version v0.14.0, with YARD 0.9.27.
     </div>
 
     </div>
