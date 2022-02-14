@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<link rel="shortcut icon" href="/favicon.png" />
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Discorb::TextInput
+  
+    &mdash; discorb v0.14.0 documentation
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Discorb::TextInput";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../a_index.html">Index (T)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span>
+     &raquo; 
+    <span class="title">TextInput</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Discorb::TextInput
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="Component.html" title="Discorb::Component (class)">Component</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="Component.html" title="Discorb::Component (class)">Component</a></span></li>
+          
+            <li class="next">Discorb::TextInput</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/discorb/components/text_input.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Represents a text input component.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#custom_id-instance_method" title="#custom_id (instance method)">#<strong>custom_id</strong> -&gt; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The custom id of the text input.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#label-instance_method" title="#label (instance method)">#<strong>label</strong> -&gt; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The label of the text input.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#max_length-instance_method" title="#max_length (instance method)">#<strong>max_length</strong> -&gt; Integer<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The maximum length of the text input.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#min_length-instance_method" title="#min_length (instance method)">#<strong>min_length</strong> -&gt; Integer<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The minimum length of the text input.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#placeholder-instance_method" title="#placeholder (instance method)">#<strong>placeholder</strong> -&gt; String<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The placeholder of the text input.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#required-instance_method" title="#required (instance method)">#<strong>required</strong> -&gt; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Whether the text input is required.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#style-instance_method" title="#style (instance method)">#<strong>style</strong> -&gt; :short, :paragraph </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The style of the text input.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#value-instance_method" title="#value (instance method)">#<strong>value</strong> -&gt; String<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The prefilled value of the text input.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#from_hash-class_method" title="from_hash (class method)">.<strong>from_hash</strong>(data) -&gt; Discorb::TextInput </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Creates a new text input from a hash.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(label, custom_id, style, min_length: nil, max_length: nil, required: false, value: nil, placeholder: nil) -&gt; TextInput </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Initialize a new text input component.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_hash-instance_method" title="#to_hash (instance method)">#<strong>to_hash</strong> -&gt; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Converts the select menu to a hash.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Component.html" title="Discorb::Component (class)">Component</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Component.html#inspect-instance_method" title="Discorb::Component#inspect (method)">#inspect</a></span>, <span class='object_link'><a href="Component.html#to_payload-class_method" title="Discorb::Component.to_payload (method)">to_payload</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(label, custom_id, style, min_length: nil, max_length: nil, required: false, value: nil, placeholder: nil) -&gt; <tt><span class='object_link'><a href="" title="Discorb::TextInput (class)">TextInput</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Initialize a new text input component.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>label</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The label of the text input.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>custom_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The custom id of the text input.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>style</span>
+      
+      
+        <span class='type'>(<tt>:short</tt>, <tt>:paragraph</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The style of the text input.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>min_length</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The minimum length of the text input.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>max_length</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The maximum length of the text input.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>required</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether the text input is required.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The prefilled value of the text input.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>placeholder</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The placeholder of the text input.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/components/text_input.rb', line 43</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_label'>label</span><span class='comma'>,</span> <span class='id identifier rubyid_custom_id'>custom_id</span><span class='comma'>,</span> <span class='id identifier rubyid_style'>style</span><span class='comma'>,</span> <span class='label'>min_length:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>max_length:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>value:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>placeholder:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='ivar'>@label</span> <span class='op'>=</span> <span class='id identifier rubyid_label'>label</span>
+  <span class='ivar'>@custom_id</span> <span class='op'>=</span> <span class='id identifier rubyid_custom_id'>custom_id</span>
+  <span class='ivar'>@style</span> <span class='op'>=</span> <span class='id identifier rubyid_style'>style</span>
+  <span class='ivar'>@min_length</span> <span class='op'>=</span> <span class='id identifier rubyid_min_length'>min_length</span>
+  <span class='ivar'>@max_length</span> <span class='op'>=</span> <span class='id identifier rubyid_max_length'>max_length</span>
+  <span class='ivar'>@required</span> <span class='op'>=</span> <span class='id identifier rubyid_required'>required</span>
+  <span class='ivar'>@value</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+  <span class='ivar'>@placeholder</span> <span class='op'>=</span> <span class='id identifier rubyid_placeholder'>placeholder</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="custom_id=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="custom_id-instance_method">
+  
+    #<strong>custom_id</strong> -&gt; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns The custom id of the text input.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The custom id of the text input.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+17
+18
+19</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/components/text_input.rb', line 17</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_custom_id'>custom_id</span>
+  <span class='ivar'>@custom_id</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="label=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="label-instance_method">
+  
+    #<strong>label</strong> -&gt; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns The label of the text input.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The label of the text input.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/components/text_input.rb', line 15</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_label'>label</span>
+  <span class='ivar'>@label</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="max_length=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="max_length-instance_method">
+  
+    #<strong>max_length</strong> -&gt; <tt>Integer</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns The maximum length of the text input.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The maximum length of the text input.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/components/text_input.rb', line 23</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_max_length'>max_length</span>
+  <span class='ivar'>@max_length</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="min_length=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="min_length-instance_method">
+  
+    #<strong>min_length</strong> -&gt; <tt>Integer</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns The minimum length of the text input.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The minimum length of the text input.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/components/text_input.rb', line 21</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_min_length'>min_length</span>
+  <span class='ivar'>@min_length</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="placeholder=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="placeholder-instance_method">
+  
+    #<strong>placeholder</strong> -&gt; <tt>String</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns The placeholder of the text input.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The placeholder of the text input.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30
+31</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/components/text_input.rb', line 29</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_placeholder'>placeholder</span>
+  <span class='ivar'>@placeholder</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="required=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="required-instance_method">
+  
+    #<strong>required</strong> -&gt; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns Whether the text input is required.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether the text input is required.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+25
+26
+27</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/components/text_input.rb', line 25</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_required'>required</span>
+  <span class='ivar'>@required</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="style=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="style-instance_method">
+  
+    #<strong>style</strong> -&gt; <tt>:short</tt>, <tt>:paragraph</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns The style of the text input.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>:short</tt>, <tt>:paragraph</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The style of the text input.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+19
+20
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/components/text_input.rb', line 19</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_style'>style</span>
+  <span class='ivar'>@style</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="value=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="value-instance_method">
+  
+    #<strong>value</strong> -&gt; <tt>String</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns The prefilled value of the text input.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The prefilled value of the text input.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+27
+28
+29</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/components/text_input.rb', line 27</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_value'>value</span>
+  <span class='ivar'>@value</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="from_hash-class_method">
+  
+    .<strong>from_hash</strong>(data) -&gt; <tt><span class='object_link'><a href="" title="Discorb::TextInput (class)">Discorb::TextInput</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Creates a new text input from a hash.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The hash to create the text input from.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Discorb::TextInput (class)">Discorb::TextInput</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The created text input.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/components/text_input.rb', line 82</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_from_hash'>from_hash</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+    <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:label</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:custom_id</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='const'>STYLES</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:style</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='label'>min_length:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:min_length</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='label'>max_length:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:max_length</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='label'>required:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:required</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='label'>value:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:value</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='label'>placeholder:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:placeholder</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="to_hash-instance_method">
+  
+    #<strong>to_hash</strong> -&gt; <tt>Hash</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Converts the select menu to a hash.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>A hash representation of the text input.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://discord.com/developers/docs/interactions/message-components#text-inputs-text-input-structure" target="_parent" title="Official Discord API docs">Official Discord API docs</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/components/text_input.rb', line 60</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_hash'>to_hash</span>
+  <span class='lbrace'>{</span>
+    <span class='label'>type:</span> <span class='int'>4</span><span class='comma'>,</span>
+    <span class='label'>label:</span> <span class='ivar'>@label</span><span class='comma'>,</span>
+    <span class='label'>style:</span> <span class='const'>STYLES</span><span class='lbracket'>[</span><span class='ivar'>@style</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='label'>custom_id:</span> <span class='ivar'>@custom_id</span><span class='comma'>,</span>
+    <span class='label'>min_length:</span> <span class='ivar'>@min_length</span><span class='comma'>,</span>
+    <span class='label'>max_length:</span> <span class='ivar'>@max_length</span><span class='comma'>,</span>
+    <span class='label'>required:</span> <span class='ivar'>@required</span><span class='comma'>,</span>
+    <span class='label'>value:</span> <span class='ivar'>@value</span><span class='comma'>,</span>
+    <span class='label'>placeholder:</span> <span class='ivar'>@placeholder</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/5982a54ad3064f3a6a27fa7138bc3eed1a26a833"><code>5982a54ad3064f3a6a27fa7138bc3eed1a26a833</code></a>, version v0.14.0, with YARD 0.9.27.
+    </div>
+
+    </div>
+  </body>
+</html>
