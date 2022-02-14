@@ -296,26 +296,7 @@
 28
 29
 30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50</pre>
+31</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/discorb/components.rb', line 22</span>
@@ -323,31 +304,12 @@
 <span class='kw'>def</span> <span class='id identifier rubyid_from_hash'>from_hash</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:type</span><span class='rbracket'>]</span>
   <span class='kw'>when</span> <span class='int'>2</span>
-    <span class='const'><span class='object_link'><a href="Button.html" title="Discorb::Button (class)">Button</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Button.html#initialize-instance_method" title="Discorb::Button#initialize (method)">new</a></span></span><span class='lparen'>(</span>
-      <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:label</span><span class='rbracket'>]</span><span class='comma'>,</span>
-      <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:style</span><span class='rbracket'>]</span><span class='comma'>,</span>
-      <span class='label'>emoji:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:emoji</span><span class='rbracket'>]</span><span class='comma'>,</span>
-      <span class='label'>custom_id:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:custom_id</span><span class='rbracket'>]</span><span class='comma'>,</span>
-      <span class='label'>url:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:url</span><span class='rbracket'>]</span><span class='comma'>,</span>
-      <span class='label'>disabled:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:disabled</span><span class='rbracket'>]</span><span class='comma'>,</span>
-    <span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="Button.html" title="Discorb::Button (class)">Button</a></span></span>
   <span class='kw'>when</span> <span class='int'>3</span>
-    <span class='const'><span class='object_link'><a href="SelectMenu.html" title="Discorb::SelectMenu (class)">SelectMenu</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SelectMenu.html#initialize-instance_method" title="Discorb::SelectMenu#initialize (method)">new</a></span></span><span class='lparen'>(</span>
-      <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:custom_id</span><span class='rbracket'>]</span><span class='comma'>,</span>
-      <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:options</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_o'>o</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="SelectMenu.html" title="Discorb::SelectMenu (class)">SelectMenu</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SelectMenu/Option.html" title="Discorb::SelectMenu::Option (class)">Option</a></span></span><span class='period'>.</span><span class='id identifier rubyid_from_hash'><span class='object_link'><a href="SelectMenu/Option.html#from_hash-class_method" title="Discorb::SelectMenu::Option.from_hash (method)">from_hash</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_o'>o</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='comma'>,</span>
-      <span class='label'>placeholder:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:placeholder</span><span class='rbracket'>]</span><span class='comma'>,</span>
-      <span class='label'>min_values:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:min_values</span><span class='rbracket'>]</span><span class='comma'>,</span>
-      <span class='label'>max_values:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:max_values</span><span class='rbracket'>]</span><span class='comma'>,</span>
-    <span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="SelectMenu.html" title="Discorb::SelectMenu (class)">SelectMenu</a></span></span>
   <span class='kw'>when</span> <span class='int'>4</span>
-    <span class='const'><span class='object_link'><a href="TextInput.html" title="Discorb::TextInput (class)">TextInput</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="TextInput.html#initialize-instance_method" title="Discorb::TextInput#initialize (method)">new</a></span></span><span class='lparen'>(</span>
-      <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:custom_id</span><span class='rbracket'>]</span><span class='comma'>,</span>
-      <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:options</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_o'>o</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="SelectMenu.html" title="Discorb::SelectMenu (class)">SelectMenu</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SelectMenu/Option.html" title="Discorb::SelectMenu::Option (class)">Option</a></span></span><span class='period'>.</span><span class='id identifier rubyid_from_hash'><span class='object_link'><a href="SelectMenu/Option.html#from_hash-class_method" title="Discorb::SelectMenu::Option.from_hash (method)">from_hash</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_o'>o</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='comma'>,</span>
-      <span class='label'>placeholder:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:placeholder</span><span class='rbracket'>]</span><span class='comma'>,</span>
-      <span class='label'>min_values:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:min_values</span><span class='rbracket'>]</span><span class='comma'>,</span>
-      <span class='label'>max_values:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:max_values</span><span class='rbracket'>]</span><span class='comma'>,</span>
-    <span class='rparen'>)</span>
-  <span class='kw'>end</span>
+    <span class='const'><span class='object_link'><a href="TextInput.html" title="Discorb::TextInput (class)">TextInput</a></span></span>
+  <span class='kw'>end</span><span class='period'>.</span><span class='id identifier rubyid_from_hash'>from_hash</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -415,29 +377,29 @@
       <pre class="lines">
 
 
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78</pre>
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/components.rb', line 59</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/components.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_payload'>to_payload</span><span class='lparen'>(</span><span class='id identifier rubyid_components'>components</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tmp_components'>tmp_components</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -505,7 +467,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/d4b0719c57aa410649c8d0611b2426c0532e256e"><code>d4b0719c57aa410649c8d0611b2426c0532e256e</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/5059881de5c604bff617d963743550cd66dd6ad2"><code>5059881de5c604bff617d963743550cd66dd6ad2</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
