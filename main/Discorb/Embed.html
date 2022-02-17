@@ -422,6 +422,37 @@
 
   
     <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#from_hash-class_method" title="from_hash (class method)">.<strong>from_hash</strong>(data) -&gt; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
       Instance Method Summary
       <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
@@ -431,7 +462,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(title = nil, description = nil, color: nil, url: nil, timestamp: nil, author: nil, fields: nil, footer: nil, image: nil, thumbnail: nil, data: nil) -&gt; Embed </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(title = nil, description = nil, color: nil, url: nil, timestamp: nil, author: nil, fields: nil, footer: nil, image: nil, thumbnail: nil) -&gt; Embed </a>
     
 
     
@@ -507,7 +538,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(title = nil, description = nil, color: nil, url: nil, timestamp: nil, author: nil, fields: nil, footer: nil, image: nil, thumbnail: nil, data: nil) -&gt; <tt><span class='object_link'><a href="" title="Discorb::Embed (class)">Embed</a></span></tt> 
+    #<strong>initialize</strong>(title = nil, description = nil, color: nil, url: nil, timestamp: nil, author: nil, fields: nil, footer: nil, image: nil, thumbnail: nil) -&gt; <tt><span class='object_link'><a href="" title="Discorb::Embed (class)">Embed</a></span></tt> 
   
 
   
@@ -716,62 +747,24 @@
 57
 58
 59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79</pre>
+60</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/discorb/embed.rb', line 47</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_title'>title</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>color:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>url:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>timestamp:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>author:</span> <span class='kw'>nil</span><span class='comma'>,</span>
-                                               <span class='label'>fields:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>footer:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>image:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>thumbnail:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>data:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
-    <span class='ivar'>@title</span> <span class='op'>=</span> <span class='id identifier rubyid_title'>title</span>
-    <span class='ivar'>@description</span> <span class='op'>=</span> <span class='id identifier rubyid_description'>description</span>
-    <span class='ivar'>@url</span> <span class='op'>=</span> <span class='id identifier rubyid_url'>url</span>
-    <span class='ivar'>@timestamp</span> <span class='op'>=</span> <span class='id identifier rubyid_timestamp'>timestamp</span>
-    <span class='ivar'>@color</span> <span class='op'>=</span> <span class='id identifier rubyid_color'>color</span>
-    <span class='ivar'>@author</span> <span class='op'>=</span> <span class='id identifier rubyid_author'>author</span>
-    <span class='ivar'>@fields</span> <span class='op'>=</span> <span class='id identifier rubyid_fields'>fields</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-    <span class='ivar'>@footer</span> <span class='op'>=</span> <span class='id identifier rubyid_footer'>footer</span>
-    <span class='ivar'>@image</span> <span class='op'>=</span> <span class='id identifier rubyid_image'>image</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_image'>image</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='const'><span class='object_link'><a href="Embed/Image.html" title="Discorb::Embed::Image (class)">Image</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Embed/Image.html#initialize-instance_method" title="Discorb::Embed::Image#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_image'>image</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='id identifier rubyid_image'>image</span><span class='rparen'>)</span>
-    <span class='ivar'>@thumbnail</span> <span class='op'>=</span> <span class='id identifier rubyid_thumbnail'>thumbnail</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_thumbnail'>thumbnail</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='const'><span class='object_link'><a href="Embed/Thumbnail.html" title="Discorb::Embed::Thumbnail (class)">Thumbnail</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Embed/Thumbnail.html#initialize-instance_method" title="Discorb::Embed::Thumbnail#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_thumbnail'>thumbnail</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='id identifier rubyid_thumbnail'>thumbnail</span><span class='rparen'>)</span>
-    <span class='ivar'>@type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rich</span><span class='tstring_end'>&quot;</span></span>
-  <span class='kw'>else</span>
-    <span class='ivar'>@title</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:title</span><span class='rbracket'>]</span>
-    <span class='ivar'>@description</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:description</span><span class='rbracket'>]</span>
-    <span class='ivar'>@url</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:url</span><span class='rbracket'>]</span>
-    <span class='ivar'>@timestamp</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:timestamp</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='const'><span class='object_link'><a href="../Time.html" title="Time (class)">Time</a></span></span><span class='period'>.</span><span class='id identifier rubyid_iso8601'>iso8601</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:timestamp</span><span class='rbracket'>]</span><span class='rparen'>)</span>
-    <span class='ivar'>@type</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:type</span><span class='rbracket'>]</span>
-    <span class='ivar'>@color</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:color</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='const'><span class='object_link'><a href="Color.html" title="Discorb::Color (class)">Color</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Color.html#initialize-instance_method" title="Discorb::Color#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:color</span><span class='rbracket'>]</span><span class='rparen'>)</span>
-    <span class='ivar'>@footer</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:footer</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='const'><span class='object_link'><a href="Embed/Footer.html" title="Discorb::Embed::Footer (class)">Footer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Embed/Footer.html#initialize-instance_method" title="Discorb::Embed::Footer#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:footer</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:text</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>icon:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:footer</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:icon_url</span><span class='rbracket'>]</span><span class='rparen'>)</span>
-    <span class='ivar'>@author</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:author</span><span class='rbracket'>]</span>
-        <span class='const'><span class='object_link'><a href="Embed/Author.html" title="Discorb::Embed::Author (class)">Author</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Embed/Author.html#initialize-instance_method" title="Discorb::Embed::Author#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:author</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>icon:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:author</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:icon_url</span><span class='rbracket'>]</span><span class='comma'>,</span>
-                                         <span class='label'>url:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:author</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:url</span><span class='rbracket'>]</span><span class='rparen'>)</span>
-      <span class='kw'>end</span>
-    <span class='ivar'>@thumbnail</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:thumbnail</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='const'><span class='object_link'><a href="Embed/Thumbnail.html" title="Discorb::Embed::Thumbnail (class)">Thumbnail</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Embed/Thumbnail.html#initialize-instance_method" title="Discorb::Embed::Thumbnail#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:thumbnail</span><span class='rbracket'>]</span><span class='rparen'>)</span>
-    <span class='ivar'>@image</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:image</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='const'><span class='object_link'><a href="Embed/Image.html" title="Discorb::Embed::Image (class)">Image</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Embed/Image.html#initialize-instance_method" title="Discorb::Embed::Image#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:image</span><span class='rbracket'>]</span><span class='rparen'>)</span>
-    <span class='ivar'>@video</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:video</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='const'><span class='object_link'><a href="Embed/Video.html" title="Discorb::Embed::Video (class)">Video</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:video</span><span class='rbracket'>]</span><span class='rparen'>)</span>
-    <span class='ivar'>@provider</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:provider</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='const'><span class='object_link'><a href="Embed/Provider.html" title="Discorb::Embed::Provider (class)">Provider</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:provider</span><span class='rbracket'>]</span><span class='rparen'>)</span>
-    <span class='ivar'>@fields</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:fields</span><span class='rbracket'>]</span> <span class='op'>?</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:fields</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_f'>f</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="Embed/Field.html" title="Discorb::Embed::Field (class)">Field</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Embed/Field.html#initialize-instance_method" title="Discorb::Embed::Field#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_f'>f</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_f'>f</span><span class='lbracket'>[</span><span class='symbol'>:value</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>inline:</span> <span class='id identifier rubyid_f'>f</span><span class='lbracket'>[</span><span class='symbol'>:inline</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='rbrace'>}</span> <span class='op'>:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-  <span class='kw'>end</span>
+                                               <span class='label'>fields:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>footer:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>image:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>thumbnail:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='ivar'>@title</span> <span class='op'>=</span> <span class='id identifier rubyid_title'>title</span>
+  <span class='ivar'>@description</span> <span class='op'>=</span> <span class='id identifier rubyid_description'>description</span>
+  <span class='ivar'>@url</span> <span class='op'>=</span> <span class='id identifier rubyid_url'>url</span>
+  <span class='ivar'>@timestamp</span> <span class='op'>=</span> <span class='id identifier rubyid_timestamp'>timestamp</span>
+  <span class='ivar'>@color</span> <span class='op'>=</span> <span class='id identifier rubyid_color'>color</span>
+  <span class='ivar'>@author</span> <span class='op'>=</span> <span class='id identifier rubyid_author'>author</span>
+  <span class='ivar'>@fields</span> <span class='op'>=</span> <span class='id identifier rubyid_fields'>fields</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@footer</span> <span class='op'>=</span> <span class='id identifier rubyid_footer'>footer</span>
+  <span class='ivar'>@image</span> <span class='op'>=</span> <span class='id identifier rubyid_image'>image</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_image'>image</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='const'><span class='object_link'><a href="Embed/Image.html" title="Discorb::Embed::Image (class)">Image</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Embed/Image.html#initialize-instance_method" title="Discorb::Embed::Image#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_image'>image</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='id identifier rubyid_image'>image</span><span class='rparen'>)</span>
+  <span class='ivar'>@thumbnail</span> <span class='op'>=</span> <span class='id identifier rubyid_thumbnail'>thumbnail</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_thumbnail'>thumbnail</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='const'><span class='object_link'><a href="Embed/Thumbnail.html" title="Discorb::Embed::Thumbnail (class)">Thumbnail</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Embed/Thumbnail.html#initialize-instance_method" title="Discorb::Embed::Thumbnail#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_thumbnail'>thumbnail</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='id identifier rubyid_thumbnail'>thumbnail</span><span class='rparen'>)</span>
+  <span class='ivar'>@type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rich</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1435,6 +1428,46 @@
   </div>
 
 
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="from_hash-class_method">
+  
+    .<strong>from_hash</strong>(data) -&gt; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+115
+116
+117
+118
+119</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/embed.rb', line 115</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_from_hash'>from_hash</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_inst'>inst</span> <span class='op'>=</span> <span class='id identifier rubyid_allocate'>allocate</span>
+  <span class='id identifier rubyid_inst'>inst</span><span class='period'>.</span><span class='id identifier rubyid_initialize_hash'>initialize_hash</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_inst'>inst</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
 
@@ -1454,12 +1487,12 @@
       <pre class="lines">
 
 
-89
 90
-91</pre>
+91
+92</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/embed.rb', line 89</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/embed.rb', line 90</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> \&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@title</span><span class='embexpr_end'>}</span><span class='tstring_content'>\&quot;&gt;</span><span class='tstring_end'>&quot;</span></span>
@@ -1518,7 +1551,6 @@
       <pre class="lines">
 
 
-99
 100
 101
 102
@@ -1531,10 +1563,11 @@
 109
 110
 111
-112</pre>
+112
+113</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/embed.rb', line 99</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/embed.rb', line 100</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_hash'>to_hash</span>
   <span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>type:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rich</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
@@ -1560,7 +1593,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/60482731530eab52f87269ea4a2658b4439e5e44"><code>60482731530eab52f87269ea4a2658b4439e5e44</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/aab8cfdd1bfa75b6a711159553a376050bc0140c"><code>aab8cfdd1bfa75b6a711159553a376050bc0140c</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
