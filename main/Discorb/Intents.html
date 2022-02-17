@@ -184,29 +184,6 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#default-class_method" title="default (class method)">.<strong>default</strong> -&gt; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>Create new intent object with default values.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#from_value-class_method" title="from_value (class method)">.<strong>from_value</strong>(value) -&gt; Object </a>
     
 
@@ -262,7 +239,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(guilds: true, members: false, bans: true, emojis: true, integrations: true, webhooks: true, invites: true, voice_states: true, presences: false, messages: true, reactions: true, typing: true, dm_messages: true, dm_reactions: true, dm_typing: true, scheduled_events: true) -&gt; Intents </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(guilds: true, members: false, bans: true, emojis: true, integrations: true, webhooks: true, invites: true, voice_states: true, presences: false, messages: true, reactions: true, typing: true, dm_messages: true, dm_reactions: true, dm_typing: true, message_content: nil, scheduled_events: true) -&gt; Intents </a>
     
 
     
@@ -405,7 +382,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(guilds: true, members: false, bans: true, emojis: true, integrations: true, webhooks: true, invites: true, voice_states: true, presences: false, messages: true, reactions: true, typing: true, dm_messages: true, dm_reactions: true, dm_typing: true, scheduled_events: true) -&gt; <tt><span class='object_link'><a href="" title="Discorb::Intents (class)">Intents</a></span></tt> 
+    #<strong>initialize</strong>(guilds: true, members: false, bans: true, emojis: true, integrations: true, webhooks: true, invites: true, voice_states: true, presences: false, messages: true, reactions: true, typing: true, dm_messages: true, dm_reactions: true, dm_typing: true, message_content: nil, scheduled_events: true) -&gt; <tt><span class='object_link'><a href="" title="Discorb::Intents (class)">Intents</a></span></tt> 
   
 
   
@@ -417,6 +394,14 @@
   <div class="note notetag">
     <strong>Note:</strong>
     <div class='inline'><p>You must enable privileged intents to use <code>members</code> and/or <code>presences</code> intents.</p>
+</div>
+  </div>
+
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'><p>Message Content Intent is not required to use <code>message_content</code> intents for now,
+this will be required in April 30, 2022. <a href="https://support-dev.discord.com/hc/en-us/articles/4404772028055">Learn More</a>.
+You should specify <code>message_content</code> intent for preventing unexpected changes in the future.</p>
 </div>
   </div>
 
@@ -669,6 +654,23 @@
   
     <li>
       
+        <span class='name'>message_content</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether message content will be sent with events.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
         <span class='name'>scheduled_events</span>
       
       
@@ -693,11 +695,6 @@
       <pre class="lines">
 
 
-46
-47
-48
-49
-50
 51
 52
 53
@@ -727,10 +724,17 @@
 77
 78
 79
-80</pre>
+80
+81
+82
+83
+84
+85
+86
+87</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 51</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='label'>guilds:</span> <span class='kw'>true</span><span class='comma'>,</span>
                <span class='label'>members:</span> <span class='kw'>false</span><span class='comma'>,</span>
@@ -747,6 +751,7 @@
                <span class='label'>dm_messages:</span> <span class='kw'>true</span><span class='comma'>,</span>
                <span class='label'>dm_reactions:</span> <span class='kw'>true</span><span class='comma'>,</span>
                <span class='label'>dm_typing:</span> <span class='kw'>true</span><span class='comma'>,</span>
+               <span class='label'>message_content:</span> <span class='kw'>nil</span><span class='comma'>,</span>
                <span class='label'>scheduled_events:</span> <span class='kw'>true</span><span class='rparen'>)</span>
   <span class='ivar'>@raw_value</span> <span class='op'>=</span> <span class='lbrace'>{</span>
     <span class='label'>guilds:</span> <span class='id identifier rubyid_guilds'>guilds</span><span class='comma'>,</span>
@@ -764,6 +769,7 @@
     <span class='label'>dm_messages:</span> <span class='id identifier rubyid_dm_messages'>dm_messages</span><span class='comma'>,</span>
     <span class='label'>dm_reactions:</span> <span class='id identifier rubyid_dm_reactions'>dm_reactions</span><span class='comma'>,</span>
     <span class='label'>dm_typing:</span> <span class='id identifier rubyid_dm_typing'>dm_typing</span><span class='comma'>,</span>
+    <span class='label'>message_content:</span> <span class='id identifier rubyid_message_content'>message_content</span><span class='comma'>,</span>
     <span class='label'>scheduled_events:</span> <span class='id identifier rubyid_scheduled_events'>scheduled_events</span><span class='comma'>,</span>
   <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
@@ -805,20 +811,20 @@
       <pre class="lines">
 
 
-85
-86
-87
-88
-89
-90
-91
 92
 93
 94
-95</pre>
+95
+96
+97
+98
+99
+100
+101
+102</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 85</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 92</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='ivar'>@raw_value</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
@@ -868,12 +874,12 @@
       <pre class="lines">
 
 
-146
-147
-148</pre>
+151
+152
+153</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 146</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 151</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_intent_bits'>intent_bits</span>
   <span class='ivar'>@intent_bits</span>
@@ -915,56 +921,15 @@
       <pre class="lines">
 
 
-137
-138
-139</pre>
+142
+143
+144</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 137</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 142</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_all'>all</span>
   <span class='id identifier rubyid_from_value'>from_value</span><span class='lparen'>(</span><span class='ivar'>@intent_bits</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_reduce'>reduce</span><span class='lparen'>(</span><span class='symbol'>:+</span><span class='rparen'>)</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="default-class_method">
-  
-    .<strong>default</strong> -&gt; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>Create new intent object with default values.
-This will return intents without members and presence.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-132
-133
-134</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 132</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_default'>default</span>
-  <span class='id identifier rubyid_from_value'>from_value</span><span class='lparen'>(</span><span class='ivar'>@intent_bits</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_reduce'>reduce</span><span class='lparen'>(</span><span class='symbol'>:+</span><span class='rparen'>)</span> <span class='op'>-</span> <span class='ivar'>@intent_bits</span><span class='lbracket'>[</span><span class='symbol'>:members</span><span class='rbracket'>]</span> <span class='op'>-</span> <span class='ivar'>@intent_bits</span><span class='lbracket'>[</span><span class='symbol'>:presences</span><span class='rbracket'>]</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1015,16 +980,16 @@ This will return intents without members and presence.</p>
       <pre class="lines">
 
 
-122
-123
-124
-125
-126
-127
-128</pre>
+129
+130
+131
+132
+133
+134
+135</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 122</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 129</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_from_value'>from_value</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raw_value'>raw_value</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
@@ -1063,12 +1028,12 @@ This will return intents without members and presence.</p>
       <pre class="lines">
 
 
-142
-143
-144</pre>
+147
+148
+149</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 142</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 147</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_none'>none</span>
   <span class='id identifier rubyid_from_value'>from_value</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span>
@@ -1099,12 +1064,12 @@ This will return intents without members and presence.</p>
       <pre class="lines">
 
 
-111
-112
-113</pre>
+118
+119
+120</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 111</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 118</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> value=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_value'>value</span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
@@ -1151,12 +1116,12 @@ This will return intents without members and presence.</p>
       <pre class="lines">
 
 
-97
-98
-99</pre>
+104
+105
+106</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 97</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 104</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_respond_to_missing?'>respond_to_missing?</span><span class='lparen'>(</span><span class='id identifier rubyid_sym'>sym</span><span class='comma'>,</span> <span class='id identifier rubyid_include_private'>include_private</span><span class='rparen'>)</span>
   <span class='ivar'>@raw_value</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='kw'>true</span> <span class='op'>:</span> <span class='kw'>super</span>
@@ -1181,12 +1146,12 @@ This will return intents without members and presence.</p>
       <pre class="lines">
 
 
-115
-116
-117</pre>
+122
+123
+124</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 115</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 122</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_h'>to_h</span>
   <span class='ivar'>@raw_value</span>
@@ -1238,16 +1203,16 @@ This will return intents without members and presence.</p>
       <pre class="lines">
 
 
-103
-104
-105
-106
-107
-108
-109</pre>
+110
+111
+112
+113
+114
+115
+116</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 103</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 110</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_value'>value</span>
   <span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='int'>0</span>
@@ -1266,7 +1231,7 @@ This will return intents without members and presence.</p>
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/fa3d8402f817b1a39a6b07967d04438fe30a4a31"><code>fa3d8402f817b1a39a6b07967d04438fe30a4a31</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/7e449e74a6797553e9e99bedf077e94aa2495c36"><code>7e449e74a6797553e9e99bedf077e94aa2495c36</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>

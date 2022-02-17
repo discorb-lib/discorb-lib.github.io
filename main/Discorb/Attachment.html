@@ -70,12 +70,10 @@
   <dl>
     <dt>Inherits:</dt>
     <dd>
-      <span class="inheritName"><span class='object_link'><a href="DiscordModel.html" title="Discorb::DiscordModel (class)">DiscordModel</a></span></span>
+      <span class="inheritName">Object</span>
       
         <ul class="fullTree">
           <li>Object</li>
-          
-            <li class="next"><span class='object_link'><a href="DiscordModel.html" title="Discorb::DiscordModel (class)">DiscordModel</a></span></li>
           
             <li class="next">Discorb::Attachment</li>
           
@@ -97,7 +95,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/discorb/file.rb</dd>
+    <dd>lib/discorb/attachment.rb</dd>
   </dl>
   
 </div>
@@ -142,6 +140,62 @@
 
   
     <span class="summary_desc"><div class='inline'><p>The attachment content type.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#created_by-instance_method" title="#created_by (instance method)">#<strong>created_by</strong> -&gt; :client, :discord </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The attachment was created by.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#description-instance_method" title="#description (instance method)">#<strong>description</strong> -&gt; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The attachment description.</p>
 </div></span>
   
 </li>
@@ -402,17 +456,226 @@
 
 
 
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#from_string-class_method" title="from_string (class method)">.<strong>from_string</strong>(string, filename = nil, content_type: nil, description: nil) -&gt; File </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
 
   
+    <span class="summary_desc"><div class='inline'><p>Creates a new file from a string.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(source, filename = nil, description: nil, content_type: nil, will_close: true) -&gt; Attachment </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
   
   
   
   
   
-  <h2>Method Summary</h2>
   
-  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="DiscordModel.html" title="Discorb::DiscordModel (class)">DiscordModel</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="DiscordModel.html#==-instance_method" title="Discorb::DiscordModel#== (method)">#==</a></span>, <span class='object_link'><a href="DiscordModel.html#eql%3F-instance_method" title="Discorb::DiscordModel#eql? (method)">#eql?</a></span></p>
+
+  
+    <span class="summary_desc"><div class='inline'><p>Creates a new attachment.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(source, filename = nil, description: nil, content_type: nil, will_close: true) -&gt; <tt><span class='object_link'><a href="" title="Discorb::Attachment (class)">Attachment</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Creates a new attachment.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>source</span>
+      
+      
+        <span class='type'>(<tt>#read</tt>, <tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The Source of the attachment.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>filename</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The filename of the attachment. If not set, path or object_id of the IO is used.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>description</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The description of the attachment.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>content_type</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The content type of the attachment. If not set, it is guessed from the filename.
+If failed to guess, it is set to <code>application/octet-stream</code>.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>will_close</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether the IO will be closed after the attachment is sent.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/attachment.rb', line 51</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_source'>source</span><span class='comma'>,</span> <span class='id identifier rubyid_filename'>filename</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>description:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>content_type:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>will_close:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='ivar'>@io</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_source'>source</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:read</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_source'>source</span>
+    <span class='kw'>else</span>
+      <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='id identifier rubyid_source'>source</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rb</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='ivar'>@filename</span> <span class='op'>=</span> <span class='id identifier rubyid_filename'>filename</span> <span class='op'>||</span> <span class='lparen'>(</span><span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:path</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span> <span class='op'>:</span> <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_object_id'>object_id</span><span class='rparen'>)</span>
+  <span class='ivar'>@description</span> <span class='op'>=</span> <span class='id identifier rubyid_description'>description</span>
+  <span class='ivar'>@content_type</span> <span class='op'>=</span> <span class='id identifier rubyid_content_type'>content_type</span> <span class='op'>||</span> <span class='const'>MIME</span><span class='op'>::</span><span class='const'>Types</span><span class='period'>.</span><span class='id identifier rubyid_type_for'>type_for</span><span class='lparen'>(</span><span class='ivar'>@filename</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='ivar'>@content_type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>application/octet-stream</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='ivar'>@content_type</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='ivar'>@will_close</span> <span class='op'>=</span> <span class='id identifier rubyid_will_close'>will_close</span>
+  <span class='ivar'>@created_by</span> <span class='op'>=</span> <span class='symbol'>:client</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
 
   <div id="instance_attr_details" class="attr_details">
     <h2>Instance Attribute Details</h2>
@@ -461,15 +724,133 @@
       <pre class="lines">
 
 
+16
+17
+18</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/attachment.rb', line 16</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_content_type'>content_type</span>
+  <span class='ivar'>@content_type</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="created_by-instance_method">
+  
+    #<strong>created_by</strong> -&gt; <tt>:client</tt>, <tt>:discord</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns The attachment was created by.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>:client</tt>, <tt>:discord</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The attachment was created by.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+34
+35
+36</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/attachment.rb', line 34</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_created_by'>created_by</span>
+  <span class='ivar'>@created_by</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="description-instance_method">
+  
+    #<strong>description</strong> -&gt; <tt>String</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns The attachment description.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The attachment description.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
 18
 19
 20</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/file.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/attachment.rb', line 18</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_content_type'>content_type</span>
-  <span class='ivar'>@content_type</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_description'>description</span>
+  <span class='ivar'>@description</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -520,12 +901,12 @@
       <pre class="lines">
 
 
-16
-17
-18</pre>
+14
+15
+16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/file.rb', line 16</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/attachment.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_filename'>filename</span>
   <span class='ivar'>@filename</span>
@@ -591,12 +972,12 @@
       <pre class="lines">
 
 
-27
-28
-29</pre>
+29
+30
+31</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/file.rb', line 27</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/attachment.rb', line 29</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_height'>height</span>
   <span class='ivar'>@height</span>
@@ -650,12 +1031,12 @@
       <pre class="lines">
 
 
-14
-15
-16</pre>
+20
+21
+22</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/file.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/attachment.rb', line 20</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_id'>id</span>
   <span class='ivar'>@id</span>
@@ -712,7 +1093,7 @@
 </pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/file.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/attachment.rb', line 38</span>
 
 </pre>
     </td>
@@ -769,7 +1150,7 @@
 14</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/file.rb', line 12</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/attachment.rb', line 12</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_io'>io</span>
   <span class='ivar'>@io</span>
@@ -823,12 +1204,12 @@
       <pre class="lines">
 
 
-24
-25
-26</pre>
+26
+27
+28</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/file.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/attachment.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_proxy_url'>proxy_url</span>
   <span class='ivar'>@proxy_url</span>
@@ -882,12 +1263,12 @@
       <pre class="lines">
 
 
-20
-21
-22</pre>
+22
+23
+24</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/file.rb', line 20</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/attachment.rb', line 22</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_size'>size</span>
   <span class='ivar'>@size</span>
@@ -941,12 +1322,12 @@
       <pre class="lines">
 
 
-22
-23
-24</pre>
+24
+25
+26</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/file.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/attachment.rb', line 24</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_url'>url</span>
   <span class='ivar'>@url</span>
@@ -1012,12 +1393,12 @@
       <pre class="lines">
 
 
-30
-31
-32</pre>
+32
+33
+34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/file.rb', line 30</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/attachment.rb', line 32</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_width'>width</span>
   <span class='ivar'>@width</span>
@@ -1030,10 +1411,130 @@
   </div>
 
 
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="from_string-class_method">
+  
+    .<strong>from_string</strong>(string, filename = nil, content_type: nil, description: nil) -&gt; <tt>File</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Creates a new file from a string.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>string</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The string to create the file from.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>filename</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The filename of the file. object_id of the string is used if not set.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>content_type</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The content type of the file. If not set, it is guessed from the filename.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>File</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The new file.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+98
+99
+100
+101
+102</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/attachment.rb', line 98</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_from_string'>from_string</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='comma'>,</span> <span class='id identifier rubyid_filename'>filename</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>content_type:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>description:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_io'>io</span> <span class='op'>=</span> <span class='const'>StringIO</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_filename'>filename</span> <span class='op'>||=</span> <span class='id identifier rubyid_string'>string</span><span class='period'>.</span><span class='id identifier rubyid_object_id'>object_id</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.txt</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_io'>io</span><span class='comma'>,</span> <span class='id identifier rubyid_filename'>filename</span><span class='comma'>,</span> <span class='label'>content_type:</span> <span class='id identifier rubyid_content_type'>content_type</span><span class='comma'>,</span> <span class='label'>description:</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>will_close:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/fa3d8402f817b1a39a6b07967d04438fe30a4a31"><code>fa3d8402f817b1a39a6b07967d04438fe30a4a31</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/7e449e74a6797553e9e99bedf077e94aa2495c36"><code>7e449e74a6797553e9e99bedf077e94aa2495c36</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
