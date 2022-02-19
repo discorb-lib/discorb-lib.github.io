@@ -775,6 +775,29 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#can_manage%3F-instance_method" title="#can_manage? (instance method)">#<strong>can_manage?</strong>(role) -&gt; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks if the member can manage the given role.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#edit-instance_method" title="#edit (instance method)">#<strong>edit</strong>(nick: Discorb::Unset, role: Discorb::Unset, mute: Discorb::Unset, deaf: Discorb::Unset, channel: Discorb::Unset, communication_disabled_until: Discorb::Unset, timeout_until: Discorb::Unset, reason: nil) -&gt; Async::Task&lt;void&gt; </a>
     
 
@@ -2530,6 +2553,86 @@
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="can_manage?-instance_method">
+  
+    #<strong>can_manage?</strong>(role) -&gt; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks if the member can manage the given role.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>role</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Role.html" title="Discorb::Role (class)">Discorb::Role</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The role.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p><code>true</code> if the member can manage the role.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+258
+259
+260
+261
+262</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/member.rb', line 258</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_can_manage?'>can_manage?</span><span class='lparen'>(</span><span class='id identifier rubyid_role'>role</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_owner?'>owner?</span>
+  <span class='id identifier rubyid_top_role'>top_role</span> <span class='op'>=</span> <span class='id identifier rubyid_roles'>roles</span><span class='period'>.</span><span class='id identifier rubyid_max_by'>max_by</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:position</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_top_role'>top_role</span><span class='period'>.</span><span class='id identifier rubyid_position'>position</span> <span class='op'>&gt;</span> <span class='id identifier rubyid_role'>role</span><span class='period'>.</span><span class='id identifier rubyid_position'>position</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="edit-instance_method">
   
     #<strong>edit</strong>(nick: Discorb::Unset, role: Discorb::Unset, mute: Discorb::Unset, deaf: Discorb::Unset, channel: Discorb::Unset, communication_disabled_until: Discorb::Unset, timeout_until: Discorb::Unset, reason: nil) -&gt; <tt>Async::Task&lt;void&gt;</tt> 
@@ -3131,7 +3234,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/7cdec5407bcd24f5a6fe4f88dc0217b4a36cca2d"><code>7cdec5407bcd24f5a6fe4f88dc0217b4a36cca2d</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/6bd24004e1ae2c4bea5ace43bb2bce1eda3356bb"><code>6bd24004e1ae2c4bea5ace43bb2bce1eda3356bb</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
