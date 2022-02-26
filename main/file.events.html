@@ -1045,6 +1045,96 @@ Not like <a href="file._23message_delete.html" title="#message_delete">#message_
 
 <h3 id="interaction-events">Interaction events</h3>
 
+<h4 id="interaction_create-interaction"><code>interaction_create(interaction)</code></h4>
+
+<p>Fires when an interaction is created. This will fire for all interactions.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>interaction</code></td>
+<td><span class='object_link'><a href="Discorb/Interaction.html" title="Discorb::Interaction (class)">Discorb::Interaction</a></span></td>
+<td>The created interaction.</td>
+</tr>
+</tbody></table>
+
+<h4 id="application_command-interaction"><code>application_command(interaction)</code></h4>
+
+<p>Fires when an application command is used.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>interaction</code></td>
+<td><span class='object_link'><a href="Discorb/CommandInteraction.html" title="Discorb::CommandInteraction (class)">Discorb::CommandInteraction</a></span></td>
+<td>The created interaction.</td>
+</tr>
+</tbody></table>
+
+<h4 id="slash_command-interaction"><code>slash_command(interaction)</code></h4>
+
+<p>Fires when a slash command is used.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>interaction</code></td>
+<td><span class='object_link'><a href="Discorb/CommandInteraction/SlashCommand.html" title="Discorb::CommandInteraction::SlashCommand (class)">Discorb::CommandInteraction::SlashCommand</a></span></td>
+<td>The created interaction.</td>
+</tr>
+</tbody></table>
+
+<h4 id="message_command-interaction"><code>message_command(interaction)</code></h4>
+
+<p>Fires when a message command is used.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>interaction</code></td>
+<td><span class='object_link'><a href="Discorb/CommandInteraction/MessageMenuCommand.html" title="Discorb::CommandInteraction::MessageMenuCommand (class)">Discorb::CommandInteraction::MessageMenuCommand</a></span></td>
+<td>The created interaction.</td>
+</tr>
+</tbody></table>
+
+<h4 id="user_command-interaction"><code>user_command(interaction)</code></h4>
+
+<p>Fires when a user command is used.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>interaction</code></td>
+<td><span class='object_link'><a href="Discorb/CommandInteraction/UserMenuCommand.html" title="Discorb::CommandInteraction::UserMenuCommand (class)">Discorb::CommandInteraction::UserMenuCommand</a></span></td>
+<td>The created interaction.</td>
+</tr>
+</tbody></table>
+
 <h4 id="button_click-interaction"><code>button_click(interaction)</code></h4>
 
 <p>Fires when a button is clicked.</p>
@@ -1080,6 +1170,26 @@ Not like <a href="file._23message_delete.html" title="#message_delete">#message_
 <td>The interaction object.</td>
 </tr>
 </tbody></table>
+
+<h4 id="form_submit-interaction"><code>form_submit(interaction)</code></h4>
+
+<p>Fires when a form is submitted.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>interaction</code></td>
+<td><span class='object_link'><a href="Discorb/ModalInteraction.html" title="Discorb::ModalInteraction (class)">Discorb::ModalInteraction</a></span></td>
+<td>The interaction object.</td>
+</tr>
+</tbody></table>
+
+<h4 id="slash_command">`slash_command</h4>
 
 <h3 id="voice-events">Voice events</h3>
 
@@ -1263,7 +1373,7 @@ Not like <a href="file._23message_delete.html" title="#message_delete">#message_
 </div></div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/c54c8152abb907d8141461dbf7551b4621398743"><code>c54c8152abb907d8141461dbf7551b4621398743</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/f3da73733bcfebcfe9694a5169291ae5a59a422a"><code>f3da73733bcfebcfe9694a5169291ae5a59a422a</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
