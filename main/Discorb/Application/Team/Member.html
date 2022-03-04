@@ -122,6 +122,34 @@
       <li class="public ">
   <span class="summary_signature">
     
+      <a href="#accepted%3F-instance_method" title="#accepted? (instance method)">#<strong>accepted?</strong> -&gt; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Whether the member accepted joining the team.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#membership_state-instance_method" title="#membership_state (instance method)">#<strong>membership_state</strong> -&gt; :invited, :accepted </a>
     
 
@@ -144,6 +172,62 @@
 
   
     <span class="summary_desc"><div class='inline'><p>The member&#39;s membership state.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#owner%3F-instance_method" title="#owner? (instance method)">#<strong>owner?</strong> -&gt; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Whether the member is the team&#39;s owner.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pending%3F-instance_method" title="#pending? (instance method)">#<strong>pending?</strong> -&gt; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Whether the member is not joined to the team.</p>
 </div></span>
   
 </li>
@@ -271,28 +355,6 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#accepted%3F-instance_method" title="#accepted? (instance method)">#<strong>accepted?</strong> -&gt; Boolean </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(client, team, data) -&gt; Member </a>
     
 
@@ -319,50 +381,6 @@
   <span class="summary_signature">
     
       <a href="#inspect-instance_method" title="#inspect (instance method)">#<strong>inspect</strong> -&gt; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#owner%3F-instance_method" title="#owner? (instance method)">#<strong>owner?</strong> -&gt; Boolean </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#pending%3F-instance_method" title="#pending? (instance method)">#<strong>pending?</strong> -&gt; Boolean </a>
     
 
     
@@ -423,18 +441,18 @@
       <pre class="lines">
 
 
-150
-151
-152
-153
-154
-155
-156
-157
-158</pre>
+164
+165
+166
+167
+168
+169
+170
+171
+172</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/application.rb', line 150</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/application.rb', line 164</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_client'>client</span><span class='comma'>,</span> <span class='id identifier rubyid_team'>team</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
   <span class='ivar'>@client</span> <span class='op'>=</span> <span class='id identifier rubyid_client'>client</span>
@@ -442,7 +460,7 @@
   <span class='ivar'>@team</span> <span class='op'>=</span> <span class='id identifier rubyid_team'>team</span>
   <span class='ivar'>@user</span> <span class='op'>=</span> <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_users'>users</span><span class='lbracket'>[</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:user</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="../../User.html" title="Discorb::User (class)">User</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_client'>client</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:user</span><span class='rbracket'>]</span><span class='rparen'>)</span>
   <span class='ivar'>@team_id</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Snowflake.html" title="Discorb::Snowflake (class)">Snowflake</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:team_id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
-  <span class='ivar'>@membership_state</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_membership_state'>membership_state</span><span class='lbracket'>[</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:membership_state</span><span class='rbracket'>]</span><span class='rbracket'>]</span>
+  <span class='ivar'>@membership_state</span> <span class='op'>=</span> <span class='const'>MEMBERSHIP_STATE</span><span class='lbracket'>[</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:membership_state</span><span class='rbracket'>]</span><span class='rbracket'>]</span>
   <span class='ivar'>@permissions</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:permissions</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -458,7 +476,62 @@
       
       <span id=""></span>
       <div class="method_details first">
-  <h3 class="signature first" id="membership_state-instance_method">
+  <h3 class="signature first" id="accepted?-instance_method">
+  
+    #<strong>accepted?</strong> -&gt; <tt>Boolean</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns Whether the member accepted joining the team.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether the member accepted joining the team.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/application.rb', line 150</span>
+
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="membership_state-instance_method">
   
     #<strong>membership_state</strong> -&gt; <tt>:invited</tt>, <tt>:accepted</tt>  <span class="extras">(readonly)</span>
   
@@ -503,16 +576,126 @@
       <pre class="lines">
 
 
-132
-133
-134</pre>
+144
+145
+146</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/application.rb', line 132</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/application.rb', line 144</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_membership_state'>membership_state</span>
   <span class='ivar'>@membership_state</span>
 <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="owner?-instance_method">
+  
+    #<strong>owner?</strong> -&gt; <tt>Boolean</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns Whether the member is the team&#39;s owner.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether the member is the team&#39;s owner.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/application.rb', line 150</span>
+
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="pending?-instance_method">
+  
+    #<strong>pending?</strong> -&gt; <tt>Boolean</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns Whether the member is not joined to the team.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether the member is not joined to the team.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/application.rb', line 150</span>
+
+</pre>
     </td>
   </tr>
 </table>
@@ -569,12 +752,12 @@
       <pre class="lines">
 
 
-136
-137
-138</pre>
+148
+149
+150</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/application.rb', line 136</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/application.rb', line 148</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_permissions'>permissions</span>
   <span class='ivar'>@permissions</span>
@@ -628,12 +811,12 @@
       <pre class="lines">
 
 
-130
-131
-132</pre>
+142
+143
+144</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/application.rb', line 130</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/application.rb', line 142</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_team_id'>team_id</span>
   <span class='ivar'>@team_id</span>
@@ -687,12 +870,12 @@
       <pre class="lines">
 
 
-128
-129
-130</pre>
+140
+141
+142</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/application.rb', line 128</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/application.rb', line 140</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_user'>user</span>
   <span class='ivar'>@user</span>
@@ -724,67 +907,15 @@
       <pre class="lines">
 
 
-176
-177
-178</pre>
+190
+191
+192</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/application.rb', line 176</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/application.rb', line 190</span>
 
 <span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='kw'>super</span> <span class='op'>||</span> <span class='ivar'>@user</span> <span class='op'>==</span> <span class='id identifier rubyid_other'>other</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="accepted?-instance_method">
-  
-    #<strong>accepted?</strong> -&gt; <tt>Boolean</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-164
-165
-166</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/application.rb', line 164</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_accepted?'>accepted?</span>
-  <span class='ivar'>@membership_state</span> <span class='op'>==</span> <span class='symbol'>:accepted</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -806,119 +937,15 @@
       <pre class="lines">
 
 
-168
-169
-170</pre>
+182
+183
+184</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/application.rb', line 168</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/application.rb', line 182</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> id=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="owner?-instance_method">
-  
-    #<strong>owner?</strong> -&gt; <tt>Boolean</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-172
-173
-174</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/application.rb', line 172</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_owner?'>owner?</span>
-  <span class='ivar'>@team</span><span class='period'>.</span><span class='id identifier rubyid_owner_user_id'>owner_user_id</span> <span class='op'>==</span> <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="pending?-instance_method">
-  
-    #<strong>pending?</strong> -&gt; <tt>Boolean</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-160
-161
-162</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/application.rb', line 160</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_pending?'>pending?</span>
-  <span class='ivar'>@membership_state</span> <span class='op'>==</span> <span class='symbol'>:invited</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -930,7 +957,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/5f26b159d3632af08620fdd71744d7277a508207"><code>5f26b159d3632af08620fdd71744d7277a508207</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/dede27329a370bed0935f9345366332dcb12a5f1"><code>dede27329a370bed0935f9345366332dcb12a5f1</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>

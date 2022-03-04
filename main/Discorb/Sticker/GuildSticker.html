@@ -118,9 +118,41 @@
 
 
 
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#guild-instance_method" title="#guild (instance method)">#<strong>guild</strong> -&gt; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+  </ul>
 
 
-  <h2>Instance Attribute Summary</h2>
+
+  
   
   <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../Sticker.html" title="Discorb::Sticker (class)">Discorb::Sticker</a></span></h3>
   <p class="inherited"><span class='object_link'><a href="../Sticker.html#available-instance_method" title="Discorb::Sticker#available (method)">#available</a></span>, <span class='object_link'><a href="../Sticker.html#description-instance_method" title="Discorb::Sticker#description (method)">#description</a></span>, <span class='object_link'><a href="../Sticker.html#format-instance_method" title="Discorb::Sticker#format (method)">#format</a></span>, <span class='object_link'><a href="../Sticker.html#guild_id-instance_method" title="Discorb::Sticker#guild_id (method)">#guild_id</a></span>, <span class='object_link'><a href="../Sticker.html#id-instance_method" title="Discorb::Sticker#id (method)">#id</a></span>, <span class='object_link'><a href="../Sticker.html#name-instance_method" title="Discorb::Sticker#name (method)">#name</a></span>, <span class='object_link'><a href="../Sticker.html#pack_id-instance_method" title="Discorb::Sticker#pack_id (method)">#pack_id</a></span>, <span class='object_link'><a href="../Sticker.html#sort_value-instance_method" title="Discorb::Sticker#sort_value (method)">#sort_value</a></span>, <span class='object_link'><a href="../Sticker.html#tags-instance_method" title="Discorb::Sticker#tags (method)">#tags</a></span>, <span class='object_link'><a href="../Sticker.html#type-instance_method" title="Discorb::Sticker#type (method)">#type</a></span>, <span class='object_link'><a href="../Sticker.html#user-instance_method" title="Discorb::Sticker#user (method)">#user</a></span></p>
@@ -184,28 +216,6 @@
 </li>
 
       
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#guild-instance_method" title="#guild (instance method)">#<strong>guild</strong> -&gt; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
     </ul>
   
 
@@ -226,6 +236,43 @@
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../DiscordModel.html" title="Discorb::DiscordModel (class)">DiscordModel</a></span></h3>
   <p class="inherited"><span class='object_link'><a href="../DiscordModel.html#==-instance_method" title="Discorb::DiscordModel#== (method)">#==</a></span>, <span class='object_link'><a href="../DiscordModel.html#eql%3F-instance_method" title="Discorb::DiscordModel#eql? (method)">#eql?</a></span></p>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="guild-instance_method">
+  
+    #<strong>guild</strong> -&gt; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+66
+67
+68</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/sticker.rb', line 66</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_guild'>guild</span>
+  <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_guilds'>guilds</span><span class='lbracket'>[</span><span class='ivar'>@guild_id</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
 
 
   <div id="instance_method_details" class="method_details_list">
@@ -282,14 +329,14 @@
       <pre class="lines">
 
 
-98
-99
 100
 101
-102</pre>
+102
+103
+104</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/sticker.rb', line 98</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/sticker.rb', line 100</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete!'>delete!</span><span class='lparen'>(</span><span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -426,18 +473,18 @@
       <pre class="lines">
 
 
-80
-81
 82
 83
 84
 85
 86
 87
-88</pre>
+88
+89
+90</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/sticker.rb', line 80</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/sticker.rb', line 82</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_edit'>edit</span><span class='lparen'>(</span><span class='label'>name:</span> <span class='const'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span> <span class='label'>description:</span> <span class='const'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span> <span class='label'>tag:</span> <span class='const'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='const'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -453,42 +500,12 @@
 </table>
 </div>
     
-      <div class="method_details ">
-  <h3 class="signature " id="guild-instance_method">
-  
-    #<strong>guild</strong> -&gt; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-64
-65
-66</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/sticker.rb', line 64</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_guild'>guild</span>
-  <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_guilds'>guilds</span><span class='lbracket'>[</span><span class='ivar'>@guild_id</span><span class='rbracket'>]</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
   </div>
 
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/5f26b159d3632af08620fdd71744d7277a508207"><code>5f26b159d3632af08620fdd71744d7277a508207</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/dede27329a370bed0935f9345366332dcb12a5f1"><code>dede27329a370bed0935f9345366332dcb12a5f1</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>

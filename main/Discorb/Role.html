@@ -1440,14 +1440,14 @@
       <pre class="lines">
 
 
-64
-65
-66
-67
-68</pre>
+71
+72
+73
+74
+75</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/role.rb', line 64</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/role.rb', line 71</span>
 
 <span class='kw'>def</span> <span class='op'>&lt;=&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="" title="Discorb::Role (class)">Role</a></span></span><span class='rparen'>)</span>
@@ -1496,12 +1496,12 @@
       <pre class="lines">
 
 
-83
-84
-85</pre>
+90
+91
+92</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/role.rb', line 83</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/role.rb', line 90</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_color?'>color?</span>
   <span class='ivar'>@color</span> <span class='op'>!=</span> <span class='int'>0</span>
@@ -1578,14 +1578,14 @@
       <pre class="lines">
 
 
-149
-150
-151
-152
-153</pre>
+156
+157
+158
+159
+160</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/role.rb', line 149</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/role.rb', line 156</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete!'>delete!</span><span class='lparen'>(</span><span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -1773,13 +1773,6 @@
       <pre class="lines">
 
 
-121
-122
-123
-124
-125
-126
-127
 128
 129
 130
@@ -1790,10 +1783,17 @@
 135
 136
 137
-138</pre>
+138
+139
+140
+141
+142
+143
+144
+145</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/role.rb', line 121</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/role.rb', line 128</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_edit'>edit</span><span class='lparen'>(</span><span class='label'>name:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span> <span class='label'>position:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span> <span class='label'>color:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span> <span class='label'>hoist:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span> <span class='label'>mentionable:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span> <span class='label'>icon:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -1833,12 +1833,12 @@
       <pre class="lines">
 
 
-53
-54
-55</pre>
+60
+61
+62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/role.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/role.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_icon'>icon</span>
   <span class='ivar'>@custom_icon</span> <span class='op'>||</span> <span class='ivar'>@emoji</span>
@@ -1863,12 +1863,12 @@
       <pre class="lines">
 
 
-87
-88
-89</pre>
+94
+95
+96</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/role.rb', line 87</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/role.rb', line 94</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> @</span><span class='embexpr_beg'>#{</span><span class='ivar'>@name</span><span class='embexpr_end'>}</span><span class='tstring_content'> id=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@id</span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
@@ -1893,12 +1893,12 @@
       <pre class="lines">
 
 
-79
-80
-81</pre>
+86
+87
+88</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/role.rb', line 79</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/role.rb', line 86</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mention'>mention</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;@&amp;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@id</span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
@@ -1986,14 +1986,14 @@
       <pre class="lines">
 
 
-100
-101
-102
-103
-104</pre>
+107
+108
+109
+110
+111</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/role.rb', line 100</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/role.rb', line 107</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_move'>move</span><span class='lparen'>(</span><span class='id identifier rubyid_position'>position</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -2024,12 +2024,12 @@
       <pre class="lines">
 
 
-157
-158
-159</pre>
+164
+165
+166</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/role.rb', line 157</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/role.rb', line 164</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_tag'>tag</span>
   <span class='const'><span class='object_link'><a href="Role/Tag.html" title="Discorb::Role::Tag (class)">Tag</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@tags</span><span class='rparen'>)</span>
@@ -2081,12 +2081,12 @@
       <pre class="lines">
 
 
-75
-76
-77</pre>
+82
+83
+84</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/role.rb', line 75</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/role.rb', line 82</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@</span><span class='embexpr_beg'>#{</span><span class='ivar'>@name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -2101,7 +2101,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/5f26b159d3632af08620fdd71744d7277a508207"><code>5f26b159d3632af08620fdd71744d7277a508207</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/dede27329a370bed0935f9345366332dcb12a5f1"><code>dede27329a370bed0935f9345366332dcb12a5f1</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>

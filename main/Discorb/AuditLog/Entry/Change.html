@@ -226,7 +226,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#inspect-instance_method" title="#inspect (instance method)">#<strong>inspect</strong> -&gt; Object </a>
+      <a href="#inspect-instance_method" title="#inspect (instance method)">#<strong>inspect</strong> -&gt; String </a>
     
 
     
@@ -240,7 +240,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>Format the change into a string.</p>
+</div></span>
   
 </li>
 
@@ -285,7 +286,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>Whether the change responds to the given method.</p>
+</div></span>
   
 </li>
 
@@ -336,12 +338,12 @@
       <pre class="lines">
 
 
-297
-298
-299</pre>
+318
+319
+320</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 297</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 318</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='op'>...</span><span class='rparen'>)</span>
   <span class='ivar'>@new_value</span><span class='period'>.</span><span class='id identifier rubyid___send__'>__send__</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='op'>...</span><span class='rparen'>)</span>
@@ -400,12 +402,12 @@
       <pre class="lines">
 
 
-267
-268
-269</pre>
+285
+286
+287</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 267</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 285</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_key'>key</span>
   <span class='ivar'>@key</span>
@@ -459,12 +461,12 @@
       <pre class="lines">
 
 
-271
-272
-273</pre>
+289
+290
+291</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 271</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 289</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_new_value'>new_value</span>
   <span class='ivar'>@new_value</span>
@@ -518,12 +520,12 @@
       <pre class="lines">
 
 
-269
-270
-271</pre>
+287
+288
+289</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 269</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 287</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_old_value'>old_value</span>
   <span class='ivar'>@old_value</span>
@@ -543,24 +545,51 @@
       <div class="method_details first">
   <h3 class="signature first" id="inspect-instance_method">
   
-    #<strong>inspect</strong> -&gt; <tt>Object</tt> 
+    #<strong>inspect</strong> -&gt; <tt>String</tt> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Format the change into a string.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The string representation of the change.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-301
-302
-303</pre>
+327
+328
+329</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 301</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 327</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='ivar'>@key</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='ivar'>@old_value</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'> -&gt; </span><span class='embexpr_beg'>#{</span><span class='ivar'>@new_value</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
@@ -581,7 +610,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
+    <p>Whether the change responds to the given method.</p>
+
 
   </div>
 </div>
@@ -597,6 +627,10 @@
       
       
       
+        &mdash;
+        <div class='inline'><p>Whether the change responds to the given method.</p>
+</div>
+      
     </li>
   
 </ul>
@@ -607,12 +641,12 @@
       <pre class="lines">
 
 
-305
-306
-307</pre>
+336
+337
+338</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 305</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 336</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_respond_to_missing?'>respond_to_missing?</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_include_private'>include_private</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='ivar'>@new_value</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_include_private'>include_private</span><span class='rparen'>)</span>
@@ -627,7 +661,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/5f26b159d3632af08620fdd71744d7277a508207"><code>5f26b159d3632af08620fdd71744d7277a508207</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/dede27329a370bed0935f9345366332dcb12a5f1"><code>dede27329a370bed0935f9345366332dcb12a5f1</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>

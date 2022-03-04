@@ -640,7 +640,6 @@ If failed to guess, it is set to <code>application/octet-stream</code>.</p>
       <pre class="lines">
 
 
-51
 52
 53
 54
@@ -652,10 +651,11 @@ If failed to guess, it is set to <code>application/octet-stream</code>.</p>
 60
 61
 62
-63</pre>
+63
+64</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/attachment.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/attachment.rb', line 52</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_source'>source</span><span class='comma'>,</span> <span class='id identifier rubyid_filename'>filename</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>description:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>content_type:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>will_close:</span> <span class='kw'>true</span><span class='rparen'>)</span>
   <span class='ivar'>@io</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_source'>source</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:read</span><span class='rparen'>)</span>
@@ -1093,7 +1093,7 @@ If failed to guess, it is set to <code>application/octet-stream</code>.</p>
 </pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/attachment.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/attachment.rb', line 39</span>
 
 </pre>
     </td>
@@ -1510,14 +1510,14 @@ If failed to guess, it is set to <code>application/octet-stream</code>.</p>
       <pre class="lines">
 
 
-98
-99
-100
-101
-102</pre>
+105
+106
+107
+108
+109</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/attachment.rb', line 98</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/attachment.rb', line 105</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_from_string'>from_string</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='comma'>,</span> <span class='id identifier rubyid_filename'>filename</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>content_type:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>description:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_io'>io</span> <span class='op'>=</span> <span class='const'>StringIO</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
@@ -1534,7 +1534,7 @@ If failed to guess, it is set to <code>application/octet-stream</code>.</p>
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/5f26b159d3632af08620fdd71744d7277a508207"><code>5f26b159d3632af08620fdd71744d7277a508207</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/dede27329a370bed0935f9345366332dcb12a5f1"><code>dede27329a370bed0935f9345366332dcb12a5f1</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
