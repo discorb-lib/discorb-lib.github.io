@@ -429,7 +429,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#log-instance_method" title="#log (instance method)">#<strong>log</strong> -&gt; Logger </a>
+      <a href="#logger-instance_method" title="#logger (instance method)">#<strong>logger</strong> -&gt; Logger </a>
     
 
     
@@ -874,7 +874,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(allowed_mentions: nil, intents: nil, message_caches: 1000, log: nil, wait_until_ready: true, fetch_member: false, title: nil) -&gt; Client </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(allowed_mentions: nil, intents: nil, message_caches: 1000, logger: nil, wait_until_ready: true, fetch_member: false, title: nil) -&gt; Client </a>
     
 
     
@@ -1084,7 +1084,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(allowed_mentions: nil, intents: nil, message_caches: 1000, log: nil, wait_until_ready: true, fetch_member: false, title: nil) -&gt; <tt><span class='object_link'><a href="" title="Discorb::Client (class)">Client</a></span></tt> 
+    #<strong>initialize</strong>(allowed_mentions: nil, intents: nil, message_caches: 1000, logger: nil, wait_until_ready: true, fetch_member: false, title: nil) -&gt; <tt><span class='object_link'><a href="" title="Discorb::Client (class)">Client</a></span></tt> 
   
 
   
@@ -1154,7 +1154,7 @@
   
     <li>
       
-        <span class='name'>log</span>
+        <span class='name'>logger</span>
       
       
         <span class='type'>(<tt>Logger</tt>)</span>
@@ -1283,7 +1283,7 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span>
   <span class='label'>allowed_mentions:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>intents:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>message_caches:</span> <span class='int'>1000</span><span class='comma'>,</span>
-  <span class='label'>log:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+  <span class='label'>logger:</span> <span class='kw'>nil</span><span class='comma'>,</span>
   <span class='label'>wait_until_ready:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>fetch_member:</span> <span class='kw'>false</span><span class='comma'>,</span>
   <span class='label'>title:</span> <span class='kw'>nil</span>
 <span class='rparen'>)</span>
@@ -1291,7 +1291,7 @@
   <span class='ivar'>@intents</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_intents'>intents</span> <span class='kw'>or</span> <span class='const'><span class='object_link'><a href="Intents.html" title="Discorb::Intents (class)">Intents</a></span></span><span class='period'>.</span><span class='id identifier rubyid_default'>default</span><span class='rparen'>)</span>
   <span class='ivar'>@events</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
   <span class='ivar'>@api_version</span> <span class='op'>=</span> <span class='kw'>nil</span>
-  <span class='ivar'>@log</span> <span class='op'>=</span> <span class='id identifier rubyid_log'>log</span> <span class='op'>||</span> <span class='const'>Logger</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='gvar'>$stdout</span><span class='comma'>,</span> <span class='label'>progname:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>discorb</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@logger</span> <span class='op'>=</span> <span class='id identifier rubyid_logger'>logger</span> <span class='op'>||</span> <span class='const'>Logger</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='gvar'>$stdout</span><span class='comma'>,</span> <span class='label'>progname:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>discorb</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='ivar'>@user</span> <span class='op'>=</span> <span class='kw'>nil</span>
   <span class='ivar'>@users</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Dictionary.html" title="Discorb::Dictionary (class)">Dictionary</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Dictionary.html#initialize-instance_method" title="Discorb::Dictionary#initialize (method)">new</a></span></span>
   <span class='ivar'>@channels</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Dictionary.html" title="Discorb::Dictionary (class)">Dictionary</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Dictionary.html#initialize-instance_method" title="Discorb::Dictionary#initialize (method)">new</a></span></span>
@@ -2000,9 +2000,9 @@
       
       <span id=""></span>
       <div class="method_details ">
-  <h3 class="signature " id="log-instance_method">
+  <h3 class="signature " id="logger-instance_method">
   
-    #<strong>log</strong> -&gt; <tt>Logger</tt>  <span class="extras">(readonly)</span>
+    #<strong>logger</strong> -&gt; <tt>Logger</tt>  <span class="extras">(readonly)</span>
   
 
   
@@ -2048,8 +2048,8 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/discorb/client.rb', line 44</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_log'>log</span>
-  <span class='ivar'>@log</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_logger'>logger</span>
+  <span class='ivar'>@logger</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2686,16 +2686,16 @@
       <span class='id identifier rubyid_events'>events</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_event_method'>event_method</span>
     <span class='kw'>end</span>
     <span class='kw'>if</span> <span class='id identifier rubyid_events'>events</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
-      <span class='ivar'>@log</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Event </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_event_name'>event_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> doesn&#39;t have any proc, skipping</span><span class='tstring_end'>&quot;</span></span>
+      <span class='ivar'>@logger</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Event </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_event_name'>event_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> doesn&#39;t have any proc, skipping</span><span class='tstring_end'>&quot;</span></span>
       <span class='kw'>next</span>
     <span class='kw'>end</span>
-    <span class='ivar'>@log</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Dispatching event </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_event_name'>event_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='ivar'>@logger</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Dispatching event </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_event_name'>event_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
     <span class='id identifier rubyid_events'>events</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_block'>block</span><span class='op'>|</span>
       <span class='const'>Async</span> <span class='kw'>do</span>
         <span class='const'>Async</span><span class='lparen'>(</span><span class='label'>annotation:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Discorb event: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_event_name'>event_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid__task'>_task</span><span class='op'>|</span>
           <span class='ivar'>@events</span><span class='lbracket'>[</span><span class='id identifier rubyid_event_name'>event_name</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="EventHandler.html" title="Discorb::EventHandler (class)">EventHandler</a></span></span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_metadata'>metadata</span><span class='lbracket'>[</span><span class='symbol'>:once</span><span class='rbracket'>]</span>
           <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
-          <span class='ivar'>@log</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Dispatched proc with ID </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+          <span class='ivar'>@logger</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Dispatched proc with ID </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
         <span class='kw'>rescue</span> <span class='const'>StandardError</span><span class='comma'>,</span> <span class='const'>ScriptError</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
           <span class='id identifier rubyid_dispatch'>dispatch</span><span class='lparen'>(</span><span class='symbol'>:error</span><span class='comma'>,</span> <span class='id identifier rubyid_event_name'>event_name</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='id identifier rubyid_e'>e</span><span class='rparen'>)</span>
         <span class='kw'>end</span>
@@ -4186,7 +4186,7 @@ If application was cached, it will be used.</p>
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/f6b18cba459c97cadfec1c94007d7b08bd3d06e6"><code>f6b18cba459c97cadfec1c94007d7b08bd3d06e6</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/6ae42c997c079a556fe0c75d582cee72440b7592"><code>6ae42c997c079a556fe0c75d582cee72440b7592</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
