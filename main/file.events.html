@@ -84,12 +84,12 @@ Alternatively, you can use <span class='object_link'><a href="Discorb/Client.htm
 <span class='kw'>end</span>
 </code></pre>
 
-<p>If you want to seperate event handlers from the client, consider using <span class='object_link'><a href="Discorb/Extension.html" title="Discorb::Extension (module)">Discorb::Extension</a></span>. <a href="file.extension.html" title="Learn more about extensions">Learn more about extensions</a>.</p>
+<p>If you want to separate event handlers from the client, consider using <span class='object_link'><a href="Discorb/Extension.html" title="Discorb::Extension (module)">Discorb::Extension</a></span>. <a href="file.extension.html" title="Learn more about extensions">Learn more about extensions</a>.</p>
 
-<p>Since v0.6.1, you can set <code>:override</code> to <code>true</code> to register overridable event handlers.</p>
+<p>Since v0.6.1, you can set <code>:override</code> to <code>true</code> to register event handlers that can be overridden.</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span> <span class='symbol'>:message</span><span class='comma'>,</span> <span class='label'>override:</span> <span class='kw'>true</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_event'>event</span><span class='op'>|</span>
-  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>This event handler is overrideable!</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>This event handler can be overridden.</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span>
 
 <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span> <span class='symbol'>:message</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_event'>event</span><span class='op'>|</span>
@@ -97,8 +97,8 @@ Alternatively, you can use <span class='object_link'><a href="Discorb/Client.htm
 <span class='kw'>end</span>
 </code></pre>
 
-<p>This example will print <code>Override!</code>, but not <code>This event handler is overrideable!</code>.
-This is useful for registering event handlers as default behaviour, such as error handlers.</p>
+<p>This example will print <code>Override!</code>, but not <code>This event handler can be overridden.</code>.
+This is useful for registering event handlers as default behavior, such as error handlers.</p>
 
 <pre class="code ruby"><code class="ruby"><span class='comment'># In the library...
 </span>
@@ -161,6 +161,42 @@ Defaults to printing the error to stderr, override to handle it yourself.</p>
 
 <p>Fires when <code>discorb setup</code> is run.
 This is useful for setting up some dependencies, such as the database.</p>
+
+<h4 id="shard_standby-shard"><code>shard_standby(shard)</code></h4>
+
+<p>Fires when a shard is standby.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>shard</code></td>
+<td><span class='object_link'><a href="Discorb/Shard.html" title="Discorb::Shard (class)">Discorb::Shard</a></span></td>
+<td>The shard that is standby.</td>
+</tr>
+</tbody></table>
+
+<h4 id="shard_resumed-shard"><code>shard_resumed(shard)</code></h4>
+
+<p>Fires when a shard is resumed connection.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>shard</code></td>
+<td><span class='object_link'><a href="Discorb/Shard.html" title="Discorb::Shard (class)">Discorb::Shard</a></span></td>
+<td>The shard that is standby.</td>
+</tr>
+</tbody></table>
 
 <h3 id="guild-events">Guild events</h3>
 
@@ -1373,7 +1409,7 @@ Not like <a href="file._23message_delete.html" title="#message_delete">#message_
 </div></div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/3e4d00fbc4504ea496f5e4e0324850f1014fe11f"><code>3e4d00fbc4504ea496f5e4e0324850f1014fe11f</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/a9178cb54caf641765e18f321bf553dba429a5db"><code>a9178cb54caf641765e18f321bf553dba429a5db</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
