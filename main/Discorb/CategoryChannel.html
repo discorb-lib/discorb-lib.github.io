@@ -101,7 +101,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/discorb/channel.rb</dd>
+    <dd>lib/discorb/channel/category.rb</dd>
   </dl>
   
 </div>
@@ -251,94 +251,6 @@
 </li>
 
       
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#news_channel-instance_method" title="#news_channel (instance method)">#<strong>news_channel</strong> -&gt; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#stage_channels-instance_method" title="#stage_channels (instance method)">#<strong>stage_channels</strong> -&gt; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#text_channels-instance_method" title="#text_channels (instance method)">#<strong>text_channels</strong> -&gt; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#voice_channels-instance_method" title="#voice_channels (instance method)">#<strong>voice_channels</strong> -&gt; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
     </ul>
   
 
@@ -352,7 +264,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="GuildChannel.html" title="Discorb::GuildChannel (class)">GuildChannel</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="GuildChannel.html#<=>-instance_method" title="Discorb::GuildChannel#&lt;=&gt; (method)">#<=></a></span>, <span class='object_link'><a href="GuildChannel.html#==-instance_method" title="Discorb::GuildChannel#== (method)">#==</a></span>, <span class='object_link'><a href="GuildChannel.html#delete!-instance_method" title="Discorb::GuildChannel#delete! (method)">#delete!</a></span>, <span class='object_link'><a href="GuildChannel.html#guild-instance_method" title="Discorb::GuildChannel#guild (method)">#guild</a></span>, <span class='object_link'><a href="GuildChannel.html#inspect-instance_method" title="Discorb::GuildChannel#inspect (method)">#inspect</a></span>, <span class='object_link'><a href="GuildChannel.html#mention-instance_method" title="Discorb::GuildChannel#mention (method)">#mention</a></span>, <span class='object_link'><a href="GuildChannel.html#move-instance_method" title="Discorb::GuildChannel#move (method)">#move</a></span>, <span class='object_link'><a href="GuildChannel.html#parent-instance_method" title="Discorb::GuildChannel#parent (method)">#parent</a></span>, <span class='object_link'><a href="GuildChannel.html#to_s-instance_method" title="Discorb::GuildChannel#to_s (method)">#to_s</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="GuildChannel.html#<=>-instance_method" title="Discorb::GuildChannel#&lt;=&gt; (method)">#<=></a></span>, <span class='object_link'><a href="GuildChannel.html#==-instance_method" title="Discorb::GuildChannel#== (method)">#==</a></span>, <span class='object_link'><a href="GuildChannel.html#create_invite-instance_method" title="Discorb::GuildChannel#create_invite (method)">#create_invite</a></span>, <span class='object_link'><a href="GuildChannel.html#delete!-instance_method" title="Discorb::GuildChannel#delete! (method)">#delete!</a></span>, <span class='object_link'><a href="GuildChannel.html#delete_permissions-instance_method" title="Discorb::GuildChannel#delete_permissions (method)">#delete_permissions</a></span>, <span class='object_link'><a href="GuildChannel.html#fetch_invites-instance_method" title="Discorb::GuildChannel#fetch_invites (method)">#fetch_invites</a></span>, <span class='object_link'><a href="GuildChannel.html#guild-instance_method" title="Discorb::GuildChannel#guild (method)">#guild</a></span>, <span class='object_link'><a href="GuildChannel.html#inspect-instance_method" title="Discorb::GuildChannel#inspect (method)">#inspect</a></span>, <span class='object_link'><a href="GuildChannel.html#mention-instance_method" title="Discorb::GuildChannel#mention (method)">#mention</a></span>, <span class='object_link'><a href="GuildChannel.html#move-instance_method" title="Discorb::GuildChannel#move (method)">#move</a></span>, <span class='object_link'><a href="GuildChannel.html#parent-instance_method" title="Discorb::GuildChannel#parent (method)">#parent</a></span>, <span class='object_link'><a href="GuildChannel.html#set_permissions-instance_method" title="Discorb::GuildChannel#set_permissions (method)">#set_permissions</a></span>, <span class='object_link'><a href="GuildChannel.html#to_s-instance_method" title="Discorb::GuildChannel#to_s (method)">#to_s</a></span></p>
 
   
   
@@ -397,12 +309,12 @@
       <pre class="lines">
 
 
-1107
-1108
-1109</pre>
+9
+10
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 1107</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel/category.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_channels'>channels</span>
   <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_channels'>channels</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_channel'>channel</span><span class='op'>|</span> <span class='id identifier rubyid_channel'>channel</span><span class='period'>.</span><span class='id identifier rubyid_parent'>parent</span> <span class='op'>==</span> <span class='kw'>self</span> <span class='rbrace'>}</span>
@@ -427,12 +339,12 @@
       <pre class="lines">
 
 
-1135
-1136
-1137</pre>
+21
+22
+23</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 1135</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel/category.rb', line 21</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create_news_channel'>create_news_channel</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_guild'>guild</span><span class='period'>.</span><span class='id identifier rubyid_create_news_channel'>create_news_channel</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='label'>parent:</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
@@ -457,12 +369,12 @@
       <pre class="lines">
 
 
-1139
-1140
-1141</pre>
+25
+26
+27</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 1139</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel/category.rb', line 25</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create_stage_channel'>create_stage_channel</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_guild'>guild</span><span class='period'>.</span><span class='id identifier rubyid_create_stage_channel'>create_stage_channel</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='label'>parent:</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
@@ -487,12 +399,12 @@
       <pre class="lines">
 
 
-1127
-1128
-1129</pre>
+13
+14
+15</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 1127</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel/category.rb', line 13</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create_text_channel'>create_text_channel</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_guild'>guild</span><span class='period'>.</span><span class='id identifier rubyid_create_text_channel'>create_text_channel</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='label'>parent:</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
@@ -517,135 +429,15 @@
       <pre class="lines">
 
 
-1131
-1132
-1133</pre>
+17
+18
+19</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 1131</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel/category.rb', line 17</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create_voice_channel'>create_voice_channel</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_guild'>guild</span><span class='period'>.</span><span class='id identifier rubyid_create_voice_channel'>create_voice_channel</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='label'>parent:</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="news_channel-instance_method">
-  
-    #<strong>news_channel</strong> -&gt; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-1119
-1120
-1121</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 1119</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_news_channel'>news_channel</span>
-  <span class='id identifier rubyid_channels'>channels</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'><span class='object_link'><a href="NewsChannel.html" title="Discorb::NewsChannel (class)">NewsChannel</a></span></span> <span class='rbrace'>}</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="stage_channels-instance_method">
-  
-    #<strong>stage_channels</strong> -&gt; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-1123
-1124
-1125</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 1123</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_stage_channels'>stage_channels</span>
-  <span class='id identifier rubyid_channels'>channels</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'><span class='object_link'><a href="StageChannel.html" title="Discorb::StageChannel (class)">StageChannel</a></span></span> <span class='rbrace'>}</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="text_channels-instance_method">
-  
-    #<strong>text_channels</strong> -&gt; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-1111
-1112
-1113</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 1111</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_text_channels'>text_channels</span>
-  <span class='id identifier rubyid_channels'>channels</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'><span class='object_link'><a href="TextChannel.html" title="Discorb::TextChannel (class)">TextChannel</a></span></span> <span class='rbrace'>}</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="voice_channels-instance_method">
-  
-    #<strong>voice_channels</strong> -&gt; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-1115
-1116
-1117</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel.rb', line 1115</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_voice_channels'>voice_channels</span>
-  <span class='id identifier rubyid_channels'>channels</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'><span class='object_link'><a href="VoiceChannel.html" title="Discorb::VoiceChannel (class)">VoiceChannel</a></span></span> <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -657,7 +449,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/7341e1be9360f8a6d92ae1aa181e39496df900d1"><code>7341e1be9360f8a6d92ae1aa181e39496df900d1</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/75167309072d5e814c5946d07d725ccaecb5604b"><code>75167309072d5e814c5946d07d725ccaecb5604b</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>

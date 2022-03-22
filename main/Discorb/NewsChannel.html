@@ -96,11 +96,6 @@
   
   
   
-  <dl>
-      <dt>Includes:</dt>
-      <dd><span class='object_link'><a href="Messageable.html" title="Discorb::Messageable (module)">Messageable</a></span></dd>
-  </dl>
-  
   
 
   
@@ -108,7 +103,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/discorb/channel.rb</dd>
+    <dd>lib/discorb/channel/text.rb</dd>
   </dl>
   
 </div>
@@ -145,6 +140,40 @@
   <p class="inherited"><span class='object_link'><a href="Channel.html#id-instance_method" title="Discorb::Channel#id (method)">#id</a></span>, <span class='object_link'><a href="Channel.html#name-instance_method" title="Discorb::Channel#name (method)">#name</a></span></p>
 
 
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#follow_to-instance_method" title="#follow_to (instance method)">#<strong>follow_to</strong>(target, reason: nil) -&gt; Async::Task&lt;void&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Follow the existing announcement channel from self.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
 
   
   
@@ -152,7 +181,18 @@
   
   
   
-  <h2>Method Summary</h2>
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="TextChannel.html" title="Discorb::TextChannel (class)">TextChannel</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="TextChannel.html#create_webhook-instance_method" title="Discorb::TextChannel#create_webhook (method)">#create_webhook</a></span>, <span class='object_link'><a href="TextChannel.html#delete_messages!-instance_method" title="Discorb::TextChannel#delete_messages! (method)">#delete_messages!</a></span>, <span class='object_link'><a href="TextChannel.html#edit-instance_method" title="Discorb::TextChannel#edit (method)">#edit</a></span>, <span class='object_link'><a href="TextChannel.html#fetch_archived_private_threads-instance_method" title="Discorb::TextChannel#fetch_archived_private_threads (method)">#fetch_archived_private_threads</a></span>, <span class='object_link'><a href="TextChannel.html#fetch_archived_public_threads-instance_method" title="Discorb::TextChannel#fetch_archived_public_threads (method)">#fetch_archived_public_threads</a></span>, <span class='object_link'><a href="TextChannel.html#fetch_joined_archived_private_threads-instance_method" title="Discorb::TextChannel#fetch_joined_archived_private_threads (method)">#fetch_joined_archived_private_threads</a></span>, <span class='object_link'><a href="TextChannel.html#fetch_webhooks-instance_method" title="Discorb::TextChannel#fetch_webhooks (method)">#fetch_webhooks</a></span>, <span class='object_link'><a href="TextChannel.html#follow_from-instance_method" title="Discorb::TextChannel#follow_from (method)">#follow_from</a></span>, <span class='object_link'><a href="TextChannel.html#start_thread-instance_method" title="Discorb::TextChannel#start_thread (method)">#start_thread</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="Messageable.html" title="Discorb::Messageable (module)">Messageable</a></span></h3>
   <p class="inherited"><span class='object_link'><a href="Messageable.html#delete_message!-instance_method" title="Discorb::Messageable#delete_message! (method)">#delete_message!</a></span>, <span class='object_link'><a href="Messageable.html#edit_message-instance_method" title="Discorb::Messageable#edit_message (method)">#edit_message</a></span>, <span class='object_link'><a href="Messageable.html#fetch_message-instance_method" title="Discorb::Messageable#fetch_message (method)">#fetch_message</a></span>, <span class='object_link'><a href="Messageable.html#fetch_messages-instance_method" title="Discorb::Messageable#fetch_messages (method)">#fetch_messages</a></span>, <span class='object_link'><a href="Messageable.html#fetch_pins-instance_method" title="Discorb::Messageable#fetch_pins (method)">#fetch_pins</a></span>, <span class='object_link'><a href="Messageable.html#pin_message-instance_method" title="Discorb::Messageable#pin_message (method)">#pin_message</a></span>, <span class='object_link'><a href="Messageable.html#post-instance_method" title="Discorb::Messageable#post (method)">#post</a></span>, <span class='object_link'><a href="Messageable.html#typing-instance_method" title="Discorb::Messageable#typing (method)">#typing</a></span>, <span class='object_link'><a href="Messageable.html#unpin_message-instance_method" title="Discorb::Messageable#unpin_message (method)">#unpin_message</a></span></p>
@@ -165,19 +205,8 @@
   
   
   
-  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="TextChannel.html" title="Discorb::TextChannel (class)">TextChannel</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="TextChannel.html#create_invite-instance_method" title="Discorb::TextChannel#create_invite (method)">#create_invite</a></span>, <span class='object_link'><a href="TextChannel.html#create_webhook-instance_method" title="Discorb::TextChannel#create_webhook (method)">#create_webhook</a></span>, <span class='object_link'><a href="TextChannel.html#delete_messages!-instance_method" title="Discorb::TextChannel#delete_messages! (method)">#delete_messages!</a></span>, <span class='object_link'><a href="TextChannel.html#delete_permissions-instance_method" title="Discorb::TextChannel#delete_permissions (method)">#delete_permissions</a></span>, <span class='object_link'><a href="TextChannel.html#edit-instance_method" title="Discorb::TextChannel#edit (method)">#edit</a></span>, <span class='object_link'><a href="TextChannel.html#fetch_archived_private_threads-instance_method" title="Discorb::TextChannel#fetch_archived_private_threads (method)">#fetch_archived_private_threads</a></span>, <span class='object_link'><a href="TextChannel.html#fetch_archived_public_threads-instance_method" title="Discorb::TextChannel#fetch_archived_public_threads (method)">#fetch_archived_public_threads</a></span>, <span class='object_link'><a href="TextChannel.html#fetch_invites-instance_method" title="Discorb::TextChannel#fetch_invites (method)">#fetch_invites</a></span>, <span class='object_link'><a href="TextChannel.html#fetch_joined_archived_private_threads-instance_method" title="Discorb::TextChannel#fetch_joined_archived_private_threads (method)">#fetch_joined_archived_private_threads</a></span>, <span class='object_link'><a href="TextChannel.html#fetch_webhooks-instance_method" title="Discorb::TextChannel#fetch_webhooks (method)">#fetch_webhooks</a></span>, <span class='object_link'><a href="TextChannel.html#follow_from-instance_method" title="Discorb::TextChannel#follow_from (method)">#follow_from</a></span>, <span class='object_link'><a href="TextChannel.html#follow_to-instance_method" title="Discorb::TextChannel#follow_to (method)">#follow_to</a></span>, <span class='object_link'><a href="TextChannel.html#set_permissions-instance_method" title="Discorb::TextChannel#set_permissions (method)">#set_permissions</a></span>, <span class='object_link'><a href="TextChannel.html#start_thread-instance_method" title="Discorb::TextChannel#start_thread (method)">#start_thread</a></span></p>
-
-  
-  
-  
-  
-  
-  
-  
-  
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="GuildChannel.html" title="Discorb::GuildChannel (class)">GuildChannel</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="GuildChannel.html#<=>-instance_method" title="Discorb::GuildChannel#&lt;=&gt; (method)">#<=></a></span>, <span class='object_link'><a href="GuildChannel.html#==-instance_method" title="Discorb::GuildChannel#== (method)">#==</a></span>, <span class='object_link'><a href="GuildChannel.html#delete!-instance_method" title="Discorb::GuildChannel#delete! (method)">#delete!</a></span>, <span class='object_link'><a href="GuildChannel.html#guild-instance_method" title="Discorb::GuildChannel#guild (method)">#guild</a></span>, <span class='object_link'><a href="GuildChannel.html#inspect-instance_method" title="Discorb::GuildChannel#inspect (method)">#inspect</a></span>, <span class='object_link'><a href="GuildChannel.html#mention-instance_method" title="Discorb::GuildChannel#mention (method)">#mention</a></span>, <span class='object_link'><a href="GuildChannel.html#move-instance_method" title="Discorb::GuildChannel#move (method)">#move</a></span>, <span class='object_link'><a href="GuildChannel.html#parent-instance_method" title="Discorb::GuildChannel#parent (method)">#parent</a></span>, <span class='object_link'><a href="GuildChannel.html#to_s-instance_method" title="Discorb::GuildChannel#to_s (method)">#to_s</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="GuildChannel.html#<=>-instance_method" title="Discorb::GuildChannel#&lt;=&gt; (method)">#<=></a></span>, <span class='object_link'><a href="GuildChannel.html#==-instance_method" title="Discorb::GuildChannel#== (method)">#==</a></span>, <span class='object_link'><a href="GuildChannel.html#create_invite-instance_method" title="Discorb::GuildChannel#create_invite (method)">#create_invite</a></span>, <span class='object_link'><a href="GuildChannel.html#delete!-instance_method" title="Discorb::GuildChannel#delete! (method)">#delete!</a></span>, <span class='object_link'><a href="GuildChannel.html#delete_permissions-instance_method" title="Discorb::GuildChannel#delete_permissions (method)">#delete_permissions</a></span>, <span class='object_link'><a href="GuildChannel.html#fetch_invites-instance_method" title="Discorb::GuildChannel#fetch_invites (method)">#fetch_invites</a></span>, <span class='object_link'><a href="GuildChannel.html#guild-instance_method" title="Discorb::GuildChannel#guild (method)">#guild</a></span>, <span class='object_link'><a href="GuildChannel.html#inspect-instance_method" title="Discorb::GuildChannel#inspect (method)">#inspect</a></span>, <span class='object_link'><a href="GuildChannel.html#mention-instance_method" title="Discorb::GuildChannel#mention (method)">#mention</a></span>, <span class='object_link'><a href="GuildChannel.html#move-instance_method" title="Discorb::GuildChannel#move (method)">#move</a></span>, <span class='object_link'><a href="GuildChannel.html#parent-instance_method" title="Discorb::GuildChannel#parent (method)">#parent</a></span>, <span class='object_link'><a href="GuildChannel.html#set_permissions-instance_method" title="Discorb::GuildChannel#set_permissions (method)">#set_permissions</a></span>, <span class='object_link'><a href="GuildChannel.html#to_s-instance_method" title="Discorb::GuildChannel#to_s (method)">#to_s</a></span></p>
 
   
   
@@ -203,10 +232,113 @@
   <p class="inherited"><span class='object_link'><a href="DiscordModel.html#==-instance_method" title="Discorb::DiscordModel#== (method)">#==</a></span>, <span class='object_link'><a href="DiscordModel.html#eql%3F-instance_method" title="Discorb::DiscordModel#eql? (method)">#eql?</a></span>, <span class='object_link'><a href="DiscordModel.html#inspect-instance_method" title="Discorb::DiscordModel#inspect (method)">#inspect</a></span></p>
 
 
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="follow_to-instance_method">
+  
+    #<strong>follow_to</strong>(target, reason: nil) -&gt; <tt>Async::Task&lt;void&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Follow the existing announcement channel from self.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>target</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="TextChannel.html" title="Discorb::TextChannel (class)">Discorb::TextChannel</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The channel to follow to.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>reason</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The reason of following the channel.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Async::Task&lt;void&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The task.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+271
+272
+273
+274
+275</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel/text.rb', line 271</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_follow_to'>follow_to</span><span class='lparen'>(</span><span class='id identifier rubyid_target'>target</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='const'>Async</span> <span class='kw'>do</span>
+    <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/channels/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/followers</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//channels/:channel_id/followers</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:post</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='label'>webhook_channel_id:</span> <span class='id identifier rubyid_target'>target</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>audit_log_reason:</span> <span class='id identifier rubyid_reason'>reason</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/7341e1be9360f8a6d92ae1aa181e39496df900d1"><code>7341e1be9360f8a6d92ae1aa181e39496df900d1</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/75167309072d5e814c5946d07d725ccaecb5604b"><code>75167309072d5e814c5946d07d725ccaecb5604b</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
