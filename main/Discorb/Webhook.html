@@ -994,12 +994,12 @@
       <pre class="lines">
 
 
-469
-470
-471</pre>
+477
+478
+479</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 469</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 477</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_from_url'>from_url</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="Webhook/URLWebhook.html" title="Discorb::Webhook::URLWebhook (class)">URLWebhook</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#new-class_method" title="Discorb::Webhook.new (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
@@ -1076,40 +1076,16 @@
 452
 453
 454
-455
-456
-457
-458
-459
-460
-461
-462
-463
-464
-465
-466
-467</pre>
+455</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 449</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='kw'>self</span> <span class='op'>!=</span> <span class='const'><span class='object_link'><a href="" title="Discorb::Webhook (class)">Webhook</a></span></span>
-    <span class='kw'>return</span> <span class='kw'>super</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_url'>url</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span>
-
-    <span class='kw'>return</span> <span class='kw'>super</span>
-  <span class='kw'>end</span>
-  <span class='kw'>if</span> <span class='id identifier rubyid_url'>url</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='kw'>self</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="" title="Discorb::Webhook (class)">Webhook</a></span></span>
     <span class='const'><span class='object_link'><a href="Webhook/URLWebhook.html" title="Discorb::Webhook::URLWebhook (class)">URLWebhook</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
   <span class='kw'>else</span>
-    <span class='kw'>case</span> <span class='id identifier rubyid_url'>url</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:type</span><span class='rbracket'>]</span>
-    <span class='kw'>when</span> <span class='int'>1</span>
-      <span class='const'><span class='object_link'><a href="Webhook/IncomingWebhook.html" title="Discorb::Webhook::IncomingWebhook (class)">IncomingWebhook</a></span></span>
-    <span class='kw'>when</span> <span class='int'>2</span>
-      <span class='const'><span class='object_link'><a href="Webhook/FollowerWebhook.html" title="Discorb::Webhook::FollowerWebhook (class)">FollowerWebhook</a></span></span>
-    <span class='kw'>when</span> <span class='int'>3</span>
-      <span class='const'><span class='object_link'><a href="Webhook/ApplicationWebhook.html" title="Discorb::Webhook::ApplicationWebhook (class)">ApplicationWebhook</a></span></span>
-    <span class='kw'>end</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
+    <span class='kw'>super</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1966,7 +1942,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/5b151ac06e0b2aa4d195fb5d901e3a7fe0ef0ecf"><code>5b151ac06e0b2aa4d195fb5d901e3a7fe0ef0ecf</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/bee521a9a0cb01576137744d0d0c6edb67aaf199"><code>bee521a9a0cb01576137744d0d0c6edb67aaf199</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
