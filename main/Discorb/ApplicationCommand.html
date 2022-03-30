@@ -109,6 +109,48 @@
   
 </p>
 
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="VALID_LOCALES-constant" class="">VALID_LOCALES =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Returns List of valid locales.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>List of valid locales.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='qwords_beg'>%w[</span><span class='tstring_content'>da</span><span class='words_sep'> </span><span class='tstring_content'>de</span><span class='words_sep'> </span><span class='tstring_content'>en-GB</span><span class='words_sep'> </span><span class='tstring_content'>en-US</span><span class='words_sep'> </span><span class='tstring_content'>es-ES</span><span class='words_sep'> </span><span class='tstring_content'>fr</span><span class='words_sep'> </span><span class='tstring_content'>hr</span><span class='words_sep'> </span><span class='tstring_content'>it</span><span class='words_sep'> </span><span class='tstring_content'>lt</span><span class='words_sep'> </span><span class='tstring_content'>hu</span><span class='words_sep'> </span><span class='tstring_content'>nl</span><span class='words_sep'> </span><span class='tstring_content'>no</span><span class='words_sep'> </span><span class='tstring_content'>pl</span><span class='words_sep'> </span><span class='tstring_content'>pt-BR</span><span class='words_sep'> </span><span class='tstring_content'>ro</span><span class='words_sep'> </span><span class='tstring_content'>fi</span><span class='words_sep'> </span><span class='tstring_content'>sv-SE</span><span class='words_sep'> </span><span class='tstring_content'>vi</span><span class='words_sep'> </span><span class='tstring_content'>tr</span><span class='words_sep'> </span><span class='tstring_content'>cs</span><span class='words_sep'> </span><span class='tstring_content'>el</span><span class='words_sep'> </span><span class='tstring_content'>bg</span><span class='words_sep'> </span><span class='tstring_content'>ru</span><span class='words_sep'> </span><span class='tstring_content'>uk</span><span class='words_sep'> </span><span class='tstring_content'>hi</span><span class='words_sep'> </span><span class='tstring_content'>th</span><span class='words_sep'> </span><span class='tstring_content'>zh-CN</span><span class='words_sep'> </span><span class='tstring_content'>ja</span><span class='words_sep'> </span><span class='tstring_content'>zh-TW</span><span class='words_sep'> </span><span class='tstring_content'>ko</span><span class='tstring_end'>]</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+    </dl>
+  
 
 
 
@@ -116,11 +158,89 @@
 
 
 
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#modify_localization_hash-class_method" title="modify_localization_hash (class method)">.<strong>modify_localization_hash</strong>(hash) -&gt; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="modify_localization_hash-class_method">
+  
+    .<strong>modify_localization_hash</strong>(hash) -&gt; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+186
+187
+188
+189
+190
+191
+192</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/handler.rb', line 186</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_modify_localization_hash'>modify_localization_hash</span><span class='lparen'>(</span><span class='id identifier rubyid_hash'>hash</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_hash'>hash</span><span class='period'>.</span><span class='id identifier rubyid_to_h'>to_h</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_rkey'>rkey</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
+    <span class='id identifier rubyid_key'>key</span> <span class='op'>=</span> <span class='id identifier rubyid_rkey'>rkey</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>_</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>-</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Invalid locale: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="#VALID_LOCALES-constant" title="Discorb::ApplicationCommand::VALID_LOCALES (constant)">VALID_LOCALES</a></span></span><span class='period'>.</span><span class='id identifier rubyid_none?'>none?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_valid'>valid</span><span class='op'>|</span> <span class='id identifier rubyid_valid'>valid</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span> <span class='op'>==</span> <span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span> <span class='rbrace'>}</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_key'>key</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>default</span><span class='tstring_end'>&quot;</span></span>
+    <span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>default</span><span class='tstring_end'>&quot;</span></span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>default</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='const'><span class='object_link'><a href="#VALID_LOCALES-constant" title="Discorb::ApplicationCommand::VALID_LOCALES (constant)">VALID_LOCALES</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_valid'>valid</span><span class='op'>|</span> <span class='id identifier rubyid_valid'>valid</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span> <span class='op'>==</span> <span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span> <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
 
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/6c510406a18eb5baeef9095e18225e6c09134dda"><code>6c510406a18eb5baeef9095e18225e6c09134dda</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/e39b64efb79caf82e995f2adfc9dc2285b40052c"><code>e39b64efb79caf82e995f2adfc9dc2285b40052c</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>

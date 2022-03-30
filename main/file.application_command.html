@@ -177,6 +177,11 @@ Guild commands will be registered immediately.</p>
 <td>Choice of the option.</td>
 </tr>
 <tr>
+<td><code>:choice_localizations</code></td>
+<td><code>Hash{String =&gt; Hash{Symbol =&gt; String}}</code></td>
+<td>Localization of the choice. Key must be the name of a choice. (See below for example)</td>
+</tr>
+<tr>
 <td><code>:default</code></td>
 <td><code>Object</code></td>
 <td>Default value of the option.</td>
@@ -199,7 +204,7 @@ Guild commands will be registered immediately.</p>
 </tbody></table>
 
 <p><code>choices</code> should be unspecified if you don&#39;t want to use it.
-<code>choices</code> is hash like this:</p>
+<code>choices</code> example:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='lbrace'>{</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>vocaloid</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
@@ -514,10 +519,97 @@ Due to the limitation of Discord API, the proc must return the result in less th
 <td>The message object.</td>
 </tr>
 </tbody></table>
+
+<h3 id="localizing-command">Localizing command</h3>
+
+<p>You can localize commands with passing parameters, or setting Hash to name.
+Also, you can change the text by checking <code>interaction.locale</code> and <code>interaction.guild_locale</code>.</p>
+
+<p>Command name localize example:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_localizations'>localizations</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+  <span class='label'>localized:</span> <span class='lbrace'>{</span>
+    <span class='label'>text:</span> <span class='lbrace'>{</span>
+      <span class='label'>en:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello, %s!</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='label'>ja:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%sさん、こんにちは！</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+<span class='rbrace'>}</span>
+
+<span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_slash'>slash</span><span class='lparen'>(</span><span class='lbrace'>{</span>
+  <span class='label'>default:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>greet</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='label'>ja:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>挨拶</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='rbrace'>}</span><span class='comma'>,</span> <span class='lbrace'>{</span>
+  <span class='label'>default:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bot greets. Cute OwO</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='label'>ja:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Botが挨拶します。かわいいね</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='rbrace'>}</span><span class='comma'>,</span> <span class='lbrace'>{</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>name</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>name_localizations:</span> <span class='lbrace'>{</span>
+      <span class='label'>ja:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>名前</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>description:</span> <span class='lbrace'>{</span>
+      <span class='label'>default:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>The name to greet.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='label'>ja:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>挨拶する人の名前。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>type:</span> <span class='symbol'>:string</span><span class='comma'>,</span>
+    <span class='label'>optional:</span> <span class='kw'>true</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+<span class='rbrace'>}</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_interaction'>interaction</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='op'>|</span>
+  <span class='id identifier rubyid_interaction'>interaction</span><span class='period'>.</span><span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span>
+    <span class='lparen'>(</span><span class='id identifier rubyid_localizations'>localizations</span><span class='lbracket'>[</span><span class='symbol'>:localized</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:text</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_interaction'>interaction</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_localizations'>localizations</span><span class='lbracket'>[</span><span class='symbol'>:localized</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:text</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:en</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span> <span class='op'>||</span> <span class='id identifier rubyid_interaction'>interaction</span><span class='period'>.</span><span class='id identifier rubyid_target'>target</span><span class='period'>.</span><span class='id identifier rubyid_to_s_user'>to_s_user</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='label'>ephemeral:</span> <span class='kw'>true</span><span class='comma'>,</span>
+  <span class='rparen'>)</span>
+<span class='kw'>end</span>
+</code></pre>
+
+<p>Option localize example:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='lbrace'>{</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>vocaloid</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>name_localizations:</span> <span class='lbrace'>{</span>
+      <span class='label'>ja:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ボカロ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>required:</span> <span class='kw'>true</span><span class='comma'>,</span>
+    <span class='label'>description:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>The vocaloid which you like.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>description_localizations:</span> <span class='lbrace'>{</span>
+      <span class='label'>ja:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>好きなボカロ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>type:</span> <span class='symbol'>:string</span><span class='comma'>,</span>
+    <span class='label'>choices:</span> <span class='lbrace'>{</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hatsune Miku</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>miku</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Kagamine Rin</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rin</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Kagamine Len</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>len</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Megurine Luka</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>luka</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MEIKO</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>meiko</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>KAITO</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>kaito</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>choice_localizations:</span> <span class='lbrace'>{</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hatsune Miku</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+        <span class='label'>ja:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>初音ミク</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='rbrace'>}</span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Kagamine Rin</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+        <span class='label'>ja:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>鏡音リン</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='rbrace'>}</span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Kagamine Len</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+        <span class='label'>ja:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>鏡音レン</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='rbrace'>}</span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Megurine Luka</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+        <span class='label'>ja:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>巡音ルカ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='rbrace'>}</span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MEIKO</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+        <span class='label'>ja:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MEIKO</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='rbrace'>}</span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>KAITO</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+        <span class='label'>ja:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>KAITO</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='rbrace'>}</span>
+  <span class='rbrace'>}</span>
+<span class='rbrace'>}</span>
+</code></pre>
 </div></div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/6c510406a18eb5baeef9095e18225e6c09134dda"><code>6c510406a18eb5baeef9095e18225e6c09134dda</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/e39b64efb79caf82e995f2adfc9dc2285b40052c"><code>e39b64efb79caf82e995f2adfc9dc2285b40052c</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
