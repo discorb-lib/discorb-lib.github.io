@@ -265,7 +265,7 @@
       <pre class="code"><span class="info file"># File 'lib/discorb/channel/container.rb', line 30</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_news_channels'>news_channels</span>
-  <span class='id identifier rubyid_channels'>channels</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'><span class='object_link'><a href="NewsChannel.html" title="Discorb::NewsChannel (class)">NewsChannel</a></span></span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_channels'>channels</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_instance_of?'>instance_of?</span> <span class='const'><span class='object_link'><a href="NewsChannel.html" title="Discorb::NewsChannel (class)">NewsChannel</a></span></span> <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -322,7 +322,7 @@
       <pre class="code"><span class="info file"># File 'lib/discorb/channel/container.rb', line 39</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_stage_channels'>stage_channels</span>
-  <span class='id identifier rubyid_channels'>channels</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'><span class='object_link'><a href="StageChannel.html" title="Discorb::StageChannel (class)">StageChannel</a></span></span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_channels'>channels</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_instance_of?'>instance_of?</span> <span class='const'><span class='object_link'><a href="StageChannel.html" title="Discorb::StageChannel (class)">StageChannel</a></span></span> <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -379,7 +379,7 @@
       <pre class="code"><span class="info file"># File 'lib/discorb/channel/container.rb', line 12</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_text_channels'>text_channels</span>
-  <span class='id identifier rubyid_channels'>channels</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'><span class='object_link'><a href="TextChannel.html" title="Discorb::TextChannel (class)">TextChannel</a></span></span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_channels'>channels</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_instance_of?'>instance_of?</span> <span class='const'><span class='object_link'><a href="TextChannel.html" title="Discorb::TextChannel (class)">TextChannel</a></span></span> <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -436,7 +436,7 @@
       <pre class="code"><span class="info file"># File 'lib/discorb/channel/container.rb', line 21</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_voice_channels'>voice_channels</span>
-  <span class='id identifier rubyid_channels'>channels</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'><span class='object_link'><a href="VoiceChannel.html" title="Discorb::VoiceChannel (class)">VoiceChannel</a></span></span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_channels'>channels</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_instance_of?'>instance_of?</span> <span class='const'><span class='object_link'><a href="VoiceChannel.html" title="Discorb::VoiceChannel (class)">VoiceChannel</a></span></span> <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -448,7 +448,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/8d1554c8ae07726e6bacaa20fb45cd4a3f613716"><code>8d1554c8ae07726e6bacaa20fb45cd4a3f613716</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/bab8d9c14862e56d6595c771ad9f310293397363"><code>bab8d9c14862e56d6595c771ad9f310293397363</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
