@@ -382,16 +382,16 @@
       <pre class="lines">
 
 
+88
+89
+90
+91
+92
 93
-94
-95
-96
-97
-98
-99</pre>
+94</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/handler.rb', line 93</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/handler.rb', line 88</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_message_command'>message_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='label'>guild_ids:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_command_name'>command_name</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>default:</span> <span class='id identifier rubyid_command_name'>command_name</span> <span class='rbrace'>}</span> <span class='kw'>if</span> <span class='id identifier rubyid_command_name'>command_name</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span>
@@ -482,6 +482,11 @@
       <pre class="lines">
 
 
+126
+127
+128
+129
+130
 131
 132
 133
@@ -527,15 +532,10 @@
 173
 174
 175
-176
-177
-178
-179
-180
-181</pre>
+176</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/handler.rb', line 131</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/handler.rb', line 126</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_setup_commands'>setup_commands</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>guild_ids:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -787,19 +787,19 @@ The key is the option name, the value is a hash with the following keys:</p>
       <pre class="lines">
 
 
+41
+42
+43
+44
+45
 46
 47
 48
 49
-50
-51
-52
-53
-54
-55</pre>
+50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/handler.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/handler.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_slash'>slash</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>guild_ids:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_command_name'>command_name</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>default:</span> <span class='id identifier rubyid_command_name'>command_name</span> <span class='rbrace'>}</span> <span class='kw'>if</span> <span class='id identifier rubyid_command_name'>command_name</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span>
@@ -954,17 +954,17 @@ The key is the option name, the value is a hash with the following keys:</p>
       <pre class="lines">
 
 
+67
+68
+69
+70
+71
 72
 73
-74
-75
-76
-77
-78
-79</pre>
+74</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/handler.rb', line 72</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/handler.rb', line 67</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_slash_group'>slash_group</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>guild_ids:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_command_name'>command_name</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../ApplicationCommand.html" title="Discorb::ApplicationCommand (module)">ApplicationCommand</a></span></span><span class='period'>.</span><span class='id identifier rubyid_modify_localization_hash'><span class='object_link'><a href="../ApplicationCommand.html#modify_localization_hash-class_method" title="Discorb::ApplicationCommand.modify_localization_hash (method)">modify_localization_hash</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='rparen'>)</span>
@@ -1123,16 +1123,16 @@ The key is the option name, the value is a hash with the following keys:</p>
       <pre class="lines">
 
 
+108
+109
+110
+111
+112
 113
-114
-115
-116
-117
-118
-119</pre>
+114</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/handler.rb', line 113</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/handler.rb', line 108</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_user_command'>user_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='label'>guild_ids:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_command_name'>command_name</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>default:</span> <span class='id identifier rubyid_command_name'>command_name</span> <span class='rbrace'>}</span> <span class='kw'>if</span> <span class='id identifier rubyid_command_name'>command_name</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span>
@@ -1151,7 +1151,7 @@ The key is the option name, the value is a hash with the following keys:</p>
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/dd75e845e5829409ebf8220187f619bbd178fa15"><code>dd75e845e5829409ebf8220187f619bbd178fa15</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/b7c15cfa3c58cc8b10cb86a47c6759683cfd52ed"><code>b7c15cfa3c58cc8b10cb86a47c6759683cfd52ed</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
