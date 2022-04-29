@@ -232,6 +232,29 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#from_keys-class_method" title="from_keys (class method)">.<strong>from_keys</strong>(*keys) -&gt; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Initialize a new flag with keys.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#max_value-class_method" title="max_value (class method)">.<strong>max_value</strong> -&gt; Integer </a>
     
 
@@ -805,7 +828,47 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="max_value-class_method">
+  <h3 class="signature first" id="from_keys-class_method">
+  
+    .<strong>from_keys</strong>(*keys) -&gt; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Initialize a new flag with keys.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+119
+120
+121</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/flag.rb', line 119</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_from_keys'>from_keys</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_keys'>keys</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_sum'>sum</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='op'>|</span> <span class='int'>1</span> <span class='op'>&lt;&lt;</span> <span class='ivar'>@bits</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="max_value-class_method">
   
     .<strong>max_value</strong> -&gt; <tt>Integer</tt> 
   
@@ -1319,7 +1382,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/b7c15cfa3c58cc8b10cb86a47c6759683cfd52ed"><code>b7c15cfa3c58cc8b10cb86a47c6759683cfd52ed</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/1123401285dad4ebd0958110de02f0493a13dbfc"><code>1123401285dad4ebd0958110de02f0493a13dbfc</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
