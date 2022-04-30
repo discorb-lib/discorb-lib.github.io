@@ -605,12 +605,30 @@
 49
 50
 51
-52</pre>
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/discorb/components/text_input.rb', line 43</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_label'>label</span><span class='comma'>,</span> <span class='id identifier rubyid_custom_id'>custom_id</span><span class='comma'>,</span> <span class='id identifier rubyid_style'>style</span><span class='comma'>,</span> <span class='label'>min_length:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>max_length:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>value:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>placeholder:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span>
+  <span class='id identifier rubyid_label'>label</span><span class='comma'>,</span>
+  <span class='id identifier rubyid_custom_id'>custom_id</span><span class='comma'>,</span>
+  <span class='id identifier rubyid_style'>style</span><span class='comma'>,</span>
+  <span class='label'>min_length:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+  <span class='label'>max_length:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+  <span class='label'>required:</span> <span class='kw'>false</span><span class='comma'>,</span>
+  <span class='label'>value:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+  <span class='label'>placeholder:</span> <span class='kw'>nil</span>
+<span class='rparen'>)</span>
   <span class='ivar'>@label</span> <span class='op'>=</span> <span class='id identifier rubyid_label'>label</span>
   <span class='ivar'>@custom_id</span> <span class='op'>=</span> <span class='id identifier rubyid_custom_id'>custom_id</span>
   <span class='ivar'>@style</span> <span class='op'>=</span> <span class='id identifier rubyid_style'>style</span>
@@ -1170,21 +1188,21 @@
       <pre class="lines">
 
 
-82
-83
-84
-85
-86
-87
-88
-89
-90
-91
 92
-93</pre>
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/components/text_input.rb', line 82</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/components/text_input.rb', line 92</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_from_hash'>from_hash</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
@@ -1258,22 +1276,22 @@
       <pre class="lines">
 
 
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
 70
 71
-72</pre>
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/components/text_input.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/components/text_input.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_hash'>to_hash</span>
   <span class='lbrace'>{</span>
@@ -1298,7 +1316,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/30444595aa2087739ba1043e86535fb5ec1a999c"><code>30444595aa2087739ba1043e86535fb5ec1a999c</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/0a8eb1a0037f14fe3ce393d3abc1143ebbfa1b12"><code>0a8eb1a0037f14fe3ce393d3abc1143ebbfa1b12</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>

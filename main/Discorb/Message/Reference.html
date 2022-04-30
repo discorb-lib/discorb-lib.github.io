@@ -437,15 +437,15 @@
       <pre class="lines">
 
 
-57
 58
 59
 60
 61
-62</pre>
+62
+63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message_meta.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message_meta.rb', line 58</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_guild_id'>guild_id</span><span class='comma'>,</span> <span class='id identifier rubyid_channel_id'>channel_id</span><span class='comma'>,</span> <span class='id identifier rubyid_message_id'>message_id</span><span class='comma'>,</span> <span class='label'>fail_if_not_exists:</span> <span class='kw'>true</span><span class='rparen'>)</span>
   <span class='ivar'>@guild_id</span> <span class='op'>=</span> <span class='id identifier rubyid_guild_id'>guild_id</span>
@@ -507,12 +507,12 @@
       <pre class="lines">
 
 
-41
 42
-43</pre>
+43
+44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message_meta.rb', line 41</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message_meta.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_channel_id'>channel_id</span>
   <span class='ivar'>@channel_id</span>
@@ -570,12 +570,12 @@
       <pre class="lines">
 
 
-45
 46
-47</pre>
+47
+48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message_meta.rb', line 45</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message_meta.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fail_if_not_exists'>fail_if_not_exists</span>
   <span class='ivar'>@fail_if_not_exists</span>
@@ -629,12 +629,12 @@
       <pre class="lines">
 
 
-39
 40
-41</pre>
+41
+42</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message_meta.rb', line 39</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message_meta.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_guild_id'>guild_id</span>
   <span class='ivar'>@guild_id</span>
@@ -688,12 +688,12 @@
       <pre class="lines">
 
 
-43
 44
-45</pre>
+45
+46</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message_meta.rb', line 43</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message_meta.rb', line 44</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_message_id'>message_id</span>
   <span class='ivar'>@message_id</span>
@@ -778,12 +778,12 @@
       <pre class="lines">
 
 
-88
 89
-90</pre>
+90
+91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message_meta.rb', line 88</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message_meta.rb', line 89</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_from_hash'>from_hash</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:guild_id</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:channel_id</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:message_id</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>fail_if_not_exists:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:fail_if_not_exists</span><span class='rbracket'>]</span><span class='rparen'>)</span>
@@ -814,12 +814,12 @@
       <pre class="lines">
 
 
-92
 93
-94</pre>
+94
+95</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message_meta.rb', line 92</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message_meta.rb', line 93</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='ivar'>@channel_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@message_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
@@ -875,17 +875,17 @@
       <pre class="lines">
 
 
-69
 70
 71
 72
 73
 74
 75
-76</pre>
+76
+77</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/message_meta.rb', line 69</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/message_meta.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_hash'>to_hash</span>
   <span class='lbrace'>{</span>
@@ -905,7 +905,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/30444595aa2087739ba1043e86535fb5ec1a999c"><code>30444595aa2087739ba1043e86535fb5ec1a999c</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/0a8eb1a0037f14fe3ce393d3abc1143ebbfa1b12"><code>0a8eb1a0037f14fe3ce393d3abc1143ebbfa1b12</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
