@@ -250,34 +250,6 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#member-instance_method" title="#member (instance method)">#<strong>member</strong> -&gt; Discorb::Member </a>
-    
-
-    
-  </span>
-  
-  
-  
-    
-      <span class="note title readonly">readonly</span>
-    
-    
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>The member that created the interaction.</p>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#token-instance_method" title="#token (instance method)">#<strong>token</strong> -&gt; String </a>
     
 
@@ -334,9 +306,11 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#user-instance_method" title="#user (instance method)">#<strong>user</strong> -&gt; Discorb::User </a>
+      <a href="#user-instance_method" title="#user (instance method)">#<strong>user</strong> -&gt; Discorb::User, Discorb::Member </a>
     
 
+    
+      (also: #member)
     
   </span>
   
@@ -353,7 +327,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The user that created the interaction.</p>
+    <span class="summary_desc"><div class='inline'><p>The user or member that created the interaction.</p>
 </div></span>
   
 </li>
@@ -450,30 +424,6 @@
       <a href="#inspect-instance_method" title="#inspect (instance method)">#<strong>inspect</strong> -&gt; Object </a>
     
 
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#target-instance_method" title="#target (instance method)">#<strong>target</strong> -&gt; Object </a>
-    
-
-    
-      (also: #fired_by, #from)
     
   </span>
   
@@ -618,12 +568,12 @@
       <pre class="lines">
 
 
+27
 28
-29
-30</pre>
+29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 28</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 27</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_guild_locale'>guild_locale</span>
   <span class='ivar'>@guild_locale</span>
@@ -743,74 +693,15 @@
       <pre class="lines">
 
 
+24
 25
-26
-27</pre>
+26</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 25</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 24</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_locale'>locale</span>
   <span class='ivar'>@locale</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id=""></span>
-      <div class="method_details ">
-  <h3 class="signature " id="member-instance_method">
-  
-    #<strong>member</strong> -&gt; <tt><span class='object_link'><a href="Member.html" title="Discorb::Member (class)">Discorb::Member</a></span></tt>  <span class="extras">(readonly)</span>
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>Returns The member that created the interaction.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="Member.html" title="Discorb::Member (class)">Discorb::Member</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The member that created the interaction.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-15
-16
-17</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 15</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_member'>member</span>
-  <span class='ivar'>@member</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -861,12 +752,12 @@
       <pre class="lines">
 
 
+21
 22
-23
-24</pre>
+23</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 21</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_token'>token</span>
   <span class='ivar'>@token</span>
@@ -940,15 +831,19 @@
       <div class="method_details ">
   <h3 class="signature " id="user-instance_method">
   
-    #<strong>user</strong> -&gt; <tt><span class='object_link'><a href="User.html" title="Discorb::User (class)">Discorb::User</a></span></tt>  <span class="extras">(readonly)</span>
+    #<strong>user</strong> -&gt; <tt><span class='object_link'><a href="User.html" title="Discorb::User (class)">Discorb::User</a></span></tt>, <tt><span class='object_link'><a href="Member.html" title="Discorb::Member (class)">Discorb::Member</a></span></tt>  <span class="extras">(readonly)</span>
   
 
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='member-instance_method'>member</span></span>
+    </span>
   
 
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns The user that created the interaction.</p>
+    <p>Returns The user or member that created the interaction.</p>
 
 
   </div>
@@ -961,12 +856,12 @@
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="User.html" title="Discorb::User (class)">Discorb::User</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="User.html" title="Discorb::User (class)">Discorb::User</a></span></tt>, <tt><span class='object_link'><a href="Member.html" title="Discorb::Member (class)">Discorb::Member</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>The user that created the interaction.</p>
+        <div class='inline'><p>The user or member that created the interaction.</p>
 </div>
       
     </li>
@@ -979,12 +874,12 @@
       <pre class="lines">
 
 
-17
-18
-19</pre>
+15
+16
+17</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 17</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 15</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_user'>user</span>
   <span class='ivar'>@user</span>
@@ -1045,12 +940,12 @@
       <pre class="lines">
 
 
+19
 20
-21
-22</pre>
+21</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 20</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 19</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_version'>version</span>
   <span class='ivar'>@version</span>
@@ -1142,40 +1037,6 @@
       <pre class="lines">
 
 
-86
-87
-88</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 86</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> id=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@id</span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="target-instance_method">
-  
-    #<strong>target</strong> -&gt; <tt>Object</tt> 
-  
-
-  
-    <span class="aliases">Also known as:
-    <span class="names"><span id='fired_by-instance_method'>fired_by</span>, <span id='from-instance_method'>from</span></span>
-    </span>
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
 79
 80
 81</pre>
@@ -1183,8 +1044,8 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 79</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_target'>target</span>
-  <span class='ivar'>@member</span> <span class='op'>||</span> <span class='ivar'>@user</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> id=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@id</span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1196,7 +1057,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/31c6332cc34b1277686b604c608d14416cb59fbf"><code>31c6332cc34b1277686b604c608d14416cb59fbf</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/5146f6debaa042834a25f325e4e876da7f01c3d3"><code>5146f6debaa042834a25f325e4e876da7f01c3d3</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
