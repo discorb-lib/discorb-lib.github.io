@@ -128,7 +128,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#commands-instance_method" title="#commands (instance method)">#<strong>commands</strong> -&gt; Array&lt; Discorb::ApplicationCommand::Command::SlashCommand, Discorb::ApplicationCommand::Command::SubcommandGroup </a>
+      <a href="#commands-instance_method" title="#commands (instance method)">#<strong>commands</strong> -&gt; Array&lt; Discorb::ApplicationCommand::Command::ChatInputCommand, Discorb::ApplicationCommand::Command::SubcommandGroup </a>
     
 
     
@@ -227,7 +227,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#slash-instance_method" title="#slash (instance method)">#<strong>slash</strong>(command_name, description, options = {}, dm_permission: true, default_permission: nil, &amp;block) -&gt; Discorb::ApplicationCommand::Command::SlashCommand </a>
+      <a href="#slash-instance_method" title="#slash (instance method)">#<strong>slash</strong>(command_name, description, options = {}, dm_permission: true, default_permission: nil, &amp;block) -&gt; Discorb::ApplicationCommand::Command::ChatInputCommand </a>
     
 
     
@@ -300,7 +300,7 @@
   <h3 class="signature first" id="commands-instance_method">
   
     #<strong>commands</strong> -&gt; <tt>Array&lt;
-<span class='object_link'><a href="SlashCommand.html" title="Discorb::ApplicationCommand::Command::SlashCommand (class)">Discorb::ApplicationCommand::Command::SlashCommand</a></span>,
+<span class='object_link'><a href="ChatInputCommand.html" title="Discorb::ApplicationCommand::Command::ChatInputCommand (class)">Discorb::ApplicationCommand::Command::ChatInputCommand</a></span>,
 <span class='object_link'><a href="SubcommandGroup.html" title="Discorb::ApplicationCommand::Command::SubcommandGroup (class)">Discorb::ApplicationCommand::Command::SubcommandGroup</a></span></tt>  <span class="extras">(readonly)</span>
   
 
@@ -325,14 +325,14 @@
       
       
         <span class='type'>(<tt>Array&lt;
-<span class='object_link'><a href="SlashCommand.html" title="Discorb::ApplicationCommand::Command::SlashCommand (class)">Discorb::ApplicationCommand::Command::SlashCommand</a></span>,
+<span class='object_link'><a href="ChatInputCommand.html" title="Discorb::ApplicationCommand::Command::ChatInputCommand (class)">Discorb::ApplicationCommand::Command::ChatInputCommand</a></span>,
 <span class='object_link'><a href="SubcommandGroup.html" title="Discorb::ApplicationCommand::Command::SubcommandGroup (class)">Discorb::ApplicationCommand::Command::SubcommandGroup</a></span></tt>)</span>
       
       
       
         &mdash;
         <div class='inline'><p>Array&lt;
-Discorb::ApplicationCommand::Command::SlashCommand,
+Discorb::ApplicationCommand::Command::ChatInputCommand,
 Discorb::ApplicationCommand::Command::SubcommandGroup</p>
 </div>
       
@@ -570,7 +570,7 @@ Discorb::ApplicationCommand::Command::SubcommandGroup</p>
       <div class="method_details ">
   <h3 class="signature " id="slash-instance_method">
   
-    #<strong>slash</strong>(command_name, description, options = {}, dm_permission: true, default_permission: nil, &amp;block) -&gt; <tt><span class='object_link'><a href="SlashCommand.html" title="Discorb::ApplicationCommand::Command::SlashCommand (class)">Discorb::ApplicationCommand::Command::SlashCommand</a></span></tt> 
+    #<strong>slash</strong>(command_name, description, options = {}, dm_permission: true, default_permission: nil, &amp;block) -&gt; <tt><span class='object_link'><a href="ChatInputCommand.html" title="Discorb::ApplicationCommand::Command::ChatInputCommand (class)">Discorb::ApplicationCommand::Command::ChatInputCommand</a></span></tt> 
   
 
   
@@ -591,7 +591,7 @@ Discorb::ApplicationCommand::Command::SubcommandGroup</p>
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="SlashCommand.html" title="Discorb::ApplicationCommand::Command::SlashCommand (class)">Discorb::ApplicationCommand::Command::SlashCommand</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="ChatInputCommand.html" title="Discorb::ApplicationCommand::Command::ChatInputCommand (class)">Discorb::ApplicationCommand::Command::ChatInputCommand</a></span></tt>)</span>
       
       
       
@@ -630,7 +630,7 @@ Discorb::ApplicationCommand::Command::SubcommandGroup</p>
       <pre class="code"><span class="info file"># File 'lib/discorb/app_command/command.rb', line 250</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_slash'>slash</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>dm_permission:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>default_permission:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../ApplicationCommand.html" title="Discorb::ApplicationCommand (module)">ApplicationCommand</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Command.html" title="Discorb::ApplicationCommand::Command (class)">Command</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SlashCommand.html" title="Discorb::ApplicationCommand::Command::SlashCommand (class)">SlashCommand</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+  <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../ApplicationCommand.html" title="Discorb::ApplicationCommand (module)">ApplicationCommand</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Command.html" title="Discorb::ApplicationCommand::Command (class)">Command</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="ChatInputCommand.html" title="Discorb::ApplicationCommand::Command::ChatInputCommand (class)">ChatInputCommand</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
     <span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span>
     <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span>
     <span class='id identifier rubyid_options'>options</span><span class='comma'>,</span>
@@ -641,7 +641,7 @@ Discorb::ApplicationCommand::Command::SubcommandGroup</p>
     <span class='id identifier rubyid_dm_permission'>dm_permission</span><span class='comma'>,</span>
     <span class='id identifier rubyid_default_permission'>default_permission</span>
   <span class='rparen'>)</span>
-  <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_bottom_commands'>bottom_commands</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_command'>command</span>
+  <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_callable_commands'>callable_commands</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_command'>command</span>
   <span class='ivar'>@commands</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_command'>command</span>
   <span class='id identifier rubyid_command'>command</span>
 <span class='kw'>end</span></pre>
@@ -712,7 +712,7 @@ Discorb::ApplicationCommand::Command::SubcommandGroup</p>
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/5146f6debaa042834a25f325e4e876da7f01c3d3"><code>5146f6debaa042834a25f325e4e876da7f01c3d3</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/e8db8798c7bdbf8df3f358e12323eabee99a8412"><code>e8db8798c7bdbf8df3f358e12323eabee99a8412</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>

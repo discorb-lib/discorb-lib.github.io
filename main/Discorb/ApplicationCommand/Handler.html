@@ -186,7 +186,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#slash-instance_method" title="#slash (instance method)">#<strong>slash</strong>(command_name, description, options = {}, guild_ids: nil, dm_permission: true, default_permission: nil, &amp;block) -&gt; Discorb::ApplicationCommand::Command::SlashCommand </a>
+      <a href="#slash-instance_method" title="#slash (instance method)">#<strong>slash</strong>(command_name, description, options = {}, guild_ids: nil, dm_permission: true, default_permission: nil, &amp;block) -&gt; Discorb::ApplicationCommand::Command::ChatInputCommand </a>
     
 
     
@@ -771,7 +771,7 @@
       <div class="method_details ">
   <h3 class="signature " id="slash-instance_method">
   
-    #<strong>slash</strong>(command_name, description, options = {}, guild_ids: nil, dm_permission: true, default_permission: nil, &amp;block) -&gt; <tt><span class='object_link'><a href="Command/SlashCommand.html" title="Discorb::ApplicationCommand::Command::SlashCommand (class)">Discorb::ApplicationCommand::Command::SlashCommand</a></span></tt> 
+    #<strong>slash</strong>(command_name, description, options = {}, guild_ids: nil, dm_permission: true, default_permission: nil, &amp;block) -&gt; <tt><span class='object_link'><a href="Command/ChatInputCommand.html" title="Discorb::ApplicationCommand::Command::ChatInputCommand (class)">Discorb::ApplicationCommand::Command::ChatInputCommand</a></span></tt> 
   
 
   
@@ -931,7 +931,7 @@ If hash is passed, it must be a pair of Language code and Command description, a
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Command/SlashCommand.html" title="Discorb::ApplicationCommand::Command::SlashCommand (class)">Discorb::ApplicationCommand::Command::SlashCommand</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Command/ChatInputCommand.html" title="Discorb::ApplicationCommand::Command::ChatInputCommand (class)">Discorb::ApplicationCommand::Command::ChatInputCommand</a></span></tt>)</span>
       
       
       
@@ -1003,7 +1003,7 @@ If hash is passed, it must be a pair of Language code and Command description, a
   <span class='id identifier rubyid_description'>description</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>default:</span> <span class='id identifier rubyid_description'>description</span> <span class='rbrace'>}</span> <span class='kw'>if</span> <span class='id identifier rubyid_description'>description</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_command_name'>command_name</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../ApplicationCommand.html" title="Discorb::ApplicationCommand (module)">ApplicationCommand</a></span></span><span class='period'>.</span><span class='id identifier rubyid_modify_localization_hash'><span class='object_link'><a href="../ApplicationCommand.html#modify_localization_hash-class_method" title="Discorb::ApplicationCommand.modify_localization_hash (method)">modify_localization_hash</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_description'>description</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../ApplicationCommand.html" title="Discorb::ApplicationCommand (module)">ApplicationCommand</a></span></span><span class='period'>.</span><span class='id identifier rubyid_modify_localization_hash'><span class='object_link'><a href="../ApplicationCommand.html#modify_localization_hash-class_method" title="Discorb::ApplicationCommand.modify_localization_hash (method)">modify_localization_hash</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_description'>description</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../ApplicationCommand.html" title="Discorb::ApplicationCommand (module)">ApplicationCommand</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Command.html" title="Discorb::ApplicationCommand::Command (class)">Command</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Command/SlashCommand.html" title="Discorb::ApplicationCommand::Command::SlashCommand (class)">SlashCommand</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+  <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../ApplicationCommand.html" title="Discorb::ApplicationCommand (module)">ApplicationCommand</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Command.html" title="Discorb::ApplicationCommand::Command (class)">Command</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Command/ChatInputCommand.html" title="Discorb::ApplicationCommand::Command::ChatInputCommand (class)">ChatInputCommand</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
     <span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span>
     <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span>
     <span class='id identifier rubyid_options'>options</span><span class='comma'>,</span>
@@ -1015,7 +1015,7 @@ If hash is passed, it must be a pair of Language code and Command description, a
     <span class='id identifier rubyid_default_permission'>default_permission</span>
   <span class='rparen'>)</span>
   <span class='ivar'>@commands</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_command'>command</span>
-  <span class='ivar'>@bottom_commands</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_command'>command</span>
+  <span class='ivar'>@callable_commands</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_command'>command</span>
   <span class='id identifier rubyid_command'>command</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1434,7 +1434,7 @@ If hash is passed, it must be a pair of Language code and Command description, a
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/5146f6debaa042834a25f325e4e876da7f01c3d3"><code>5146f6debaa042834a25f325e4e876da7f01c3d3</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/e8db8798c7bdbf8df3f358e12323eabee99a8412"><code>e8db8798c7bdbf8df3f358e12323eabee99a8412</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
