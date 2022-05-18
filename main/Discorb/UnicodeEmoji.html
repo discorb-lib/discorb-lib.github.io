@@ -415,7 +415,11 @@
 257
 258
 259
-260</pre>
+260
+261
+262
+263
+264</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/discorb/emoji.rb', line 232</span>
@@ -438,14 +442,18 @@
     <span class='kw'>end</span>
     <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Invalid skin tone: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tone'>tone</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='ivar'>@skin_tone</span>
 
-    <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_name2'>name2</span><span class='period'>.</span><span class='id identifier rubyid_bytes'>bytes</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='id identifier rubyid__1'>_1</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='int'>16</span> <span class='rbrace'>}</span>
     <span class='ivar'>@name</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="EmojiTable.html" title="Discorb::EmojiTable (module)">EmojiTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="EmojiTable.html#UNICODE_TO_DISCORD-constant" title="Discorb::EmojiTable::UNICODE_TO_DISCORD (constant)">UNICODE_TO_DISCORD</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_name2'>name2</span><span class='rbracket'>]</span>
     <span class='ivar'>@value</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span>
   <span class='kw'>else</span>
     <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>No such emoji: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_tone'>tone</span><span class='period'>.</span><span class='id identifier rubyid_positive?'>positive?</span>
-    <span class='ivar'>@value</span> <span class='op'>+=</span> <span class='const'><span class='object_link'><a href="EmojiTable.html" title="Discorb::EmojiTable (module)">EmojiTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="EmojiTable.html#SKIN_TONES-constant" title="Discorb::EmojiTable::SKIN_TONES (constant)">SKIN_TONES</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_tone'>tone</span> <span class='op'>-</span> <span class='int'>1</span><span class='rbracket'>]</span>
+    <span class='kw'>unless</span> <span class='ivar'>@value</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="EmojiTable.html" title="Discorb::EmojiTable (module)">EmojiTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="EmojiTable.html#DISCORD_TO_UNICODE-constant" title="Discorb::EmojiTable::DISCORD_TO_UNICODE (constant)">DISCORD_TO_UNICODE</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>_tone</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tone'>tone</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Invalid skin tone for emoji: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='ivar'>@name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>_tone</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tone'>tone</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
     <span class='ivar'>@skin_tone</span> <span class='op'>=</span> <span class='id identifier rubyid_tone'>tone</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
@@ -658,12 +666,12 @@
       <pre class="lines">
 
 
-276
-277
-278</pre>
+280
+281
+282</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/emoji.rb', line 276</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/emoji.rb', line 280</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> :</span><span class='embexpr_beg'>#{</span><span class='ivar'>@name</span><span class='embexpr_end'>}</span><span class='tstring_content'>:&gt;</span><span class='tstring_end'>&quot;</span></span>
@@ -715,12 +723,12 @@
       <pre class="lines">
 
 
-263
-264
-265</pre>
+267
+268
+269</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/emoji.rb', line 263</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/emoji.rb', line 267</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
   <span class='ivar'>@value</span>
@@ -772,12 +780,12 @@
       <pre class="lines">
 
 
-272
-273
-274</pre>
+276
+277
+278</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/emoji.rb', line 272</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/emoji.rb', line 276</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_uri'>to_uri</span>
   <span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_encode_www_form_component'>encode_www_form_component</span><span class='lparen'>(</span><span class='ivar'>@value</span><span class='rparen'>)</span>
@@ -792,7 +800,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/9226d9c71cdaf90cda428cd4e9f269a0d109abe3"><code>9226d9c71cdaf90cda428cd4e9f269a0d109abe3</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/2a32e71da919e6ce56f692fc6bbb6b8e792841c0"><code>2a32e71da919e6ce56f692fc6bbb6b8e792841c0</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
