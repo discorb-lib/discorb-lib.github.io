@@ -517,12 +517,12 @@
       <pre class="lines">
 
 
-235
-236
-237</pre>
+237
+238
+239</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 235</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 237</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_converts'>converts</span>
   <span class='ivar'>@converts</span>
@@ -559,12 +559,12 @@
       <pre class="lines">
 
 
-235
-236
-237</pre>
+237
+238
+239</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 235</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 237</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_events'>events</span>
   <span class='ivar'>@events</span>
@@ -623,12 +623,12 @@
       <pre class="lines">
 
 
-110
 111
-112</pre>
+112
+113</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 110</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 111</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_changes'>changes</span>
   <span class='ivar'>@changes</span>
@@ -748,12 +748,12 @@
       <pre class="lines">
 
 
-116
 117
-118</pre>
+118
+119</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 116</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 117</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_options'>options</span>
   <span class='ivar'>@options</span>
@@ -807,12 +807,12 @@
       <pre class="lines">
 
 
-113
 114
-115</pre>
+115
+116</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 113</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 114</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_target'>target</span>
   <span class='ivar'>@target</span>
@@ -944,6 +944,7 @@
 <li><code>:thread_create</code></li>
 <li><code>:thread_update</code></li>
 <li><code>:thread_delete</code></li>
+<li><code>:application_command_permission_update</code>`</li>
 </ul>
 
 
@@ -975,12 +976,12 @@
       <pre class="lines">
 
 
-108
 109
-110</pre>
+110
+111</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 108</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 109</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_type'>type</span>
   <span class='ivar'>@type</span>
@@ -1037,7 +1038,7 @@
 </pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 118</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 119</span>
 
 </pre>
     </td>
@@ -1185,12 +1186,12 @@
       <pre class="lines">
 
 
-226
-227
-228</pre>
+228
+229
+230</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 226</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 228</span>
 
 <span class='kw'>def</span> <span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
   <span class='ivar'>@changes</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span>
@@ -1215,12 +1216,12 @@
       <pre class="lines">
 
 
-230
-231
-232</pre>
+232
+233
+234</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 230</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/audit_logs.rb', line 232</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='ivar'>@changes</span><span class='op'>&amp;.</span><span class='id identifier rubyid_data'>data</span><span class='op'>&amp;.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>No</span><span class='tstring_end'>&quot;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'> changes&gt;</span><span class='tstring_end'>&quot;</span></span>
@@ -1235,7 +1236,7 @@
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/a6845a33c83abcb9ebf1f50d224296c7fba3d340"><code>a6845a33c83abcb9ebf1f50d224296c7fba3d340</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/90ddf6ce47e4a9c7916687e68629cd9650eff364"><code>90ddf6ce47e4a9c7916687e68629cd9650eff364</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
