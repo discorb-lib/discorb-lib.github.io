@@ -130,12 +130,12 @@ This is useful for registering event handlers as default behavior, such as error
 </thead><tbody>
 <tr>
 <td><code>event_name</code></td>
-<td>Symbol</td>
+<td><code>Symbol</code></td>
 <td>The name of the event.</td>
 </tr>
 <tr>
 <td><code>data</code></td>
-<td>Hash</td>
+<td><code>Hash</code></td>
 <td>The data of the event.</td>
 </tr>
 </tbody></table>
@@ -156,6 +156,30 @@ This is useful for registering event handlers as default behavior, such as error
 
 <p>Fires when an error occurs during an event.
 Defaults to printing the error to stderr, override to handle it yourself.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>event_name</code></td>
+<td><code>Symbol</code></td>
+<td>The name of the event.</td>
+</tr>
+<tr>
+<td><code>args</code></td>
+<td><code>Array&lt;Object&gt;</code></td>
+<td>The arguments of the event.</td>
+</tr>
+<tr>
+<td><code>error</code></td>
+<td><code>Exception</code></td>
+<td>The error that occurred.</td>
+</tr>
+</tbody></table>
 
 <h4 id="setup"><code>setup()</code></h4>
 
@@ -1225,8 +1249,6 @@ Not like <a href="file._23message_delete.html" title="#message_delete">#message_
 </tr>
 </tbody></table>
 
-<h4 id="slash_command">`slash_command</h4>
-
 <h3 id="voice-events">Voice events</h3>
 
 <p>Because it&#39;s big, it&#39;s documented in <a href="file.voice_events.html" title="Voice Events">Voice Events</a>.</p>
@@ -1409,7 +1431,7 @@ Not like <a href="file._23message_delete.html" title="#message_delete">#message_
 </div></div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/ca5964a50ac6303346ae6cee4b0b89af64e4569d"><code>ca5964a50ac6303346ae6cee4b0b89af64e4569d</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/747cdcfa84fa662858a08828fd8e011a258fe024"><code>747cdcfa84fa662858a08828fd8e011a258fe024</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>

@@ -1506,7 +1506,8 @@ If block is given, trigger typing indicator during executing block.</p>
 274
 275
 276
-277</pre>
+277
+278</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/discorb/modules.rb', line 259</span>
@@ -1520,10 +1521,11 @@ If block is given, trigger typing indicator during executing block.</p>
           <span class='id identifier rubyid_sleep'>sleep</span><span class='lparen'>(</span><span class='int'>5</span><span class='rparen'>)</span>
         <span class='kw'>end</span>
       <span class='kw'>end</span>
-      <span class='kw'>yield</span>
+      <span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='kw'>yield</span>
     <span class='kw'>ensure</span>
       <span class='id identifier rubyid_post_task'>post_task</span><span class='period'>.</span><span class='id identifier rubyid_stop'>stop</span>
     <span class='kw'>end</span>
+    <span class='id identifier rubyid_ret'>ret</span>
   <span class='kw'>else</span>
     <span class='const'>Async</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid__task'>_task</span><span class='op'>|</span>
       <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/channels/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/typing</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//channels/:channel_id/typing</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:post</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
@@ -1643,7 +1645,7 @@ If block is given, trigger typing indicator during executing block.</p>
 </div>
 
     <div id="footer">
-    Generated from <a href="https://github.com/discorb-lib/discorb/tree/ca5964a50ac6303346ae6cee4b0b89af64e4569d"><code>ca5964a50ac6303346ae6cee4b0b89af64e4569d</code></a>, version (main), with YARD 0.9.27.
+    Generated from <a href="https://github.com/discorb-lib/discorb/tree/747cdcfa84fa662858a08828fd8e011a258fe024"><code>747cdcfa84fa662858a08828fd8e011a258fe024</code></a>, version (main), with YARD 0.9.27.
     </div>
 
     </div>
