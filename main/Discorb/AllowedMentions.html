@@ -417,10 +417,10 @@
       <pre class="code"><span class="info file"># File 'lib/discorb/allowed_mentions.rb', line 25</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='label'>everyone:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>roles:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>users:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>replied_user:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
-  <span class='ivar'>@everyone</span> <span class='op'>=</span> <span class='id identifier rubyid_everyone'>everyone</span>
+  <span class='ivar'>@everyone</span> <span class='op'>=</span> <span class='op'>!</span><span class='id identifier rubyid_everyone'>everyone</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
   <span class='ivar'>@roles</span> <span class='op'>=</span> <span class='id identifier rubyid_roles'>roles</span>
   <span class='ivar'>@users</span> <span class='op'>=</span> <span class='id identifier rubyid_users'>users</span>
-  <span class='ivar'>@replied_user</span> <span class='op'>=</span> <span class='id identifier rubyid_replied_user'>replied_user</span>
+  <span class='ivar'>@replied_user</span> <span class='op'>=</span> <span class='op'>!</span><span class='op'>!</span><span class='id identifier rubyid_replied_user'>replied_user</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -746,7 +746,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Jun  3 12:24:59 2022 by
+  Generated on Fri Jun  3 13:28:50 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>
