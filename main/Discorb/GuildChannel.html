@@ -737,7 +737,7 @@
       <pre class="code"><span class="info file"># File 'lib/discorb/channel/guild.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='op'>&lt;=&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
-  <span class='kw'>return</span> <span class='int'>0</span> <span class='kw'>unless</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:position</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:position</span><span class='rparen'>)</span>
 
   <span class='ivar'>@position</span> <span class='op'>&lt;=&gt;</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_position'>position</span>
 <span class='kw'>end</span></pre>
@@ -958,7 +958,6 @@
       <pre class="lines">
 
 
-211
 212
 213
 214
@@ -970,10 +969,11 @@
 220
 221
 222
-223</pre>
+223
+224</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel/guild.rb', line 211</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel/guild.rb', line 212</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create_invite'>create_invite</span><span class='lparen'>(</span><span class='label'>max_age:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>max_uses:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>temporary:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>unique:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -1167,17 +1167,17 @@
       <pre class="lines">
 
 
-171
 172
 173
 174
 175
 176
 177
-178</pre>
+178
+179</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel/guild.rb', line 171</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel/guild.rb', line 172</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete_permissions'>delete_permissions</span><span class='lparen'>(</span><span class='id identifier rubyid_target'>target</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -1234,16 +1234,16 @@
       <pre class="lines">
 
 
-190
 191
 192
 193
 194
 195
-196</pre>
+196
+197</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel/guild.rb', line 190</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel/guild.rb', line 191</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fetch_invites'>fetch_invites</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -1469,14 +1469,16 @@
 122
 123
 124
-125</pre>
+125
+126</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/discorb/channel/guild.rb', line 115</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_move'>move</span><span class='lparen'>(</span><span class='id identifier rubyid_position'>position</span><span class='comma'>,</span> <span class='label'>lock_permissions:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>parent:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
-    <span class='id identifier rubyid_payload'>payload</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+    <span class='comment'># @type var payload: Hash[Symbol, untyped]
+</span>    <span class='id identifier rubyid_payload'>payload</span> <span class='op'>=</span> <span class='lbrace'>{</span>
       <span class='label'>position:</span> <span class='id identifier rubyid_position'>position</span><span class='comma'>,</span>
     <span class='rbrace'>}</span>
     <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:lock_permissions</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_lock_permissions'>lock_permissions</span>
@@ -1625,7 +1627,6 @@
       <pre class="lines">
 
 
-137
 138
 139
 140
@@ -1643,10 +1644,11 @@
 152
 153
 154
-155</pre>
+155
+156</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/channel/guild.rb', line 137</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/channel/guild.rb', line 138</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set_permissions'>set_permissions</span><span class='lparen'>(</span><span class='id identifier rubyid_target'>target</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_perms'>perms</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -1734,7 +1736,7 @@
 </div>
 
       <div id="footer">
-  Generated on Tue Jun  7 10:17:51 2022 by
+  Generated on Tue Jun  7 11:12:21 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>
