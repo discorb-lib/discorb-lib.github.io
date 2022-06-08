@@ -1450,7 +1450,7 @@
       <pre class="code"><span class="info file"># File 'lib/discorb/role.rb', line 71</span>
 
 <span class='kw'>def</span> <span class='op'>&lt;=&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
-  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="" title="Discorb::Role (class)">Role</a></span></span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="" title="Discorb::Role (class)">Role</a></span></span><span class='rparen'>)</span>
 
   <span class='ivar'>@position</span> <span class='op'>&lt;=&gt;</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_position'>position</span>
 <span class='kw'>end</span></pre>
@@ -2132,7 +2132,7 @@ Specify value to set the value, if not don&#39;t specify or specify <code>Discor
 </div>
 
       <div id="footer">
-  Generated on Wed Jun  8 07:14:54 2022 by
+  Generated on Wed Jun  8 08:19:37 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>
