@@ -594,7 +594,7 @@
         <span class='name'>color</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Color.html" title="Discorb::Color (class)">Discorb::Color</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Color.html" title="Discorb::Color (class)">Discorb::Color</a></span></tt>, <tt>Integer</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>nil</tt>)</em>
@@ -778,7 +778,7 @@
   <span class='ivar'>@description</span> <span class='op'>=</span> <span class='id identifier rubyid_description'>description</span>
   <span class='ivar'>@url</span> <span class='op'>=</span> <span class='id identifier rubyid_url'>url</span>
   <span class='ivar'>@timestamp</span> <span class='op'>=</span> <span class='id identifier rubyid_timestamp'>timestamp</span>
-  <span class='ivar'>@color</span> <span class='op'>=</span> <span class='id identifier rubyid_color'>color</span>
+  <span class='ivar'>@color</span> <span class='op'>=</span> <span class='id identifier rubyid_color'>color</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_color'>color</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Color.html" title="Discorb::Color (class)">Color</a></span></span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_color'>color</span> <span class='op'>:</span> <span class='const'><span class='object_link'><a href="Color.html" title="Discorb::Color (class)">Color</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Color.html#initialize-instance_method" title="Discorb::Color#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_color'>color</span><span class='rparen'>)</span><span class='rparen'>)</span>
   <span class='ivar'>@author</span> <span class='op'>=</span> <span class='id identifier rubyid_author'>author</span>
   <span class='ivar'>@fields</span> <span class='op'>=</span> <span class='id identifier rubyid_fields'>fields</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
   <span class='ivar'>@footer</span> <span class='op'>=</span> <span class='id identifier rubyid_footer'>footer</span>
@@ -1615,7 +1615,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Jun 11 21:11:06 2022 by
+  Generated on Sat Jun 11 22:12:07 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>
