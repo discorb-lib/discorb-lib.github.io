@@ -120,7 +120,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#limit-instance_method" title="#limit (instance method)">#<strong>limit</strong> -&gt; Numeric </a>
+      <a href="#limit-instance_method" title="#limit (instance method)">#<strong>limit</strong> -&gt; Integer </a>
     
 
     
@@ -463,7 +463,7 @@
         <span class='name'>limit</span>
       
       
-        <span class='type'>(<tt>Numeric</tt>)</span>
+        <span class='type'>(<tt>Integer</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>nil</tt>)</em>
@@ -588,7 +588,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="limit-instance_method">
   
-    #<strong>limit</strong> -&gt; <tt>Numeric</tt> 
+    #<strong>limit</strong> -&gt; <tt>Integer</tt> 
   
 
   
@@ -609,7 +609,7 @@
     <li>
       
       
-        <span class='type'>(<tt>Numeric</tt>)</span>
+        <span class='type'>(<tt>Integer</tt>)</span>
       
       
       
@@ -686,7 +686,7 @@
         <span class='name'>index</span>
       
       
-        <span class='type'>(<tt>Numeric</tt>)</span>
+        <span class='type'>(<tt>Integer</tt>)</span>
       
       
       
@@ -801,7 +801,7 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='ivar'>@cache</span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbracket'>]</span>
-  <span class='kw'>if</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_id'>id</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Numeric</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_id'>id</span> <span class='op'>&lt;</span> <span class='ivar'>@cache</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_id'>id</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Integer</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_id'>id</span> <span class='op'>&lt;</span> <span class='ivar'>@cache</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
     <span class='ivar'>@cache</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='rbracket'>]</span>
   <span class='kw'>else</span>
     <span class='id identifier rubyid_res'>res</span>
@@ -1303,7 +1303,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Jun 12 07:12:49 2022 by
+  Generated on Sun Jun 12 08:15:53 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>
