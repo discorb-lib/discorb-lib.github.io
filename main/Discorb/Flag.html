@@ -128,7 +128,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#bits-class_method" title="bits (class method)">.<strong>bits</strong> -&gt; Hash{Integer =&gt; Symbol} </a>
+      <a href="#bits-class_method" title="bits (class method)">.<strong>bits</strong> -&gt; Hash{Numeric =&gt; Symbol} </a>
     
 
     
@@ -161,7 +161,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#value-instance_method" title="#value (instance method)">#<strong>value</strong> -&gt; Integer </a>
+      <a href="#value-instance_method" title="#value (instance method)">#<strong>value</strong> -&gt; Numeric </a>
     
 
     
@@ -255,7 +255,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#max_value-class_method" title="max_value (class method)">.<strong>max_value</strong> -&gt; Integer </a>
+      <a href="#max_value-class_method" title="max_value (class method)">.<strong>max_value</strong> -&gt; Numeric </a>
     
 
     
@@ -553,7 +553,7 @@
         <span class='name'>value</span>
       
       
-        <span class='type'>(<tt>Integer</tt>)</span>
+        <span class='type'>(<tt>Numeric</tt>)</span>
       
       
       
@@ -586,7 +586,7 @@
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='ivar'>@value</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
   <span class='ivar'>@values</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_bits'>bits</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_bn'>bn</span><span class='comma'>,</span> <span class='id identifier rubyid_bv'>bv</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid__i'>_i</span><span class='op'>|</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_bits'>bits</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_bn'>bn</span><span class='comma'>,</span> <span class='id identifier rubyid_bv'>bv</span><span class='op'>|</span>
     <span class='ivar'>@values</span><span class='lbracket'>[</span><span class='id identifier rubyid_bn'>bn</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span> <span class='op'>&amp;</span> <span class='lparen'>(</span><span class='int'>1</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_bv'>bv</span><span class='rparen'>)</span> <span class='op'>!=</span> <span class='int'>0</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
@@ -661,7 +661,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="bits-class_method">
   
-    .<strong>bits</strong> -&gt; <tt>Hash{Integer =&gt; Symbol}</tt>  <span class="extras">(readonly)</span>
+    .<strong>bits</strong> -&gt; <tt>Hash{Numeric =&gt; Symbol}</tt>  <span class="extras">(readonly)</span>
   
 
   
@@ -682,7 +682,7 @@
     <li>
       
       
-        <span class='type'>(<tt>Hash{Integer =&gt; Symbol}</tt>)</span>
+        <span class='type'>(<tt>Hash{Numeric =&gt; Symbol}</tt>)</span>
       
       
       
@@ -725,7 +725,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="value-instance_method">
   
-    #<strong>value</strong> -&gt; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+    #<strong>value</strong> -&gt; <tt>Numeric</tt>  <span class="extras">(readonly)</span>
   
 
   
@@ -746,7 +746,7 @@
     <li>
       
       
-        <span class='type'>(<tt>Integer</tt>)</span>
+        <span class='type'>(<tt>Numeric</tt>)</span>
       
       
       
@@ -892,7 +892,7 @@
       <div class="method_details ">
   <h3 class="signature " id="max_value-class_method">
   
-    .<strong>max_value</strong> -&gt; <tt>Integer</tt> 
+    .<strong>max_value</strong> -&gt; <tt>Numeric</tt> 
   
 
   
@@ -913,7 +913,7 @@
     <li>
       
       
-        <span class='type'>(<tt>Integer</tt>)</span>
+        <span class='type'>(<tt>Numeric</tt>)</span>
       
       
       
@@ -1434,7 +1434,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Jun 12 05:11:48 2022 by
+  Generated on Sun Jun 12 06:16:57 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>
