@@ -1548,6 +1548,29 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#create_automod_rule-instance_method" title="#create_automod_rule (instance method)">#<strong>create_automod_rule</strong>(name, trigger_type, actions, event_type = :send_message, enabled: false, exempt_roles: [], exempt_channels: [], keyword_filter: nil, presets: nil, reason: nil) -&gt; Async::Task&lt;Discorb::AutoModRule&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Create a new automod rule in the guild.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#create_category_channel-instance_method" title="#create_category_channel (instance method)">#<strong>create_category_channel</strong>(name, position: nil, permission_overwrites: nil, parent: nil, reason: nil) -&gt; Async::Task&lt;Discorb::CategoryChannel&gt; </a>
     
 
@@ -1820,6 +1843,54 @@
 
   
     <span class="summary_desc"><div class='inline'><p>Fetch audit log of the guild.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#fetch_automod_rule-instance_method" title="#fetch_automod_rule (instance method)">#<strong>fetch_automod_rule</strong>(id) -&gt; Async::Task&lt;Array&lt;Discord::AutoModRule&gt;&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Fetch the automod rule by ID.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#fetch_automod_rules-instance_method" title="#fetch_automod_rules (instance method)">#<strong>fetch_automod_rules</strong> -&gt; Async::Task&lt;Array&lt;Discorb::AutoModRule&gt;&gt; </a>
+    
+
+    
+      (also: #fetch_automod_rule_list)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Fetch the automod rules in the guild.</p>
 </div></span>
   
 </li>
@@ -5503,12 +5574,12 @@
       <pre class="lines">
 
 
-1290
-1291
-1292</pre>
+1384
+1385
+1386</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 1290</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 1384</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_banner'>banner</span><span class='lparen'>(</span><span class='id identifier rubyid_guild_id'>guild_id</span><span class='comma'>,</span> <span class='label'>style:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>banner</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#API_BASE_URL-constant" title="Discorb::API_BASE_URL (constant)">API_BASE_URL</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>/guilds/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_guild_id'>guild_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/widget.png&amp;style=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_style'>style</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -5729,6 +5800,303 @@
 <span class='kw'>def</span> <span class='id identifier rubyid_banned?'>banned?</span><span class='lparen'>(</span><span class='id identifier rubyid_user'>user</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
     <span class='op'>!</span><span class='id identifier rubyid_fetch_ban'>fetch_ban</span><span class='lparen'>(</span><span class='id identifier rubyid_user'>user</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_automod_rule-instance_method">
+  
+    #<strong>create_automod_rule</strong>(name, trigger_type, actions, event_type = :send_message, enabled: false, exempt_roles: [], exempt_channels: [], keyword_filter: nil, presets: nil, reason: nil) -&gt; <tt>Async::Task&lt;<span class='object_link'><a href="AutoModRule.html" title="Discorb::AutoModRule (class)">Discorb::AutoModRule</a></span>&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Create a new automod rule in the guild.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the rule.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>trigger_type</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The trigger type of the rule. See <span class='object_link'>AutoModRule::TRIGGER_TYPES</span>.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>actions</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="AutoModRule/Action.html" title="Discorb::AutoModRule::Action (class)">Discorb::AutoModRule::Action</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The actions of the rule.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>event_type</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:send_message</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The event type of the rule. See <span class='object_link'>AutoModRule::EVENT_TYPES</span>.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>enabled</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether the rule is enabled or not.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>exempt_roles</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Role.html" title="Discorb::Role (class)">Discorb::Role</a></span>&gt;</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>[]</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The roles that are exempt from the rule.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>exempt_channels</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Channel.html" title="Discorb::Channel (class)">Discorb::Channel</a></span>&gt;</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>[]</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The channels that are exempt from the rule.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>keyword_filter</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The keywords to filter.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>presets</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The preset of the rule. See <span class='object_link'>AutoModRule::PRESET_TYPES</span>.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>reason</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The reason for creating the rule.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Async::Task&lt;<span class='object_link'><a href="AutoModRule.html" title="Discorb::AutoModRule (class)">Discorb::AutoModRule</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The automod rule.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1187
+1188
+1189
+1190
+1191
+1192
+1193
+1194
+1195
+1196
+1197
+1198
+1199
+1200
+1201
+1202
+1203
+1204
+1205
+1206
+1207
+1208
+1209
+1210
+1211
+1212
+1213
+1214
+1215
+1216
+1217
+1218
+1219
+1220
+1221
+1222
+1223
+1224
+1225</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 1187</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_automod_rule'>create_automod_rule</span><span class='lparen'>(</span>
+  <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
+  <span class='id identifier rubyid_trigger_type'>trigger_type</span><span class='comma'>,</span>
+  <span class='id identifier rubyid_actions'>actions</span><span class='comma'>,</span>
+  <span class='id identifier rubyid_event_type'>event_type</span> <span class='op'>=</span> <span class='symbol'>:send_message</span><span class='comma'>,</span>
+  <span class='label'>enabled:</span> <span class='kw'>false</span><span class='comma'>,</span>
+  <span class='label'>exempt_roles:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='label'>exempt_channels:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='label'>keyword_filter:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+  <span class='label'>presets:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+  <span class='label'>reason:</span> <span class='kw'>nil</span>
+<span class='rparen'>)</span>
+  <span class='const'>Async</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_payload'>payload</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+      <span class='label'>name:</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
+      <span class='label'>event_type:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="AutoModRule.html" title="Discorb::AutoModRule (class)">AutoModRule</a></span></span><span class='op'>::</span><span class='const'>EVENT_TYPES</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='lparen'>(</span><span class='id identifier rubyid_event_type'>event_type</span><span class='rparen'>)</span><span class='comma'>,</span>
+      <span class='label'>trigger_type:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="AutoModRule.html" title="Discorb::AutoModRule (class)">AutoModRule</a></span></span><span class='op'>::</span><span class='const'>TRIGGER_TYPES</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='lparen'>(</span><span class='id identifier rubyid_trigger_type'>trigger_type</span><span class='rparen'>)</span><span class='comma'>,</span>
+      <span class='label'>metadata:</span> <span class='lbrace'>{</span>
+        <span class='label'>keyword_filter:</span> <span class='id identifier rubyid_keyword_filter'>keyword_filter</span><span class='comma'>,</span>
+        <span class='label'>presets:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="AutoModRule.html" title="Discorb::AutoModRule (class)">AutoModRule</a></span></span><span class='op'>::</span><span class='const'>PRESET_TYPES</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='lparen'>(</span><span class='id identifier rubyid_presets'>presets</span><span class='rparen'>)</span><span class='comma'>,</span>
+      <span class='rbrace'>}</span><span class='comma'>,</span>
+      <span class='label'>actions:</span> <span class='id identifier rubyid_actions'>actions</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_hash</span><span class='rparen'>)</span><span class='comma'>,</span>
+      <span class='label'>enabled:</span> <span class='id identifier rubyid_enabled'>enabled</span><span class='comma'>,</span>
+      <span class='label'>exempt_roles:</span> <span class='id identifier rubyid_exempt_roles'>exempt_roles</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:id</span><span class='rparen'>)</span><span class='comma'>,</span>
+      <span class='label'>exempt_channels:</span> <span class='id identifier rubyid_exempt_channels'>exempt_channels</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:id</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='rbrace'>}</span>
+
+    <span class='id identifier rubyid__resp'>_resp</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span>
+      <span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/guilds/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/auto-moderation/rules</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//guilds/:guild_id/auto-moderation/rules</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='symbol'>:post</span>
+      <span class='rparen'>)</span><span class='comma'>,</span>
+      <span class='id identifier rubyid_payload'>payload</span><span class='comma'>,</span>
+      <span class='label'>audit_log_reason:</span> <span class='id identifier rubyid_reason'>reason</span>
+    <span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="AutoModRule.html" title="Discorb::AutoModRule (class)">AutoModRule</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@client</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -7844,6 +8212,171 @@
     <span class='id identifier rubyid__resp'>_resp</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/guilds/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/audit-logs</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//guilds/:guild_id/audit-logs</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
                                                  <span class='symbol'>:get</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
     <span class='const'><span class='object_link'><a href="AuditLog.html" title="Discorb::AuditLog (class)">AuditLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@client</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="fetch_automod_rule-instance_method">
+  
+    #<strong>fetch_automod_rule</strong>(id) -&gt; <tt>Async::Task&lt;Array&lt;Discord::AutoModRule&gt;&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Fetch the automod rule by ID.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>#to_s</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The ID of the automod rule.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Async::Task&lt;Array&lt;Discord::AutoModRule&gt;&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The automod rule.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1157
+1158
+1159
+1160
+1161
+1162
+1163
+1164
+1165
+1166
+1167
+1168</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 1157</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_fetch_automod_rule'>fetch_automod_rule</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+  <span class='const'>Async</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid__resp'>_resp</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span>
+      <span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/guilds/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/auto-moderation/rules/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//guilds/:guild_id/auto-moderation/rules/:rule_id</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='symbol'>:get</span>
+      <span class='rparen'>)</span>
+    <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
+    <span class='const'><span class='object_link'><a href="AutoModRule.html" title="Discorb::AutoModRule (class)">AutoModRule</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@client</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="fetch_automod_rules-instance_method">
+  
+    #<strong>fetch_automod_rules</strong> -&gt; <tt>Async::Task&lt;Array&lt;<span class='object_link'><a href="AutoModRule.html" title="Discorb::AutoModRule (class)">Discorb::AutoModRule</a></span>&gt;&gt;</tt> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='fetch_automod_rule_list-instance_method'>fetch_automod_rule_list</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Fetch the automod rules in the guild.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Async::Task&lt;Array&lt;<span class='object_link'><a href="AutoModRule.html" title="Discorb::AutoModRule (class)">Discorb::AutoModRule</a></span>&gt;&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The automod rules.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1139
+1140
+1141
+1142
+1143
+1144
+1145
+1146</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 1139</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_fetch_automod_rules'>fetch_automod_rules</span>
+  <span class='const'>Async</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid__resp'>_resp</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span>
+      <span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/guilds/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/auto-moderation/rules</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//guilds/:guild_id/auto-moderation/rules</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:get</span><span class='rparen'>)</span>
+    <span class='rparen'>)</span>
+    <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_d'>d</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="AutoModRule.html" title="Discorb::AutoModRule (class)">AutoModRule</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@client</span><span class='comma'>,</span> <span class='id identifier rubyid_d'>d</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -10363,7 +10896,7 @@ Defaults to <code>true</code>.</p>
 </div>
 
       <div id="footer">
-  Generated on Sat Jun 25 13:21:43 2022 by
+  Generated on Sat Jun 25 14:11:41 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>

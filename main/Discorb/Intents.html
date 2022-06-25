@@ -206,7 +206,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(guilds: true, members: false, bans: true, emojis: true, integrations: true, webhooks: true, invites: true, voice_states: true, presences: false, messages: true, reactions: true, typing: true, dm_messages: true, dm_reactions: true, dm_typing: true, message_content: nil, scheduled_events: true) -&gt; Intents </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(guilds: true, members: false, bans: true, emojis: true, integrations: true, webhooks: true, invites: true, voice_states: true, presences: false, messages: true, reactions: true, typing: true, dm_messages: true, dm_reactions: true, dm_typing: true, message_content: nil, scheduled_events: true, automod_configuration: true, automod_execution: true) -&gt; Intents </a>
     
 
     
@@ -349,7 +349,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(guilds: true, members: false, bans: true, emojis: true, integrations: true, webhooks: true, invites: true, voice_states: true, presences: false, messages: true, reactions: true, typing: true, dm_messages: true, dm_reactions: true, dm_typing: true, message_content: nil, scheduled_events: true) -&gt; <tt><span class='object_link'><a href="" title="Discorb::Intents (class)">Intents</a></span></tt> 
+    #<strong>initialize</strong>(guilds: true, members: false, bans: true, emojis: true, integrations: true, webhooks: true, invites: true, voice_states: true, presences: false, messages: true, reactions: true, typing: true, dm_messages: true, dm_reactions: true, dm_typing: true, message_content: nil, scheduled_events: true, automod_configuration: true, automod_execution: true) -&gt; <tt><span class='object_link'><a href="" title="Discorb::Intents (class)">Intents</a></span></tt> 
   
 
   
@@ -653,6 +653,40 @@ You should specify <code>message_content</code> intent for preventing unexpected
       
     </li>
   
+    <li>
+      
+        <span class='name'>automod_configuration</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether automod configuration related events are enabled.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>automod_execution</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether automod execution related events are enabled.</p>
+</div>
+      
+    </li>
+  
 </ul>
 
 
@@ -662,9 +696,6 @@ You should specify <code>message_content</code> intent for preventing unexpected
       <pre class="lines">
 
 
-53
-54
-55
 56
 57
 58
@@ -698,28 +729,41 @@ You should specify <code>message_content</code> intent for preventing unexpected
 86
 87
 88
-89</pre>
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 56</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='label'>guilds:</span> <span class='kw'>true</span><span class='comma'>,</span>
-               <span class='label'>members:</span> <span class='kw'>false</span><span class='comma'>,</span>
-               <span class='label'>bans:</span> <span class='kw'>true</span><span class='comma'>,</span>
-               <span class='label'>emojis:</span> <span class='kw'>true</span><span class='comma'>,</span>
-               <span class='label'>integrations:</span> <span class='kw'>true</span><span class='comma'>,</span>
-               <span class='label'>webhooks:</span> <span class='kw'>true</span><span class='comma'>,</span>
-               <span class='label'>invites:</span> <span class='kw'>true</span><span class='comma'>,</span>
-               <span class='label'>voice_states:</span> <span class='kw'>true</span><span class='comma'>,</span>
-               <span class='label'>presences:</span> <span class='kw'>false</span><span class='comma'>,</span>
-               <span class='label'>messages:</span> <span class='kw'>true</span><span class='comma'>,</span>
-               <span class='label'>reactions:</span> <span class='kw'>true</span><span class='comma'>,</span>
-               <span class='label'>typing:</span> <span class='kw'>true</span><span class='comma'>,</span>
-               <span class='label'>dm_messages:</span> <span class='kw'>true</span><span class='comma'>,</span>
-               <span class='label'>dm_reactions:</span> <span class='kw'>true</span><span class='comma'>,</span>
-               <span class='label'>dm_typing:</span> <span class='kw'>true</span><span class='comma'>,</span>
-               <span class='label'>message_content:</span> <span class='kw'>nil</span><span class='comma'>,</span>
-               <span class='label'>scheduled_events:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span>
+  <span class='label'>guilds:</span> <span class='kw'>true</span><span class='comma'>,</span>
+  <span class='label'>members:</span> <span class='kw'>false</span><span class='comma'>,</span>
+  <span class='label'>bans:</span> <span class='kw'>true</span><span class='comma'>,</span>
+  <span class='label'>emojis:</span> <span class='kw'>true</span><span class='comma'>,</span>
+  <span class='label'>integrations:</span> <span class='kw'>true</span><span class='comma'>,</span>
+  <span class='label'>webhooks:</span> <span class='kw'>true</span><span class='comma'>,</span>
+  <span class='label'>invites:</span> <span class='kw'>true</span><span class='comma'>,</span>
+  <span class='label'>voice_states:</span> <span class='kw'>true</span><span class='comma'>,</span>
+  <span class='label'>presences:</span> <span class='kw'>false</span><span class='comma'>,</span>
+  <span class='label'>messages:</span> <span class='kw'>true</span><span class='comma'>,</span>
+  <span class='label'>reactions:</span> <span class='kw'>true</span><span class='comma'>,</span>
+  <span class='label'>typing:</span> <span class='kw'>true</span><span class='comma'>,</span>
+  <span class='label'>dm_messages:</span> <span class='kw'>true</span><span class='comma'>,</span>
+  <span class='label'>dm_reactions:</span> <span class='kw'>true</span><span class='comma'>,</span>
+  <span class='label'>dm_typing:</span> <span class='kw'>true</span><span class='comma'>,</span>
+  <span class='label'>message_content:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+  <span class='label'>scheduled_events:</span> <span class='kw'>true</span><span class='comma'>,</span>
+  <span class='label'>automod_configuration:</span> <span class='kw'>true</span><span class='comma'>,</span>
+  <span class='label'>automod_execution:</span> <span class='kw'>true</span>
+<span class='rparen'>)</span>
   <span class='ivar'>@raw_value</span> <span class='op'>=</span> <span class='lbrace'>{</span>
     <span class='label'>guilds:</span> <span class='id identifier rubyid_guilds'>guilds</span><span class='comma'>,</span>
     <span class='label'>members:</span> <span class='id identifier rubyid_members'>members</span><span class='comma'>,</span>
@@ -738,6 +782,8 @@ You should specify <code>message_content</code> intent for preventing unexpected
     <span class='label'>dm_typing:</span> <span class='id identifier rubyid_dm_typing'>dm_typing</span><span class='comma'>,</span>
     <span class='label'>message_content:</span> <span class='id identifier rubyid_message_content'>message_content</span><span class='comma'>,</span>
     <span class='label'>scheduled_events:</span> <span class='id identifier rubyid_scheduled_events'>scheduled_events</span><span class='comma'>,</span>
+    <span class='label'>automod_configuration:</span> <span class='id identifier rubyid_automod_configuration'>automod_configuration</span><span class='comma'>,</span>
+    <span class='label'>automod_execution:</span> <span class='id identifier rubyid_automod_execution'>automod_execution</span><span class='comma'>,</span>
   <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -778,20 +824,20 @@ You should specify <code>message_content</code> intent for preventing unexpected
       <pre class="lines">
 
 
-94
-95
-96
-97
-98
-99
-100
-101
-102
 103
-104</pre>
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 94</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 103</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='ivar'>@raw_value</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
@@ -841,12 +887,12 @@ You should specify <code>message_content</code> intent for preventing unexpected
       <pre class="lines">
 
 
-144
-145
-146</pre>
+153
+154
+155</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 144</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 153</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_all'>all</span>
   <span class='id identifier rubyid_from_value'>from_value</span><span class='lparen'>(</span><span class='const'>INTENT_BITS</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_reduce'>reduce</span><span class='lparen'>(</span><span class='symbol'>:+</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -900,16 +946,16 @@ You should specify <code>message_content</code> intent for preventing unexpected
       <pre class="lines">
 
 
-131
-132
-133
-134
-135
-136
-137</pre>
+140
+141
+142
+143
+144
+145
+146</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 131</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 140</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_from_value'>from_value</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raw_value'>raw_value</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
@@ -948,12 +994,12 @@ You should specify <code>message_content</code> intent for preventing unexpected
       <pre class="lines">
 
 
-149
-150
-151</pre>
+158
+159
+160</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 149</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 158</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_none'>none</span>
   <span class='id identifier rubyid_from_value'>from_value</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span>
@@ -984,12 +1030,12 @@ You should specify <code>message_content</code> intent for preventing unexpected
       <pre class="lines">
 
 
-120
-121
-122</pre>
+129
+130
+131</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 120</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 129</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> value=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_value'>value</span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
@@ -1036,12 +1082,12 @@ You should specify <code>message_content</code> intent for preventing unexpected
       <pre class="lines">
 
 
-106
-107
-108</pre>
+115
+116
+117</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 106</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 115</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_respond_to_missing?'>respond_to_missing?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_include_private'>include_private</span><span class='rparen'>)</span>
   <span class='ivar'>@raw_value</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='kw'>true</span> <span class='op'>:</span> <span class='kw'>super</span>
@@ -1066,12 +1112,12 @@ You should specify <code>message_content</code> intent for preventing unexpected
       <pre class="lines">
 
 
-124
-125
-126</pre>
+133
+134
+135</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 124</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 133</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_h'>to_h</span>
   <span class='ivar'>@raw_value</span>
@@ -1123,16 +1169,16 @@ You should specify <code>message_content</code> intent for preventing unexpected
       <pre class="lines">
 
 
-112
-113
-114
-115
-116
-117
-118</pre>
+121
+122
+123
+124
+125
+126
+127</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 112</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/intents.rb', line 121</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_value'>value</span>
   <span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='int'>0</span>
@@ -1151,7 +1197,7 @@ You should specify <code>message_content</code> intent for preventing unexpected
 </div>
 
       <div id="footer">
-  Generated on Sat Jun 25 13:21:44 2022 by
+  Generated on Sat Jun 25 14:11:41 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>

@@ -1350,6 +1350,78 @@ Not like <a href="file._23message_delete.html" title="#message_delete">#message_
 </tr>
 </tbody></table>
 
+<h3 id="automod-events">Automod events</h3>
+
+<h4 id="auto_moderation_rule_create-rule"><code>auto_moderation_rule_create(rule)</code></h4>
+
+<p>Fires when an auto moderation rule is created.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>rule</code></td>
+<td><span class='object_link'><a href="Discorb/AutoModRule.html" title="Discorb::AutoModRule (class)">Discorb::AutoModRule</a></span></td>
+<td>The created auto moderation rule.</td>
+</tr>
+</tbody></table>
+
+<h4 id="auto_moderation_rule_update-rule"><code>auto_moderation_rule_update(rule)</code></h4>
+
+<p>Fires when an auto moderation rule is updated.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>rule</code></td>
+<td><span class='object_link'><a href="Discorb/AutoModRule.html" title="Discorb::AutoModRule (class)">Discorb::AutoModRule</a></span></td>
+<td>The updated auto moderation rule.</td>
+</tr>
+</tbody></table>
+
+<h4 id="auto_moderation_rule_delete-rule"><code>auto_moderation_rule_delete(rule)</code></h4>
+
+<p>Fires when an auto moderation rule is deleted.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>rule</code></td>
+<td><span class='object_link'><a href="Discorb/AutoModRule.html" title="Discorb::AutoModRule (class)">Discorb::AutoModRule</a></span></td>
+<td>The deleted auto moderation rule.</td>
+</tr>
+</tbody></table>
+
+<h4 id="auto_moderation_action_execution-event"><code>auto_moderation_action_execution(event)</code></h4>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>event</code></td>
+<td><span class='object_link'><a href="Discorb/Gateway/AutoModerationActionExecutionEvent.html" title="Discorb::Gateway::AutoModerationActionExecutionEvent (class)">Discorb::Gateway::AutoModerationActionExecutionEvent</a></span></td>
+<td>The auto moderation event.</td>
+</tr>
+</tbody></table>
+
 <h3 id="low-level-events">Low-level events</h3>
 
 <h4 id="guild_create-guild"><code>guild_create(guild)</code></h4>
@@ -1431,7 +1503,7 @@ Not like <a href="file._23message_delete.html" title="#message_delete">#message_
 </div></div>
 
       <div id="footer">
-  Generated on Sat Jun 25 13:21:39 2022 by
+  Generated on Sat Jun 25 14:11:37 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>
