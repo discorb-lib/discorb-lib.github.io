@@ -85,7 +85,7 @@ They are recommended:
 
 <ul>
 <li><a href="https://code.visualstudio.com/">VSCode</a></li>
-<li><a href="https://atom.io/">Atom</a></li>
+<li><a href="https://www.jetbrains.com/ruby/">RubyMine</a></li>
 <li><a href="https://www.sublimetext.com/">Sublime Text</a></li>
 <li><a href="https://brackets.io/">Brackets</a></li>
 <li><a href="https://notepad-plus-plus.org/">Notepad++</a></li>
@@ -163,10 +163,10 @@ Open terminal and type:</p>
 
 <p>Open <code>main.rb</code>, you will see the following code:</p>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>discorb</span><span class='tstring_end'>&quot;</span></span>
-<span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>dotenv</span><span class='tstring_end'>&quot;</span></span>
-
-<span class='const'>Dotenv</span><span class='period'>.</span><span class='id identifier rubyid_load'>load</span>  <span class='comment'># Loads .env file
+<pre class="code ruby"><code class="ruby"><span class='comment'># frozen_string_literal: true
+</span>
+<span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>discorb</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>dotenv/load</span><span class='tstring_end'>&quot;</span></span>  <span class='comment'># Load environment variables from .env file.
 </span>
 <span class='id identifier rubyid_client'>client</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Discorb/Client.html" title="Discorb::Client (class)">Client</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Discorb/Client.html#initialize-instance_method" title="Discorb::Client#initialize (method)">new</a></span></span>  <span class='comment'># Create client for connecting to Discord
 </span>
@@ -179,10 +179,10 @@ Open terminal and type:</p>
 
 <p>Open <code>.env</code>, you will see:</p>
 
-<pre class="code ruby"><code class="ruby"><span class='const'>TOKEN</span><span class='op'>=</span><span class='const'>Y0urB0tT0k3nHer3</span><span class='period'>.</span><span class='const'>Th1sT0ken</span><span class='period'>.</span><span class='const'>W0ntWorkB3c4useItH4sM34n1ng</span>
+<pre class="code ruby"><code class="ruby">TOKEN=
 </code></pre>
 
-<p>Replace <code>Y0urB0tT0k3nHer3.Th1sT0ken.W0ntWorkB3c4useItH4sM34n1ng</code> with your bot token.
+<p>Put your token after <code>TOKEN=</code>.
 Remember to keep this file secret!</p>
 
 <p>Open terminal and type:</p>
@@ -254,11 +254,11 @@ So, you can ignore bot&#39;s messages by adding <code>if</code> statement:</p>
 <p>This is the end of tutorial.</p>
 
 <p>To learn more, check out the <a href="https://discorb-lib.github.io/">documentation</a>.
-You can also check out <a href="docs/examples">Examples</a>.</p>
+You can also check out <a href="https://github.com/discorb-lib/discorb/tree/main/examples">Examples</a>.</p>
 </div></div>
 
       <div id="footer">
-  Generated on Sat Jun 25 23:12:51 2022 by
+  Generated on Sun Jun 26 01:14:03 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>
