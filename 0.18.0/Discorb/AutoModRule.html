@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<link rel="shortcut icon" href="/favicon.png" />
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Discorb::AutoModRule
+  
+    &mdash; discorb v0.18.0 documentation
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Discorb::AutoModRule";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../a_index.html">Index (A)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span>
+     &raquo; 
+    <span class="title">AutoModRule</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Discorb::AutoModRule
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="DiscordModel.html" title="Discorb::DiscordModel (class)">DiscordModel</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="DiscordModel.html" title="Discorb::DiscordModel (class)">DiscordModel</a></span></li>
+          
+            <li class="next">Discorb::AutoModRule</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/discorb/automod.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Represents a rule of auto moderation.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="AutoModRule/Action.html" title="Discorb::AutoModRule::Action (class)">Action</a></span>
+    
+  
+</p>
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#actions-instance_method" title="#actions (instance method)">#<strong>actions</strong> -&gt; Array&lt;Discorb::AutoModRule::Action&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The actions of the rule.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#enabled-instance_method" title="#enabled (instance method)">#<strong>enabled</strong> -&gt; Boolean </a>
+    
+
+    
+      (also: #enabled?)
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Whether the rule is enabled.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#id-instance_method" title="#id (instance method)">#<strong>id</strong> -&gt; Discorb::Snowflake </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The ID of the rule.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#keyword_filter-instance_method" title="#keyword_filter (instance method)">#<strong>keyword_filter</strong> -&gt; Array&lt;String&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The keywords that the rule is triggered by.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#name-instance_method" title="#name (instance method)">#<strong>name</strong> -&gt; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The name of the rule.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#creator-instance_method" title="#creator (instance method)">#<strong>creator</strong> -&gt; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete!-instance_method" title="#delete! (instance method)">#<strong>delete!</strong>(reason: nil) -&gt; Async::Task&lt;void&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Delete the rule.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#edit-instance_method" title="#edit (instance method)">#<strong>edit</strong>(name: Discorb::Unset, event_type: Discorb::Unset, actions: Discorb::Unset, enabled: Discorb::Unset, exempt_roles: Discorb::Unset, exempt_channels: Discorb::Unset, keyword_filter: Discorb::Unset, presets: Discorb::Unset, reason: nil) -&gt; Async::Task&lt;void&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Edit the rule.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#event_type-instance_method" title="#event_type (instance method)">#<strong>event_type</strong> -&gt; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#exempt_channels-instance_method" title="#exempt_channels (instance method)">#<strong>exempt_channels</strong> -&gt; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#exempt_roles-instance_method" title="#exempt_roles (instance method)">#<strong>exempt_roles</strong> -&gt; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#guild-instance_method" title="#guild (instance method)">#<strong>guild</strong> -&gt; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#preset_type-instance_method" title="#preset_type (instance method)">#<strong>preset_type</strong> -&gt; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#trigger_type-instance_method" title="#trigger_type (instance method)">#<strong>trigger_type</strong> -&gt; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="DiscordModel.html" title="Discorb::DiscordModel (class)">DiscordModel</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DiscordModel.html#==-instance_method" title="Discorb::DiscordModel#== (method)">#==</a></span>, <span class='object_link'><a href="DiscordModel.html#eql%3F-instance_method" title="Discorb::DiscordModel#eql? (method)">#eql?</a></span>, <span class='object_link'><a href="DiscordModel.html#inspect-instance_method" title="Discorb::DiscordModel#inspect (method)">#inspect</a></span></p>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="actions-instance_method">
+  
+    #<strong>actions</strong> -&gt; <tt>Array&lt;<span class='object_link'><a href="AutoModRule/Action.html" title="Discorb::AutoModRule::Action (class)">Discorb::AutoModRule::Action</a></span>&gt;</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns The actions of the rule.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="AutoModRule/Action.html" title="Discorb::AutoModRule::Action (class)">Discorb::AutoModRule::Action</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The actions of the rule.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+37
+38
+39</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/automod.rb', line 37</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_actions'>actions</span>
+  <span class='ivar'>@actions</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="enabled-instance_method">
+  
+    #<strong>enabled</strong> -&gt; <tt>Boolean</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='enabled?-instance_method'>enabled?</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns Whether the rule is enabled.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether the rule is enabled.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+34
+35
+36</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/automod.rb', line 34</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_enabled'>enabled</span>
+  <span class='ivar'>@enabled</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="id-instance_method">
+  
+    #<strong>id</strong> -&gt; <tt><span class='object_link'><a href="Snowflake.html" title="Discorb::Snowflake (class)">Discorb::Snowflake</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns The ID of the rule.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Snowflake.html" title="Discorb::Snowflake (class)">Discorb::Snowflake</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The ID of the rule.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+30
+31
+32</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/automod.rb', line 30</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_id'>id</span>
+  <span class='ivar'>@id</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="keyword_filter-instance_method">
+  
+    #<strong>keyword_filter</strong> -&gt; <tt>Array&lt;String&gt;</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'><p>This is only available if the trigger type is <code>:keyword</code>.</p>
+</div>
+  </div>
+
+<p>Returns The keywords that the rule is triggered by.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The keywords that the rule is triggered by.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+40
+41
+42</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/automod.rb', line 40</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_keyword_filter'>keyword_filter</span>
+  <span class='ivar'>@keyword_filter</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="name-instance_method">
+  
+    #<strong>name</strong> -&gt; <tt>String</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns The name of the rule.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the rule.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/automod.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
+  <span class='ivar'>@name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="creator-instance_method">
+  
+    #<strong>creator</strong> -&gt; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+76
+77
+78</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/automod.rb', line 76</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_creator'>creator</span>
+  <span class='id identifier rubyid_guild'>guild</span><span class='period'>.</span><span class='id identifier rubyid_members'>members</span><span class='lbracket'>[</span><span class='ivar'>@creator_id</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete!-instance_method">
+  
+    #<strong>delete!</strong>(reason: nil) -&gt; <tt>Async::Task&lt;void&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Delete the rule.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>reason</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The reason for deleting the rule.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Async::Task&lt;void&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The task.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/automod.rb', line 157</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delete!'>delete!</span><span class='lparen'>(</span><span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='const'>Async</span> <span class='kw'>do</span>
+    <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span>
+      <span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/guilds/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@guild_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/automod/rules/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//guilds/:guild_id/automod/rules/:id</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='symbol'>:delete</span>
+      <span class='rparen'>)</span><span class='comma'>,</span>
+      <span class='label'>audit_log_reason:</span> <span class='id identifier rubyid_reason'>reason</span><span class='comma'>,</span>
+    <span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="edit-instance_method">
+  
+    #<strong>edit</strong>(name: Discorb::Unset, event_type: Discorb::Unset, actions: Discorb::Unset, enabled: Discorb::Unset, exempt_roles: Discorb::Unset, exempt_channels: Discorb::Unset, keyword_filter: Discorb::Unset, presets: Discorb::Unset, reason: nil) -&gt; <tt>Async::Task&lt;void&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Edit the rule.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>Discorb::Unset</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the rule.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>event_type</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>Discorb::Unset</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The event type of the rule. See <span class='object_link'>EVENT_TYPES</span>.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>actions</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="AutoModRule/Action.html" title="Discorb::AutoModRule::Action (class)">Discorb::AutoModRule::Action</a></span>&gt;</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>Discorb::Unset</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The actions of the rule.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>enabled</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>Discorb::Unset</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether the rule is enabled or not.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>exempt_roles</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Role.html" title="Discorb::Role (class)">Discorb::Role</a></span>&gt;</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>Discorb::Unset</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The roles that are exempt from the rule.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>exempt_channels</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Channel.html" title="Discorb::Channel (class)">Discorb::Channel</a></span>&gt;</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>Discorb::Unset</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The channels that are exempt from the rule.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>keyword_filter</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>Discorb::Unset</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The keywords to filter.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>presets</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>Discorb::Unset</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The preset of the rule. See <span class='object_link'>PRESET_TYPES</span>.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>reason</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The reason for creating the rule.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Async::Task&lt;void&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The task.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/automod.rb', line 115</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_edit'>edit</span><span class='lparen'>(</span>
+  <span class='label'>name:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
+  <span class='label'>event_type:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
+  <span class='label'>actions:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
+  <span class='label'>enabled:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
+  <span class='label'>exempt_roles:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
+  <span class='label'>exempt_channels:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
+  <span class='label'>keyword_filter:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
+  <span class='label'>presets:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
+  <span class='label'>reason:</span> <span class='kw'>nil</span>
+<span class='rparen'>)</span>
+  <span class='comment'># @type var payload: Hash[Symbol, untyped]
+</span>  <span class='id identifier rubyid_payload'>payload</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+    <span class='label'>metadata:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span> <span class='kw'>unless</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
+  <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:event_type</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>EVENT_TYPES</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='lparen'>(</span><span class='id identifier rubyid_event_type'>event_type</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_event_type'>event_type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
+  <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:actions</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_actions'>actions</span> <span class='kw'>unless</span> <span class='id identifier rubyid_actions'>actions</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
+  <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:enabled</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_enabled'>enabled</span> <span class='kw'>unless</span> <span class='id identifier rubyid_enabled'>enabled</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
+  <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:exempt_roles</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_exempt_roles'>exempt_roles</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:id</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_exempt_roles'>exempt_roles</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
+  <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:exempt_channels</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_exempt_channels'>exempt_channels</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:id</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_exempt_channels'>exempt_channels</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
+  <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:metadata</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:keyword_filter</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_keyword_filter'>keyword_filter</span> <span class='kw'>unless</span> <span class='id identifier rubyid_keyword_filter'>keyword_filter</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
+  <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:metadata</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:presets</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>PRESET_TYPES</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='lparen'>(</span><span class='id identifier rubyid_presets'>presets</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_presets'>presets</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
+
+  <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span>
+    <span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/guilds/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@guild_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/automod/rules/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//guilds/:guild_id/automod/rules/:id</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='symbol'>:patch</span>
+    <span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_payload'>payload</span><span class='comma'>,</span>
+    <span class='label'>audit_log_reason:</span> <span class='id identifier rubyid_reason'>reason</span><span class='comma'>,</span>
+  <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="event_type-instance_method">
+  
+    #<strong>event_type</strong> -&gt; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+69
+70
+71</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/automod.rb', line 69</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_event_type'>event_type</span>
+  <span class='const'>EVENT_TYPES</span><span class='lbracket'>[</span><span class='ivar'>@event_type_raw</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="exempt_channels-instance_method">
+  
+    #<strong>exempt_channels</strong> -&gt; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+94
+95
+96</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/automod.rb', line 94</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_exempt_channels'>exempt_channels</span>
+  <span class='ivar'>@exempt_channels_id</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_id'>id</span><span class='op'>|</span> <span class='id identifier rubyid_guild'>guild</span><span class='period'>.</span><span class='id identifier rubyid_channels'>channels</span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="exempt_roles-instance_method">
+  
+    #<strong>exempt_roles</strong> -&gt; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+88
+89
+90</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/automod.rb', line 88</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_exempt_roles'>exempt_roles</span>
+  <span class='ivar'>@exempt_roles_id</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_id'>id</span><span class='op'>|</span> <span class='id identifier rubyid_guild'>guild</span><span class='period'>.</span><span class='id identifier rubyid_roles'>roles</span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="guild-instance_method">
+  
+    #<strong>guild</strong> -&gt; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+82
+83
+84</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/automod.rb', line 82</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_guild'>guild</span>
+  <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_guilds'>guilds</span><span class='lbracket'>[</span><span class='ivar'>@guild_id</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="preset_type-instance_method">
+  
+    #<strong>preset_type</strong> -&gt; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+57
+58
+59</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/automod.rb', line 57</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_preset_type'>preset_type</span>
+  <span class='const'>PRESET_TYPES</span><span class='lbracket'>[</span><span class='ivar'>@presets_raw</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="trigger_type-instance_method">
+  
+    #<strong>trigger_type</strong> -&gt; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+63
+64
+65</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/automod.rb', line 63</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_trigger_type'>trigger_type</span>
+  <span class='const'>TRIGGER_TYPES</span><span class='lbracket'>[</span><span class='ivar'>@trigger_type_raw</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Sun Jun 26 01:29:54 2022 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.28 (ruby-3.0.2).
+</div>
+
+    </div>
+  </body>
+</html>
