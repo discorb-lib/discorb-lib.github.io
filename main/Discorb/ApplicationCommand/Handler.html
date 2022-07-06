@@ -334,7 +334,6 @@
       <pre class="lines">
 
 
-246
 247
 248
 249
@@ -350,10 +349,11 @@
 259
 260
 261
-262</pre>
+262
+263</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/handler.rb', line 246</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/handler.rb', line 247</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_clear_commands'>clear_commands</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='id identifier rubyid_guild_ids'>guild_ids</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -555,7 +555,6 @@
       <pre class="lines">
 
 
-134
 135
 136
 137
@@ -568,10 +567,11 @@
 144
 145
 146
-147</pre>
+147
+148</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/handler.rb', line 134</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/handler.rb', line 135</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_message_command'>message_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='label'>guild_ids:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>dm_permission:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>default_permission:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_command_name'>command_name</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>default:</span> <span class='id identifier rubyid_command_name'>command_name</span> <span class='rbrace'>}</span> <span class='kw'>if</span> <span class='id identifier rubyid_command_name'>command_name</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span>
@@ -669,7 +669,6 @@
       <pre class="lines">
 
 
-184
 185
 186
 187
@@ -719,10 +718,11 @@
 231
 232
 233
-234</pre>
+234
+235</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/handler.rb', line 184</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/handler.rb', line 185</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_setup_commands'>setup_commands</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>guild_ids:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
@@ -867,7 +867,8 @@ If hash is passed, it must be a pair of Language code and Command description, a
  | <code>:default</code> | <code>Object</code> | Default value of the option. |
  | <code>:channel_types</code> | <code>Array&lt;Class&lt;Discorb::Channel&gt;&gt;</code> | Type of the channel option. |
  | <code>:autocomplete</code> | <code>Proc</code> | Autocomplete function. |
- | <code>:range</code> | <code>Range</code> | Range of the option. Only valid for numeric options. (<code>:int</code>, <code>:float</code>) |</p>
+ | <code>:range</code> | <code>Range</code> | Range of the option. Only valid for numeric options. (<code>:int</code>, <code>:float</code>) |
+ | <code>:length</code> | <code>Range</code> | Range of length of the option. Only valid for <code>:string</code>. |</p>
 </div>
       
     </li>
@@ -973,7 +974,6 @@ If hash is passed, it must be a pair of Language code and Command description, a
       <pre class="lines">
 
 
-54
 55
 56
 57
@@ -1000,10 +1000,11 @@ If hash is passed, it must be a pair of Language code and Command description, a
 78
 79
 80
-81</pre>
+81
+82</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/handler.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/handler.rb', line 55</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_slash'>slash</span><span class='lparen'>(</span>
   <span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span>
@@ -1210,7 +1211,6 @@ If hash is passed, it must be a pair of Language code and Command description, a
       <pre class="lines">
 
 
-101
 102
 103
 104
@@ -1226,10 +1226,11 @@ If hash is passed, it must be a pair of Language code and Command description, a
 114
 115
 116
-117</pre>
+117
+118</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/handler.rb', line 101</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/handler.rb', line 102</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_slash_group'>slash_group</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>guild_ids:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>dm_permission:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>default_permission:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_command_name'>command_name</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>default:</span> <span class='id identifier rubyid_command_name'>command_name</span> <span class='rbrace'>}</span> <span class='kw'>if</span> <span class='id identifier rubyid_command_name'>command_name</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span>
@@ -1431,17 +1432,17 @@ If hash is passed, it must be a pair of Language code and Command description, a
       <pre class="lines">
 
 
-164
 165
 166
 167
 168
 169
 170
-171</pre>
+171
+172</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/handler.rb', line 164</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/handler.rb', line 165</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_user_command'>user_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='label'>guild_ids:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>dm_permission:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>default_permission:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_command_name'>command_name</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>default:</span> <span class='id identifier rubyid_command_name'>command_name</span> <span class='rbrace'>}</span> <span class='kw'>if</span> <span class='id identifier rubyid_command_name'>command_name</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span>
@@ -1461,7 +1462,7 @@ If hash is passed, it must be a pair of Language code and Command description, a
 </div>
 
       <div id="footer">
-  Generated on Tue Jul  5 21:12:49 2022 by
+  Generated on Wed Jul  6 14:13:55 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>
