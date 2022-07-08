@@ -150,6 +150,29 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#edit_original_message-instance_method" title="#edit_original_message (instance method)">#<strong>edit_original_message</strong>(content = nil, tts: false, embed: nil, embeds: nil, allowed_mentions: nil, attachment: nil, attachments: nil, components: nil, ephemeral: false) -&gt; Async::Task&lt;void&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Edit the original message.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#post-instance_method" title="#post (instance method)">#<strong>post</strong>(content = nil, tts: false, embed: nil, embeds: nil, allowed_mentions: nil, attachment: nil, attachments: nil, components: nil, ephemeral: false) -&gt; Discorb::Interaction::SourceResponder::CallbackMessage, Discorb::Webhook::Message </a>
     
 
@@ -278,6 +301,304 @@
       <span class='rbrace'>}</span>
     <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
     <span class='ivar'>@defered</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="edit_original_message-instance_method">
+  
+    #<strong>edit_original_message</strong>(content = nil, tts: false, embed: nil, embeds: nil, allowed_mentions: nil, attachment: nil, attachments: nil, components: nil, ephemeral: false) -&gt; <tt>Async::Task&lt;void&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Edit the original message.
+This method is low-level.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>content</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The content of the response.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>tts</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether to send the message as text-to-speech.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>embed</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Embed.html" title="Discorb::Embed (class)">Discorb::Embed</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The embed to send.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>embeds</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../Embed.html" title="Discorb::Embed (class)">Discorb::Embed</a></span>&gt;</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The embeds to send. (max: 10)</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>allowed_mentions</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../AllowedMentions.html" title="Discorb::AllowedMentions (class)">Discorb::AllowedMentions</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The allowed mentions to send.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attachment</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Attachment.html" title="Discorb::Attachment (class)">Discorb::Attachment</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The attachment to send.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attachments</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../Attachment.html" title="Discorb::Attachment (class)">Discorb::Attachment</a></span>&gt;</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The attachments to send. (max: 10)</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>components</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../Component.html" title="Discorb::Component (class)">Discorb::Component</a></span>&gt;</tt>, <tt>Array&lt;Array&lt;<span class='object_link'><a href="../Component.html" title="Discorb::Component (class)">Discorb::Component</a></span>&gt;&gt;</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The components to send.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>ephemeral</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether to make the response ephemeral.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Async::Task&lt;void&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The task.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="SourceResponder/CallbackMessage.html#edit-instance_method" title="Discorb::Interaction::SourceResponder::CallbackMessage#edit (method)"></a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/response.rb', line 149</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_edit_original_message'>edit_original_message</span><span class='lparen'>(</span>
+  <span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span>
+  <span class='label'>tts:</span> <span class='kw'>false</span><span class='comma'>,</span>
+  <span class='label'>embed:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+  <span class='label'>embeds:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+  <span class='label'>allowed_mentions:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+  <span class='label'>attachment:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+  <span class='label'>attachments:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+  <span class='label'>components:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+  <span class='label'>ephemeral:</span> <span class='kw'>false</span>
+<span class='rparen'>)</span>
+  <span class='const'>Async</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_payload'>payload</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:content</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_content'>content</span> <span class='kw'>if</span> <span class='id identifier rubyid_content'>content</span>
+    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:tts</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_tts'>tts</span>
+    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:embeds</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_embeds'>embeds</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='id identifier rubyid_embed'>embed</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_e'>e</span><span class='op'>|</span> <span class='id identifier rubyid_e'>e</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_hash'>to_hash</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='id identifier rubyid__1'>_1</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:allowed_mentions</span><span class='rbracket'>]</span> <span class='op'>=</span>
+      <span class='id identifier rubyid_allowed_mentions'>allowed_mentions</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='lparen'>(</span><span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_allowed_mentions'>allowed_mentions</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_allowed_mentions'>allowed_mentions</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span>
+    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:components</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Component.html" title="Discorb::Component (class)">Component</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_payload'><span class='object_link'><a href="../Component.html#to_payload-class_method" title="Discorb::Component.to_payload (method)">to_payload</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_components'>components</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_components'>components</span>
+    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:flags</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_ephemeral'>ephemeral</span> <span class='op'>?</span> <span class='int'>1</span> <span class='op'>&lt;&lt;</span> <span class='int'>6</span> <span class='op'>:</span> <span class='int'>0</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_attachments'>attachments</span> <span class='op'>||=</span> <span class='id identifier rubyid_attachment'>attachment</span> <span class='op'>?</span> <span class='lbracket'>[</span><span class='id identifier rubyid_attachment'>attachment</span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+
+    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:attachments</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_attachments'>attachments</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='period'>.</span><span class='id identifier rubyid_with_index'>with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='comma'>,</span> <span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
+      <span class='lbrace'>{</span>
+        <span class='label'>id:</span> <span class='id identifier rubyid_i'>i</span><span class='comma'>,</span>
+        <span class='label'>filename:</span> <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_filename'>filename</span><span class='comma'>,</span>
+        <span class='label'>description:</span> <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_description'>description</span><span class='comma'>,</span>
+      <span class='rbrace'>}</span>
+    <span class='kw'>end</span>
+
+    <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_multipart_request'>multipart_request</span><span class='lparen'>(</span>
+      <span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/webhooks/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@application_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@token</span><span class='embexpr_end'>}</span><span class='tstring_content'>/messages/@original</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//webhooks/:webhook_id/:token/messages/@original</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='symbol'>:patch</span>
+      <span class='rparen'>)</span><span class='comma'>,</span>
+      <span class='id identifier rubyid_payload'>payload</span><span class='comma'>,</span>
+      <span class='id identifier rubyid_attachments'>attachments</span>
+    <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -636,7 +957,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Jul  8 22:12:54 2022 by
+  Generated on Fri Jul  8 23:14:02 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>
