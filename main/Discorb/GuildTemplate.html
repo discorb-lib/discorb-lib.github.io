@@ -456,11 +456,9 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#delete!-instance_method" title="#delete! (instance method)">#<strong>delete!</strong> -&gt; Async::Task&lt;void&gt; </a>
+      <a href="#delete-instance_method" title="#delete (instance method)">#<strong>delete</strong> -&gt; Async::Task&lt;void&gt; </a>
     
 
-    
-      (also: #destroy!)
     
   </span>
   
@@ -1237,15 +1235,11 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="delete!-instance_method">
+  <h3 class="signature first" id="delete-instance_method">
   
-    #<strong>delete!</strong> -&gt; <tt>Async::Task&lt;void&gt;</tt> 
+    #<strong>delete</strong> -&gt; <tt>Async::Task&lt;void&gt;</tt> 
   
 
-  
-    <span class="aliases">Also known as:
-    <span class="names"><span id='destroy!-instance_method'>destroy!</span></span>
-    </span>
   
 
   
@@ -1292,7 +1286,7 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/discorb/guild_template.rb', line 96</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_delete!'>delete!</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_delete'>delete</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
     <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/guilds/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@source_guild_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/templates/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@code</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
                                    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//guilds/:guild_id/templates/:code</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:delete</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
@@ -1496,7 +1490,7 @@ Specify value to set the value, if not don&#39;t specify or specify <code>Discor
 </div>
 
       <div id="footer">
-  Generated on Tue Jul 12 20:15:40 2022 by
+  Generated on Tue Jul 12 21:13:02 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>
