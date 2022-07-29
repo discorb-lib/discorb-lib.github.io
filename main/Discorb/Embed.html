@@ -1602,7 +1602,7 @@
   <span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:image</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@image</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_hash'>to_hash</span> <span class='kw'>if</span> <span class='ivar'>@image</span>
   <span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:thumbnail</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@thumbnail</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_hash'>to_hash</span> <span class='kw'>if</span> <span class='ivar'>@thumbnail</span>
   <span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:author</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@author</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_hash'>to_hash</span> <span class='kw'>if</span> <span class='ivar'>@author</span>
-  <span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:fields</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@fields</span><span class='op'>&amp;.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_f'>f</span><span class='op'>|</span> <span class='id identifier rubyid_f'>f</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span> <span class='rbrace'>}</span> <span class='kw'>if</span> <span class='ivar'>@fields</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span>
+  <span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='symbol'>:fields</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@fields</span><span class='op'>&amp;.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_hash</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@fields</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span>
   <span class='id identifier rubyid_ret'>ret</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1615,7 +1615,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Jul 29 21:13:19 2022 by
+  Generated on Fri Jul 29 22:13:45 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>
