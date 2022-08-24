@@ -311,27 +311,29 @@
       <pre class="lines">
 
 
-506
-507
-508
-509
-510
-511
-512
-513
-514
-515
-516
-517</pre>
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/gateway_events.rb', line 506</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/gateway_events.rb', line 534</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_client'>client</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='ivar'>@client</span> <span class='op'>=</span> <span class='id identifier rubyid_client'>client</span>
   <span class='ivar'>@data</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span>
   <span class='ivar'>@message</span> <span class='op'>=</span> <span class='id identifier rubyid_message'>message</span>
-  <span class='ivar'>@type</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+  <span class='ivar'>@type</span> <span class='op'>=</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
       <span class='symbol'>:unknown</span>
     <span class='kw'>elsif</span> <span class='ivar'>@message</span><span class='period'>.</span><span class='id identifier rubyid_pinned?'>pinned?</span>
       <span class='symbol'>:pinned</span>
@@ -393,12 +395,12 @@
       <pre class="lines">
 
 
-497
-498
-499</pre>
+525
+526
+527</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/gateway_events.rb', line 497</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/gateway_events.rb', line 525</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_message'>message</span>
   <span class='ivar'>@message</span>
@@ -452,27 +454,29 @@
       <pre class="lines">
 
 
-506
-507
-508
-509
-510
-511
-512
-513
-514
-515
-516
-517</pre>
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/gateway_events.rb', line 506</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/gateway_events.rb', line 534</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_client'>client</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='ivar'>@client</span> <span class='op'>=</span> <span class='id identifier rubyid_client'>client</span>
   <span class='ivar'>@data</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span>
   <span class='ivar'>@message</span> <span class='op'>=</span> <span class='id identifier rubyid_message'>message</span>
-  <span class='ivar'>@type</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+  <span class='ivar'>@type</span> <span class='op'>=</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
       <span class='symbol'>:unknown</span>
     <span class='kw'>elsif</span> <span class='ivar'>@message</span><span class='period'>.</span><span class='id identifier rubyid_pinned?'>pinned?</span>
       <span class='symbol'>:pinned</span>
@@ -529,12 +533,12 @@
       <pre class="lines">
 
 
-499
-500
-501</pre>
+527
+528
+529</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/gateway_events.rb', line 499</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/gateway_events.rb', line 527</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_type'>type</span>
   <span class='ivar'>@type</span>
@@ -588,27 +592,29 @@
       <pre class="lines">
 
 
-506
-507
-508
-509
-510
-511
-512
-513
-514
-515
-516
-517</pre>
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/gateway_events.rb', line 506</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/gateway_events.rb', line 534</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_client'>client</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='ivar'>@client</span> <span class='op'>=</span> <span class='id identifier rubyid_client'>client</span>
   <span class='ivar'>@data</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span>
   <span class='ivar'>@message</span> <span class='op'>=</span> <span class='id identifier rubyid_message'>message</span>
-  <span class='ivar'>@type</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+  <span class='ivar'>@type</span> <span class='op'>=</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
       <span class='symbol'>:unknown</span>
     <span class='kw'>elsif</span> <span class='ivar'>@message</span><span class='period'>.</span><span class='id identifier rubyid_pinned?'>pinned?</span>
       <span class='symbol'>:pinned</span>
@@ -627,7 +633,7 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Aug 24 09:14:25 2022 by
+  Generated on Wed Aug 24 10:16:42 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>

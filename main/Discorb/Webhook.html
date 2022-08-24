@@ -994,12 +994,12 @@
       <pre class="lines">
 
 
-502
-503
-504</pre>
+532
+533
+534</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 502</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 532</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_from_url'>from_url</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="Webhook/URLWebhook.html" title="Discorb::Webhook::URLWebhook (class)">URLWebhook</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#new-class_method" title="Discorb::Webhook.new (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
@@ -1087,16 +1087,16 @@
       <pre class="lines">
 
 
-474
-475
-476
-477
-478
-479
-480</pre>
+504
+505
+506
+507
+508
+509
+510</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 474</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 504</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='comma'>,</span> <span class='label'>client:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='kw'>self</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="" title="Discorb::Webhook (class)">Webhook</a></span></span>
@@ -1162,19 +1162,23 @@
       <pre class="lines">
 
 
-138
-139
-140
-141
-142
-143</pre>
+148
+149
+150
+151
+152
+153
+154
+155</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 138</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 148</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete'>delete</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
-    <span class='ivar'>@http</span><span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//webhooks/:webhook_id/:token</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:delete</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
+    <span class='ivar'>@http</span><span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span>
+      <span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//webhooks/:webhook_id/:token</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:delete</span><span class='rparen'>)</span>
+    <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
     <span class='kw'>self</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
@@ -1244,27 +1248,29 @@
       <pre class="lines">
 
 
-194
-195
-196
-197
-198
-199
-200
-201
-202
-203
-204</pre>
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 194</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 218</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete_message'>delete_message</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
     <span class='ivar'>@http</span><span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span>
       <span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
         <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_url'>url</span><span class='embexpr_end'>}</span><span class='tstring_content'>/messages/</span><span class='embexpr_beg'>#{</span><span class='const'>Utils</span><span class='period'>.</span><span class='id identifier rubyid_try'>try</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='symbol'>:id</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//webhooks/:webhook_id/:token/messages/:message_id</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:delete</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//webhooks/:webhook_id/:token/messages/:message_id</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='symbol'>:delete</span>
       <span class='rparen'>)</span>
     <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
     <span class='id identifier rubyid_message'>message</span>
@@ -1384,26 +1390,42 @@ Specify value to set the value, if not don&#39;t specify or specify <code>Discor
       <pre class="lines">
 
 
-120
-121
 122
 123
 124
 125
 126
 127
-128</pre>
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 120</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 122</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_edit'>edit</span><span class='lparen'>(</span><span class='label'>name:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span> <span class='label'>avatar:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span> <span class='label'>channel:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_edit'>edit</span><span class='lparen'>(</span>
+  <span class='label'>name:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
+  <span class='label'>avatar:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
+  <span class='label'>channel:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
+<span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
     <span class='id identifier rubyid_payload'>payload</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
     <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span> <span class='kw'>if</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>!=</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
     <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:avatar</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_avatar'>avatar</span> <span class='kw'>if</span> <span class='id identifier rubyid_avatar'>avatar</span> <span class='op'>!=</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
-    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:channel_id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Utils</span><span class='period'>.</span><span class='id identifier rubyid_try'>try</span><span class='lparen'>(</span><span class='id identifier rubyid_channel'>channel</span><span class='comma'>,</span> <span class='symbol'>:id</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_channel'>channel</span> <span class='op'>!=</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
-    <span class='ivar'>@http</span><span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//webhooks/:webhook_id/:token</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:patch</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_payload'>payload</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
+    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:channel_id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Utils</span><span class='period'>.</span><span class='id identifier rubyid_try'>try</span><span class='lparen'>(</span><span class='id identifier rubyid_channel'>channel</span><span class='comma'>,</span> <span class='symbol'>:id</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_channel'>channel</span> <span class='op'>!=</span>
+      <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
+    <span class='ivar'>@http</span><span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span>
+      <span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//webhooks/:webhook_id/:token</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:patch</span><span class='rparen'>)</span><span class='comma'>,</span>
+      <span class='id identifier rubyid_payload'>payload</span>
+    <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1599,18 +1621,6 @@ Specify value to set the value, if not don&#39;t specify or specify <code>Discor
       <pre class="lines">
 
 
-163
-164
-165
-166
-167
-168
-169
-170
-171
-172
-173
-174
 175
 176
 177
@@ -1621,30 +1631,66 @@ Specify value to set the value, if not don&#39;t specify or specify <code>Discor
 182
 183
 184
-185</pre>
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 163</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 175</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_edit_message'>edit_message</span><span class='lparen'>(</span>
-  <span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
-  <span class='label'>embed:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span> <span class='label'>embeds:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
-  <span class='label'>file:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span> <span class='label'>files:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
+  <span class='id identifier rubyid_message'>message</span><span class='comma'>,</span>
+  <span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
+  <span class='label'>embed:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
+  <span class='label'>embeds:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
+  <span class='label'>file:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
+  <span class='label'>files:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
   <span class='label'>attachments:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
   <span class='label'>allowed_mentions:</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
 <span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
     <span class='id identifier rubyid_payload'>payload</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
     <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:content</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_content'>content</span> <span class='kw'>if</span> <span class='id identifier rubyid_content'>content</span> <span class='op'>!=</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
-    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:embeds</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_embed'>embed</span> <span class='op'>?</span> <span class='lbracket'>[</span><span class='id identifier rubyid_embed'>embed</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_embed'>embed</span> <span class='op'>!=</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
+    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:embeds</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_embed'>embed</span> <span class='op'>?</span> <span class='lbracket'>[</span><span class='id identifier rubyid_embed'>embed</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_embed'>embed</span> <span class='op'>!=</span>
+      <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
     <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:embeds</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_embeds'>embeds</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_hash</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_embeds'>embeds</span> <span class='op'>!=</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
-    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:attachments</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_attachments'>attachments</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_hash</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_attachments'>attachments</span> <span class='op'>!=</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
-    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:allowed_mentions</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_allowed_mentions'>allowed_mentions</span> <span class='kw'>if</span> <span class='id identifier rubyid_allowed_mentions'>allowed_mentions</span> <span class='op'>!=</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
+    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:attachments</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_attachments'>attachments</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_hash</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_attachments'>attachments</span> <span class='op'>!=</span>
+      <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
+    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:allowed_mentions</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_allowed_mentions'>allowed_mentions</span> <span class='kw'>if</span> <span class='id identifier rubyid_allowed_mentions'>allowed_mentions</span> <span class='op'>!=</span>
+      <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
     <span class='id identifier rubyid_files'>files</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_file'>file</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_file'>file</span> <span class='op'>!=</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
-    <span class='id identifier rubyid__resp'>_resp</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id identifier rubyid_multipart_request'>multipart_request</span><span class='lparen'>(</span>
-      <span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_url'>url</span><span class='embexpr_end'>}</span><span class='tstring_content'>/messages/</span><span class='embexpr_beg'>#{</span><span class='const'>Utils</span><span class='period'>.</span><span class='id identifier rubyid_try'>try</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='symbol'>:id</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//webhooks/:webhook_id/:token/messages/:message_id</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-                <span class='symbol'>:patch</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_payload'>payload</span><span class='comma'>,</span> <span class='id identifier rubyid_files'>files</span>
-    <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
+    <span class='id identifier rubyid__resp'>_resp</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span>
+      <span class='ivar'>@http</span><span class='period'>.</span><span class='id identifier rubyid_multipart_request'>multipart_request</span><span class='lparen'>(</span>
+        <span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_url'>url</span><span class='embexpr_end'>}</span><span class='tstring_content'>/messages/</span><span class='embexpr_beg'>#{</span><span class='const'>Utils</span><span class='period'>.</span><span class='id identifier rubyid_try'>try</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='symbol'>:id</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//webhooks/:webhook_id/:token/messages/:message_id</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='symbol'>:patch</span>
+        <span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='id identifier rubyid_payload'>payload</span><span class='comma'>,</span>
+        <span class='id identifier rubyid_files'>files</span>
+      <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
     <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='symbol'>:_set_data</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_message'>message</span>
   <span class='kw'>end</span>
@@ -1954,7 +2000,9 @@ Specify value to set the value, if not don&#39;t specify or specify <code>Discor
 102
 103
 104
-105</pre>
+105
+106
+107</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/discorb/webhook.rb', line 68</span>
@@ -1975,7 +2023,8 @@ Specify value to set the value, if not don&#39;t specify or specify <code>Discor
     <span class='id identifier rubyid_payload'>payload</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
     <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:content</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_content'>content</span> <span class='kw'>if</span> <span class='id identifier rubyid_content'>content</span>
     <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:tts</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_tts'>tts</span>
-    <span class='id identifier rubyid_tmp_embed'>tmp_embed</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_embed'>embed</span>
+    <span class='id identifier rubyid_tmp_embed'>tmp_embed</span> <span class='op'>=</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_embed'>embed</span>
         <span class='lbracket'>[</span><span class='id identifier rubyid_embed'>embed</span><span class='rbracket'>]</span>
       <span class='kw'>elsif</span> <span class='id identifier rubyid_embeds'>embeds</span>
         <span class='id identifier rubyid_embeds'>embeds</span>
@@ -1985,15 +2034,16 @@ Specify value to set the value, if not don&#39;t specify or specify <code>Discor
     <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:username</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_username'>username</span> <span class='kw'>if</span> <span class='id identifier rubyid_username'>username</span>
     <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:avatar_url</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_avatar_url'>avatar_url</span> <span class='kw'>if</span> <span class='id identifier rubyid_avatar_url'>avatar_url</span> <span class='op'>!=</span> <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
     <span class='id identifier rubyid_attachments'>attachments</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_attachment'>attachment</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_attachment'>attachment</span>
-    <span class='id identifier rubyid__resp'>_resp</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='ivar'>@http</span><span class='period'>.</span><span class='id identifier rubyid_multipart_request'>multipart_request</span><span class='lparen'>(</span>
-      <span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
-        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_url'>url</span><span class='embexpr_end'>}</span><span class='tstring_content'>?wait=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_wait'>wait</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//webhooks/:webhook_id/:token</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-        <span class='symbol'>:post</span>
-      <span class='rparen'>)</span><span class='comma'>,</span>
-      <span class='id identifier rubyid_attachments'>attachments</span><span class='comma'>,</span>
-      <span class='id identifier rubyid_payload'>payload</span>
-    <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
+    <span class='id identifier rubyid__resp'>_resp</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span>
+      <span class='ivar'>@http</span><span class='period'>.</span><span class='id identifier rubyid_multipart_request'>multipart_request</span><span class='lparen'>(</span>
+        <span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_url'>url</span><span class='embexpr_end'>}</span><span class='tstring_content'>?wait=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_wait'>wait</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//webhooks/:webhook_id/:token</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='symbol'>:post</span>
+        <span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='id identifier rubyid_attachments'>attachments</span><span class='comma'>,</span>
+        <span class='id identifier rubyid_payload'>payload</span>
+      <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
     <span class='id identifier rubyid_data'>data</span> <span class='op'>&amp;&amp;</span> <span class='const'><span class='object_link'><a href="" title="Discorb::Webhook (class)">Webhook</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Webhook/Message.html" title="Discorb::Webhook::Message (class)">Message</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#new-class_method" title="Discorb::Webhook.new (method)">new</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
@@ -2007,7 +2057,7 @@ Specify value to set the value, if not don&#39;t specify or specify <code>Discor
 </div>
 
       <div id="footer">
-  Generated on Wed Aug 24 09:14:22 2022 by
+  Generated on Wed Aug 24 10:16:39 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>

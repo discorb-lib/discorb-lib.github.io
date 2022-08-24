@@ -336,12 +336,12 @@
       <pre class="lines">
 
 
-221
-222
-223</pre>
+254
+255
+256</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/command.rb', line 221</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/command.rb', line 254</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_commands'>commands</span>
   <span class='ivar'>@commands</span>
@@ -395,12 +395,12 @@
       <pre class="lines">
 
 
-223
-224
-225</pre>
+256
+257
+258</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/command.rb', line 223</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/command.rb', line 256</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_description'>description</span>
   <span class='ivar'>@description</span>
@@ -536,18 +536,30 @@
       <pre class="lines">
 
 
-285
-286
-287
-288
-289
-290</pre>
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/command.rb', line 285</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/command.rb', line 332</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_group'>group</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../ApplicationCommand.html" title="Discorb::ApplicationCommand (module)">ApplicationCommand</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Command.html" title="Discorb::ApplicationCommand::Command (class)">Command</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SubcommandGroup.html" title="Discorb::ApplicationCommand::Command::SubcommandGroup (class)">SubcommandGroup</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='ivar'>@client</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span>
+    <span class='const'><span class='object_link'><a href="../../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../ApplicationCommand.html" title="Discorb::ApplicationCommand (module)">ApplicationCommand</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Command.html" title="Discorb::ApplicationCommand::Command (class)">Command</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SubcommandGroup.html" title="Discorb::ApplicationCommand::Command::SubcommandGroup (class)">SubcommandGroup</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+      <span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span>
+      <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span>
+      <span class='kw'>self</span><span class='comma'>,</span>
+      <span class='ivar'>@client</span>
+    <span class='rparen'>)</span>
   <span class='kw'>yield</span> <span class='id identifier rubyid_command'>command</span> <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
   <span class='ivar'>@commands</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_command'>command</span>
   <span class='id identifier rubyid_command'>command</span>
@@ -599,38 +611,54 @@
       <pre class="lines">
 
 
-255
-256
-257
-258
-259
-260
-261
-262
-263
-264
-265
-266
-267
-268
-269
-270</pre>
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/command.rb', line 255</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/command.rb', line 294</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_slash'>slash</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>dm_permission:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>default_permission:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../ApplicationCommand.html" title="Discorb::ApplicationCommand (module)">ApplicationCommand</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Command.html" title="Discorb::ApplicationCommand::Command (class)">Command</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="ChatInputCommand.html" title="Discorb::ApplicationCommand::Command::ChatInputCommand (class)">ChatInputCommand</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
-    <span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span>
-    <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span>
-    <span class='id identifier rubyid_options'>options</span><span class='comma'>,</span>
-    <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span>
-    <span class='id identifier rubyid_block'>block</span><span class='comma'>,</span>
-    <span class='int'>1</span><span class='comma'>,</span>
-    <span class='kw'>self</span><span class='comma'>,</span>
-    <span class='id identifier rubyid_dm_permission'>dm_permission</span><span class='comma'>,</span>
-    <span class='id identifier rubyid_default_permission'>default_permission</span>
-  <span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_slash'>slash</span><span class='lparen'>(</span>
+  <span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span>
+  <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span>
+  <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='label'>dm_permission:</span> <span class='kw'>true</span><span class='comma'>,</span>
+  <span class='label'>default_permission:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+  <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span>
+<span class='rparen'>)</span>
+  <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span>
+    <span class='const'><span class='object_link'><a href="../../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../ApplicationCommand.html" title="Discorb::ApplicationCommand (module)">ApplicationCommand</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Command.html" title="Discorb::ApplicationCommand::Command (class)">Command</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="ChatInputCommand.html" title="Discorb::ApplicationCommand::Command::ChatInputCommand (class)">ChatInputCommand</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+      <span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span>
+      <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span>
+      <span class='id identifier rubyid_options'>options</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='id identifier rubyid_block'>block</span><span class='comma'>,</span>
+      <span class='int'>1</span><span class='comma'>,</span>
+      <span class='kw'>self</span><span class='comma'>,</span>
+      <span class='id identifier rubyid_dm_permission'>dm_permission</span><span class='comma'>,</span>
+      <span class='id identifier rubyid_default_permission'>default_permission</span>
+    <span class='rparen'>)</span>
   <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_callable_commands'>callable_commands</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_command'>command</span>
   <span class='ivar'>@commands</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_command'>command</span>
   <span class='id identifier rubyid_command'>command</span>
@@ -682,12 +710,12 @@
       <pre class="lines">
 
 
-297
-298
-299</pre>
+350
+351
+352</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/command.rb', line 297</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/app_command/command.rb', line 350</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
   <span class='ivar'>@name</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>default</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
@@ -702,7 +730,7 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Aug 24 09:14:25 2022 by
+  Generated on Wed Aug 24 10:16:42 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>

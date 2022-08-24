@@ -377,29 +377,29 @@
       <pre class="lines">
 
 
-1558
-1559
-1560
-1561
-1562
-1563
-1564
-1565
-1566
-1567
-1568
-1569
-1570
-1571
-1572
-1573
-1574
-1575
-1576
-1577</pre>
+2025
+2026
+2027
+2028
+2029
+2030
+2031
+2032
+2033
+2034
+2035
+2036
+2037
+2038
+2039
+2040
+2041
+2042
+2043
+2044</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 1558</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 2025</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_channel'>channel</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_emoji'>emoji</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_description'>description</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span>
@@ -497,7 +497,7 @@
 </pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 1545</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 2012</span>
 
 </pre>
     </td>
@@ -549,12 +549,12 @@
       <pre class="lines">
 
 
-1543
-1544
-1545</pre>
+2010
+2011
+2012</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 1543</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 2010</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_description'>description</span>
   <span class='ivar'>@description</span>
@@ -611,7 +611,7 @@
 </pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 1545</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 2012</span>
 
 </pre>
     </td>
@@ -748,32 +748,64 @@ Specify value to set the value, if not don&#39;t specify or specify <code>Discor
       <pre class="lines">
 
 
-1618
-1619
-1620
-1621
-1622
-1623
-1624
-1625
-1626
-1627
-1628
-1629</pre>
+2085
+2086
+2087
+2088
+2089
+2090
+2091
+2092
+2093
+2094
+2095
+2096
+2097
+2098
+2099
+2100
+2101
+2102
+2103
+2104
+2105
+2106
+2107
+2108
+2109
+2110
+2111
+2112</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 1618</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 2085</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_edit'>edit</span><span class='lparen'>(</span><span class='label'>enabled:</span> <span class='const'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span> <span class='label'>channels:</span> <span class='const'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span> <span class='label'>description:</span> <span class='const'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_edit'>edit</span><span class='lparen'>(</span>
+  <span class='label'>enabled:</span> <span class='const'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
+  <span class='label'>channels:</span> <span class='const'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
+  <span class='label'>description:</span> <span class='const'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span><span class='comma'>,</span>
+  <span class='label'>reason:</span> <span class='kw'>nil</span>
+<span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
     <span class='id identifier rubyid_payload'>payload</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
     <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:enabled</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_enabled'>enabled</span> <span class='kw'>unless</span> <span class='id identifier rubyid_enabled'>enabled</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
-    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:welcome_channels</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_channels'>channels</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_hash</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_channels'>channels</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
-    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:description</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_description'>description</span> <span class='kw'>unless</span> <span class='id identifier rubyid_description'>description</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
-    <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span>
-      <span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/guilds/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@guild</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/welcome-screen</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//guilds/:guild_id/welcome-screen</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-                <span class='symbol'>:patch</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_payload'>payload</span><span class='comma'>,</span> <span class='label'>audit_log_reason:</span> <span class='id identifier rubyid_reason'>reason</span><span class='comma'>,</span>
-    <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
+    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:welcome_channels</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_channels'>channels</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span>
+      <span class='op'>&amp;</span><span class='symbol'>:to_hash</span>
+    <span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_channels'>channels</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
+    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:description</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_description'>description</span> <span class='kw'>unless</span> <span class='id identifier rubyid_description'>description</span> <span class='op'>==</span>
+      <span class='const'><span class='object_link'><a href="../../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Discorb.html#Unset-constant" title="Discorb::Unset (constant)">Unset</a></span></span>
+    <span class='ivar'>@client</span>
+      <span class='period'>.</span><span class='id identifier rubyid_http'>http</span>
+      <span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span>
+        <span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/guilds/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@guild</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/welcome-screen</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//guilds/:guild_id/welcome-screen</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='symbol'>:patch</span>
+        <span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='id identifier rubyid_payload'>payload</span><span class='comma'>,</span>
+        <span class='label'>audit_log_reason:</span> <span class='id identifier rubyid_reason'>reason</span>
+      <span class='rparen'>)</span>
+      <span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -830,24 +862,24 @@ Specify value to set the value, if not don&#39;t specify or specify <code>Discor
       <pre class="lines">
 
 
-1585
-1586
-1587
-1588
-1589
-1590
-1591
-1592</pre>
+2052
+2053
+2054
+2055
+2056
+2057
+2058
+2059</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 1585</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/guild.rb', line 2052</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_hash'>to_hash</span>
   <span class='lbrace'>{</span>
     <span class='label'>channel_id:</span> <span class='ivar'>@channel_id</span><span class='comma'>,</span>
     <span class='label'>description:</span> <span class='ivar'>@description</span><span class='comma'>,</span>
     <span class='label'>emoji_id:</span> <span class='ivar'>@emoji_id</span><span class='comma'>,</span>
-    <span class='label'>emoji_name:</span> <span class='ivar'>@emoji_name</span><span class='comma'>,</span>
+    <span class='label'>emoji_name:</span> <span class='ivar'>@emoji_name</span>
   <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -860,7 +892,7 @@ Specify value to set the value, if not don&#39;t specify or specify <code>Discor
 </div>
 
       <div id="footer">
-  Generated on Wed Aug 24 09:14:21 2022 by
+  Generated on Wed Aug 24 10:16:38 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>

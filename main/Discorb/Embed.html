@@ -757,7 +757,9 @@
 67
 68
 69
-70</pre>
+70
+71
+72</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/discorb/embed.rb', line 47</span>
@@ -783,7 +785,9 @@
   <span class='ivar'>@fields</span> <span class='op'>=</span> <span class='id identifier rubyid_fields'>fields</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
   <span class='ivar'>@footer</span> <span class='op'>=</span> <span class='id identifier rubyid_footer'>footer</span>
   <span class='ivar'>@image</span> <span class='op'>=</span> <span class='id identifier rubyid_image'>image</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_image'>image</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='const'><span class='object_link'><a href="Embed/Image.html" title="Discorb::Embed::Image (class)">Image</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Embed/Image.html#initialize-instance_method" title="Discorb::Embed::Image#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_image'>image</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='id identifier rubyid_image'>image</span><span class='rparen'>)</span>
-  <span class='ivar'>@thumbnail</span> <span class='op'>=</span> <span class='id identifier rubyid_thumbnail'>thumbnail</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_thumbnail'>thumbnail</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='const'><span class='object_link'><a href="Embed/Thumbnail.html" title="Discorb::Embed::Thumbnail (class)">Thumbnail</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Embed/Thumbnail.html#initialize-instance_method" title="Discorb::Embed::Thumbnail#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_thumbnail'>thumbnail</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='id identifier rubyid_thumbnail'>thumbnail</span><span class='rparen'>)</span>
+  <span class='ivar'>@thumbnail</span> <span class='op'>=</span>
+    <span class='id identifier rubyid_thumbnail'>thumbnail</span> <span class='op'>&amp;&amp;</span>
+      <span class='lparen'>(</span><span class='id identifier rubyid_thumbnail'>thumbnail</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='const'><span class='object_link'><a href="Embed/Thumbnail.html" title="Discorb::Embed::Thumbnail (class)">Thumbnail</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Embed/Thumbnail.html#initialize-instance_method" title="Discorb::Embed::Thumbnail#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_thumbnail'>thumbnail</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='id identifier rubyid_thumbnail'>thumbnail</span><span class='rparen'>)</span>
   <span class='ivar'>@type</span> <span class='op'>=</span> <span class='symbol'>:rich</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1467,14 +1471,14 @@
       <pre class="lines">
 
 
-131
-132
-133
-134
-135</pre>
+148
+149
+150
+151
+152</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/embed.rb', line 131</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/embed.rb', line 148</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_from_hash'>from_hash</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_inst'>inst</span> <span class='op'>=</span> <span class='id identifier rubyid_allocate'>allocate</span>
@@ -1507,12 +1511,12 @@
       <pre class="lines">
 
 
-105
-106
-107</pre>
+122
+123
+124</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/embed.rb', line 105</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/embed.rb', line 122</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> \&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@title</span><span class='embexpr_end'>}</span><span class='tstring_content'>\&quot;&gt;</span><span class='tstring_end'>&quot;</span></span>
@@ -1571,24 +1575,24 @@
       <pre class="lines">
 
 
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129</pre>
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/embed.rb', line 115</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/embed.rb', line 132</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_hash'>to_hash</span>
   <span class='comment'># @type var ret: Hash[untyped, untyped]
@@ -1615,7 +1619,7 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Aug 24 09:14:19 2022 by
+  Generated on Wed Aug 24 10:16:37 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>

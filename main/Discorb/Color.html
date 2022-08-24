@@ -709,12 +709,12 @@ Currently these colors are supported:</p>
       <pre class="lines">
 
 
-175
-176
-177</pre>
+171
+172
+173</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/color.rb', line 175</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/color.rb', line 171</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_color'>color</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@discord_colors</span><span class='lbracket'>[</span><span class='id identifier rubyid_color'>color</span><span class='rbracket'>]</span><span class='rparen'>)</span>
@@ -785,12 +785,12 @@ Currently these colors are supported:</p>
       <pre class="lines">
 
 
-117
-118
-119</pre>
+113
+114
+115</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/color.rb', line 117</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/color.rb', line 113</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_from_hex'>from_hex</span><span class='lparen'>(</span><span class='id identifier rubyid_hex'>hex</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_hex'>hex</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='lparen'>(</span><span class='int'>16</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -891,15 +891,15 @@ Currently these colors are supported:</p>
       <pre class="lines">
 
 
-130
-131
-132</pre>
+126
+127
+128</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/color.rb', line 130</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/color.rb', line 126</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_from_rgb'>from_rgb</span><span class='lparen'>(</span><span class='id identifier rubyid_red'>red</span><span class='comma'>,</span> <span class='id identifier rubyid_green'>green</span><span class='comma'>,</span> <span class='id identifier rubyid_blue'>blue</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_red'>red</span> <span class='op'>*</span> <span class='int'>256</span> <span class='op'>*</span> <span class='int'>256</span> <span class='op'>+</span> <span class='id identifier rubyid_green'>green</span> <span class='op'>*</span> <span class='int'>256</span> <span class='op'>+</span> <span class='id identifier rubyid_blue'>blue</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_red'>red</span> <span class='op'>*</span> <span class='int'>256</span> <span class='op'>*</span> <span class='int'>256</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='id identifier rubyid_green'>green</span> <span class='op'>*</span> <span class='int'>256</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='id identifier rubyid_blue'>blue</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -927,12 +927,12 @@ Currently these colors are supported:</p>
       <pre class="lines">
 
 
-106
-107
-108</pre>
+102
+103
+104</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/color.rb', line 106</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/color.rb', line 102</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='ivar'>@value</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
@@ -1165,21 +1165,13 @@ Currently these colors are supported:</p>
 
 87
 88
-89
-90
-91
-92
-93</pre>
+89</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/discorb/color.rb', line 87</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_rgb_hash'>to_rgb_hash</span>
-  <span class='lbrace'>{</span>
-    <span class='label'>r:</span> <span class='ivar'>@value</span> <span class='op'>/</span> <span class='lparen'>(</span><span class='int'>256</span> <span class='op'>*</span> <span class='int'>256</span><span class='rparen'>)</span><span class='comma'>,</span>
-    <span class='label'>g:</span> <span class='ivar'>@value</span> <span class='op'>/</span> <span class='int'>256</span> <span class='op'>%</span> <span class='int'>256</span><span class='comma'>,</span>
-    <span class='label'>b:</span> <span class='ivar'>@value</span> <span class='op'>%</span> <span class='int'>256</span><span class='comma'>,</span>
-  <span class='rbrace'>}</span>
+  <span class='lbrace'>{</span> <span class='label'>r:</span> <span class='ivar'>@value</span> <span class='op'>/</span> <span class='lparen'>(</span><span class='int'>256</span> <span class='op'>*</span> <span class='int'>256</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='label'>g:</span> <span class='ivar'>@value</span> <span class='op'>/</span> <span class='int'>256</span> <span class='op'>%</span> <span class='int'>256</span><span class='comma'>,</span> <span class='label'>b:</span> <span class='ivar'>@value</span> <span class='op'>%</span> <span class='int'>256</span> <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1228,12 +1220,12 @@ Currently these colors are supported:</p>
       <pre class="lines">
 
 
-102
-103
-104</pre>
+98
+99
+100</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/color.rb', line 102</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/color.rb', line 98</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_to_hex'>to_hex</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -1248,7 +1240,7 @@ Currently these colors are supported:</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Aug 24 09:14:19 2022 by
+  Generated on Wed Aug 24 10:16:37 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>

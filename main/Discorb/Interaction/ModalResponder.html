@@ -237,34 +237,48 @@
       <pre class="lines">
 
 
-315
-316
-317
-318
-319
-320
-321
-322
-323
-324
-325
-326
-327</pre>
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/response.rb', line 315</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/response.rb', line 351</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_show_modal'>show_modal</span><span class='lparen'>(</span><span class='id identifier rubyid_title'>title</span><span class='comma'>,</span> <span class='id identifier rubyid_custom_id'>custom_id</span><span class='comma'>,</span> <span class='id identifier rubyid_components'>components</span><span class='rparen'>)</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
-    <span class='id identifier rubyid_payload'>payload</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>title:</span> <span class='id identifier rubyid_title'>title</span><span class='comma'>,</span> <span class='label'>custom_id:</span> <span class='id identifier rubyid_custom_id'>custom_id</span><span class='comma'>,</span> <span class='label'>components:</span> <span class='const'><span class='object_link'><a href="../Component.html" title="Discorb::Component (class)">Component</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_payload'><span class='object_link'><a href="../Component.html#to_payload-class_method" title="Discorb::Component.to_payload (method)">to_payload</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_components'>components</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
-    <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span>
-      <span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
-        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/interactions/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@token</span><span class='embexpr_end'>}</span><span class='tstring_content'>/callback</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//interactions/:interaction_id/:token/callback</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-        <span class='symbol'>:post</span>
-      <span class='rparen'>)</span><span class='comma'>,</span>
-      <span class='lbrace'>{</span> <span class='label'>type:</span> <span class='int'>9</span><span class='comma'>,</span> <span class='label'>data:</span> <span class='id identifier rubyid_payload'>payload</span> <span class='rbrace'>}</span>
-    <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
+    <span class='id identifier rubyid_payload'>payload</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+      <span class='label'>title:</span> <span class='id identifier rubyid_title'>title</span><span class='comma'>,</span>
+      <span class='label'>custom_id:</span> <span class='id identifier rubyid_custom_id'>custom_id</span><span class='comma'>,</span>
+      <span class='label'>components:</span> <span class='const'><span class='object_link'><a href="../Component.html" title="Discorb::Component (class)">Component</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_payload'><span class='object_link'><a href="../Component.html#to_payload-class_method" title="Discorb::Component.to_payload (method)">to_payload</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_components'>components</span><span class='rparen'>)</span>
+    <span class='rbrace'>}</span>
+    <span class='ivar'>@client</span>
+      <span class='period'>.</span><span class='id identifier rubyid_http'>http</span>
+      <span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span>
+        <span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/interactions/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@token</span><span class='embexpr_end'>}</span><span class='tstring_content'>/callback</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//interactions/:interaction_id/:token/callback</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='symbol'>:post</span>
+        <span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='lbrace'>{</span> <span class='label'>type:</span> <span class='int'>9</span><span class='comma'>,</span> <span class='label'>data:</span> <span class='id identifier rubyid_payload'>payload</span> <span class='rbrace'>}</span>
+      <span class='rparen'>)</span>
+      <span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -277,7 +291,7 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Aug 24 09:14:19 2022 by
+  Generated on Wed Aug 24 10:16:36 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>

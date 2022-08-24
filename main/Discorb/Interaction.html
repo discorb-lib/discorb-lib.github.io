@@ -1135,12 +1135,12 @@
       <pre class="lines">
 
 
-78
-79
-80</pre>
+81
+82
+83</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 78</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 81</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_channel'>channel</span>
   <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_channels'>channels</span><span class='lbracket'>[</span><span class='ivar'>@channel_id</span><span class='rbracket'>]</span>
@@ -1193,30 +1193,36 @@ This method is low-level.</p>
       <pre class="lines">
 
 
-210
-211
-212
-213
-214
-215
-216
-217
-218
 219
-220</pre>
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 210</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 219</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete_original_message'>delete_original_message</span>
   <span class='const'>Async</span> <span class='kw'>do</span>
-    <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span>
-      <span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
-        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/webhooks/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@application_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@token</span><span class='embexpr_end'>}</span><span class='tstring_content'>/messages/@original</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//webhooks/:webhook_id/:token/messages/@original</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-        <span class='symbol'>:delete</span>
+    <span class='ivar'>@client</span>
+      <span class='period'>.</span><span class='id identifier rubyid_http'>http</span>
+      <span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span>
+        <span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/webhooks/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@application_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@token</span><span class='embexpr_end'>}</span><span class='tstring_content'>/messages/@original</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//webhooks/:webhook_id/:token/messages/@original</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='symbol'>:delete</span>
+        <span class='rparen'>)</span>
       <span class='rparen'>)</span>
-    <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
+      <span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1395,13 +1401,6 @@ This method is low-level.</p>
       <pre class="lines">
 
 
-166
-167
-168
-169
-170
-171
-172
 173
 174
 175
@@ -1429,10 +1428,19 @@ This method is low-level.</p>
 197
 198
 199
-200</pre>
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 166</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 173</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_edit_original_message'>edit_original_message</span><span class='lparen'>(</span>
   <span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span>
@@ -1445,28 +1453,30 @@ This method is low-level.</p>
   <span class='const'>Async</span> <span class='kw'>do</span>
     <span class='id identifier rubyid_payload'>payload</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
     <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:content</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_content'>content</span> <span class='kw'>if</span> <span class='id identifier rubyid_content'>content</span>
-    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:embeds</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_embeds'>embeds</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='id identifier rubyid_embed'>embed</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_e'>e</span><span class='op'>|</span> <span class='id identifier rubyid_e'>e</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_hash'>to_hash</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='id identifier rubyid__1'>_1</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_then'>then</span> <span class='lbrace'>{</span> <span class='id identifier rubyid__1'>_1</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='op'>?</span> <span class='kw'>nil</span> <span class='op'>:</span> <span class='id identifier rubyid__1'>_1</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:embeds</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_embeds'>embeds</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='id identifier rubyid_embed'>embed</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_e'>e</span><span class='op'>|</span> <span class='id identifier rubyid_e'>e</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_hash'>to_hash</span> <span class='rbrace'>}</span>
+      <span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='id identifier rubyid__1'>_1</span> <span class='rbrace'>}</span>
+      <span class='period'>.</span><span class='id identifier rubyid_then'>then</span> <span class='lbrace'>{</span> <span class='id identifier rubyid__1'>_1</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='op'>?</span> <span class='kw'>nil</span> <span class='op'>:</span> <span class='id identifier rubyid__1'>_1</span> <span class='rbrace'>}</span>
     <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:components</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Component.html" title="Discorb::Component (class)">Component</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_payload'><span class='object_link'><a href="Component.html#to_payload-class_method" title="Discorb::Component.to_payload (method)">to_payload</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_components'>components</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_components'>components</span>
     <span class='id identifier rubyid_attachments'>attachments</span> <span class='op'>||=</span> <span class='id identifier rubyid_attachment'>attachment</span> <span class='op'>&amp;&amp;</span> <span class='lbracket'>[</span><span class='id identifier rubyid_attachment'>attachment</span><span class='rbracket'>]</span>
 
     <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:attachments</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_attachments'>attachments</span><span class='op'>&amp;.</span><span class='id identifier rubyid_map'>map</span><span class='op'>&amp;.</span><span class='id identifier rubyid_with_index'>with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='comma'>,</span> <span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
-      <span class='lbrace'>{</span>
-        <span class='label'>id:</span> <span class='id identifier rubyid_i'>i</span><span class='comma'>,</span>
-        <span class='label'>filename:</span> <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_filename'>filename</span><span class='comma'>,</span>
-        <span class='label'>description:</span> <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_description'>description</span><span class='comma'>,</span>
-      <span class='rbrace'>}</span>
+      <span class='lbrace'>{</span> <span class='label'>id:</span> <span class='id identifier rubyid_i'>i</span><span class='comma'>,</span> <span class='label'>filename:</span> <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_filename'>filename</span><span class='comma'>,</span> <span class='label'>description:</span> <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_description'>description</span> <span class='rbrace'>}</span>
     <span class='kw'>end</span>
     <span class='id identifier rubyid_payload'>payload</span><span class='period'>.</span><span class='id identifier rubyid_compact!'>compact!</span>
 
-    <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_multipart_request'>multipart_request</span><span class='lparen'>(</span>
-      <span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
-        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/webhooks/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@application_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@token</span><span class='embexpr_end'>}</span><span class='tstring_content'>/messages/@original</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//webhooks/:webhook_id/:token/messages/@original</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-        <span class='symbol'>:patch</span>
-      <span class='rparen'>)</span><span class='comma'>,</span>
-      <span class='id identifier rubyid_payload'>payload</span><span class='comma'>,</span>
-      <span class='id identifier rubyid_attachments'>attachments</span>
-    <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
+    <span class='ivar'>@client</span>
+      <span class='period'>.</span><span class='id identifier rubyid_http'>http</span>
+      <span class='period'>.</span><span class='id identifier rubyid_multipart_request'>multipart_request</span><span class='lparen'>(</span>
+        <span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/webhooks/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@application_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@token</span><span class='embexpr_end'>}</span><span class='tstring_content'>/messages/@original</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//webhooks/:webhook_id/:token/messages/@original</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='symbol'>:patch</span>
+        <span class='rparen'>)</span><span class='comma'>,</span>
+        <span class='id identifier rubyid_payload'>payload</span><span class='comma'>,</span>
+        <span class='id identifier rubyid_attachments'>attachments</span>
+      <span class='rparen'>)</span>
+      <span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1489,12 +1499,12 @@ This method is low-level.</p>
       <pre class="lines">
 
 
-74
-75
-76</pre>
+77
+78
+79</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 74</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 77</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_guild'>guild</span>
   <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_guilds'>guilds</span><span class='lbracket'>[</span><span class='ivar'>@guild_id</span><span class='rbracket'>]</span>
@@ -1519,12 +1529,12 @@ This method is low-level.</p>
       <pre class="lines">
 
 
-82
-83
-84</pre>
+85
+86
+87</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 82</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 85</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> id=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@id</span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
@@ -1733,9 +1743,6 @@ This method is low-level.</p>
       <pre class="lines">
 
 
-103
-104
-105
 106
 107
 108
@@ -1776,10 +1783,17 @@ This method is low-level.</p>
 143
 144
 145
-146</pre>
+146
+147
+148
+149
+150
+151
+152
+153</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 103</span>
+      <pre class="code"><span class="info file"># File 'lib/discorb/interaction/root.rb', line 106</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span>
   <span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span>
@@ -1796,31 +1810,35 @@ This method is low-level.</p>
     <span class='id identifier rubyid_payload'>payload</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
     <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:content</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_content'>content</span> <span class='kw'>if</span> <span class='id identifier rubyid_content'>content</span>
     <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:tts</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_tts'>tts</span>
-    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:embeds</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_embeds'>embeds</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='id identifier rubyid_embed'>embed</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_e'>e</span><span class='op'>|</span> <span class='id identifier rubyid_e'>e</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_hash'>to_hash</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='id identifier rubyid__1'>_1</span> <span class='rbrace'>}</span>
-    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:allowed_mentions</span><span class='rbracket'>]</span> <span class='op'>=</span>
-      <span class='id identifier rubyid_allowed_mentions'>allowed_mentions</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='lparen'>(</span><span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_allowed_mentions'>allowed_mentions</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_allowed_mentions'>allowed_mentions</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span>
+    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:embeds</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_embeds'>embeds</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='id identifier rubyid_embed'>embed</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_e'>e</span><span class='op'>|</span> <span class='id identifier rubyid_e'>e</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_hash'>to_hash</span> <span class='rbrace'>}</span>
+      <span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='lbrace'>{</span> <span class='id identifier rubyid__1'>_1</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:allowed_mentions</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_allowed_mentions'>allowed_mentions</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='lparen'>(</span>
+      <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_allowed_mentions'>allowed_mentions</span>
+    <span class='rparen'>)</span> <span class='op'>||</span> <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_allowed_mentions'>allowed_mentions</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span>
     <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:components</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Component.html" title="Discorb::Component (class)">Component</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_payload'><span class='object_link'><a href="Component.html#to_payload-class_method" title="Discorb::Component.to_payload (method)">to_payload</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_components'>components</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_components'>components</span>
     <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:flags</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_ephemeral'>ephemeral</span> <span class='op'>?</span> <span class='int'>1</span> <span class='op'>&lt;&lt;</span> <span class='int'>6</span> <span class='op'>:</span> <span class='int'>0</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_attachments'>attachments</span> <span class='op'>||=</span> <span class='id identifier rubyid_attachment'>attachment</span> <span class='op'>?</span> <span class='lbracket'>[</span><span class='id identifier rubyid_attachment'>attachment</span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 
     <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:attachments</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_attachments'>attachments</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='period'>.</span><span class='id identifier rubyid_with_index'>with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='comma'>,</span> <span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
-      <span class='lbrace'>{</span>
-        <span class='label'>id:</span> <span class='id identifier rubyid_i'>i</span><span class='comma'>,</span>
-        <span class='label'>filename:</span> <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_filename'>filename</span><span class='comma'>,</span>
-        <span class='label'>description:</span> <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_description'>description</span><span class='comma'>,</span>
-      <span class='rbrace'>}</span>
+      <span class='lbrace'>{</span> <span class='label'>id:</span> <span class='id identifier rubyid_i'>i</span><span class='comma'>,</span> <span class='label'>filename:</span> <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_filename'>filename</span><span class='comma'>,</span> <span class='label'>description:</span> <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_description'>description</span> <span class='rbrace'>}</span>
     <span class='kw'>end</span>
 
-    <span class='id identifier rubyid__resp'>_resp</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_multipart_request'>multipart_request</span><span class='lparen'>(</span>
-      <span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
-        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/webhooks/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@application_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@token</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//webhooks/:webhook_id/:token</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-        <span class='symbol'>:post</span>
-      <span class='rparen'>)</span><span class='comma'>,</span>
-      <span class='id identifier rubyid_payload'>payload</span><span class='comma'>,</span>
-      <span class='id identifier rubyid_attachments'>attachments</span>
-    <span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
-    <span class='id identifier rubyid_webhook'>webhook</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Webhook.html" title="Discorb::Webhook (class)">Webhook</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Webhook/URLWebhook.html" title="Discorb::Webhook::URLWebhook (class)">URLWebhook</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Webhook.html#new-class_method" title="Discorb::Webhook.new (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/webhooks/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@application_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@token</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid__resp'>_resp</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span>
+      <span class='ivar'>@client</span>
+        <span class='period'>.</span><span class='id identifier rubyid_http'>http</span>
+        <span class='period'>.</span><span class='id identifier rubyid_multipart_request'>multipart_request</span><span class='lparen'>(</span>
+          <span class='const'>Route</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/webhooks/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@application_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@token</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//webhooks/:webhook_id/:token</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+            <span class='symbol'>:post</span>
+          <span class='rparen'>)</span><span class='comma'>,</span>
+          <span class='id identifier rubyid_payload'>payload</span><span class='comma'>,</span>
+          <span class='id identifier rubyid_attachments'>attachments</span>
+        <span class='rparen'>)</span>
+        <span class='period'>.</span><span class='id identifier rubyid_wait'>wait</span>
+    <span class='id identifier rubyid_webhook'>webhook</span> <span class='op'>=</span>
+      <span class='const'><span class='object_link'><a href="Webhook.html" title="Discorb::Webhook (class)">Webhook</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Webhook/URLWebhook.html" title="Discorb::Webhook::URLWebhook (class)">URLWebhook</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Webhook.html#new-class_method" title="Discorb::Webhook.new (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/webhooks/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@application_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@token</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
     <span class='const'><span class='object_link'><a href="Webhook.html" title="Discorb::Webhook (class)">Webhook</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Webhook/Message.html" title="Discorb::Webhook::Message (class)">Message</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Webhook.html#new-class_method" title="Discorb::Webhook.new (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_webhook'>webhook</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='ivar'>@client</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_ret'>ret</span>
   <span class='kw'>end</span>
@@ -1835,7 +1853,7 @@ This method is low-level.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Aug 24 09:14:25 2022 by
+  Generated on Wed Aug 24 10:16:42 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>

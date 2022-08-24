@@ -201,7 +201,11 @@ Include from this module to make your own extension.</p>
 24
 25
 26
-27</pre>
+27
+28
+29
+30
+31</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/discorb/extension.rb', line 15</span>
@@ -212,9 +216,13 @@ Include from this module to make your own extension.</p>
   <span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_events'>events</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_event'>event</span><span class='comma'>,</span> <span class='id identifier rubyid_handlers'>handlers</span><span class='op'>|</span>
     <span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='id identifier rubyid_event'>event</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_handlers'>handlers</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_handler'>handler</span><span class='op'>|</span>
-      <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="EventHandler.html" title="Discorb::EventHandler (class)">EventHandler</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="EventHandler.html#initialize-instance_method" title="Discorb::EventHandler#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_proc'>proc</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='op'>|</span>
-        <span class='id identifier rubyid_instance_exec'>instance_exec</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_handler'>handler</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='rparen'>)</span>
-      <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_handler'>handler</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_handler'>handler</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='const'><span class='object_link'><a href="../Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="EventHandler.html" title="Discorb::EventHandler (class)">EventHandler</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="EventHandler.html#initialize-instance_method" title="Discorb::EventHandler#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+        <span class='id identifier rubyid_proc'>proc</span> <span class='kw'>do</span> <span class='op'>|</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='op'>|</span>
+          <span class='id identifier rubyid_instance_exec'>instance_exec</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_handler'>handler</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+        <span class='kw'>end</span><span class='comma'>,</span>
+        <span class='id identifier rubyid_handler'>handler</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span>
+        <span class='id identifier rubyid_handler'>handler</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
+      <span class='rparen'>)</span>
     <span class='kw'>end</span>
   <span class='kw'>end</span>
   <span class='ivar'>@events</span> <span class='op'>=</span> <span class='id identifier rubyid_ret'>ret</span>
@@ -259,7 +267,7 @@ Include from this module to make your own extension.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Aug 24 09:14:17 2022 by
+  Generated on Wed Aug 24 10:16:34 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>
