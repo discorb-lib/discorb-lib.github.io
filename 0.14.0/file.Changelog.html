@@ -58,325 +58,369 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><div id='filecontents'><h1 id="changelog">Changelog</h1>
-
-<h2 id="v0-14">v0.14</h2>
-
-<h3 id="v0-14-0">v0.14.0</h3>
-
-<ul>
-<li>Add: Support Modal interaction</li>
-<li>Add: Support attachment option type in slash command</li>
-<li>Fix: Connections will no longer stacked</li>
-<li>Fix: Fix Client#fetch_nitro_sticker_packs returning 404</li>
-<li>Fix: Fix <code>self</code> reference in subcommand of extension</li>
-<li>Refactor: Refactored many things</li>
-<li>Refactor: Add Rubocop</li>
-</ul>
-
-<h2 id="v0-13">v0.13</h2>
-
-<h3 id="v0-13-4">v0.13.4</h3>
-
-<ul>
-<li>Add: Show command on <code>discorb setup</code></li>
-<li>Fix: Fix issue when logging in to file(#6, thanks <code>deanpcmad</code>)</li>
-<li>Fix: Fix rate limit handing</li>
-<li>Fix: Fix <code>Client#users</code>, it was always empty</li>
-<li>Fix: Fix sorting dictionary</li>
-</ul>
-
-<h3 id="v0-13-3">v0.13.3</h3>
-
-<ul>
-<li>Fix: Fix INTEGRATION_xxx event</li>
-<li>Change: Change description</li>
-</ul>
-
-<h3 id="v0-13-2">v0.13.2</h3>
-
-<ul>
-<li>Fix: Fix MESSAGE_DELETE_BULK event</li>
-<li>Fix: Delete VoiceState from <code>Guild#voice_states</code> when member leaves</li>
-<li>Add: Add <code>VoiceChannel#members</code>, <code>VoiceChannel#voice_states</code></li>
-<li>Add: Add <code>StageChannel#members</code>, <code>StageChannel#voice_states</code>, <code>StageChannel#audiences</code>, <code>StageChannel#speakers</code></li>
-<li>Fix: Ignore errors on closing websocket</li>
-</ul>
-
-<h3 id="v0-13-1">v0.13.1</h3>
-
-<ul>
-<li>Add: <code>Discorb::Integration#locale</code>, <code>Discorb::Integration#guild_locale</code></li>
-<li>Fix: Fix grammers</li>
-<li>Change: Use <code>Discorb::Unset</code> instead of <code>:unset</code></li>
-<li>Add: <code>Member#timeout</code></li>
-<li>Improve: Improve sending attachments</li>
-<li>Fix: Handle <code>EPIPE</code> errors</li>
-</ul>
-
-<h3 id="v0-13-0">v0.13.0</h3>
-
-<ul>
-<li>Change!: Event is now EventHandler.</li>
-<li>Add: Support for scheduled events.</li>
-<li>Fix: Fix bug in sticker initialization.</li>
-<li>Add: Support application flags</li>
-<li>Add: Add <code>#inspect</code> method to many classes.</li>
-</ul>
-
-<h2 id="v0-12">v0.12</h2>
-
-<h3 id="v0-12-4">v0.12.4</h3>
-
-<ul>
-<li>Update: Update emoji table</li>
-<li>Add: Support min_value and max_value for numeric options in slash command</li>
-<li>Fix: Fix sending images</li>
-</ul>
-
-<h3 id="v0-12-3">v0.12.3</h3>
-
-<ul>
-<li>Fix: Fix NoMethodError in command interaction</li>
-<li>Fix: Fix NoMethodError in Integration#initialize</li>
-</ul>
-
-<h3 id="v0-12-2">v0.12.2</h3>
-
-<ul>
-<li>Fix: Fix <code>Message#type</code></li>
-<li>Change: <code>discorb run</code> will look up for <code>main.rb</code> in parent directories</li>
-</ul>
-
-<h3 id="v0-12-1">v0.12.1</h3>
-
-<ul>
-<li>Fix: Fix some texts</li>
-<li>Add: Add <code>User#mention</code></li>
-</ul>
-
-<h3 id="v0-12-0">v0.12.0</h3>
-
-<ul>
-<li>Refactor: Refactor the code</li>
-<li>Fix: Fix resuming gateway, finally</li>
-<li>Fix: Fix <code>@client</code> in slash command handler in extension</li>
-</ul>
-
-<h2 id="v0-11">v0.11</h2>
-
-<h3 id="v0-11-4">v0.11.4</h3>
-
-<ul>
-<li>Fix: Fix unpinning messages</li>
-</ul>
-
-<h3 id="v0-11-3">v0.11.3</h3>
-
-<ul>
-<li>Add: Add <code>Snowflake#id</code> as alias for <code>Snowflake#to_s</code></li>
-<li>Fix: Fix <code>Message#unpin</code></li>
-</ul>
-
-<h3 id="v0-11-2">v0.11.2</h3>
-
-<ul>
-<li>Add: Add <code>setup</code> event</li>
-<li>Fix: Fix gateway resuming</li>
-<li>Add: Add GitHub Packages</li>
-</ul>
-
-<h3 id="v0-11-1">v0.11.1</h3>
-
-<ul>
-<li>Improve: Improve rate limit handling</li>
-<li>Fix: Fix bug in Integration initalization</li>
-<li>Change: Change log style</li>
-<li>Add: Support OP code 7</li>
-</ul>
-
-<h3 id="v0-11-0">v0.11.0</h3>
-
-<ul>
-<li>Add: Improve documents</li>
-<li>Add: Implement global rate limits</li>
-<li>Add: Add support autocomplete</li>
-<li>Add: Add role icon editting</li>
-<li>Change: Use <code>include Discorb::Extension</code> instead of <code>&lt; Discorb::Extension</code></li>
-<li>Fix: Fix role operation</li>
-</ul>
-
-<h2 id="v0-10">v0.10</h2>
-
-<h3 id="v0-10-3">v0.10.3</h3>
-
-<ul>
-<li>Add: Support role icons</li>
-<li>Fix: Fix version order</li>
-<li>Change: Use <code>exec</code> instead of <code>system</code> in <code>discorb run</code></li>
-<li>Add: Add <code>Extension.loaded</code></li>
-</ul>
-
-<h3 id="v0-10-2">v0.10.2</h3>
-
-<ul>
-<li>Change: <code>discorb init</code> is now <code>discorb new</code></li>
-<li>Add: Add <code>:channel_types</code> parameter to <code>ApplicationCommand::Handler#slash</code> and some</li>
-</ul>
-
-<h3 id="v0-10-1">v0.10.1</h3>
-
-<ul>
-<li>Add: Add <code>Client#extensions</code></li>
-<li>Change: <code>Client#load_extension</code> allows instance of <code>Extension</code></li>
-<li>Add: Add <code>-b</code> option to <code>discorb run</code></li>
-</ul>
-
-<h3 id="v0-10-0">v0.10.0</h3>
-
-<ul>
-<li>Change: Sort versions</li>
-<li>Change: Snowflake is now String</li>
-<li>Change: Extension is now Class</li>
-<li>Add: Add <code>SelectMenu#disabled=</code></li>
-</ul>
-
-<h2 id="v0-9">v0.9</h2>
-
-<h3 id="v0-9-6">v0.9.6</h3>
-
-<ul>
-<li>Add: Add <code>Messageable#send_message</code> as alias of <code>Messageable#post</code></li>
-<li>Fix: Fix interaction responding with updating message</li>
-<li>Fix: Fix <code>MessageComponentInteraction#message</code></li>
-</ul>
-
-<h3 id="v0-9-5">v0.9.5</h3>
-
-<ul>
-<li>Fix: Fix editing message</li>
-<li>Add: Add <code>required</code> in slash command argument</li>
-<li>Add: Add <code>default</code> in slash command argument</li>
-</ul>
-
-<h3 id="v0-9-4">v0.9.4</h3>
-
-<ul>
-<li>Change: <code>Messageable#typing</code> with block is now synchronous</li>
-<li>Fix: Fix some issues in document</li>
-<li>Add: Add some attributes to <code>Message</code></li>
-<li>Fix: Fix guild parameter in message of message command</li>
-</ul>
-
-<h3 id="v0-9-3">v0.9.3</h3>
-
-<ul>
-<li>Fix: Fix interaction responding</li>
-</ul>
-
-<h3 id="v0-9-2-yanked">v0.9.2 (yanked)</h3>
-
-<ul>
-<li>Add: Make <code>Async::Task#inspect</code> shorter</li>
-<li>Add: <code>SourceResponse#post</code> will return message now</li>
-<li>Fix: Fix member caching</li>
-</ul>
-
-<h3 id="v0-9-1">v0.9.1</h3>
-
-<ul>
-<li>Fix: Fix member fetching</li>
-</ul>
-
-<h3 id="v0-9-0">v0.9.0</h3>
-
-<ul>
-<li>Delete: Delete <code>-d</code> parameter from <code>discorb run</code>; This is caused by segement fault error.</li>
-<li>Change: Rename <code>-t</code>, <code>--token</code> to <code>-e</code>, <code>--env</code> parameter</li>
-<li>Add: Add <code>-t</code>, <code>--title</code> parameter to <code>discorb run</code></li>
-<li>Add: Add <code>title</code> parameter to <code>Client#initialize</code></li>
-</ul>
-
-<h2 id="v0-8">v0.8</h2>
-
-<h3 id="v0-8-2">v0.8.2</h3>
-
-<ul>
-<li>Fix: Fix <code>Client#initialize</code></li>
-</ul>
-
-<h3 id="v0-8-1">v0.8.1</h3>
-
-<ul>
-<li>Add: Add FAQ</li>
-<li>Fix: Fix sending files</li>
-<li>Add: Add <code>File.from_string</code></li>
-<li>Fix: Fix <code>Client#update_presence</code></li>
-<li>Add: Add information in <code>discorb run -d</code></li>
-</ul>
-
-<h3 id="v0-8-0">v0.8.0</h3>
-
-<ul>
-<li>Add: Add <code>Guild#fetch_members</code></li>
-<li>Add: Add <code>Guild#fetch_member_list</code> as alias of <code>Guild#fetch_members</code></li>
-<li>Add: Add <code>Intents#to_h</code></li>
-<li>Add: Add <code>fetch_member</code> parameter to <code>Client#initialize</code>; Note you should set <code>false</code> if your bot doesn&#39;t have <code>GUILD_MEMBERS</code> intent</li>
-<li>Change: Change <code>ready</code> to <code>standby</code> event</li>
-<li>Change: <code>ready</code> will be fired when client receives <code>READY</code> event</li>
-</ul>
-
-<h2 id="v0-7">v0.7</h2>
-
-<h3 id="v0-7-6">v0.7.6</h3>
-
-<ul>
-<li>Fix: Fix heartbeating error</li>
-</ul>
-
-<h3 id="v0-7-5-yanked">v0.7.5 (yanked)</h3>
-
-<ul>
-<li>Fix: Fix critical error</li>
-</ul>
-
-<h3 id="v0-7-4-yanked">v0.7.4 (yanked)</h3>
-
-<ul>
-<li>Fix: Fix disconnected client</li>
-</ul>
-
-<h3 id="v0-7-3">v0.7.3</h3>
-
-<ul>
-<li>Add: Improve <code>discorb init</code></li>
-</ul>
-
-<h3 id="v0-7-2">v0.7.2</h3>
-
-<ul>
-<li>Add: Add <code>Member#owner?</code></li>
-<li>Fix: Fix <code>Member#permissions</code></li>
-<li>Add: Add <code>Member#guild_permissions</code> as alias of <code>Member#permissions</code></li>
-<li>Add: Add default role to <code>Member#roles</code></li>
-<li>Fix: Fix error in <code>Integration#_set_data</code></li>
-<li>Change: Reverse <code>Member#roles</code></li>
-</ul>
-
-<h3 id="v0-7-1">v0.7.1</h3>
-
-<ul>
-<li>Fix: Fix error of responding to interaction</li>
-</ul>
-
-<h3 id="v0-7-0">v0.7.0</h3>
-
-<ul>
-<li>Add: Add <code>error</code> event</li>
-<li>Fix: Fix some issues with client without guild intent</li>
-<li>Add: Add alias for <code>#fired_by</code></li>
-<li>Change!: Change block usage of <code>ApplicationCommand::Handler#group</code></li>
-</ul>
+      <div id="content"><div id='filecontents'>
+<h1 id="label-Changelog">Changelog</h1>
+
+<h2 id="label-v0.14">v0.14</h2>
+
+<h3 id="label-v0.14.0">v0.14.0</h3>
+<ul><li>
+<p>Add: Support Modal interaction</p>
+</li><li>
+<p>Add: Support attachment option type in slash command</p>
+</li><li>
+<p>Fix: Connections will no longer stacked</p>
+</li><li>
+<p>Fix: Fix Client#fetch_nitro_sticker_packs returning 404</p>
+</li><li>
+<p>Fix: Fix <code>self</code> reference in subcommand of extension</p>
+</li><li>
+<p>Refactor: Refactored many things</p>
+</li><li>
+<p>Refactor: Add Rubocop</p>
+</li></ul>
+
+<h2 id="label-v0.13">v0.13</h2>
+
+<h3 id="label-v0.13.4">v0.13.4</h3>
+<ul><li>
+<p>Add: Show command on <code>discorb setup</code></p>
+</li><li>
+<p>Fix: Fix issue when logging in to file(#6, thanks <code>deanpcmad</code>)</p>
+</li><li>
+<p>Fix: Fix rate limit handing</p>
+</li><li>
+<p>Fix: Fix <code>Client#users</code>, it was always empty</p>
+</li><li>
+<p>Fix: Fix sorting dictionary</p>
+</li></ul>
+
+<h3 id="label-v0.13.3">v0.13.3</h3>
+<ul><li>
+<p>Fix: Fix INTEGRATION_xxx event</p>
+</li><li>
+<p>Change: Change description</p>
+</li></ul>
+
+<h3 id="label-v0.13.2">v0.13.2</h3>
+<ul><li>
+<p>Fix: Fix MESSAGE_DELETE_BULK event</p>
+</li><li>
+<p>Fix: Delete VoiceState from <code>Guild#voice_states</code> when member leaves</p>
+</li><li>
+<p>Add: Add <code>VoiceChannel#members</code>, <code>VoiceChannel#voice_states</code></p>
+</li><li>
+<p>Add: Add <code>StageChannel#members</code>, <code>StageChannel#voice_states</code>, <code>StageChannel#audiences</code>, <code>StageChannel#speakers</code></p>
+</li><li>
+<p>Fix: Ignore errors on closing websocket</p>
+</li></ul>
+
+<h3 id="label-v0.13.1">v0.13.1</h3>
+<ul><li>
+<p>Add: <code>Discorb::Integration#locale</code>, <code>Discorb::Integration#guild_locale</code></p>
+</li><li>
+<p>Fix: Fix grammers</p>
+</li><li>
+<p>Change: Use <code>Discorb::Unset</code> instead of <code>:unset</code></p>
+</li><li>
+<p>Add: <code>Member#timeout</code></p>
+</li><li>
+<p>Improve: Improve sending attachments</p>
+</li><li>
+<p>Fix: Handle <code>EPIPE</code> errors</p>
+</li></ul>
+
+<h3 id="label-v0.13.0">v0.13.0</h3>
+<ul><li>
+<p>Change!: Event is now EventHandler.</p>
+</li><li>
+<p>Add: Support for scheduled events.</p>
+</li><li>
+<p>Fix: Fix bug in sticker initialization.</p>
+</li><li>
+<p>Add: Support application flags</p>
+</li><li>
+<p>Add: Add <code>#inspect</code> method to many classes.</p>
+</li></ul>
+
+<h2 id="label-v0.12">v0.12</h2>
+
+<h3 id="label-v0.12.4">v0.12.4</h3>
+<ul><li>
+<p>Update: Update emoji table</p>
+</li><li>
+<p>Add: Support min_value and max_value for numeric options in slash command</p>
+</li><li>
+<p>Fix: Fix sending images</p>
+</li></ul>
+
+<h3 id="label-v0.12.3">v0.12.3</h3>
+<ul><li>
+<p>Fix: Fix NoMethodError in command interaction</p>
+</li><li>
+<p>Fix: Fix NoMethodError in Integration#initialize</p>
+</li></ul>
+
+<h3 id="label-v0.12.2">v0.12.2</h3>
+<ul><li>
+<p>Fix: Fix <code>Message#type</code></p>
+</li><li>
+<p>Change: <code>discorb run</code> will look up for <code>main.rb</code> in parent directories</p>
+</li></ul>
+
+<h3 id="label-v0.12.1">v0.12.1</h3>
+<ul><li>
+<p>Fix: Fix some texts</p>
+</li><li>
+<p>Add: Add <code>User#mention</code></p>
+</li></ul>
+
+<h3 id="label-v0.12.0">v0.12.0</h3>
+<ul><li>
+<p>Refactor: Refactor the code</p>
+</li><li>
+<p>Fix: Fix resuming gateway, finally</p>
+</li><li>
+<p>Fix: Fix <code>@client</code> in slash command handler in extension</p>
+</li></ul>
+
+<h2 id="label-v0.11">v0.11</h2>
+
+<h3 id="label-v0.11.4">v0.11.4</h3>
+<ul><li>
+<p>Fix: Fix unpinning messages</p>
+</li></ul>
+
+<h3 id="label-v0.11.3">v0.11.3</h3>
+<ul><li>
+<p>Add: Add <code>Snowflake#id</code> as alias for <code>Snowflake#to_s</code></p>
+</li><li>
+<p>Fix: Fix <code>Message#unpin</code></p>
+</li></ul>
+
+<h3 id="label-v0.11.2">v0.11.2</h3>
+<ul><li>
+<p>Add: Add <code>setup</code> event</p>
+</li><li>
+<p>Fix: Fix gateway resuming</p>
+</li><li>
+<p>Add: Add GitHub Packages</p>
+</li></ul>
+
+<h3 id="label-v0.11.1">v0.11.1</h3>
+<ul><li>
+<p>Improve: Improve rate limit handling</p>
+</li><li>
+<p>Fix: Fix bug in Integration initalization</p>
+</li><li>
+<p>Change: Change log style</p>
+</li><li>
+<p>Add: Support OP code 7</p>
+</li></ul>
+
+<h3 id="label-v0.11.0">v0.11.0</h3>
+<ul><li>
+<p>Add: Improve documents</p>
+</li><li>
+<p>Add: Implement global rate limits</p>
+</li><li>
+<p>Add: Add support autocomplete</p>
+</li><li>
+<p>Add: Add role icon editting</p>
+</li><li>
+<p>Change: Use <code>include Discorb::Extension</code> instead of <code>&lt; Discorb::Extension</code></p>
+</li><li>
+<p>Fix: Fix role operation</p>
+</li></ul>
+
+<h2 id="label-v0.10">v0.10</h2>
+
+<h3 id="label-v0.10.3">v0.10.3</h3>
+<ul><li>
+<p>Add: Support role icons</p>
+</li><li>
+<p>Fix: Fix version order</p>
+</li><li>
+<p>Change: Use <code>exec</code> instead of <code>system</code> in <code>discorb run</code></p>
+</li><li>
+<p>Add: Add <code>Extension.loaded</code></p>
+</li></ul>
+
+<h3 id="label-v0.10.2">v0.10.2</h3>
+<ul><li>
+<p>Change: <code>discorb init</code> is now <code>discorb new</code></p>
+</li><li>
+<p>Add: Add <code>:channel_types</code> parameter to <code>ApplicationCommand::Handler#slash</code> and some</p>
+</li></ul>
+
+<h3 id="label-v0.10.1">v0.10.1</h3>
+<ul><li>
+<p>Add: Add <code>Client#extensions</code></p>
+</li><li>
+<p>Change: <code>Client#load_extension</code> allows instance of <code>Extension</code></p>
+</li><li>
+<p>Add: Add <code>-b</code> option to <code>discorb run</code></p>
+</li></ul>
+
+<h3 id="label-v0.10.0">v0.10.0</h3>
+<ul><li>
+<p>Change: Sort versions</p>
+</li><li>
+<p>Change: Snowflake is now String</p>
+</li><li>
+<p>Change: Extension is now Class</p>
+</li><li>
+<p>Add: Add <code>SelectMenu#disabled=</code></p>
+</li></ul>
+
+<h2 id="label-v0.9">v0.9</h2>
+
+<h3 id="label-v0.9.6">v0.9.6</h3>
+<ul><li>
+<p>Add: Add <code>Messageable#send_message</code> as alias of <code>Messageable#post</code></p>
+</li><li>
+<p>Fix: Fix interaction responding with updating message</p>
+</li><li>
+<p>Fix: Fix <code>MessageComponentInteraction#message</code></p>
+</li></ul>
+
+<h3 id="label-v0.9.5">v0.9.5</h3>
+<ul><li>
+<p>Fix: Fix editing message</p>
+</li><li>
+<p>Add: Add <code>required</code> in slash command argument</p>
+</li><li>
+<p>Add: Add <code>default</code> in slash command argument</p>
+</li></ul>
+
+<h3 id="label-v0.9.4">v0.9.4</h3>
+<ul><li>
+<p>Change: <code>Messageable#typing</code> with block is now synchronous</p>
+</li><li>
+<p>Fix: Fix some issues in document</p>
+</li><li>
+<p>Add: Add some attributes to <code>Message</code></p>
+</li><li>
+<p>Fix: Fix guild parameter in message of message command</p>
+</li></ul>
+
+<h3 id="label-v0.9.3">v0.9.3</h3>
+<ul><li>
+<p>Fix: Fix interaction responding</p>
+</li></ul>
+
+<h3 id="label-v0.9.2+-28yanked-29">v0.9.2 (yanked)</h3>
+<ul><li>
+<p>Add: Make <code>Async::Task#inspect</code> shorter</p>
+</li><li>
+<p>Add: <code>SourceResponse#post</code> will return message now</p>
+</li><li>
+<p>Fix: Fix member caching</p>
+</li></ul>
+
+<h3 id="label-v0.9.1">v0.9.1</h3>
+<ul><li>
+<p>Fix: Fix member fetching</p>
+</li></ul>
+
+<h3 id="label-v0.9.0">v0.9.0</h3>
+<ul><li>
+<p>Delete: Delete <code>-d</code> parameter from <code>discorb run</code>; This is caused by segement fault error.</p>
+</li><li>
+<p>Change: Rename <code>-t</code>, <code>--token</code> to <code>-e</code>, <code>--env</code> parameter</p>
+</li><li>
+<p>Add: Add <code>-t</code>, <code>--title</code> parameter to <code>discorb run</code></p>
+</li><li>
+<p>Add: Add <code>title</code> parameter to <code>Client#initialize</code></p>
+</li></ul>
+
+<h2 id="label-v0.8">v0.8</h2>
+
+<h3 id="label-v0.8.2">v0.8.2</h3>
+<ul><li>
+<p>Fix: Fix <code>Client#initialize</code></p>
+</li></ul>
+
+<h3 id="label-v0.8.1">v0.8.1</h3>
+<ul><li>
+<p>Add: Add FAQ</p>
+</li><li>
+<p>Fix: Fix sending files</p>
+</li><li>
+<p>Add: Add <code>File.from_string</code></p>
+</li><li>
+<p>Fix: Fix <code>Client#update_presence</code></p>
+</li><li>
+<p>Add: Add information in <code>discorb run -d</code></p>
+</li></ul>
+
+<h3 id="label-v0.8.0">v0.8.0</h3>
+<ul><li>
+<p>Add: Add <code>Guild#fetch_members</code></p>
+</li><li>
+<p>Add: Add <code>Guild#fetch_member_list</code> as alias of <code>Guild#fetch_members</code></p>
+</li><li>
+<p>Add: Add <code>Intents#to_h</code></p>
+</li><li>
+<p>Add: Add <code>fetch_member</code> parameter to <code>Client#initialize</code>; Note you should set <code>false</code> if your bot doesn&#39;t have <code>GUILD_MEMBERS</code> intent</p>
+</li><li>
+<p>Change: Change <code>ready</code> to <code>standby</code> event</p>
+</li><li>
+<p>Change: <code>ready</code> will be fired when client receives <code>READY</code> event</p>
+</li></ul>
+
+<h2 id="label-v0.7">v0.7</h2>
+
+<h3 id="label-v0.7.6">v0.7.6</h3>
+<ul><li>
+<p>Fix: Fix heartbeating error</p>
+</li></ul>
+
+<h3 id="label-v0.7.5+-28yanked-29">v0.7.5 (yanked)</h3>
+<ul><li>
+<p>Fix: Fix critical error</p>
+</li></ul>
+
+<h3 id="label-v0.7.4+-28yanked-29">v0.7.4 (yanked)</h3>
+<ul><li>
+<p>Fix: Fix disconnected client</p>
+</li></ul>
+
+<h3 id="label-v0.7.3">v0.7.3</h3>
+<ul><li>
+<p>Add: Improve <code>discorb init</code></p>
+</li></ul>
+
+<h3 id="label-v0.7.2">v0.7.2</h3>
+<ul><li>
+<p>Add: Add <code>Member#owner?</code></p>
+</li><li>
+<p>Fix: Fix <code>Member#permissions</code></p>
+</li><li>
+<p>Add: Add <code>Member#guild_permissions</code> as alias of <code>Member#permissions</code></p>
+</li><li>
+<p>Add: Add default role to <code>Member#roles</code></p>
+</li><li>
+<p>Fix: Fix error in <code>Integration#_set_data</code></p>
+</li><li>
+<p>Change: Reverse <code>Member#roles</code></p>
+</li></ul>
+
+<h3 id="label-v0.7.1">v0.7.1</h3>
+<ul><li>
+<p>Fix: Fix error of responding to interaction</p>
+</li></ul>
+
+<h3 id="label-v0.7.0">v0.7.0</h3>
+<ul><li>
+<p>Add: Add <code>error</code> event</p>
+</li><li>
+<p>Fix: Fix some issues with client without guild intent</p>
+</li><li>
+<p>Add: Add alias for <code>#fired_by</code></p>
+</li><li>
+<p>Change!: Change block usage of <code>ApplicationCommand::Handler#group</code></p>
+</li></ul>
 
 <pre class="code ruby"><code class="ruby"><span class='comment'># before
 </span><span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_slash_group'>slash_group</span> <span class='kw'>do</span>
@@ -391,235 +435,240 @@
     <span class='comment'># ...
 </span>  <span class='kw'>end</span>
 <span class='kw'>end</span>
-
 </code></pre>
 
-<h2 id="v0-6">v0.6</h2>
-
-<h3 id="v0-6-1">v0.6.1</h3>
-
-<ul>
-<li>Change: Rename <code>Event#discriminator</code> to <code>Event#metadata</code></li>
-<li>Add: Add <code>:override</code> to <code>Client#on</code></li>
-</ul>
-
-<h3 id="v0-6-0">v0.6.0</h3>
-
-<ul>
-<li>Fix: Fix issue with client with no guilds</li>
-<li>Add: Add rbs (experimental)</li>
-<li>Add: Add <code>-t</code>, <code>--token</code> option to <code>discorb run</code></li>
-<li>Add: Add <code>-g</code>, <code>--guild</code> option to <code>discorb setup</code></li>
-<li>Change: Use <code>Async::Task&lt;R&gt;</code> instead of <code>R</code> in return value</li>
-</ul>
-
-<h2 id="v0-5">v0.5</h2>
-
-<h3 id="v0-5-6">v0.5.6</h3>
-
-<ul>
-<li>Add: Raise error when intents are invalid</li>
-<li>Fix: Fix Emoji#==</li>
-</ul>
-
-<h3 id="v0-5-5">v0.5.5</h3>
-
-<ul>
-<li>Fix: Fix some bugs</li>
-</ul>
-
-<h3 id="v0-5-4">v0.5.4</h3>
-
-<ul>
-<li>Fix: Fix issue of receiving component events</li>
-</ul>
-
-<h3 id="v0-5-3">v0.5.3</h3>
-
-<ul>
-<li>Add: Add way to handle raw events with <code>event_xxx</code></li>
-<li>Add: Add <code>Client#session_id</code></li>
-<li>Add: Add <code>Connectable</code></li>
-<li>Fix: Fix error by sending DM</li>
-</ul>
-
-<h3 id="v0-5-2">v0.5.2</h3>
-
-<ul>
-<li>Fix: Fix bug of registering commands</li>
-<li>Add: Add way to register commands in Extension</li>
-</ul>
-
-<h3 id="v0-5-1">v0.5.1</h3>
-
-<ul>
-<li>Add: Can use block for defining group commands</li>
-<li>Fix: Fix bug in subcommands</li>
-<li>Fix: Fix bug in receiving commands</li>
-</ul>
-
-<h3 id="v0-5-0">v0.5.0</h3>
-
-<ul>
-<li>Change: Use zlib stream instead</li>
-<li>Add: Add tutorials</li>
-<li>Add: Add ratelimit handler</li>
-<li>Change: Make <code>--git</code> option in <code>discorb init</code> false</li>
-</ul>
-
-<h2 id="v0-4">v0.4</h2>
-
-<h3 id="v0-4-2">v0.4.2</h3>
-
-<ul>
-<li>Fix: Fix error in <code>discorb run</code></li>
-</ul>
-
-<h3 id="v0-4-1">v0.4.1</h3>
-
-<ul>
-<li>Add: Add <code>-s</code> option to <code>discorb run</code></li>
-</ul>
-
-<h3 id="v0-4-0">v0.4.0</h3>
-
-<ul>
-<li>Add: Add <code>discorb setup</code></li>
-<li>Add: Add <code>discorb run</code></li>
-<li>Add: Add realtime documentation</li>
-</ul>
-
-<h2 id="v0-3">v0.3</h2>
-
-<h3 id="v0-3-1">v0.3.1</h3>
-
-<ul>
-<li>Add: Add <code>discorb show</code></li>
-<li>Fix: Fix documenting</li>
-</ul>
-
-<h3 id="v0-3-0">v0.3.0</h3>
-
-<ul>
-<li>Add: Improve CLI tools</li>
-<li>Add: Add <code>discorb init</code></li>
-<li>Change: Change <code>discord-irb</code> to <code>discorb irb</code></li>
-</ul>
-
-<h2 id="v0-2">v0.2</h2>
-
-<h3 id="v0-2-5">v0.2.5</h3>
-
-<ul>
-<li>Add: Add way to add event listener</li>
-<li>Change: Move document to <a href="https://discorb-lib.github.io/">https://discorb-lib.github.io/</a></li>
-</ul>
-
-<h3 id="v0-2-4">v0.2.4</h3>
-
-<ul>
-<li>Fix: Fix error in <code>Embed#image=</code>, <code>Embed#thumbnail=</code></li>
-</ul>
-
-<h3 id="v0-2-3">v0.2.3</h3>
-
-<ul>
-<li>Fix: Fix critical error</li>
-</ul>
-
-<h3 id="v0-2-2-yanked">v0.2.2 (yanked)</h3>
-
-<ul>
-<li>Add: Add <code>Snowflake#to_str</code></li>
-</ul>
-
-<h3 id="v0-2-1">v0.2.1</h3>
-
-<ul>
-<li>Fix: Fix NoMethodError in reaction event</li>
-<li>Add: Add Changelog.md to document</li>
-</ul>
-
-<h3 id="v0-2-0">v0.2.0</h3>
-
-<ul>
-<li>Fix: Fix unused dependency</li>
-<li>Add: Add <code>Client#close!</code></li>
-<li>Add: Add discord-irb</li>
-</ul>
-
-<h2 id="v0-1">v0.1</h2>
-
-<h3 id="v0-1-0">v0.1.0</h3>
-
-<ul>
-<li>Add: Add <code>User#created_at</code></li>
-<li>Add: Add <code>Member#to_s_user</code></li>
-<li>Add: Add <code>DefaultAvatar</code></li>
-<li>Add: Support application commands</li>
-<li>Add: Add <code>Client#ping</code></li>
-<li>Add: Allow <code>String</code> for <code>Embed#initialize</code></li>
-<li>Change: Change log format</li>
-</ul>
-
-<h2 id="v0-0">v0.0</h2>
-
-<h3 id="v0-0-8">v0.0.8</h3>
-
-<ul>
-<li>Delete: Delete task parameter</li>
-</ul>
-
-<h3 id="v0-0-7">v0.0.7</h3>
-
-<ul>
-<li>Fix: Fix <code>member_xxx</code> event</li>
-</ul>
-
-<h3 id="v0-0-6">v0.0.6</h3>
-
-<ul>
-<li>Fix: Fix error in client without members intent</li>
-<li>Add: Add ThreadChannel::News</li>
-<li>Add: Add official discord link</li>
-</ul>
-
-<h3 id="v0-0-5">v0.0.5</h3>
-
-<ul>
-<li>Fix: Fix GitHub link</li>
-<li>Change: Internet to HTTP</li>
-</ul>
-
-<h3 id="v0-0-4">v0.0.4</h3>
-
-<ul>
-<li>Fix: Fix NoMethodError by webhook message</li>
-<li>Add: Add <code>#author</code> to webhook message</li>
-<li>Fix: Add <code>#bot?</code> to webhook author</li>
-</ul>
-
-<h3 id="v0-0-3">v0.0.3</h3>
-
-<ul>
-<li>Fix: Fix no dependencies</li>
-</ul>
-
-<h3 id="v0-0-2">v0.0.2</h3>
-
-<ul>
-<li>Fix: Fix rubygems description</li>
-</ul>
-
-<h3 id="v0-0-1">v0.0.1</h3>
-
-<ul>
-<li>Initial release</li>
-</ul>
+<h2 id="label-v0.6">v0.6</h2>
+
+<h3 id="label-v0.6.1">v0.6.1</h3>
+<ul><li>
+<p>Change: Rename <code>Event#discriminator</code> to <code>Event#metadata</code></p>
+</li><li>
+<p>Add: Add <code>:override</code> to <code>Client#on</code></p>
+</li></ul>
+
+<h3 id="label-v0.6.0">v0.6.0</h3>
+<ul><li>
+<p>Fix: Fix issue with client with no guilds</p>
+</li><li>
+<p>Add: Add rbs (experimental)</p>
+</li><li>
+<p>Add: Add <code>-t</code>, <code>--token</code> option to <code>discorb run</code></p>
+</li><li>
+<p>Add: Add <code>-g</code>, <code>--guild</code> option to <code>discorb setup</code></p>
+</li><li>
+<p>Change: Use <code>Async::Task&lt;R&gt;</code> instead of <code>R</code> in return value</p>
+</li></ul>
+
+<h2 id="label-v0.5">v0.5</h2>
+
+<h3 id="label-v0.5.6">v0.5.6</h3>
+<ul><li>
+<p>Add: Raise error when intents are invalid</p>
+</li><li>
+<p>Fix: Fix Emoji#==</p>
+</li></ul>
+
+<h3 id="label-v0.5.5">v0.5.5</h3>
+<ul><li>
+<p>Fix: Fix some bugs</p>
+</li></ul>
+
+<h3 id="label-v0.5.4">v0.5.4</h3>
+<ul><li>
+<p>Fix: Fix issue of receiving component events</p>
+</li></ul>
+
+<h3 id="label-v0.5.3">v0.5.3</h3>
+<ul><li>
+<p>Add: Add way to handle raw events with <code>event_xxx</code></p>
+</li><li>
+<p>Add: Add <code>Client#session_id</code></p>
+</li><li>
+<p>Add: Add <code>Connectable</code></p>
+</li><li>
+<p>Fix: Fix error by sending DM</p>
+</li></ul>
+
+<h3 id="label-v0.5.2">v0.5.2</h3>
+<ul><li>
+<p>Fix: Fix bug of registering commands</p>
+</li><li>
+<p>Add: Add way to register commands in Extension</p>
+</li></ul>
+
+<h3 id="label-v0.5.1">v0.5.1</h3>
+<ul><li>
+<p>Add: Can use block for defining group commands</p>
+</li><li>
+<p>Fix: Fix bug in subcommands</p>
+</li><li>
+<p>Fix: Fix bug in receiving commands</p>
+</li></ul>
+
+<h3 id="label-v0.5.0">v0.5.0</h3>
+<ul><li>
+<p>Change: Use zlib stream instead</p>
+</li><li>
+<p>Add: Add tutorials</p>
+</li><li>
+<p>Add: Add ratelimit handler</p>
+</li><li>
+<p>Change: Make <code>--git</code> option in <code>discorb init</code> false</p>
+</li></ul>
+
+<h2 id="label-v0.4">v0.4</h2>
+
+<h3 id="label-v0.4.2">v0.4.2</h3>
+<ul><li>
+<p>Fix: Fix error in <code>discorb run</code></p>
+</li></ul>
+
+<h3 id="label-v0.4.1">v0.4.1</h3>
+<ul><li>
+<p>Add: Add <code>-s</code> option to <code>discorb run</code></p>
+</li></ul>
+
+<h3 id="label-v0.4.0">v0.4.0</h3>
+<ul><li>
+<p>Add: Add <code>discorb setup</code></p>
+</li><li>
+<p>Add: Add <code>discorb run</code></p>
+</li><li>
+<p>Add: Add realtime documentation</p>
+</li></ul>
+
+<h2 id="label-v0.3">v0.3</h2>
+
+<h3 id="label-v0.3.1">v0.3.1</h3>
+<ul><li>
+<p>Add: Add <code>discorb show</code></p>
+</li><li>
+<p>Fix: Fix documenting</p>
+</li></ul>
+
+<h3 id="label-v0.3.0">v0.3.0</h3>
+<ul><li>
+<p>Add: Improve CLI tools</p>
+</li><li>
+<p>Add: Add <code>discorb init</code></p>
+</li><li>
+<p>Change: Change <code>discord-irb</code> to <code>discorb irb</code></p>
+</li></ul>
+
+<h2 id="label-v0.2">v0.2</h2>
+
+<h3 id="label-v0.2.5">v0.2.5</h3>
+<ul><li>
+<p>Add: Add way to add event listener</p>
+</li><li>
+<p>Change: Move document to <a href="https://discorb-lib.github.io">discorb-lib.github.io</a>/</p>
+</li></ul>
+
+<h3 id="label-v0.2.4">v0.2.4</h3>
+<ul><li>
+<p>Fix: Fix error in <code>Embed#image=</code>, <code>Embed#thumbnail=</code></p>
+</li></ul>
+
+<h3 id="label-v0.2.3">v0.2.3</h3>
+<ul><li>
+<p>Fix: Fix critical error</p>
+</li></ul>
+
+<h3 id="label-v0.2.2+-28yanked-29">v0.2.2 (yanked)</h3>
+<ul><li>
+<p>Add: Add <code>Snowflake#to_str</code></p>
+</li></ul>
+
+<h3 id="label-v0.2.1">v0.2.1</h3>
+<ul><li>
+<p>Fix: Fix NoMethodError in reaction event</p>
+</li><li>
+<p>Add: Add Changelog.md to document</p>
+</li></ul>
+
+<h3 id="label-v0.2.0">v0.2.0</h3>
+<ul><li>
+<p>Fix: Fix unused dependency</p>
+</li><li>
+<p>Add: Add <code>Client#close!</code></p>
+</li><li>
+<p>Add: Add discord-irb</p>
+</li></ul>
+
+<h2 id="label-v0.1">v0.1</h2>
+
+<h3 id="label-v0.1.0">v0.1.0</h3>
+<ul><li>
+<p>Add: Add <code>User#created_at</code></p>
+</li><li>
+<p>Add: Add <code>Member#to_s_user</code></p>
+</li><li>
+<p>Add: Add <code>DefaultAvatar</code></p>
+</li><li>
+<p>Add: Support application commands</p>
+</li><li>
+<p>Add: Add <code>Client#ping</code></p>
+</li><li>
+<p>Add: Allow <code>String</code> for <code>Embed#initialize</code></p>
+</li><li>
+<p>Change: Change log format</p>
+</li></ul>
+
+<h2 id="label-v0.0">v0.0</h2>
+
+<h3 id="label-v0.0.8">v0.0.8</h3>
+<ul><li>
+<p>Delete: Delete task parameter</p>
+</li></ul>
+
+<h3 id="label-v0.0.7">v0.0.7</h3>
+<ul><li>
+<p>Fix: Fix <code>member_xxx</code> event</p>
+</li></ul>
+
+<h3 id="label-v0.0.6">v0.0.6</h3>
+<ul><li>
+<p>Fix: Fix error in client without members intent</p>
+</li><li>
+<p>Add: Add ThreadChannel::News</p>
+</li><li>
+<p>Add: Add official discord link</p>
+</li></ul>
+
+<h3 id="label-v0.0.5">v0.0.5</h3>
+<ul><li>
+<p>Fix: Fix GitHub link</p>
+</li><li>
+<p>Change: Internet to HTTP</p>
+</li></ul>
+
+<h3 id="label-v0.0.4">v0.0.4</h3>
+<ul><li>
+<p>Fix: Fix NoMethodError by webhook message</p>
+</li><li>
+<p>Add: Add <code>#author</code> to webhook message</p>
+</li><li>
+<p>Fix: Add <code>#bot?</code> to webhook author</p>
+</li></ul>
+
+<h3 id="label-v0.0.3">v0.0.3</h3>
+<ul><li>
+<p>Fix: Fix no dependencies</p>
+</li></ul>
+
+<h3 id="label-v0.0.2">v0.0.2</h3>
+<ul><li>
+<p>Fix: Fix rubygems description</p>
+</li></ul>
+
+<h3 id="label-v0.0.1">v0.0.1</h3>
+<ul><li>
+<p>Initial release</p>
+</li></ul>
 </div></div>
 
       <div id="footer">
-  Generated on Tue Jul  5 21:38:35 2022 by
+  Generated on Sat Sep  3 22:16:40 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>

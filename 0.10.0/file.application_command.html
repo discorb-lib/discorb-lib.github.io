@@ -58,9 +58,10 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><div id='filecontents'><h1 id="application-commands">Application Commands</h1>
+      <div id="content"><div id='filecontents'>
+<h1 id="label-Application+Commands">Application Commands</h1>
 
-<h2 id="what-is-an-application-command">What is an application command?</h2>
+<h2 id="label-What+is+an+application+command-3F">What is an application command?</h2>
 
 <blockquote>
 <p>Application commands are commands that an application can register to Discord. They provide users a first-class way of interacting directly with your application that feels deeply integrated into Discord.</p>
@@ -68,27 +69,19 @@
 
 <p>From: <a href="https://discord.com/developers/docs/interactions/application-commands#application-commands">Discord API docs</a></p>
 
-<h2 id="how-do-i-register-an-application-command">How do I register an application command?</h2>
+<h2 id="label-How+do+I+register+an+application+command-3F">How do I register an application command?</h2>
 
-<p>Write to a your script:</p>
+<p>Write to a your script: - <span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#slash-instance_method" title="Discorb::ApplicationCommand::Handler#slash (method)">Discorb::ApplicationCommand::Handler#slash</a></span>, <span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#slash_group-instance_method" title="Discorb::ApplicationCommand::Handler#slash_group (method)">Discorb::ApplicationCommand::Handler#slash_group</a></span> for slash commands, - <span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#user_command-instance_method" title="Discorb::ApplicationCommand::Handler#user_command (method)">Discorb::ApplicationCommand::Handler#user_command</a></span> for user menu commands, - <span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#message_command-instance_method" title="Discorb::ApplicationCommand::Handler#message_command (method)">Discorb::ApplicationCommand::Handler#message_command</a></span> for message menu commands.</p>
 
-<ul>
-<li><span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#slash-instance_method" title="Discorb::ApplicationCommand::Handler#slash (method)">Discorb::ApplicationCommand::Handler#slash</a></span>, <span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#slash_group-instance_method" title="Discorb::ApplicationCommand::Handler#slash_group (method)">Discorb::ApplicationCommand::Handler#slash_group</a></span> for slash commands,</li>
-<li><span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#user_command-instance_method" title="Discorb::ApplicationCommand::Handler#user_command (method)">Discorb::ApplicationCommand::Handler#user_command</a></span> for user menu commands,</li>
-<li><span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#message_command-instance_method" title="Discorb::ApplicationCommand::Handler#message_command (method)">Discorb::ApplicationCommand::Handler#message_command</a></span> for message menu commands.</li>
-</ul>
+<p>And then run <code>discorb setup</code> to register your application commands. <a href="file.setup.html" title="Learn more about &lt;code&gt;discorb setup&lt;/code&gt;">Learn more about <code>discorb setup</code></a>.</p>
 
-<p>And then run <code>discorb setup</code> to register your application commands.
-<a href="file.setup.html" title="Learn more about &lt;code&gt;discorb setup&lt;/code&gt;">Learn more about <code>discorb setup</code></a>. </p>
+<h3 id="label-Note">Note</h3>
 
-<h3 id="note">Note</h3>
+<p>To register a global command, it will take 1 hour to be registered. Guild commands will be registered immediately.</p>
 
-<p>To register a global command, it will take 1 hour to be registered.
-Guild commands will be registered immediately.</p>
+<h3 id="label-Register+Slash+Commands">Register Slash Commands</h3>
 
-<h3 id="register-slash-commands">Register Slash Commands</h3>
-
-<p>This example registers a slash command that says &quot;Hello, world!&quot; when the user types <code>/hello</code>.</p>
+<p>This example registers a slash command that says “Hello, world!” when the user types <code>/hello</code>.</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>discorb</span><span class='tstring_end'>&quot;</span></span>
 
@@ -103,33 +96,36 @@ Guild commands will be registered immediately.</p>
 
 <p><span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#slash-instance_method" title="Discorb::ApplicationCommand::Handler#slash (method)">Discorb::ApplicationCommand::Handler#slash</a></span> takes 5 arguments:</p>
 
-<table><thead>
+<table role="table">
+<thead>
 <tr>
 <th>Argument</th>
 <th>Description</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
-<td><code>command_name</code></td>
+<td>`command_name`</td>
 <td>The name of the command.</td>
 </tr>
 <tr>
-<td><code>description</code></td>
+<td>`description`</td>
 <td>The description of the command.</td>
 </tr>
 <tr>
-<td><code>options</code></td>
+<td>`options`</td>
 <td>A hash of options.</td>
 </tr>
 <tr>
-<td><code>guild_ids</code></td>
+<td>`guild_ids`</td>
 <td>The ID of the guild to register the command in.</td>
 </tr>
 <tr>
-<td><code>block</code></td>
+<td>`block`</td>
 <td>A block that will be called when the command is invoked.</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 
 <p>In <code>options</code>, hash should be like this:</p>
 
@@ -142,47 +138,9 @@ Guild commands will be registered immediately.</p>
 <span class='rbrace'>}</span>
 </code></pre>
 
-<table><thead>
-<tr>
-<th>Key</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>:description</code></td>
-<td><code>String</code></td>
-<td>Description of the option.</td>
-</tr>
-<tr>
-<td><code>:required</code></td>
-<td>Whether the argument is required. <code>optional</code> will be used if not specified.</td>
-<td></td>
-</tr>
-<tr>
-<td><code>:optional</code></td>
-<td>Whether the argument is optional. <code>required</code> will be used if not specified.</td>
-<td></td>
-</tr>
-<tr>
-<td><code>:type</code></td>
-<td><code>Object</code></td>
-<td>Type of the option.</td>
-</tr>
-<tr>
-<td><code>:choice</code></td>
-<td><code>Hash{String =&gt; String, Integer, Float}</code></td>
-<td>Type of the option.</td>
-</tr>
-<tr>
-<td><code>:default</code></td>
-<td><code>Object</code></td>
-<td>Default value of the option.</td>
-</tr>
-</tbody></table>
+<p>| Key | Type | Description | | — | — | — | | <code>:description</code> | <code>String</code> | Description of the option. | | <code>:required</code> | Whether the argument is required. <code>optional</code> will be used if not specified. | | <code>:optional</code> | Whether the argument is optional. <code>required</code> will be used if not specified. | | <code>:type</code> | <code>Object</code> | Type of the option. | | <code>:choice</code> | <code>Hash{String =&gt; String, Integer, Float}</code> | Type of the option. | | <code>:default</code> | <code>Object</code> | Default value of the option. |</p>
 
-<p><code>choices</code> should be unspecified if you don&#39;t want to use it.
-<code>choices</code> is hash like this:</p>
+<p><code>choices</code> should be unspecified if you don&#39;t want to use it. <code>choices</code> is hash like this:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='lbrace'>{</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>vocaloid</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
@@ -207,51 +165,9 @@ Guild commands will be registered immediately.</p>
 
 <p>In <code>type</code>, You must use one of the following:</p>
 
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-<th>Aliases</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>:string</code></td>
-<td>String argument.</td>
-<td><code>:str</code></td>
-</tr>
-<tr>
-<td><code>:integer</code></td>
-<td>Integer argument.</td>
-<td><code>:int</code></td>
-</tr>
-<tr>
-<td><code>:float</code></td>
-<td>Float argument.</td>
-<td>None</td>
-</tr>
-<tr>
-<td><code>:boolean</code></td>
-<td>Boolean argument.</td>
-<td><code>:bool</code></td>
-</tr>
-<tr>
-<td><code>:user</code></td>
-<td>User argument.</td>
-<td><code>:member</code></td>
-</tr>
-<tr>
-<td><code>:channel</code></td>
-<td>Channel argument.</td>
-<td>None</td>
-</tr>
-<tr>
-<td><code>:role</code></td>
-<td>Role argument.</td>
-<td>None</td>
-</tr>
-</tbody></table>
+<p>| Name | Description | Aliases| | — | — | — | | <code>:string</code> | String argument. | <code>:str</code> | | <code>:integer</code> | Integer argument. | <code>:int</code> | | <code>:float</code> | Float argument. | None | | <code>:boolean</code> | Boolean argument. | <code>:bool</code> | | <code>:user</code> | User argument. | <code>:member</code> | | <code>:channel</code> | Channel argument. | None | | <code>:role</code> | Role argument. | None |</p>
 
-<h3 id="group-slash-commands">Group Slash Commands</h3>
+<h3 id="label-Group+Slash+Commands">Group Slash Commands</h3>
 
 <p>To register a group of slash commands, use <span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#slash_group-instance_method" title="Discorb::ApplicationCommand::Handler#slash_group (method)">Discorb::ApplicationCommand::Handler#slash_group</a></span>.</p>
 
@@ -274,7 +190,6 @@ Guild commands will be registered immediately.</p>
 <span class='rbrace'>}</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_interaction'>interaction</span><span class='op'>|</span>
   <span class='comment'># ...
 </span><span class='kw'>end</span>
-
 </code></pre>
 
 <p>Since v0.5.1, You can use block for register commands.</p>
@@ -375,12 +290,11 @@ Guild commands will be registered immediately.</p>
 <span class='rbrace'>}</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_interaction'>interaction</span><span class='comma'>,</span> <span class='id identifier rubyid_role'>role</span><span class='op'>|</span>
   <span class='comment'># ...
 </span><span class='kw'>end</span>
-
 </code></pre>
 
 <p>Same as above, you can use block for register commands since v0.5.1.</p>
 
-<h3 id="register-user-context-menu-command">Register User Context Menu Command</h3>
+<h3 id="label-Register+User+Context+Menu+Command">Register User Context Menu Command</h3>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_user_command'>user_command</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_interaction'>interaction</span><span class='comma'>,</span> <span class='id identifier rubyid_user'>user</span><span class='op'>|</span>
   <span class='id identifier rubyid_interaction'>interaction</span><span class='period'>.</span><span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello, </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -389,45 +303,13 @@ Guild commands will be registered immediately.</p>
 
 <p><span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#user_command-instance_method" title="Discorb::ApplicationCommand::Handler#user_command (method)">Discorb::ApplicationCommand::Handler#user_command</a></span> takes 3 arguments:</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>command_name</code></td>
-<td>The name of the command.</td>
-</tr>
-<tr>
-<td><code>guild_ids</code></td>
-<td>The ID of the guild to register the command in.</td>
-</tr>
-<tr>
-<td><code>block</code></td>
-<td>A block that will be called when the command is invoked.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Description | | — | — | | <code>command_name</code> | The name of the command. | | <code>guild_ids</code> | The ID of the guild to register the command in. | | <code>block</code> | A block that will be called when the command is invoked. |</p>
 
 <p><code>block</code> will be called with two arguments:</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>interaction</code></td>
-<td>The interaction object.</td>
-</tr>
-<tr>
-<td><code>user</code></td>
-<td>The user object.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Description | | — | — | | <code>interaction</code> | The interaction object. | | <code>user</code> | The user object. |</p>
 
-<h3 id="register-message-context-menu-command">Register Message Context Menu Command</h3>
+<h3 id="label-Register+Message+Context+Menu+Command">Register Message Context Menu Command</h3>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_message_command'>message_command</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bookmark</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_interaction'>interaction</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='op'>|</span>
   <span class='comment'># ...
@@ -436,47 +318,15 @@ Guild commands will be registered immediately.</p>
 
 <p><span class='object_link'><a href="Discorb/ApplicationCommand/Handler.html#message_command-instance_method" title="Discorb::ApplicationCommand::Handler#message_command (method)">Discorb::ApplicationCommand::Handler#message_command</a></span> takes 3 arguments:</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>command_name</code></td>
-<td>The name of the command.</td>
-</tr>
-<tr>
-<td><code>guild_ids</code></td>
-<td>The ID of the guild to register the command in.</td>
-</tr>
-<tr>
-<td><code>block</code></td>
-<td>A block that will be called when the command is invoked.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Description | | — | — | | <code>command_name</code> | The name of the command. | | <code>guild_ids</code> | The ID of the guild to register the command in. | | <code>block</code> | A block that will be called when the command is invoked. |</p>
 
 <p><code>block</code> will be called with two arguments:</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>interaction</code></td>
-<td>The interaction object.</td>
-</tr>
-<tr>
-<td><code>message</code></td>
-<td>The message object.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Description | | — | — | | <code>interaction</code> | The interaction object. | | <code>message</code> | The message object. |</p>
 </div></div>
 
       <div id="footer">
-  Generated on Tue Jul  5 21:35:45 2022 by
+  Generated on Sat Sep  3 22:10:56 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>

@@ -58,659 +58,216 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><div id='filecontents'><h1 id="voice-events">Voice Events</h1>
+      <div id="content"><div id='filecontents'>
+<h1 id="label-Voice+Events">Voice Events</h1>
 
-<h3 id="voice-channel-events">Voice Channel Events</h3>
+<h3 id="label-Voice+Channel+Events">Voice Channel Events</h3>
 
-<h4 id="voice_channel_connect-state"><code>voice_channel_connect(state)</code></h4>
+<h4 id="label-voice_channel_connect-28state-29"><code>voice_channel_connect(state)</code></h4>
 
 <p>Fires when someone joins a voice channel.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>state</td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state of the user that joined.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | state | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state of the user that joined. |</p>
 
-<h4 id="voice_channel_disconnect-state"><code>voice_channel_disconnect(state)</code></h4>
+<h4 id="label-voice_channel_disconnect-28state-29"><code>voice_channel_disconnect(state)</code></h4>
 
 <p>Fires when someone leaves a voice channel.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>state</td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state of the user that left.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | state | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state of the user that left. |</p>
 
-<h4 id="voice_channel_move-before-after"><code>voice_channel_move(before, after)</code></h4>
+<h4 id="label-voice_channel_move-28before-2C+after-29"><code>voice_channel_move(before, after)</code></h4>
 
 <p>Fires when someone moves to a different voice channel.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>before</td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state of the user before the move.</td>
-</tr>
-<tr>
-<td>after</td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state of the user after the move.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | before | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state of the user before the move. | | after | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state of the user after the move. |</p>
 
-<h4 id="voice_channel_update-before-after"><code>voice_channel_update(before, after)</code></h4>
+<h4 id="label-voice_channel_update-28before-2C+after-29"><code>voice_channel_update(before, after)</code></h4>
 
 <p>Fires when a voice channel is connected, disconnected, or updated.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>before</td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state before the update.</td>
-</tr>
-<tr>
-<td>after</td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state after the update.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | before | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state before the update. | | after | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state after the update. |</p>
 
-<h3 id="mute-events">Mute Events</h3>
+<h3 id="label-Mute+Events">Mute Events</h3>
 
-<h4 id="voice_mute_disable-state"><code>voice_mute_disable(state)</code></h4>
+<h4 id="label-voice_mute_disable-28state-29"><code>voice_mute_disable(state)</code></h4>
 
 <p>Fires when a user&#39;s voice mute is disabled.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>state</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | <code>state</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state. |</p>
 
-<h4 id="voice_mute_enable-state"><code>voice_mute_enable(state)</code></h4>
+<h4 id="label-voice_mute_enable-28state-29"><code>voice_mute_enable(state)</code></h4>
 
 <p>Fires when a user&#39;s voice mute is enabled.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>state</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | <code>state</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state. |</p>
 
-<h4 id="voice_mute_update-before-after"><code>voice_mute_update(before, after)</code></h4>
+<h4 id="label-voice_mute_update-28before-2C+after-29"><code>voice_mute_update(before, after)</code></h4>
 
 <p>Fires when a user&#39;s voice mute is enabled or disabled.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>before</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state before the update.</td>
-</tr>
-<tr>
-<td><code>after</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state after the update.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | <code>before</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state before the update. | | <code>after</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state after the update. |</p>
 
-<h4 id="voice_server_mute_enable-state"><code>voice_server_mute_enable(state)</code></h4>
+<h4 id="label-voice_server_mute_enable-28state-29"><code>voice_server_mute_enable(state)</code></h4>
 
 <p>Fires when a user&#39;s server voice mute is enabled.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>state</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | <code>state</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state. |</p>
 
-<h4 id="voice_server_mute_disable-state"><code>voice_server_mute_disable(state)</code></h4>
+<h4 id="label-voice_server_mute_disable-28state-29"><code>voice_server_mute_disable(state)</code></h4>
 
 <p>Fires when a user&#39;s server voice mute is disabled.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>state</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | <code>state</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state. |</p>
 
-<h4 id="voice_server_mute_update-before-after"><code>voice_server_mute_update(before, after)</code></h4>
+<h4 id="label-voice_server_mute_update-28before-2C+after-29"><code>voice_server_mute_update(before, after)</code></h4>
 
 <p>Fires when a user&#39;s server voice mute is enabled or disabled.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>before</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state before the update.</td>
-</tr>
-<tr>
-<td><code>after</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state after the update.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | <code>before</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state before the update. | | <code>after</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state after the update. |</p>
 
-<h4 id="voice_self_mute_enable-state"><code>voice_self_mute_enable(state)</code></h4>
+<h4 id="label-voice_self_mute_enable-28state-29"><code>voice_self_mute_enable(state)</code></h4>
 
 <p>Fires when a user&#39;s self voice mute is enabled.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>state</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | <code>state</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state. |</p>
 
-<h4 id="voice_self_mute_disable-state"><code>voice_self_mute_disable(state)</code></h4>
+<h4 id="label-voice_self_mute_disable-28state-29"><code>voice_self_mute_disable(state)</code></h4>
 
 <p>Fires when a user&#39;s self voice mute is disabled.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>state</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | <code>state</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state. |</p>
 
-<h4 id="voice_self_mute_update-before-after"><code>voice_self_mute_update(before, after)</code></h4>
+<h4 id="label-voice_self_mute_update-28before-2C+after-29"><code>voice_self_mute_update(before, after)</code></h4>
 
 <p>Fires when a user&#39;s self voice mute is enabled or disabled.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>before</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state before the update.</td>
-</tr>
-<tr>
-<td><code>after</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state after the update.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | <code>before</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state before the update. | | <code>after</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state after the update. |</p>
 
-<h3 id="deaf-events">Deaf Events</h3>
+<h3 id="label-Deaf+Events">Deaf Events</h3>
 
-<h4 id="voice_deaf_enable-state"><code>voice_deaf_enable(state)</code></h4>
+<h4 id="label-voice_deaf_enable-28state-29"><code>voice_deaf_enable(state)</code></h4>
 
 <p>Fires when a user&#39;s voice deaf is enabled.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>state</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | <code>state</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state. |</p>
 
-<h4 id="voice_deaf_disable-state"><code>voice_deaf_disable(state)</code></h4>
+<h4 id="label-voice_deaf_disable-28state-29"><code>voice_deaf_disable(state)</code></h4>
 
 <p>Fires when a user&#39;s voice deaf is disabled.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>state</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | <code>state</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state. |</p>
 
-<h4 id="voice_deaf_update-before-after"><code>voice_deaf_update(before, after)</code></h4>
+<h4 id="label-voice_deaf_update-28before-2C+after-29"><code>voice_deaf_update(before, after)</code></h4>
 
 <p>Fires when a user&#39;s voice deaf is enabled or disabled.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>before</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state before the update.</td>
-</tr>
-<tr>
-<td><code>after</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state after the update.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | <code>before</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state before the update. | | <code>after</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state after the update. |</p>
 
-<h4 id="voice_server_deaf_enable-state"><code>voice_server_deaf_enable(state)</code></h4>
+<h4 id="label-voice_server_deaf_enable-28state-29"><code>voice_server_deaf_enable(state)</code></h4>
 
 <p>Fires when a user&#39;s server voice deaf is enabled.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>state</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | <code>state</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state. |</p>
 
-<h4 id="voice_server_deaf_disable-state"><code>voice_server_deaf_disable(state)</code></h4>
+<h4 id="label-voice_server_deaf_disable-28state-29"><code>voice_server_deaf_disable(state)</code></h4>
 
 <p>Fires when a user&#39;s server voice deaf is disabled.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>state</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | <code>state</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state. |</p>
 
-<h4 id="voice_server_deaf_update-before-after"><code>voice_server_deaf_update(before, after)</code></h4>
+<h4 id="label-voice_server_deaf_update-28before-2C+after-29"><code>voice_server_deaf_update(before, after)</code></h4>
 
 <p>Fires when a user&#39;s server voice deaf is enabled or disabled.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>before</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state before the update.</td>
-</tr>
-<tr>
-<td><code>after</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state after the update.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | <code>before</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state before the update. | | <code>after</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state after the update. |</p>
 
-<h4 id="voice_self_deaf_enable-state"><code>voice_self_deaf_enable(state)</code></h4>
+<h4 id="label-voice_self_deaf_enable-28state-29"><code>voice_self_deaf_enable(state)</code></h4>
 
 <p>Fires when a user&#39;s self voice deaf is enabled.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>state</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | <code>state</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state. |</p>
 
-<h4 id="voice_self_deaf_disable-state"><code>voice_self_deaf_disable(state)</code></h4>
+<h4 id="label-voice_self_deaf_disable-28state-29"><code>voice_self_deaf_disable(state)</code></h4>
 
 <p>Fires when a user&#39;s self voice deaf is disabled.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>state</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | <code>state</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state. |</p>
 
-<h4 id="voice_self_deaf_update-before-after"><code>voice_self_deaf_update(before, after)</code></h4>
+<h4 id="label-voice_self_deaf_update-28before-2C+after-29"><code>voice_self_deaf_update(before, after)</code></h4>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>before</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state before the update.</td>
-</tr>
-<tr>
-<td><code>after</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state after the update.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | <code>before</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state before the update. | | <code>after</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state after the update. |</p>
 
-<h3 id="stream-events">Stream Events</h3>
+<h3 id="label-Stream+Events">Stream Events</h3>
 
-<h4 id="voice_stream_start-state"><code>voice_stream_start(state)</code></h4>
+<h4 id="label-voice_stream_start-28state-29"><code>voice_stream_start(state)</code></h4>
 
 <p>Fires when a stream is started.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>state</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | <code>state</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state. |</p>
 
-<h4 id="voice_stream_end-state"><code>voice_stream_end(state)</code></h4>
+<h4 id="label-voice_stream_end-28state-29"><code>voice_stream_end(state)</code></h4>
 
 <p>Fires when a stream is ended.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>state</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | <code>state</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state. |</p>
 
-<h4 id="voice_stream_update-before-after"><code>voice_stream_update(before, after)</code></h4>
+<h4 id="label-voice_stream_update-28before-2C+after-29"><code>voice_stream_update(before, after)</code></h4>
 
 <p>Fires when a stream is started or ended.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>before</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state before the update.</td>
-</tr>
-<tr>
-<td><code>after</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state after the update.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | <code>before</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state before the update. | | <code>after</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state after the update. |</p>
 
-<h3 id="video-events">Video Events</h3>
+<h3 id="label-Video+Events">Video Events</h3>
 
-<h4 id="voice_video_start-state"><code>voice_video_start(state)</code></h4>
+<h4 id="label-voice_video_start-28state-29"><code>voice_video_start(state)</code></h4>
 
 <p>Fires when a video is started.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>state</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | <code>state</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state. |</p>
 
-<h4 id="voice_video_end-state"><code>voice_video_end(state)</code></h4>
+<h4 id="label-voice_video_end-28state-29"><code>voice_video_end(state)</code></h4>
 
 <p>Fires when a video is ended.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>state</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | <code>state</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state. |</p>
 
-<h4 id="voice_video_update-before-after"><code>voice_video_update(before, after)</code></h4>
+<h4 id="label-voice_video_update-28before-2C+after-29"><code>voice_video_update(before, after)</code></h4>
 
 <p>Fires when a video is started or ended.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>before</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state before the update.</td>
-</tr>
-<tr>
-<td><code>after</code></td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state after the update.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | <code>before</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state before the update. | | <code>after</code> | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state after the update. |</p>
 
-<h3 id="stage-instances-events">Stage Instances Events</h3>
+<h3 id="label-Stage+Instances+Events">Stage Instances Events</h3>
 
-<h4 id="stage_instance_create-instance"><code>stage_instance_create(instance)</code></h4>
+<h4 id="label-stage_instance_create-28instance-29"><code>stage_instance_create(instance)</code></h4>
 
 <p>Fires when a new stage instance is created.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>instance</code></td>
-<td><span class='object_link'><a href="Discorb/StageInstance.html" title="Discorb::StageInstance (class)">Discorb::StageInstance</a></span></td>
-<td>The created instance.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | <code>instance</code> | <span class='object_link'><a href="Discorb/StageInstance.html" title="Discorb::StageInstance (class)">Discorb::StageInstance</a></span> | The created instance. |</p>
 
-<h4 id="stage_instance_delete-instance"><code>stage_instance_delete(instance)</code></h4>
+<h4 id="label-stage_instance_delete-28instance-29"><code>stage_instance_delete(instance)</code></h4>
 
 <p>Fires when a stage instance is deleted.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>instance</code></td>
-<td><span class='object_link'><a href="Discorb/StageInstance.html" title="Discorb::StageInstance (class)">Discorb::StageInstance</a></span></td>
-<td>The deleted instance.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | <code>instance</code> | <span class='object_link'><a href="Discorb/StageInstance.html" title="Discorb::StageInstance (class)">Discorb::StageInstance</a></span> | The deleted instance. |</p>
 
-<h4 id="stage_instance_update-before-after"><code>stage_instance_update(before, after)</code></h4>
+<h4 id="label-stage_instance_update-28before-2C+after-29"><code>stage_instance_update(before, after)</code></h4>
 
 <p>Fires when a stage instance is updated.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>before</code></td>
-<td><span class='object_link'><a href="Discorb/StageInstance.html" title="Discorb::StageInstance (class)">Discorb::StageInstance</a></span></td>
-<td>The instance before the update.</td>
-</tr>
-<tr>
-<td><code>after</code></td>
-<td><span class='object_link'><a href="Discorb/StageInstance.html" title="Discorb::StageInstance (class)">Discorb::StageInstance</a></span></td>
-<td>The instance after the update.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | <code>before</code> | <span class='object_link'><a href="Discorb/StageInstance.html" title="Discorb::StageInstance (class)">Discorb::StageInstance</a></span> | The instance before the update. | | <code>after</code> | <span class='object_link'><a href="Discorb/StageInstance.html" title="Discorb::StageInstance (class)">Discorb::StageInstance</a></span> | The instance after the update. |</p>
 
-<h3 id="misc-events">Misc Events</h3>
+<h3 id="label-Misc+Events">Misc Events</h3>
 
-<h4 id="voice_state_update-before-after"><code>voice_state_update(before, after)</code></h4>
+<h4 id="label-voice_state_update-28before-2C+after-29"><code>voice_state_update(before, after)</code></h4>
 
 <p>Fired when a user changes voice state.</p>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>before</td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state before the update.</td>
-</tr>
-<tr>
-<td>after</td>
-<td><span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span></td>
-<td>The voice state after the update.</td>
-</tr>
-</tbody></table>
+<p>| Parameter | Type | Description | | — | — | — | | before | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state before the update. | | after | <span class='object_link'><a href="Discorb/VoiceState.html" title="Discorb::VoiceState (class)">Discorb::VoiceState</a></span> | The voice state after the update. |</p>
 </div></div>
 
       <div id="footer">
-  Generated on Tue Jul  5 21:33:35 2022 by
+  Generated on Sat Sep  3 22:06:38 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>

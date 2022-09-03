@@ -91,7 +91,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Module to handle commands.</p>
+    
+<p>Module to handle commands.</p>
 
 
   </div>
@@ -131,7 +132,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Add message context menu command.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Add message context menu command.</p>
 </div></span>
   
 </li>
@@ -154,7 +156,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Setup commands.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Setup commands.</p>
 </div></span>
   
 </li>
@@ -177,7 +180,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Add new top-level command.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Add new top-level command.</p>
 </div></span>
   
 </li>
@@ -200,7 +204,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Add new command with group.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Add new command with group.</p>
 </div></span>
   
 </li>
@@ -223,7 +228,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Add user context menu command.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Add user context menu command.</p>
 </div></span>
   
 </li>
@@ -249,7 +255,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Add message context menu command.</p>
+    
+<p>Add message context menu command.</p>
 
 
   </div>
@@ -268,7 +275,8 @@
       
       
         &mdash;
-        <div class='inline'><p>Command name.</p>
+        <div class='inline'>
+<p>Command name.</p>
 </div>
       
     </li>
@@ -285,7 +293,8 @@
       
       
         &mdash;
-        <div class='inline'><p>Guild IDs to restrict the command to.</p>
+        <div class='inline'>
+<p>Guild IDs to restrict the command to.</p>
 </div>
       
     </li>
@@ -300,7 +309,8 @@
       
       
         &mdash;
-        <div class='inline'><p>Command block.</p>
+        <div class='inline'>
+<p>Command block.</p>
 </div>
       
     </li>
@@ -318,7 +328,8 @@
       
       
         &mdash;
-        <div class='inline'><p>Block to execute.</p>
+        <div class='inline'>
+<p>Block to execute.</p>
 </div>
       
     </li>
@@ -337,7 +348,8 @@
       
       
         &mdash;
-        <div class='inline'><p>object.</p>
+        <div class='inline'>
+<p>object.</p>
 </div>
       
     </li>
@@ -352,7 +364,8 @@
       
       
         &mdash;
-        <div class='inline'><p>Message object.</p>
+        <div class='inline'>
+<p>Message object.</p>
 </div>
       
     </li>
@@ -369,7 +382,8 @@
       
       
         &mdash;
-        <div class='inline'><p>Command object.</p>
+        <div class='inline'>
+<p>Command object.</p>
 </div>
       
     </li>
@@ -415,15 +429,18 @@
     
   <div class="note notetag">
     <strong>Note:</strong>
-    <div class='inline'><p>This method is called automatically if overwrite_application_commands is set to true.</p>
+    <div class='inline'>
+<p>This method is called automatically if overwrite_application_commands is set to true.</p>
 </div>
   </div>
 
   <div class="note notetag">
     <strong>Note:</strong>
-    <div class='inline'><p><code>token</code> parameter only required if you don&#39;t run client.</p>
+    <div class='inline'>
+<p><code>token</code> parameter only required if you don&#39;t run client.</p>
 </div>
   </div>
+
 
 <p>Setup commands.</p>
 
@@ -446,7 +463,8 @@
       
       
         &mdash;
-        <div class='inline'><p>Bot token.</p>
+        <div class='inline'>
+<p>Bot token.</p>
 </div>
       
     </li>
@@ -517,7 +535,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Add new top-level command.</p>
+    
+<p>Add new top-level command.</p>
 
 
   </div>
@@ -536,7 +555,8 @@
       
       
         &mdash;
-        <div class='inline'><p>Command name.</p>
+        <div class='inline'>
+<p>Command name.</p>
 </div>
       
     </li>
@@ -551,7 +571,8 @@
       
       
         &mdash;
-        <div class='inline'><p>Command description.</p>
+        <div class='inline'>
+<p>Command description.</p>
 </div>
       
     </li>
@@ -568,37 +589,10 @@
       
       
         &mdash;
-        <div class='inline'><p>Command options.
-The key is the option name, the value is a hash with the following keys:</p>
+        <div class='inline'>
+<p>Command options. The key is the option name, the value is a hash with the following keys:</p>
 
-<table><thead>
-<tr>
-<th>Key</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>:description</code></td>
-<td><code>String</code></td>
-<td>Description of the option.</td>
-</tr>
-<tr>
-<td><code>:optional</code></td>
-<td><code>Boolean</code></td>
-<td>Whether the option is optional or not.</td>
-</tr>
-<tr>
-<td><code>:type</code></td>
-<td><code>Object</code></td>
-<td>Type of the option.</td>
-</tr>
-<tr>
-<td><code>:choice</code></td>
-<td><code>Hash{String =&gt; String, Integer, Float}</code></td>
-<td>Type of the option.</td>
-</tr>
-</tbody></table>
+<p>| Key | Type | Description | | — | — | — | | <code>:description</code> | <code>String</code> | Description of the option. | | <code>:optional</code> | <code>Boolean</code> | Whether the option is optional or not. | | <code>:type</code> | <code>Object</code> | Type of the option. | | <code>:choice</code> | <code>Hash{String =&gt; String, Integer, Float}</code> | Type of the option. |</p>
 </div>
       
     </li>
@@ -615,7 +609,8 @@ The key is the option name, the value is a hash with the following keys:</p>
       
       
         &mdash;
-        <div class='inline'><p>Guild IDs to restrict the command to.</p>
+        <div class='inline'>
+<p>Guild IDs to restrict the command to.</p>
 </div>
       
     </li>
@@ -630,7 +625,8 @@ The key is the option name, the value is a hash with the following keys:</p>
       
       
         &mdash;
-        <div class='inline'><p>Command block.</p>
+        <div class='inline'>
+<p>Command block.</p>
 </div>
       
     </li>
@@ -694,7 +690,8 @@ The key is the option name, the value is a hash with the following keys:</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Add new command with group.</p>
+    
+<p>Add new command with group.</p>
 
 
   </div>
@@ -713,7 +710,8 @@ The key is the option name, the value is a hash with the following keys:</p>
       
       
         &mdash;
-        <div class='inline'><p>Command name.</p>
+        <div class='inline'>
+<p>Command name.</p>
 </div>
       
     </li>
@@ -728,7 +726,8 @@ The key is the option name, the value is a hash with the following keys:</p>
       
       
         &mdash;
-        <div class='inline'><p>Command description.</p>
+        <div class='inline'>
+<p>Command description.</p>
 </div>
       
     </li>
@@ -745,7 +744,8 @@ The key is the option name, the value is a hash with the following keys:</p>
       
       
         &mdash;
-        <div class='inline'><p>Guild IDs to restrict the command to.</p>
+        <div class='inline'>
+<p>Guild IDs to restrict the command to.</p>
 </div>
       
     </li>
@@ -763,7 +763,8 @@ The key is the option name, the value is a hash with the following keys:</p>
       
       
         &mdash;
-        <div class='inline'><p>Command object.</p>
+        <div class='inline'>
+<p>Command object.</p>
 </div>
       
     </li>
@@ -813,7 +814,8 @@ The key is the option name, the value is a hash with the following keys:</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Add user context menu command.</p>
+    
+<p>Add user context menu command.</p>
 
 
   </div>
@@ -832,7 +834,8 @@ The key is the option name, the value is a hash with the following keys:</p>
       
       
         &mdash;
-        <div class='inline'><p>Command name.</p>
+        <div class='inline'>
+<p>Command name.</p>
 </div>
       
     </li>
@@ -849,7 +852,8 @@ The key is the option name, the value is a hash with the following keys:</p>
       
       
         &mdash;
-        <div class='inline'><p>Guild IDs to restrict the command to.</p>
+        <div class='inline'>
+<p>Guild IDs to restrict the command to.</p>
 </div>
       
     </li>
@@ -864,7 +868,8 @@ The key is the option name, the value is a hash with the following keys:</p>
       
       
         &mdash;
-        <div class='inline'><p>Command block.</p>
+        <div class='inline'>
+<p>Command block.</p>
 </div>
       
     </li>
@@ -882,7 +887,8 @@ The key is the option name, the value is a hash with the following keys:</p>
       
       
         &mdash;
-        <div class='inline'><p>Block to execute.</p>
+        <div class='inline'>
+<p>Block to execute.</p>
 </div>
       
     </li>
@@ -901,7 +907,8 @@ The key is the option name, the value is a hash with the following keys:</p>
       
       
         &mdash;
-        <div class='inline'><p>object.</p>
+        <div class='inline'>
+<p>object.</p>
 </div>
       
     </li>
@@ -916,7 +923,8 @@ The key is the option name, the value is a hash with the following keys:</p>
       
       
         &mdash;
-        <div class='inline'><p>User object.</p>
+        <div class='inline'>
+<p>User object.</p>
 </div>
       
     </li>
@@ -933,7 +941,8 @@ The key is the option name, the value is a hash with the following keys:</p>
       
       
         &mdash;
-        <div class='inline'><p>Command object.</p>
+        <div class='inline'>
+<p>Command object.</p>
 </div>
       
     </li>
@@ -970,7 +979,7 @@ The key is the option name, the value is a hash with the following keys:</p>
 </div>
 
       <div id="footer">
-  Generated on Tue Jul  5 21:30:46 2022 by
+  Generated on Sat Sep  3 22:01:04 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>

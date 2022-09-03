@@ -58,87 +58,81 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><div id='filecontents'><h1 id="tutorial">Tutorial</h1>
+      <div id="content"><div id='filecontents'>
+<h1 id="label-Tutorial">Tutorial</h1>
 
 <p>Welcome to discorb! This lib allows you to create a discord bot with ease. So, let&#39;s get started!</p>
 
-<h2 id="requirements">Requirements</h2>
+<h2 id="label-Requirements">Requirements</h2>
+<ul><li>
+<p>Ruby 3.0.0+</p>
+</li><li>
+<p>Basic knowledge of ruby<br> These documents will help you:</p>
+<ul><li>
+<p><a href="https://www.ruby-lang.org/en/documentation/quickstart/">Ruby in Twenty Minutes</a></p>
+</li><li>
+<p><a href="https://www.ruby-lang.org/en/documentation/ruby-from-other-languages/">Ruby from other languages</a></p>
+</li><li>
+<p><a href="https://try.ruby-lang.org/">Try ruby!</a></p>
+</li></ul>
+</li></ul>
 
-<ul>
-<li>Ruby 3.0.0+</li>
-<li>Basic knowledge of ruby<br>
-These documents will help you:
-
-<ul>
-<li><a href="https://www.ruby-lang.org/en/documentation/quickstart/">Ruby in Twenty Minutes</a></li>
-<li><a href="https://www.ruby-lang.org/en/documentation/ruby-from-other-languages/">Ruby from other languages</a></li>
-<li><a href="https://try.ruby-lang.org/">Try ruby!</a></li>
-</ul></li>
-</ul>
-
-<h3 id="recommended">Recommended</h3>
-
-<ul>
-<li>Good editor<br>
-They are recommended:
-
-<ul>
-<li><a href="https://code.visualstudio.com/">VSCode</a></li>
-<li><a href="https://atom.io/">Atom</a></li>
-<li><a href="https://www.sublimetext.com/">Sublime Text</a></li>
-<li><a href="https://brackets.io/">Brackets</a></li>
-<li><a href="https://notepad-plus-plus.org/">Notepad++</a></li>
-</ul></li>
-<li>Git</li>
-<li>Bundler</li>
-</ul>
+<h3 id="label-Recommended">Recommended</h3>
+<ul><li>
+<p>Good editor<br> They are recommended:</p>
+<ul><li>
+<p><a href="https://code.visualstudio.com/">VSCode</a></p>
+</li><li>
+<p><a href="https://atom.io/">Atom</a></p>
+</li><li>
+<p><a href="https://www.sublimetext.com/">Sublime Text</a></p>
+</li><li>
+<p><a href="https://brackets.io/">Brackets</a></p>
+</li><li>
+<p><a href="https://notepad-plus-plus.org/">Notepad++</a></p>
+</li></ul>
+</li><li>
+<p>Git</p>
+</li><li>
+<p>Bundler</p>
+</li></ul>
 
 <p>Once you have all of these, you can start coding!</p>
 
-<h2 id="start-creating-your-bot">Start creating your bot</h2>
+<h2 id="label-Start+creating+your+bot">Start creating your bot</h2>
 
-<h3 id="create-a-bot-account">Create a Bot account</h3>
+<h3 id="label-Create+a+Bot+account">Create a Bot account</h3>
 
-<p>You must have a bot account to use this lib. First, go to <a href="https://discord.com/developers/applications">Discord Developer Portal</a> and click on <code>New Application</code>.<br>
-<img src="./assets/01_new_app.png" alt=""></p>
+<p>You must have a bot account to use this lib. First, go to <a href="https://discord.com/developers/applications">Discord Developer Portal</a> and click on <code>New Application</code>.<br> <img src="./assets/01_new_app.png"></p>
 
-<p>And then type a name for your bot, and click <code>Create</code>.<br>
-<img src="./assets/02_bot_name.png" alt=""></p>
+<p>And then type a name for your bot, and click <code>Create</code>.<br> <img src="./assets/02_bot_name.png"></p>
 
-<p>You will be redirected to the <code>General Information</code> page.
-Then, click <code>Bot</code> and then <code>Add Bot</code> and then <code>Yes, do it!</code>.<br>
-<img src="./assets/03_add_bot.png" alt=""></p>
+<p>You will be redirected to the <code>General Information</code> page. Then, click <code>Bot</code> and then <code>Add Bot</code> and then <code>Yes, do it!</code>.<br> <img src="./assets/03_add_bot.png"></p>
 
-<p>You will see bot information, and click <code>Copy</code> button in TOKEN section.<br>
-<img src="./assets/04_token_copy.png" alt=""></p>
+<p>You will see bot information, and click <code>Copy</code> button in TOKEN section.<br> <img src="./assets/04_token_copy.png"></p>
 
-<p><strong>DO NOT SHARE THIS TOKEN, OR YOUR BOT BAN EVERYONE IN EVERY SERVER!</strong>
-This is serious security risk.</p>
+<p><strong>DO NOT SHARE THIS TOKEN, OR YOUR BOT BAN EVERYONE IN EVERY SERVER!</strong> This is serious security risk.</p>
 
 <p>Click <code>Regenerate</code> button to regenerate your token. Do this immediately when you accidentally share your token.</p>
 
 <p>You did it! Now, you have a bot account.</p>
 
-<h4 id="invite-your-bot-to-a-server">Invite your bot to a server</h4>
+<h4 id="label-Invite+your+bot+to+a+server">Invite your bot to a server</h4>
 
-<p>Go to <code>OAuth2</code> page and scroll down, and check <code>bot</code> and <code>applications.commands</code> permissions.<br>
-<img src="./assets/05_oauth.png" alt="">
-Then, click <code>Copy</code> button and paste it to your browser.
-Choose a server you want to invite your bot to, and follow the instructions.</p>
+<p>Go to <code>OAuth2</code> page and scroll down, and check <code>bot</code> and <code>applications.commands</code> permissions.<br> <img src="./assets/05_oauth.png"> Then, click <code>Copy</code> button and paste it to your browser. Choose a server you want to invite your bot to, and follow the instructions.</p>
 
-<h3 id="code-your-bot">Code your bot</h3>
+<h3 id="label-Code+your+bot">Code your bot</h3>
 
-<h4 id="install-gems">Install gems</h4>
+<h4 id="label-Install+gems">Install gems</h4>
 
 <p>Open terminal and type:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='id identifier rubyid_install'>install</span> <span class='id identifier rubyid_bundler'>bundler</span> <span class='id identifier rubyid_discorb'>discorb</span>
 </code></pre>
 
-<h4 id="setup-files">Setup files</h4>
+<h4 id="label-Setup+files">Setup files</h4>
 
-<p>Create a new directory and go to it.
-Open terminal and type:</p>
+<p>Create a new directory and go to it. Open terminal and type:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_discorb'>discorb</span> <span class='id identifier rubyid_init'>init</span>
 </code></pre>
@@ -146,18 +140,19 @@ Open terminal and type:</p>
 <p>Specify <code>--git</code> if you want to use git.</p>
 
 <p>You will get some files in your directory.</p>
+<ul><li>
+<p><code>main.rb</code>: The main file of your bot.</p>
+</li><li>
+<p><code>.env</code>: The environment variables of your bot. <strong>You must keep this file secret!</strong></p>
+</li><li>
+<p><code>Gemfile</code>: Gemfile for bundler.</p>
+</li><li>
+<p><code>Gemfile.lock</code>: Gemfile.lock for bundler.</p>
+</li></ul>
 
-<ul>
-<li><code>main.rb</code>: The main file of your bot.</li>
-<li><code>.env</code>: The environment variables of your bot. <strong>You must keep this file secret!</strong></li>
-<li><code>Gemfile</code>: Gemfile for bundler.</li>
-<li><code>Gemfile.lock</code>: Gemfile.lock for bundler.</li>
-</ul>
+<p>You will get other files if you specify <code>--git</code>. <a href="file.init.html" title="Learn more here">Learn more here</a>.</p>
 
-<p>You will get other files if you specify <code>--git</code>.
-<a href="file.init.html" title="Learn more here">Learn more here</a>.</p>
-
-<h4 id="start-your-bot">Start your bot</h4>
+<h4 id="label-Start+your+bot">Start your bot</h4>
 
 <p>Open <code>main.rb</code>, you will see the following code:</p>
 
@@ -180,24 +175,20 @@ Open terminal and type:</p>
 <pre class="code ruby"><code class="ruby"><span class='const'>TOKEN</span><span class='op'>=</span><span class='const'>Y0urB0tT0k3nHer3</span><span class='period'>.</span><span class='const'>Th1sT0ken</span><span class='period'>.</span><span class='const'>W0ntWorkB3c4useItH4sM34n1ng</span>
 </code></pre>
 
-<p>Replace <code>Y0urB0tT0k3nHer3.Th1sT0ken.W0ntWorkB3c4useItH4sM34n1ng</code> with your bot token.
-Remember to keep this file secret!</p>
+<p>Replace <code>Y0urB0tT0k3nHer3.Th1sT0ken.W0ntWorkB3c4useItH4sM34n1ng</code> with your bot token. Remember to keep this file secret!</p>
 
 <p>Open terminal and type:</p>
 
-<pre class="code sh"><code class="sh">bundle exec ruby main.rb
-# or
-bundle exec discorb run main.rb
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_bundle'>bundle</span> <span class='id identifier rubyid_exec'>exec</span> <span class='id identifier rubyid_ruby'>ruby</span> <span class='id identifier rubyid_main'>main</span><span class='period'>.</span><span class='id identifier rubyid_rb'>rb</span>
+<span class='comment'># or
+</span><span class='id identifier rubyid_bundle'>bundle</span> <span class='id identifier rubyid_exec'>exec</span> <span class='id identifier rubyid_discorb'>discorb</span> <span class='id identifier rubyid_run'>run</span> <span class='id identifier rubyid_main'>main</span><span class='period'>.</span><span class='id identifier rubyid_rb'>rb</span>
 </code></pre>
 
-<p>Yay! Your bot is online!<br>
-<img src="./assets/06_online.png" alt=""></p>
+<p>Yay! Your bot is online!<br> <img src="./assets/06_online.png"></p>
 
-<p>But your bot won&#39;t do anything.
-So add your bot some greetings!
-<code>Ctrl + C</code> to stop your bot.</p>
+<p>But your bot won&#39;t do anything. So add your bot some greetings! <code>Ctrl + C</code> to stop your bot.</p>
 
-<h4 id="add-a-greeting">Add a greeting</h4>
+<h4 id="label-Add+a+greeting">Add a greeting</h4>
 
 <p>You can do some action on message by typing like this:</p>
 
@@ -206,9 +197,7 @@ So add your bot some greetings!
 </span><span class='kw'>end</span>
 </code></pre>
 
-<p><code>message</code> is a <span class='object_link'><a href="Discorb/Message.html" title="Discorb::Message (class)">Discorb::Message</a></span> object. It contains information about the message.
-You can get the message content by <span class='object_link'><a href="Discorb/Message.html#content-instance_method" title="Discorb::Message#content (method)">Discorb::Message#content</a></span>.
-Add <code>if</code> statement, and reply to the message with <span class='object_link'><a href="Discorb/Message.html#reply-instance_method" title="Discorb::Message#reply (method)">Discorb::Message#reply</a></span>.</p>
+<p><code>message</code> is a <span class='object_link'><a href="Discorb/Message.html" title="Discorb::Message (class)">Discorb::Message</a></span> object. It contains information about the message. You can get the message content by <span class='object_link'><a href="Discorb/Message.html#content-instance_method" title="Discorb::Message#content (method)">Discorb::Message#content</a></span>. Add <code>if</code> statement, and reply to the message with <span class='object_link'><a href="Discorb/Message.html#reply-instance_method" title="Discorb::Message#reply (method)">Discorb::Message#reply</a></span>.</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span> <span class='symbol'>:message</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_message'>message</span><span class='op'>|</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&quot;</span></span>
@@ -219,18 +208,17 @@ Add <code>if</code> statement, and reply to the message with <span class='object
 
 <p>Save your bot and restart it.</p>
 
-<p>You can see your bot&#39;s response by typing <code>hello</code> in your server...  </p>
+<p>You can see your bot&#39;s response by typing <code>hello</code> in your server…</p>
 
-<p><img src="./assets/07_hello_infinite.png" alt=""></p>
+<p><img src="./assets/07_hello_infinite.png"></p>
 
 <p>Oh no! Your bot is responding to bot&#39;s messages, and it doesn&#39;t stop!</p>
 
 <p>Terminate your bot by typing <code>Ctrl + C</code> in terminal.</p>
 
-<h4 id="ignore-bots-messages">Ignore bot&#39;s messages</h4>
+<h4 id="label-Ignore+bot-27s+messages">Ignore bot&#39;s messages</h4>
 
-<p>You can access author information by <span class='object_link'><a href="Discorb/Message.html#author-instance_method" title="Discorb::Message#author (method)">Discorb::Message#author</a></span>, and it has <span class='object_link'><a href="Discorb/User.html#bot%3F-instance_method" title="Discorb::User#bot? (method)">Discorb::User#bot?</a></span>.
-So, you can ignore bot&#39;s messages by adding <code>if</code> statement:</p>
+<p>You can access author information by <span class='object_link'><a href="Discorb/Message.html#author-instance_method" title="Discorb::Message#author (method)">Discorb::Message#author</a></span>, and it has <span class='object_link'><a href="Discorb/User.html#bot%3F-instance_method" title="Discorb::User#bot? (method)">Discorb::User#bot?</a></span>. So, you can ignore bot&#39;s messages by adding <code>if</code> statement:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span> <span class='symbol'>:message</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_message'>message</span><span class='op'>|</span>
   <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_author'>author</span><span class='period'>.</span><span class='id identifier rubyid_bot?'>bot?</span>
@@ -243,11 +231,11 @@ So, you can ignore bot&#39;s messages by adding <code>if</code> statement:</p>
 
 <p>Save your bot and start it.</p>
 
-<p><img src="./assets/08_hello_once.png" alt=""></p>
+<p><img src="./assets/08_hello_once.png"></p>
 
 <p>You did it! Your bot won&#39;t respond to bot&#39;s messages anymore.</p>
 
-<h2 id="finally">Finally</h2>
+<h2 id="label-Finally">Finally</h2>
 
 <p>This is the end of tutorial.</p>
 
@@ -257,7 +245,7 @@ So, you can ignore bot&#39;s messages by adding <code>if</code> statement:</p>
 </div></div>
 
       <div id="footer">
-  Generated on Tue Jul  5 21:35:53 2022 by
+  Generated on Sat Sep  3 22:11:15 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>

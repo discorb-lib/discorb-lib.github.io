@@ -58,27 +58,28 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><div id='filecontents'><h1 id="fequently-asked-questions">Fequently asked questions</h1>
+      <div id="content"><div id='filecontents'>
+<h1 id="label-Fequently+asked+questions">Fequently asked questions</h1>
 
-<h2 id="what-is">What is ...?</h2>
+<h2 id="label-What+is+...-3F">What is …?</h2>
 
-<h3 id="what-is-async-task">What is <code>Async::Task</code>?</h3>
+<h3 id="label-What+is+Async-3A-3ATask-3F">What is <code>Async::Task</code>?</h3>
 
 <p>Async::Task is an object for asynchronous tasks.</p>
 
-<p><a href="https://socketry.github.io/async/">https://socketry.github.io/async/</a> for more information.</p>
+<p><a href="https://socketry.github.io/async">socketry.github.io/async</a>/ for more information.</p>
 
-<h3 id="what-is-guild">What is <code>Guild</code>?</h3>
+<h3 id="label-What+is+Guild-3F">What is <code>Guild</code>?</h3>
 
 <p>It means a <code>server</code> of Discord.</p>
 
-<h3 id="what-is-difference-between-user-and-member">What is difference between <code>User</code> and <code>Member</code>?</h3>
+<h3 id="label-What+is+difference+between+User+and+Member-3F">What is difference between <code>User</code> and <code>Member</code>?</h3>
 
 <p><code>User</code> is an object for account, <code>Member</code> is an object for user in guild.</p>
 
-<h2 id="how-can-i">How can I ...?</h2>
+<h2 id="label-How+can+I+...-3F">How can I …?</h2>
 
-<h3 id="how-can-i-do-something-with-sent-messages">How can I do something with sent messages?</h3>
+<h3 id="label-How+can+I+do+something+with+sent+messages-3F">How can I do something with sent messages?</h3>
 
 <p>Use <code>Async::Task#wait</code> method.</p>
 
@@ -91,11 +92,11 @@
 </span><span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_pin'>pin</span>
 </code></pre>
 
-<h3 id="how-can-i-send-dm-to-a-user">How can I send DM to a user?</h3>
+<h3 id="label-How+can+I+send+DM+to+a+user-3F">How can I send DM to a user?</h3>
 
 <p>Use <span class='object_link'><a href="Discorb/Messageable.html#post-instance_method" title="Discorb::Messageable#post (method)">Discorb::Messageable#post</a></span> method, <span class='object_link'><a href="Discorb/User.html" title="Discorb::User (class)">Discorb::User</a></span> includes <span class='object_link'><a href="Discorb/Messageable.html" title="Discorb::Messageable (module)">Discorb::Messageable</a></span>.</p>
 
-<h3 id="how-can-i-edit-status">How can I edit status?</h3>
+<h3 id="label-How+can+I+edit+status-3F">How can I edit status?</h3>
 
 <p>Use <span class='object_link'><a href="Discorb/Client.html#update_presence-instance_method" title="Discorb::Client#update_presence (method)">Discorb::Client#update_presence</a></span> method.</p>
 
@@ -115,7 +116,7 @@
 <span class='kw'>end</span>
 </code></pre>
 
-<h3 id="how-can-i-send-attachments">How can I send attachments?</h3>
+<h3 id="label-How+can+I+send+attachments-3F">How can I send attachments?</h3>
 
 <p>Use <span class='object_link'><a href="Discorb/Attachment.html" title="Discorb::Attachment (class)">Discorb::Attachment</a></span> class.</p>
 
@@ -129,7 +130,7 @@
 </span><span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_channel'>channel</span><span class='period'>.</span><span class='id identifier rubyid_post'>post</span> <span class='label'>attachments:</span> <span class='const'><span class='object_link'><a href="Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Discorb/Attachment.html" title="Discorb::Attachment (class)">Attachment</a></span></span><span class='period'>.</span><span class='id identifier rubyid_from_string'><span class='object_link'><a href="Discorb/Attachment.html#from_string-class_method" title="Discorb::Attachment.from_string (method)">from_string</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello world!</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hello.txt</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 </code></pre>
 
-<h3 id="how-can-i-add-reactions">How can I add reactions?</h3>
+<h3 id="label-How+can+I+add+reactions-3F">How can I add reactions?</h3>
 
 <p>Use <span class='object_link'><a href="Discorb/Message.html#add_reaction-instance_method" title="Discorb::Message#add_reaction (method)">Discorb::Message#add_reaction</a></span> method.</p>
 
@@ -137,23 +138,23 @@
 <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_add_reaction'>add_reaction</span> <span class='const'><span class='object_link'><a href="Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Discorb/UnicodeEmoji.html" title="Discorb::UnicodeEmoji (class)">UnicodeEmoji</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>thinking</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
 </code></pre>
 
-<h1 id="not-fequently-asked-questions">Not fequently asked questions</h1>
+<h1 id="label-Not+fequently+asked+questions">Not fequently asked questions</h1>
 
-<h2 id="how-can-i-pronounce-discorb">How can I pronounce <code>discorb</code>?</h2>
+<h2 id="label-How+can+I+pronounce+discorb-3F">How can I pronounce <code>discorb</code>?</h2>
 
 <p>Discorb is pronounced <code>disco-R-B</code>.</p>
 
-<h2 id="why-did-you-make-discorb">Why did you make <code>discorb</code>?</h2>
+<h2 id="label-Why+did+you+make+discorb-3F">Why did you make <code>discorb</code>?</h2>
 
-<p>There are many reasons -- One is I didn&#39;t like <code>discordrb</code>&#39;s <code>bot.message</code> -- but the main reason is, &quot;Just for Fun&quot;.</p>
+<p>There are many reasons – One is I didn&#39;t like <code>discordrb</code>&#39;s <code>bot.message</code> – but the main reason is, “Just for Fun”.</p>
 
-<h2 id="how-was-discorb-named">How was <code>discorb</code> named?</h2>
+<h2 id="label-How+was+discorb+named-3F">How was <code>discorb</code> named?</h2>
 
 <p><code>discord</code> and <code>.rb</code>.</p>
 </div></div>
 
       <div id="footer">
-  Generated on Tue Jul  5 21:38:54 2022 by
+  Generated on Sat Sep  3 22:17:16 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>

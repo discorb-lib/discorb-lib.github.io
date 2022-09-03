@@ -58,102 +58,55 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><div id='filecontents'><h1 id="discorb-init">discorb init</h1>
+      <div id="content"><div id='filecontents'>
+<h1 id="label-discorb+init">discorb init</h1>
 
 <p>This command will create a new project in the directory.</p>
 
-<h2 id="usage">Usage</h2>
+<h2 id="label-Usage">Usage</h2>
 
-<pre class="code bash"><code class="bash">discorb init [options] [dir]
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_discorb'>discorb</span> <span class='id identifier rubyid_init'>init</span> <span class='lbracket'>[</span><span class='id identifier rubyid_options'>options</span><span class='rbracket'>]</span> <span class='lbracket'>[</span><span class='id identifier rubyid_dir'>dir</span><span class='rbracket'>]</span>
 </code></pre>
 
-<h2 id="options">Options</h2>
+<h2 id="label-Options">Options</h2>
 
-<h3 id="dir"><code>dir</code></h3>
+<h3 id="label-dir"><code>dir</code></h3>
 
-<p>The directory to create the project in.
-Defaults to the current directory.
-If the directory exists and is not empty, an error is returned.
-You can use <code>--force</code> to overwrite an existing directory.</p>
+<p>The directory to create the project in. Defaults to the current directory. If the directory exists and is not empty, an error is returned. You can use <code>--force</code> to overwrite an existing directory.</p>
 
-<h3 id="no-bundle"><code>--[no-]bundle</code></h3>
+<h3 id="label---5Bno--5Dbundle"><code>--[no-]bundle</code></h3>
 
-<p>Whether to use bundle.
-If true, the command will create Gemfile and execute <code>bundle install</code>.
-Default to true.</p>
+<p>Whether to use bundle. If true, the command will create Gemfile and execute <code>bundle install</code>. Default to true.</p>
 
-<h3 id="no-git"><code>--[no-]git</code></h3>
+<h3 id="label---5Bno--5Dgit"><code>--[no-]git</code></h3>
 
-<p>Whether to initialize git.
-If true, the command will initialize git and commit the initial files with commit message <code>Initial commit</code>.
-Use <code>git commit --amend -m &quot;...&quot;</code> to change the commit message.
-Default to false.</p>
+<p>Whether to initialize git. If true, the command will initialize git and commit the initial files with commit message <code>Initial commit</code>. Use <code>git commit --amend -m &quot;...&quot;</code> to change the commit message. Default to false.</p>
 
-<h3 id="no-desc"><code>--[no-]desc</code></h3>
+<h3 id="label---5Bno--5Ddesc"><code>--[no-]desc</code></h3>
 
-<p>Whether to create a description file.
-If true, the command will create a <code>.env.sample</code> and <code>README.md</code> file.
-Default to false.</p>
+<p>Whether to create a description file. If true, the command will create a <code>.env.sample</code> and <code>README.md</code> file. Default to false.</p>
 
-<h3 id="n-name"><code>-n</code> <code>--name</code></h3>
+<h3 id="label-n+--name"><code>-n</code> <code>--name</code></h3>
 
-<p>The name of the project.
-It will be used in the <code>README.md</code> file.
-Default to the directory name.</p>
+<p>The name of the project. It will be used in the <code>README.md</code> file. Default to the directory name.</p>
 
-<h3 id="t-token"><code>-t</code>, <code>--token</code></h3>
+<h3 id="label-t-2C+--token"><code>-t</code>, <code>--token</code></h3>
 
-<p>The name of token environment variable.
-Default to TOKEN.</p>
+<p>The name of token environment variable. Default to TOKEN.</p>
 
-<h3 id="f-force"><code>-f</code>, <code>--force</code></h3>
+<h3 id="label-f-2C+--force"><code>-f</code>, <code>--force</code></h3>
 
-<p>Whether to overwrite an existing directory.
-Default to false.</p>
+<p>Whether to overwrite an existing directory. Default to false.</p>
 
-<h2 id="file-structure">File structure</h2>
+<h2 id="label-File+structure">File structure</h2>
 
 <p>The following files will be created:</p>
 
-<table><thead>
-<tr>
-<th>File</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>.env</code></td>
-<td>Environment variables.</td>
-</tr>
-<tr>
-<td><code>main.rb</code></td>
-<td>Main script.</td>
-</tr>
-<tr>
-<td><code>.gitignore</code></td>
-<td>Git ignore file. Won&#39;t be created if <code>--git</code> is false.</td>
-</tr>
-<tr>
-<td><code>Gemfile</code></td>
-<td>Gemfile. Won&#39;t be created if <code>--bundle</code> is false.</td>
-</tr>
-<tr>
-<td><code>Gemfile.lock</code></td>
-<td>Gemfile lock file. Won&#39;t be created if <code>--bundle</code> is false.</td>
-</tr>
-<tr>
-<td><code>README.md</code></td>
-<td>Readme file. Won&#39;t be created if <code>--desc</code> is false.</td>
-</tr>
-<tr>
-<td><code>.env.sample</code></td>
-<td>Sample environment variables. Won&#39;t be created if <code>--desc</code> is false.</td>
-</tr>
-</tbody></table>
+<p>| File | Description | | —- | ———– | | <code>.env</code> | Environment variables. | | <code>main.rb</code> | Main script. | | <code>.gitignore</code> | Git ignore file. Won&#39;t be created if <code>--git</code> is false. | | <code>Gemfile</code> | Gemfile. Won&#39;t be created if <code>--bundle</code> is false. | | <code>Gemfile.lock</code> | Gemfile lock file. Won&#39;t be created if <code>--bundle</code> is false. | | <code>README.md</code> | Readme file. Won&#39;t be created if <code>--desc</code> is false. | | <code>.env.sample</code> | Sample environment variables. Won&#39;t be created if <code>--desc</code> is false. |</p>
 </div></div>
 
       <div id="footer">
-  Generated on Tue Jul  5 21:35:10 2022 by
+  Generated on Sat Sep  3 22:09:47 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>

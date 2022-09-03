@@ -108,7 +108,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Represents the subcommand group.</p>
+    
+<p>Represents the subcommand group.</p>
 
 
   </div>
@@ -145,7 +146,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The subcommands of the command.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>The subcommands of the command.</p>
 </div></span>
   
 </li>
@@ -191,7 +193,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Add new subcommand.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Add new subcommand.</p>
 </div></span>
   
 </li>
@@ -267,7 +270,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns The subcommands of the command.</p>
+    
+<p>Returns The subcommands of the command.</p>
 
 
   </div>
@@ -285,7 +289,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The subcommands of the command.</p>
+        <div class='inline'>
+<p>The subcommands of the command.</p>
 </div>
       
     </li>
@@ -331,7 +336,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Add new subcommand.</p>
+    
+<p>Add new subcommand.</p>
 
 
   </div>
@@ -350,7 +356,8 @@
       
       
         &mdash;
-        <div class='inline'><p>Command name.</p>
+        <div class='inline'>
+<p>Command name.</p>
 </div>
       
     </li>
@@ -365,7 +372,8 @@
       
       
         &mdash;
-        <div class='inline'><p>Command description.</p>
+        <div class='inline'>
+<p>Command description.</p>
 </div>
       
     </li>
@@ -382,62 +390,10 @@
       
       
         &mdash;
-        <div class='inline'><p>Command options.
-The key is the option name, the value is a hash with the following keys:</p>
+        <div class='inline'>
+<p>Command options. The key is the option name, the value is a hash with the following keys:</p>
 
-<table><thead>
-<tr>
-<th>Key</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>:description</code></td>
-<td><code>String</code></td>
-<td>Description of the option.</td>
-</tr>
-<tr>
-<td><code>:required</code></td>
-<td>Whether the argument is required. <code>optional</code> will be used if not specified.</td>
-<td></td>
-</tr>
-<tr>
-<td><code>:optional</code></td>
-<td>Whether the argument is optional. <code>required</code> will be used if not specified.</td>
-<td></td>
-</tr>
-<tr>
-<td><code>:type</code></td>
-<td><code>Object</code></td>
-<td>Type of the option.</td>
-</tr>
-<tr>
-<td><code>:choice</code></td>
-<td><code>Hash{String =&gt; String, Integer, Float}</code></td>
-<td>Type of the option.</td>
-</tr>
-<tr>
-<td><code>:default</code></td>
-<td><code>Object</code></td>
-<td>Default value of the option.</td>
-</tr>
-<tr>
-<td><code>:channel_types</code></td>
-<td><code>Array&lt;Class&lt;Discorb::Channel&gt;&gt;</code></td>
-<td>Type of the channel option.</td>
-</tr>
-<tr>
-<td><code>:autocomplete</code></td>
-<td><code>Proc</code></td>
-<td>Autocomplete function.</td>
-</tr>
-<tr>
-<td><code>:range</code></td>
-<td><code>Range</code></td>
-<td>Range of the option. Only valid for numeric options. (<code>:int</code>, <code>:float</code>)</td>
-</tr>
-</tbody></table>
+<p>| Key | Type | Description | | — | — | — | | <code>:description</code> | <code>String</code> | Description of the option. | | <code>:required</code> | Whether the argument is required. <code>optional</code> will be used if not specified. | | <code>:optional</code> | Whether the argument is optional. <code>required</code> will be used if not specified. | | <code>:type</code> | <code>Object</code> | Type of the option. | | <code>:choice</code> | <code>Hash{String =&gt; String, Integer, Float}</code> | Type of the option. | | <code>:default</code> | <code>Object</code> | Default value of the option. | | <code>:channel_types</code> | <code>Array&lt;Class&lt;Discorb::Channel&gt;&gt;</code> | Type of the channel option. | | <code>:autocomplete</code> | <code>Proc</code> | Autocomplete function. | | <code>:range</code> | <code>Range</code> | Range of the option. Only valid for numeric options. (<code>:int</code>, <code>:float</code>) |</p>
 </div>
       
     </li>
@@ -452,7 +408,8 @@ The key is the option name, the value is a hash with the following keys:</p>
       
       
         &mdash;
-        <div class='inline'><p>Guild IDs to set the command to. <code>false</code> to global command, <code>nil</code> to use default.</p>
+        <div class='inline'>
+<p>Guild IDs to set the command to. <code>false</code> to global command, <code>nil</code> to use default.</p>
 </div>
       
     </li>
@@ -467,7 +424,8 @@ The key is the option name, the value is a hash with the following keys:</p>
       
       
         &mdash;
-        <div class='inline'><p>Command block.</p>
+        <div class='inline'>
+<p>Command block.</p>
 </div>
       
     </li>
@@ -485,7 +443,8 @@ The key is the option name, the value is a hash with the following keys:</p>
       
       
         &mdash;
-        <div class='inline'><p>The added subcommand.</p>
+        <div class='inline'>
+<p>The added subcommand.</p>
 </div>
       
     </li>
@@ -554,7 +513,7 @@ The key is the option name, the value is a hash with the following keys:</p>
 </div>
 
       <div id="footer">
-  Generated on Tue Jul  5 21:37:53 2022 by
+  Generated on Sat Sep  3 22:15:19 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>

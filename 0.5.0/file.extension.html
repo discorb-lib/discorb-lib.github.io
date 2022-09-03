@@ -58,22 +58,23 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><div id='filecontents'><h1 id="extension">Extension</h1>
+      <div id="content"><div id='filecontents'>
+<h1 id="label-Extension">Extension</h1>
 
 <p>Extension allows you to split your code into multiple files.</p>
 
-<h2 id="make-a-new-extension">Make a new extension</h2>
+<h2 id="label-Make+a+new+extension">Make a new extension</h2>
 
 <p>Make a new module, and extend <span class='object_link'><a href="Discorb/Extension.html" title="Discorb::Extension (module)">Discorb::Extension</a></span>.</p>
 
 <pre class="code ruby"><code class="ruby"><span class='kw'>module</span> <span class='const'>MyExtension</span>
   <span class='id identifier rubyid_extend'>extend</span> <span class='const'><span class='object_link'><a href="Discorb.html" title="Discorb (module)">Discorb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Discorb/Extension.html" title="Discorb::Extension (module)">Extension</a></span></span>
-
+  
   <span class='comment'># ...
 </span><span class='kw'>end</span>
 </code></pre>
 
-<h2 id="register-event">Register Event</h2>
+<h2 id="label-Register+Event">Register Event</h2>
 
 <p>Use Discorb::Extension.event to register event, or Discorb::Extension.once_event to register event only once.</p>
 
@@ -90,7 +91,7 @@
 <span class='kw'>end</span>
 </code></pre>
 
-<h2 id="load-extension">Load extension</h2>
+<h2 id="label-Load+extension">Load extension</h2>
 
 <p>Use <span class='object_link'><a href="Discorb/Client.html#extend-instance_method" title="Discorb::Client#extend (method)">Discorb::Client#extend</a></span> to load extension.</p>
 
@@ -105,7 +106,7 @@
 <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_extend'>extend</span> <span class='const'>MyExtension</span>
 </code></pre>
 
-<h2 id="access-client-from-extension">Access Client from extension</h2>
+<h2 id="label-Access+Client+from+extension">Access Client from extension</h2>
 
 <p>You can access <span class='object_link'><a href="Discorb/Client.html" title="Discorb::Client (class)">Discorb::Client</a></span> from extension with <code>@client</code>.</p>
 
@@ -120,7 +121,7 @@
 </div></div>
 
       <div id="footer">
-  Generated on Tue Jul  5 21:32:01 2022 by
+  Generated on Sat Sep  3 22:03:33 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>

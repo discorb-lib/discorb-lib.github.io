@@ -58,67 +58,64 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><div id='filecontents'><h1 id="discorb-run">discorb run</h1>
+      <div id="content"><div id='filecontents'>
+<h1 id="label-discorb+run">discorb run</h1>
 
 <p>This command will run a client.</p>
 
-<h2 id="usage">Usage</h2>
+<h2 id="label-Usage">Usage</h2>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_discorb'>discorb</span> <span class='id identifier rubyid_run'>run</span> <span class='lbracket'>[</span><span class='id identifier rubyid_options'>options</span><span class='rbracket'>]</span> <span class='lbracket'>[</span><span class='id identifier rubyid_script'>script</span><span class='rbracket'>]</span>
 </code></pre>
 
-<h3 id="arguments">Arguments</h3>
+<h3 id="label-Arguments">Arguments</h3>
 
-<h4 id="script"><code>script</code></h4>
+<h4 id="label-script"><code>script</code></h4>
 
 <p>The script to run. Defaults to <code>main.rb</code>.</p>
 
-<h3 id="options">Options</h3>
+<h3 id="label-Options">Options</h3>
 
-<h4 id="t-title"><code>-t</code>, <code>--title</code></h4>
+<h4 id="label-t-2C+--title"><code>-t</code>, <code>--title</code></h4>
 
 <p>The title of the process.</p>
 
-<h4 id="l-log-level"><code>-l</code>, <code>--log-level</code></h4>
+<h4 id="label-l-2C+--log-level"><code>-l</code>, <code>--log-level</code></h4>
 
-<p>Specify the log level.
-Should be one of the following:</p>
+<p>Specify the log level. Should be one of the following:</p>
+<ul><li>
+<p><code>none</code></p>
+</li><li>
+<p><code>debug</code></p>
+</li><li>
+<p><code>info</code></p>
+</li><li>
+<p><code>warn</code></p>
+</li><li>
+<p><code>error</code></p>
+</li><li>
+<p><code>fatal</code></p>
+</li></ul>
 
-<ul>
-<li><code>none</code></li>
-<li><code>debug</code></li>
-<li><code>info</code></li>
-<li><code>warn</code></li>
-<li><code>error</code></li>
-<li><code>fatal</code></li>
-</ul>
+<h4 id="label-f-2C+--log-file"><code>-f</code>, <code>--log-file</code></h4>
 
-<h4 id="f-log-file"><code>-f</code>, <code>--log-file</code></h4>
+<p>Specify the file to write logs to. You can use <code>stdout</code> to write to the standard output, and <code>stderr</code> to write to the standard error.</p>
 
-<p>Specify the file to write logs to.
-You can use <code>stdout</code> to write to the standard output, and <code>stderr</code> to write to the standard error.</p>
+<h4 id="label-c-2C+---5Bno--5Dlog-color"><code>-c</code>, <code>--[no-]log-color</code></h4>
 
-<h4 id="c-no-log-color"><code>-c</code>, <code>--[no-]log-color</code></h4>
+<p>Whether to colorize the log output. If not specified, the default will be: - <code>true</code> if the file to write logs to is <code>stdout</code> or <code>stderr</code>. - <code>false</code> otherwise.</p>
 
-<p>Whether to colorize the log output.
-If not specified, the default will be:</p>
-
-<ul>
-<li><code>true</code> if the file to write logs to is <code>stdout</code> or <code>stderr</code>.</li>
-<li><code>false</code> otherwise.</li>
-</ul>
-
-<h4 id="s-setup"><code>-s</code>, <code>--setup</code></h4>
+<h4 id="label-s-2C+--setup"><code>-s</code>, <code>--setup</code></h4>
 
 <p>Whether to setup application commands.</p>
 
-<h4 id="e-env"><code>-e</code>, <code>--env</code></h4>
+<h4 id="label-e-2C+--env"><code>-e</code>, <code>--env</code></h4>
 
 <p>The name of the environment variable to use for token, or just <code>-t</code> or <code>--token</code> for intractive prompt.</p>
 </div></div>
 
       <div id="footer">
-  Generated on Tue Jul  5 21:35:27 2022 by
+  Generated on Sat Sep  3 22:10:22 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>
