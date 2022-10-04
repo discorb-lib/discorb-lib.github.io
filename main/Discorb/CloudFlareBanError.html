@@ -226,7 +226,7 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid__resp'>_resp</span><span class='comma'>,</span> <span class='id identifier rubyid_client'>client</span><span class='rparen'>)</span>
   <span class='ivar'>@client</span> <span class='op'>=</span> <span class='id identifier rubyid_client'>client</span>
-  <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_close!'>close!</span>
+  <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_close'>close</span>
   <span class='id identifier rubyid_message'>message</span> <span class='op'>=</span> <span class='heredoc_beg'>&lt;&lt;~MESSAGE</span>
 <span class='tstring_content'>    The client is banned from CloudFlare.
 </span><span class='tstring_content'>    Hint: Try to decrease the number of requests per second, e.g. Use sleep in between requests.
@@ -245,7 +245,7 @@
 </div>
 
       <div id="footer">
-  Generated on Tue Oct  4 20:19:54 2022 by
+  Generated on Tue Oct  4 21:16:11 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.0.2).
 </div>
